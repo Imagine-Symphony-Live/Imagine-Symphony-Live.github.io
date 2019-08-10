@@ -37,6 +37,7 @@
     "webpack-cli": "^3.3.6"
   },
   "dependencies": {
+    "pixi-viewport": "^4.2.0",
     "pixi.js": "^5.1.0"
   }
 }
