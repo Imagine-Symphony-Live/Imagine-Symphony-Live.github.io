@@ -1,0 +1,42 @@
+{
+  "name": "imagine-symphony-live",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack",
+    "watch": "npx webpack --env.watch"
+  },
+  "appConfig": {
+    "title": "Imagine Symphony Live",
+    "distDirectory": "./dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:DustinWoods/imagine-symphony-live.git  "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DustinWoods/imagine-symphony-live/issues"
+  },
+  "homepage": "https://imaginesymphony.live",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "css-loader": "^3.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "source-map-support": "^0.5.13",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webfontloader": "^1.6.28",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "pixi.js": "^5.1.0"
+  }
+}
