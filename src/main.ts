@@ -3,6 +3,7 @@ import { Application } from 'pixi.js';
 import { BioElement } from './bio-element';
 import { Musician } from './types/musician';
 import { Viewport } from 'pixi-viewport'
+import { WORLD_WIDTH, WORLD_HEIGHT } from './constants';
 
 window.onload = (): void => {
 
@@ -18,8 +19,8 @@ window.onload = (): void => {
   const viewport = new Viewport({
     screenWidth: window.innerWidth,
     screenHeight: window.innerHeight,
-    worldWidth: 1000,
-    worldHeight: 1000,
+    worldWidth: WORLD_WIDTH,
+    worldHeight: WORLD_HEIGHT,
     interaction: app.renderer.plugins.interaction,
   });
 
@@ -49,12 +50,24 @@ window.onload = (): void => {
       date: new Date(),
       instrument: "Timpani"
     }
-  ]
+  ];
 
-  musicians.forEach((m) => {
-    const e = new BioElement(m);
+  function unFocusAllExcept(allBios: Array<BioElement>, except: BioElement) {
+    for (let i = 0; i < allBios.length; i++) {
+      if(allBios[i] !== except) {
+        allBios[i].unfocus();
+      }
+    }
+  }
+
+  const musicianBios = musicians.map((m) => new BioElement(m));
+  musicianBios.forEach((b) => {
+    b.on("focused", unFocusAllExcept.bind(null, musicianBios, b));
+  });
+
+  musicianBios.forEach((e) => {
     viewport.addChild(e);
-    e.position.set(100 + Math.random()* 600,100 + Math.random()* 600);
+    e.position.set(Math.random() * WORLD_WIDTH, WORLD_HEIGHT * Math.random());
   });
 
   // Main loop
