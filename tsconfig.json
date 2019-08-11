@@ -3,6 +3,7 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "module": "commonjs",
+    "esModuleInterop": true,
     "target": "es5",
     "allowJs": true,
     "outDir": "./dist/",

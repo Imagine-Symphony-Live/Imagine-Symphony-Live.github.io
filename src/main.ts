@@ -4,6 +4,7 @@ import { BioElement } from './bio-element';
 import { Musician } from './types/musician';
 import { Viewport } from 'pixi-viewport'
 import { WORLD_WIDTH, WORLD_HEIGHT } from './constants';
+import TWEEN from '@tweenjs/tween.js';
 
 window.onload = (): void => {
 
@@ -75,4 +76,9 @@ window.onload = (): void => {
 
   });
 
+  function animate(time: number) {
+    requestAnimationFrame(animate);
+    TWEEN.update(time);
+  }
+  requestAnimationFrame(animate);
 };

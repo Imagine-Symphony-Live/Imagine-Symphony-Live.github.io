@@ -1,5 +1,7 @@
 import { Container, Graphics, Text } from "pixi.js";
 import { Musician } from "./types/musician";
+import TWEEN from "@tweenjs/tween.js";
+import { gameTime } from "./tween-pixi-tick";
 
 const BIO_RADIUS = 32;
 
@@ -29,7 +31,19 @@ export class BioElement extends Container {
   focus() {
     if(this.isFocused) return;
     this.isFocused = true;
-    this.focusContent.visible = true;
+
+    new TWEEN.Tween({alpha: 0})
+      .to({alpha: 1}, 500)
+      .easing( TWEEN.Easing.Cubic.Out )
+      .onStart(() => {
+        this.focusContent.alpha = 0;
+        this.focusContent.visible = true;
+      })
+      .onUpdate(({alpha}) => {
+        this.focusContent.alpha = alpha;
+      })
+      .start();
+
     this.emit("focused");
 
     // Also activate if not already
@@ -43,7 +57,22 @@ export class BioElement extends Container {
   unfocus() {
     if(!this.isFocused) return;
     this.isFocused = false;
-    this.focusContent.visible = false;
+
+    new TWEEN.Tween({alpha: 1})
+      .to({alpha: 0}, 100)
+      .easing( TWEEN.Easing.Cubic.Out )
+      .onStart(() => {
+        this.focusContent.alpha = 1;
+        this.focusContent.visible = true;
+      })
+      .onUpdate(({alpha}) => {
+        this.focusContent.alpha = alpha;
+      })
+      .onComplete(() => {
+        this.focusContent.visible = false;
+      })
+      .start();
+
     this.emit("unfocused");
     this.draw();
   }
