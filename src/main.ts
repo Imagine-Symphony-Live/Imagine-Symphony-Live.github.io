@@ -1,10 +1,11 @@
 import './css/styles.css';
-import { Application } from 'pixi.js';
+import { Application, Container } from 'pixi.js';
 import { BioElement } from './bio-element';
 import { Musician } from './types/musician';
 import { Viewport } from 'pixi-viewport'
 import { WORLD_WIDTH, WORLD_HEIGHT } from './constants';
 import TWEEN from '@tweenjs/tween.js';
+import { NucleusElement } from './nucleus-element';
 
 window.onload = (): void => {
 
@@ -27,7 +28,11 @@ window.onload = (): void => {
 
   document.body.appendChild(app.view);
 
+  viewport.moveCenter(0,0);
   app.stage.addChild(viewport);
+
+  const nucleus = new NucleusElement();
+  viewport.addChild(nucleus);
 
   viewport
     .drag()

@@ -1,7 +1,6 @@
 import { Container, Graphics, Text } from "pixi.js";
 import { Musician } from "./types/musician";
 import TWEEN from "@tweenjs/tween.js";
-import { gameTime } from "./tween-pixi-tick";
 
 const BIO_RADIUS = 32;
 
@@ -31,6 +30,7 @@ export class BioElement extends Container {
   focus() {
     if(this.isFocused) return;
     this.isFocused = true;
+    this.zIndex = 1;
 
     new TWEEN.Tween({alpha: 0})
       .to({alpha: 1}, 500)
@@ -57,6 +57,7 @@ export class BioElement extends Container {
   unfocus() {
     if(!this.isFocused) return;
     this.isFocused = false;
+    this.zIndex = 0;
 
     new TWEEN.Tween({alpha: 1})
       .to({alpha: 0}, 100)
