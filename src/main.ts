@@ -60,7 +60,187 @@ window.onload = (): void => {
       name: "Dustin Woods",
       date: new Date(),
       instrument: "Timpani"
-    }
+    },
+    {
+      name: "Evan Sigvaldsen",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Chris Thomas",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Dustin Woods",
+      date: new Date(),
+      instrument: "Timpani"
+    },
+    {
+      name: "Evan Sigvaldsen",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Chris Thomas",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Dustin Woods",
+      date: new Date(),
+      instrument: "Timpani"
+    },
+    {
+      name: "Evan Sigvaldsen",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Chris Thomas",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Dustin Woods",
+      date: new Date(),
+      instrument: "Timpani"
+    },
+    {
+      name: "Evan Sigvaldsen",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Chris Thomas",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Dustin Woods",
+      date: new Date(),
+      instrument: "Timpani"
+    },
+    {
+      name: "Evan Sigvaldsen",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Chris Thomas",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Dustin Woods",
+      date: new Date(),
+      instrument: "Timpani"
+    },
+    {
+      name: "Evan Sigvaldsen",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Chris Thomas",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Dustin Woods",
+      date: new Date(),
+      instrument: "Timpani"
+    },
+    {
+      name: "Evan Sigvaldsen",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Chris Thomas",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Dustin Woods",
+      date: new Date(),
+      instrument: "Timpani"
+    },
+    {
+      name: "Evan Sigvaldsen",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Chris Thomas",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Dustin Woods",
+      date: new Date(),
+      instrument: "Timpani"
+    },
+    {
+      name: "Evan Sigvaldsen",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Chris Thomas",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Dustin Woods",
+      date: new Date(),
+      instrument: "Timpani"
+    },
+    {
+      name: "Evan Sigvaldsen",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Chris Thomas",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Dustin Woods",
+      date: new Date(),
+      instrument: "Timpani"
+    },
+    {
+      name: "Evan Sigvaldsen",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Chris Thomas",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Dustin Woods",
+      date: new Date(),
+      instrument: "Timpani"
+    },
+    {
+      name: "Evan Sigvaldsen",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Chris Thomas",
+      date: new Date(),
+      instrument: "Cello"
+    },
+    {
+      name: "Dustin Woods",
+      date: new Date(),
+      instrument: "Timpani"
+    },
   ];
 
   function unFocusAllExcept(allBios: Array<BioElement>, except: BioElement) {
@@ -77,8 +257,8 @@ window.onload = (): void => {
   });
 
   musicianBios.forEach((e) => {
-    viewport.addChild(e);
-    e.position.set(Math.random() * WORLD_WIDTH, WORLD_HEIGHT * Math.random());
+    bioContainer.addChild(e);
+    e.position.set((0.5 - Math.random()) * WORLD_WIDTH, (0.5 - Math.random()) * WORLD_HEIGHT);
   });
 
   // Main loop
