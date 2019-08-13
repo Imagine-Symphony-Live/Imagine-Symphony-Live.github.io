@@ -36,6 +36,10 @@ window.onload = (): void => {
   app.stage.addChild(toolbar);
   toolbar.position.set(0, window.innerHeight - toolbar.height);
 
+  window.addEventListener("resize", () => {
+    toolbar.position.set(0, window.innerHeight - toolbar.height);
+  });
+
   const nucleus = new NucleusElement();
   viewport.addChild(nucleus);
 
