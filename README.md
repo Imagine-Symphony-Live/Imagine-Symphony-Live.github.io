@@ -2,8 +2,8 @@
 
 ## TODO
  - [ ] BUG: Pinching and zooming on mobile sometimes stops working
- - [ ] Request full screen butt
- - [ ] Snap to center button
+ - [X] Request full screen butt
+ - [X] Snap to center button
 
 ## Updates
 
