@@ -257,6 +257,17 @@ window.onload = (): void => {
 
   const musicianBios = musicians.map((m) => new BioElement(m));
   musicianBios.forEach((b) => {
+    b.on("focused", () => {
+
+      new TWEEN.Tween({x: viewport.center.x, y: viewport.center.y})
+      .to({x: b.position.x, y: b.position.y}, 100)
+      .easing( TWEEN.Easing.Cubic.Out )
+      .onUpdate(({x, y}) => {
+        viewport.moveCenter(x,y);
+      })
+      .start();
+
+    });
     b.on("focused", unFocusAllExcept.bind(null, musicianBios, b));
   });
 
