@@ -43,7 +43,7 @@ window.onload = (): void => {
     .drag()
     .pinch()
     .wheel()
-    //.decelerate();
+    .decelerate();
 
   const musicians: Array<Musician> = [
     {
