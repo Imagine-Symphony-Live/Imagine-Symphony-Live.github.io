@@ -2,11 +2,11 @@ import './css/styles.css';
 import { Application, Container } from 'pixi.js';
 import { BioElement } from './bio-element';
 import { Musician } from './types/musician';
-import { Viewport } from 'pixi-viewport'
 import { WORLD_WIDTH, WORLD_HEIGHT } from './constants';
 import TWEEN from '@tweenjs/tween.js';
 import { NucleusElement } from './nucleus-element';
 import { Toolbar } from './toolbar';
+import { FancyViewport } from './fancy-viewport';
 
 window.onload = (): void => {
 
@@ -19,7 +19,7 @@ window.onload = (): void => {
     backgroundColor: 0xffffff,
   });
 
-  const viewport = new Viewport({
+  const viewport = new FancyViewport({
     screenWidth: window.innerWidth,
     screenHeight: window.innerHeight,
     worldWidth: WORLD_WIDTH,
@@ -38,12 +38,6 @@ window.onload = (): void => {
 
   const nucleus = new NucleusElement();
   viewport.addChild(nucleus);
-
-  viewport
-    .drag()
-    .pinch()
-    .wheel()
-    .decelerate();
 
   const musicians: Array<Musician> = [
     {
@@ -259,15 +253,7 @@ window.onload = (): void => {
   musicianBios.forEach((b) => {
     b.on("focused", (e: interaction.InteractionEvent) => {
       unFocusAllExcept(musicianBios, b);
-
-      new TWEEN.Tween({x: viewport.center.x, y: viewport.center.y})
-      .to({x: b.position.x, y: b.position.y}, 100)
-      .easing( TWEEN.Easing.Cubic.Out )
-      .onUpdate(({x, y}) => {
-        viewport.moveCenter(x,y);
-      })
-      .start();
-
+      viewport.transitionCenter(b.position.x, b.position.y);
     });
   });
 
