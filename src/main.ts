@@ -251,6 +251,10 @@ window.onload = (): void => {
     }
   }
 
+  const bioContainer = new Container();
+  bioContainer.sortableChildren = true;
+  viewport.addChild(bioContainer);
+
   const musicianBios = musicians.map((m) => new BioElement(m));
   musicianBios.forEach((b) => {
     b.on("focused", unFocusAllExcept.bind(null, musicianBios, b));
