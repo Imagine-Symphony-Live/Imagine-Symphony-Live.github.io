@@ -1,13 +1,13 @@
 import { Container, Text } from "pixi.js";
-import { Viewport } from "pixi-viewport";
+import { FancyViewport } from "./fancy-viewport";
 
 export class Toolbar extends Container {
-  constructor(viewport: Viewport, canvas: HTMLCanvasElement, ) {
+  constructor(viewport: FancyViewport, canvas: HTMLCanvasElement, ) {
     super();
     const snapCenterButt = new Text("[C]");
     snapCenterButt.interactive = true;
     snapCenterButt.on("pointertap", () => {
-      viewport.moveCenter(0,0);
+      viewport.transitionCenter(0,0);
     });
     snapCenterButt.scale.set(5, 5);
     snapCenterButt.anchor.set(0, 0);
