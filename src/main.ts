@@ -251,7 +251,7 @@ window.onload = (): void => {
 
   const musicianBios = musicians.map((m) => new BioElement(m));
   musicianBios.forEach((b) => {
-    b.on("focused", (e: interaction.InteractionEvent) => {
+    b.on("focused", () => {
       unFocusAllExcept(musicianBios, b);
       viewport.transitionCenter(b.position.x, b.position.y);
     });
