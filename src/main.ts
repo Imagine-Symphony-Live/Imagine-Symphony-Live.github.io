@@ -6,6 +6,7 @@ import { Viewport } from 'pixi-viewport'
 import { WORLD_WIDTH, WORLD_HEIGHT } from './constants';
 import TWEEN from '@tweenjs/tween.js';
 import { NucleusElement } from './nucleus-element';
+import { Toolbar } from './toolbar';
 
 window.onload = (): void => {
 
@@ -28,8 +29,12 @@ window.onload = (): void => {
 
   document.body.appendChild(app.view);
 
-  viewport.moveCenter(0,0);
   app.stage.addChild(viewport);
+  viewport.moveCenter(0,0);
+
+  const toolbar = new Toolbar(viewport, app.view);
+  app.stage.addChild(toolbar);
+  toolbar.position.set(0, window.innerHeight - toolbar.height);
 
   const nucleus = new NucleusElement();
   viewport.addChild(nucleus);
