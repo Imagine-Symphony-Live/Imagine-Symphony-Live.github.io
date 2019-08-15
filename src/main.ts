@@ -7,6 +7,7 @@ import TWEEN from '@tweenjs/tween.js';
 import { NucleusElement } from './nucleus-element';
 import { Toolbar } from './toolbar';
 import { FancyViewport } from './fancy-viewport';
+import { Instrument } from './types/instruments';
 
 window.onload = (): void => {
 
@@ -254,10 +255,32 @@ window.onload = (): void => {
   viewport.addChild(bioContainer);
 
   const musicianBios = musicians.map((m) => new BioElement(m));
+  const activeInstruments: Array<Instrument> = [];
   musicianBios.forEach((b) => {
     b.on("focused", () => {
       unFocusAllExcept(musicianBios, b);
       viewport.transitionCenter(b.position.x, b.position.y);
+    });
+    b.on("activated", () => {
+      // Activate other bios with same instrument
+      if(activeInstruments.indexOf(b.musician.instrument) === -1) {
+        activeInstruments.push(b.musician.instrument);
+        const toActivate: Array<{bioElement: BioElement, distanceSquared: number}> = musicianBios
+          .filter((bf) => bf.musician.instrument === b.musician.instrument && bf !== b)
+          .map((bf) => {
+            return {
+              bioElement: bf,
+              distanceSquared: Math.pow(b.position.x - bf.position.x, 2) + Math.pow(b.position.y - bf.position.y, 2),
+            }
+          });
+
+        const maxDistance = toActivate.reduce((p, {distanceSquared}) => Math.max(p, distanceSquared), 0);
+
+        for (let i = 0; i < toActivate.length; i++) {
+          const time = (toActivate[i].distanceSquared / maxDistance) * 3000;
+          setTimeout(toActivate[i].bioElement.activate.bind(toActivate[i].bioElement), time);
+        }
+      }
     });
   });
 
