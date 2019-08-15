@@ -267,9 +267,9 @@ window.onload = (): void => {
   });
 
   // Main loop
-  app.ticker.add(() => {
+  // app.ticker.add(() => {
 
-  });
+  // });
 
   function animate(time: number) {
     requestAnimationFrame(animate);
