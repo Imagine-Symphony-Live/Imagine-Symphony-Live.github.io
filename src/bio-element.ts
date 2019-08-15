@@ -1,6 +1,7 @@
 import { Container, Graphics, Text } from "pixi.js";
 import { Musician } from "./types/musician";
 import TWEEN from "@tweenjs/tween.js";
+import { INSTRUMENT_COLORS, DEFAULT_INSTRUMENT_COLOR } from "./colors";
 
 const BIO_RADIUS = 32;
 
@@ -50,8 +51,6 @@ export class BioElement extends Container {
     if(!this.isActive) {
       this.activate();
     }
-
-    this.draw();
   }
 
   unfocus() {
@@ -75,13 +74,13 @@ export class BioElement extends Container {
       .start();
 
     this.emit("unfocused");
-    this.draw();
   }
 
   activate() {
     if(this.isActive) return;
     this.isActive = true;
     this.emit("activated");
+    this.draw();
   }
 
   deactivate() {
@@ -91,7 +90,15 @@ export class BioElement extends Container {
 
   draw() {
     this.graphics.clear();
-    this.graphics.beginFill(this.isActive ? 0x00aaff00 : 0xaaaaaa);
+    if(this.isActive) {
+      if(INSTRUMENT_COLORS[this.musician.instrument]) {
+        this.graphics.beginFill(INSTRUMENT_COLORS[this.musician.instrument]);
+      } else {
+        this.graphics.beginFill(DEFAULT_INSTRUMENT_COLOR);
+      }
+    } else {
+      this.graphics.beginFill(0xaaaaaa);
+    }
     this.graphics.drawCircle(0, 0, BIO_RADIUS);
     this.graphics.endFill();
   }
