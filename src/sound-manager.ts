@@ -1,42 +1,51 @@
 import { Howl } from 'howler';
 
+type Sound = {
+  url: string,
+  howl: Howl,
+  active: boolean,
+}
 export class SoundManager {
-  private howls: Howl[];
+  private sounds: Sound[];
 
-  constructor(private tracks: string[]) {
-
+  constructor(tracks: string[]) {
+    this.sounds = tracks.map((url) => ({
+      url,
+      active: false,
+      howl: new Howl({
+        src: [url],
+        loop: true,
+      })
+    }));
   }
 
   activateTrack(track: string) {
-    const index = this.tracks.indexOf(track);
-    if(index !== -1 && this.howls[index] && this.howls[index].volume() === 0) {
-      this.howls[index].fade(0, 1, 500);
+    const sound = this.sounds.find(({url}) => url === track);
+    if(sound && !sound.active) {
+      console.log("ACTIVATING ", track);
+      sound.active = true;
+      sound.howl.fade(0, 0.7, 500);
     }
   }
 
   async loadSounds() {
 
-    this.howls = this.tracks.map((url) => new Howl({
-      src: [url],
-      loop: true,
-    }));
-
     // wait for all to load
-    await Promise.all(this.howls.map((h) => new Promise((r) => h.once('load', r))));
+    await Promise.all(this.sounds.map(({howl}) => new Promise((r) => howl.once('load', r))));
 
-    this.howls.forEach((h) => h.volume(0));
-    this.howls.forEach((h) => h.play());
+    this.sounds.forEach(({howl}) => howl.volume(0));
+    this.sounds.forEach(({howl}) => howl.play());
 
-    if(this.howls.length > 1) {
+    if(this.sounds.length > 1) {
       setTimeout(this.resync.bind(this), 0);
     }
   }
 
   private resync() {
-    if(this.howls.length > 1) {
-      const masterPos = this.howls[0].seek() as number;
-      for (let i = 1; i < this.howls.length; i++) {
-        this.howls[i].seek(masterPos);
+    if(this.sounds.length > 1) {
+      const masterPos = this.sounds[0].howl.seek() as number;
+      for (let i = 1; i < this.sounds.length; i++) {
+        this.sounds[i].howl.seek(masterPos);
       }
     }
   }

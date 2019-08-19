@@ -28,7 +28,7 @@ import { SoundManager } from './sound-manager';
   //import track15 from '../assets/music/track-15.ogg';
 
 
-window.onload = (): void => {
+window.onload = async () => {
   const sounds = new SoundManager([
     //track1,
     track2,
@@ -47,7 +47,7 @@ window.onload = (): void => {
     //track15,
   ]);
 
-  sounds.loadSounds();
+  await sounds.loadSounds();
 
   function instrumentSoundActivate(name: Instrument) {
     switch (name) {
