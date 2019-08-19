@@ -35,7 +35,7 @@ const frontBase = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: 'awesome-typescript-loader',
         exclude: /node_modules/
       },
       {
@@ -45,6 +45,17 @@ const frontBase = {
             loader: 'file-loader',
             options: {
               outputPath: 'assets/images',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(ogg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/music',
             },
           },
         ],

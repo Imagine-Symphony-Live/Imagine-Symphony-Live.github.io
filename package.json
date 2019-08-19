@@ -25,13 +25,14 @@
   "homepage": "https://imaginesymphony.live",
   "devDependencies": {
     "@types/tween.js": "^17.2.0",
+    "awesome-typescript-loader": "^5.2.1",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^3.1.0",
+    "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "source-map-support": "^0.5.13",
-    "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
     "webfontloader": "^1.6.28",
     "webpack": "^4.39.1",
@@ -39,6 +40,8 @@
   },
   "dependencies": {
     "@tweenjs/tween.js": "^17.4.0",
+    "@types/howler": "^2.1.1",
+    "howler": "^2.1.2",
     "pixi-viewport": "^4.2.0",
     "pixi.js": "^5.1.0"
   }
