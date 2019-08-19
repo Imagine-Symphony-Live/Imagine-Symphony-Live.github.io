@@ -31,8 +31,8 @@ export class NucleusElement extends Container {
 function drawCircleSin(graphics: Graphics, x: number, y: number, radius: number) {
 
   graphics.lineStyle(1,0xee8888);
+  graphics.beginFill(0x8888ee, 0);
   graphics.drawCircle(0,0,NUCLEUS_RADIUS);
-  graphics.beginFill(0x8888ee);
   //graphics.lineStyle(2,0x8888ee);
   const interval = Math.PI / 1200;
   let cx = 0;
@@ -47,5 +47,5 @@ function drawCircleSin(graphics: Graphics, x: number, y: number, radius: number)
       graphics.moveTo(cx + x, cy + y);
     }
   }
-  graphics.endFill();
+  //graphics.endFill();
 }

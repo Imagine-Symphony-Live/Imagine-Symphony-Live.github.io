@@ -17,7 +17,7 @@ window.onload = (): void => {
     autoDensity: true,
     resolution: 2, // TODO: auto
     resizeTo: window,
-    backgroundColor: 0xffffff,
+    backgroundColor: 0x000011,
   });
 
   const viewport = new FancyViewport({
@@ -44,203 +44,49 @@ window.onload = (): void => {
   const nucleus = new NucleusElement();
   viewport.addChild(nucleus);
 
-  const musicians: Array<Musician> = [
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
-    {
-      name: "Evan Sigvaldsen",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Chris Thomas",
-      date: new Date(),
-      instrument: "Cello"
-    },
-    {
-      name: "Dustin Woods",
-      date: new Date(),
-      instrument: "Timpani"
-    },
+  const listOfInstruments: Array<Instrument> = [
+    "Violin",
+    "Viola",
+    "Cello",
+    "Bass",
+    "Harp",
+    "Flute",
+    "Piccolo",
+    "Oboe",
+    "English Horn",
+    "Clarinet",
+    "Basset Horn",
+    "Bass Clarinet",
+    "Bassoon",
+    "Double Bassoon",
+    "Saxophone",
+    "French Horn",
+    "Trumpet",
+    "Cornet",
+    "Slide Trombone",
+    "Tuba",
+    "Timpani",
+    "Bass Drum",
+    "Snare Drum",
+    "Chimes",
+    "Cymbals",
+    "Gong",
+    "Triangle",
+    "Glockenspiel",
+    "Xylophone",
+    "Castanets",
+    "Tambourine",
   ];
+
+  const musicians: Array<Musician> = [];
+
+  for (let i = 0; i < 200; i++) {
+    musicians.push({
+      name: `${Math.random()}`,
+      instrument: listOfInstruments[Math.floor(Math.random()*listOfInstruments.length)],
+      date: new Date(),
+    });
+  }
 
   function unFocusAllExcept(allBios: Array<BioElement>, except: BioElement) {
     for (let i = 0; i < allBios.length; i++) {
@@ -259,7 +105,7 @@ window.onload = (): void => {
   musicianBios.forEach((b) => {
     b.on("focused", () => {
       unFocusAllExcept(musicianBios, b);
-      viewport.transitionCenter(b.position.x, b.position.y);
+      viewport.transitionCenter(b.position.x, b.position.y, 500);
     });
     b.on("activated", () => {
       // Activate other bios with same instrument
@@ -284,11 +130,17 @@ window.onload = (): void => {
     });
   });
 
-  musicianBios.forEach((e) => {
-    bioContainer.addChild(e);
-    e.position.set((0.5 - Math.random()) * WORLD_WIDTH, (0.5 - Math.random()) * WORLD_HEIGHT);
-  });
-
+  let i = 0;
+  for (let r = 1; i < musicianBios.length; r++) {
+    for (let t = 0; t < Math.PI * 2 &&  i < musicianBios.length; t+=Math.PI / 7) {
+      const e = musicianBios[i];
+      bioContainer.addChild(e);
+      const dis = r * 250 - 50 + Math.random() * 100;
+      const tRand = Math.random() * Math.PI / 14
+      e.position.set(Math.cos(t + tRand) * dis, Math.sin(t + tRand) * dis);
+      i++;
+    }
+  }
   // Main loop
   // app.ticker.add(() => {
 
