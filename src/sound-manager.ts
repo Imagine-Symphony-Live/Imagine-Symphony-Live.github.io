@@ -22,7 +22,6 @@ export class SoundManager {
   activateTrack(track: string) {
     const sound = this.sounds.find(({url}) => url === track);
     if(sound && !sound.active) {
-      console.log("ACTIVATING ", track);
       sound.active = true;
       sound.howl.fade(0, 0.7, 500);
     }
