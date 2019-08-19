@@ -12,7 +12,8 @@
  - [ ] Bio paragraph
 
 **Music**
- - [ ] Activate music tracks
+ - [X] Activate music tracks
+ - [ ] Spatial positioning
  - [ ] Waveform visuals
 
 **Intro Video**
