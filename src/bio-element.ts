@@ -15,7 +15,7 @@ export class BioElement extends Container {
   constructor(public musician: Musician) {
     super();
 
-    const bioName = new Text(musician.name, TEXT_STYLE_H2);
+    const bioName = new Text(musician.instrument.toUpperCase(), TEXT_STYLE_H2);
     bioName.anchor.set(0, 0.5);
     this.focusContent.addChild(bioName);
     bioName.position.set(BIO_RADIUS + 5, 0);
