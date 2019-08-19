@@ -1,10 +1,11 @@
 import { Container, Text } from "pixi.js";
 import { FancyViewport } from "./fancy-viewport";
+import { TEXT_STYLE_H2 } from "./styles";
 
 export class Toolbar extends Container {
   constructor(viewport: FancyViewport, canvas: HTMLCanvasElement, ) {
     super();
-    const snapCenterButt = new Text("[C]");
+    const snapCenterButt = new Text("[C]", TEXT_STYLE_H2);
     snapCenterButt.interactive = true;
     snapCenterButt.on("pointertap", () => {
       viewport.transitionCenter(0,0);
@@ -14,13 +15,13 @@ export class Toolbar extends Container {
     this.addChild(snapCenterButt);
     snapCenterButt.position.set(0, 0);
 
-    const fullScreenButt = new Text("[F]");
+    const fullScreenButt = new Text("[F]", TEXT_STYLE_H2);
     fullScreenButt.interactive = true;
     fullScreenButt.on("pointertap", () => {
       if(document.fullscreen) {
         document.exitFullscreen();
       } else {
-      canvas.requestFullscreen();
+        canvas.requestFullscreen();
       }
     });
     fullScreenButt.scale.set(5, 5);

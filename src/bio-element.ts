@@ -2,6 +2,7 @@ import { Container, Graphics, Text } from "pixi.js";
 import { Musician } from "./types/musician";
 import TWEEN from "@tweenjs/tween.js";
 import { INSTRUMENT_COLORS, DEFAULT_INSTRUMENT_COLOR } from "./colors";
+import { TEXT_STYLE_H2 } from "./styles";
 
 const BIO_RADIUS = 32;
 
@@ -14,7 +15,7 @@ export class BioElement extends Container {
   constructor(public musician: Musician) {
     super();
 
-    const bioName = new Text(musician.name);
+    const bioName = new Text(musician.name, TEXT_STYLE_H2);
     bioName.anchor.set(0, 0.5);
     this.focusContent.addChild(bioName);
     bioName.position.set(BIO_RADIUS + 5, 0);
@@ -97,7 +98,7 @@ export class BioElement extends Container {
         this.graphics.beginFill(DEFAULT_INSTRUMENT_COLOR);
       }
     } else {
-      this.graphics.beginFill(0xaaaaaa);
+      this.graphics.beginFill(0xdddddd, 0.3);
     }
     this.graphics.drawCircle(0, 0, BIO_RADIUS);
     this.graphics.endFill();
