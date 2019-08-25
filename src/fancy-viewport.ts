@@ -14,7 +14,7 @@ export class FancyViewport extends Container {
       .drag()
       .pinch()
       .wheel()
-      .decelerate();
+      //.decelerate();
 
     super.addChild(this.viewPort);
   }
