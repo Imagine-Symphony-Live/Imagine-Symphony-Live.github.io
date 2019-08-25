@@ -14,6 +14,7 @@
 **Music**
  - [X] Activate music tracks
  - [ ] Spatial positioning
+ - [ ] Cue events with visuals
  - [ ] Waveform visuals
 
 **Intro Video**
