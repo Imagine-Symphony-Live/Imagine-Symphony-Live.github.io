@@ -15,13 +15,6 @@ export class BioElement extends Container {
   constructor(public musician: Musician) {
     super();
 
-    const bioName = new Text(musician.instrument.toUpperCase(), TEXT_STYLE_H2);
-    bioName.anchor.set(0, 0.5);
-    this.focusContent.addChild(bioName);
-    bioName.position.set(BIO_RADIUS + 5, 0);
-    this.focusContent.visible = false;
-    this.addChild(this.focusContent);
-
     this.graphics.interactive = true;
     this.graphics.cursor = "pointer";
     this.draw();
@@ -34,6 +27,7 @@ export class BioElement extends Container {
     this.isFocused = true;
     this.zIndex = 1;
 
+    this.prepareFocusContet();
     new TWEEN.Tween({alpha: 0})
       .to({alpha: 1}, 500)
       .easing( TWEEN.Easing.Cubic.Out )
@@ -71,6 +65,7 @@ export class BioElement extends Container {
       })
       .onComplete(() => {
         this.focusContent.visible = false;
+        this.clearFocusContent();
       })
       .start();
 
@@ -87,6 +82,24 @@ export class BioElement extends Container {
   deactivate() {
     if(!this.isActive) return;
     this.isActive = false;
+  }
+
+  clearFocusContent() {
+    if(this.focusContent) {
+      this.removeChild(this.focusContent);
+      this.focusContent.destroy();
+      this.focusContent = new Container();
+    }
+  }
+
+  prepareFocusContet() {
+    if(this.focusContent.children.length > 0) return;
+    const bioName = new Text(this.musician.instrument.toUpperCase(), TEXT_STYLE_H2);
+    bioName.anchor.set(0, 0.5);
+    this.focusContent.addChild(bioName);
+    bioName.position.set(BIO_RADIUS + 5, 0);
+    this.focusContent.visible = false;
+    this.addChild(this.focusContent);
   }
 
   draw() {
