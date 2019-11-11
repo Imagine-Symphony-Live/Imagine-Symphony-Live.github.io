@@ -1,10 +1,11 @@
-import { Container, Graphics, Text } from "pixi.js";
+import { Container, Graphics, Text, Rectangle } from "pixi.js";
 import { Musician } from "./types/musician";
 import TWEEN from "@tweenjs/tween.js";
 import { INSTRUMENT_COLORS, DEFAULT_INSTRUMENT_COLOR } from "./colors";
-import { TEXT_STYLE_H2 } from "./styles";
+import { TEXT_STYLE_H2, TEXT_STYLE_BIO_P } from "./styles";
 
 const BIO_RADIUS = 32;
+const BIO_CONTENT_PADDING = 10;
 
 export class BioElement extends Container {
   private graphics: Graphics = new Graphics();
@@ -97,10 +98,32 @@ export class BioElement extends Container {
 
   prepareFocusContet() {
     if(this.focusContent.children.length > 0) return;
-    const bioName = new Text(this.musician.instrument.toUpperCase(), TEXT_STYLE_H2);
-    bioName.anchor.set(0, 0.5);
+
+    this.focusContent.position.set(BIO_RADIUS, -BIO_RADIUS);
+
+    const graphicsBkg = new Graphics();
+    this.focusContent.addChild(graphicsBkg);
+
+    // Musicians Name with instrument
+    const bioName = new Text(`${this.musician.name} (${this.musician.instrument})`, TEXT_STYLE_H2);
+    bioName.anchor.set(0, 0);
     this.focusContent.addChild(bioName);
-    bioName.position.set(BIO_RADIUS + 5, 0);
+    bioName.position.set(BIO_CONTENT_PADDING, BIO_CONTENT_PADDING);
+
+    // Musicians Bio Content
+    if(this.musician.biography) {
+      const bioContent = new Text(this.musician.biography, TEXT_STYLE_BIO_P);
+      bioContent.anchor.set(0, 0);
+      this.focusContent.addChild(bioContent);
+      bioContent.position.set(BIO_CONTENT_PADDING, bioName.height + BIO_CONTENT_PADDING * 2);
+    }
+
+    // Rectangle background
+    graphicsBkg.beginFill(INSTRUMENT_COLORS[this.musician.instrument]);
+    graphicsBkg.lineStyle(0);
+    // Main bkg for text
+    graphicsBkg.drawRect(0, 0, this.focusContent.width + BIO_CONTENT_PADDING, this.focusContent.height + BIO_CONTENT_PADDING);
+    graphicsBkg.endFill();
   }
 
   draw() {
