@@ -15,6 +15,7 @@ export class BioElement extends Container {
   constructor(public musician: Musician) {
     super();
 
+    this.clearFocusContent();
     this.graphics.interactive = true;
     this.graphics.cursor = "pointer";
     this.draw();
@@ -89,7 +90,9 @@ export class BioElement extends Container {
       this.removeChild(this.focusContent);
       this.focusContent.destroy();
       this.focusContent = new Container();
+      this.addChild(this.focusContent);
     }
+    this.focusContent.visible = false;
   }
 
   prepareFocusContet() {
@@ -98,8 +101,6 @@ export class BioElement extends Container {
     bioName.anchor.set(0, 0.5);
     this.focusContent.addChild(bioName);
     bioName.position.set(BIO_RADIUS + 5, 0);
-    this.focusContent.visible = false;
-    this.addChild(this.focusContent);
   }
 
   draw() {
