@@ -5,5 +5,5 @@ export interface Musician {
   date: Date,
   instrument: Instrument,
   biography?: string,
-  video?: HTMLVideoElement,
+  video?: string,
 }

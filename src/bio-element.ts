@@ -3,6 +3,7 @@ import { Musician } from "./types/musician";
 import TWEEN from "@tweenjs/tween.js";
 import { INSTRUMENT_COLORS, DEFAULT_INSTRUMENT_COLOR } from "./colors";
 import { TEXT_STYLE_H2, TEXT_STYLE_BIO_P } from "./styles";
+import { VideoPlayer } from "./video-player";
 
 const BIO_RADIUS = 32;
 const BIO_CONTENT_PADDING = 10;
@@ -118,12 +119,21 @@ export class BioElement extends Container {
       bioContent.position.set(BIO_CONTENT_PADDING, bioName.height + BIO_CONTENT_PADDING * 2);
     }
 
+    // Video playet
+    if(this.musician.video) {
+      const player = new VideoPlayer(this.musician.video);
+      this.focusContent.addChild(player);
+      player.position.set(BIO_CONTENT_PADDING, this.focusContent.height + BIO_CONTENT_PADDING);
+      player.preload();
+    }
+
     // Rectangle background
     graphicsBkg.beginFill(INSTRUMENT_COLORS[this.musician.instrument]);
     graphicsBkg.lineStyle(0);
     // Main bkg for text
     graphicsBkg.drawRect(0, 0, this.focusContent.width + BIO_CONTENT_PADDING, this.focusContent.height + BIO_CONTENT_PADDING);
     graphicsBkg.endFill();
+
   }
 
   draw() {

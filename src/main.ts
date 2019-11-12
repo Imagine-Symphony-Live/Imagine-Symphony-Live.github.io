@@ -11,22 +11,23 @@ import { Instrument } from './types/instruments';
 import { SoundManager } from './sound-manager';
 
 
-  //import track1 from '../assets/music/track-1.ogg';
-  import track2 from '../assets/music/track-2.ogg';
-  import track3 from '../assets/music/track-3.ogg';
-  import track4 from '../assets/music/track-4.ogg';
-  //import track5 from '../assets/music/track-5.ogg';
-  import track6 from '../assets/music/track-6.ogg';
-  import track7 from '../assets/music/track-7.ogg';
-  import track8 from '../assets/music/track-8.ogg';
-  //import track9 from '../assets/music/track-9.ogg';
-  //import track10 from '../assets/music/track-10.ogg';
-  import track11 from '../assets/music/track-11.ogg';
-  import track12 from '../assets/music/track-12.ogg';
-  import track13 from '../assets/music/track-13.ogg';
-  import track14 from '../assets/music/track-14.ogg';
-  //import track15 from '../assets/music/track-15.ogg';
+//import track1 from '../assets/music/track-1.ogg';
+import track2 from '../assets/music/track-2.ogg';
+import track3 from '../assets/music/track-3.ogg';
+import track4 from '../assets/music/track-4.ogg';
+//import track5 from '../assets/music/track-5.ogg';
+import track6 from '../assets/music/track-6.ogg';
+import track7 from '../assets/music/track-7.ogg';
+import track8 from '../assets/music/track-8.ogg';
+//import track9 from '../assets/music/track-9.ogg';
+//import track10 from '../assets/music/track-10.ogg';
+import track11 from '../assets/music/track-11.ogg';
+import track12 from '../assets/music/track-12.ogg';
+import track13 from '../assets/music/track-13.ogg';
+import track14 from '../assets/music/track-14.ogg';
+//import track15 from '../assets/music/track-15.ogg';
 
+import interiewdemo from '../assets/video/interviews/demo-interview.mp4';
 
 window.onload = async () => {
   const sounds = new SoundManager([
@@ -166,9 +167,11 @@ window.onload = async () => {
 
   for (let i = 0; i < 200; i++) {
     musicians.push({
-      name: `${Math.random()}`,
+      name: `Chris Thomas`,
       instrument: listOfInstruments[Math.floor(Math.random()*listOfInstruments.length)],
       date: new Date(),
+      video: interiewdemo,
+      biography: Math.random() > 0.5 ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.": undefined
     });
   }
 

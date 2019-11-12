@@ -61,6 +61,17 @@ const frontBase = {
         ],
       },
       {
+        test: /\.(mp4)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/video',
+            },
+          },
+        ],
+      },
+      {
         test: /\.css$/,
         use: [
           {
