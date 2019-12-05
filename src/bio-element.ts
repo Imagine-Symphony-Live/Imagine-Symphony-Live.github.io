@@ -2,13 +2,17 @@ import { Container, Graphics, Text, Point } from "pixi.js";
 import { Musician } from "./types/musician";
 import TWEEN from "@tweenjs/tween.js";
 import { INSTRUMENT_COLORS, DEFAULT_INSTRUMENT_COLOR } from "./colors";
-import { TEXT_STYLE_H2, TEXT_STYLE_BIO_P } from "./styles";
+import { TEXT_STYLE_H2, TEXT_STYLE_BIO_P, TET_STYLE_BIO_SUBTITLE } from "./styles";
 import { VideoPlayer } from "./video-player";
 
 const OUTER_RADIUS = 32;
 const INNER_RADIUS = 25;
 const LINE_THICK = 3;
-const BIO_CONTENT_PADDING = 10;
+const BOX_LINE_THICK = 7;
+const BIO_CONTENT_PADDING = 30;
+const BIO_CONTENT_SPACING = 15;
+const BIO_WIDTH = 500 + BIO_CONTENT_PADDING * 2;
+const BIO_BOX_X = 96;
 
 export class BioElement extends Container {
   private graphics: Graphics = new Graphics();
@@ -107,26 +111,33 @@ export class BioElement extends Container {
   prepareFocusContet() {
     if(this.focusContent.children.length > 0) return;
 
-    this.focusContent.position.set(OUTER_RADIUS, -OUTER_RADIUS);
+    const color = INSTRUMENT_COLORS[this.musician.instrument] || DEFAULT_INSTRUMENT_COLOR;
+    const calculatedOuterRad = this.musician.bioText || this.musician.video ? OUTER_RADIUS : INNER_RADIUS;
 
     const graphicsBkg = new Graphics();
     this.focusContent.addChild(graphicsBkg);
 
     // Musicians Name with instrument
-    const bioName = new Text(`${this.musician.name} (${this.musician.instrument})`, TEXT_STYLE_H2);
-    bioName.anchor.set(0, 0);
+    const bioName = new Text(`${this.musician.name}`, TEXT_STYLE_H2);
+    bioName.anchor.set(0.5, 0);
     this.focusContent.addChild(bioName);
-    bioName.position.set(BIO_CONTENT_PADDING, BIO_CONTENT_PADDING);
+    bioName.position.set(BIO_WIDTH / 2 + BIO_BOX_X, BIO_CONTENT_PADDING);
+
+    // Subtitle
+    const subTitle = new Text(`Plays ${this.musician.instrument}`, TET_STYLE_BIO_SUBTITLE);
+    subTitle.anchor.set(0.5, 0);
+    this.focusContent.addChild(subTitle);
+    subTitle.position.set(BIO_WIDTH / 2 + BIO_BOX_X, bioName.position.y + bioName.height + BIO_CONTENT_SPACING);
 
     // Musicians Bio Content
     if(this.musician.bioText) {
       const bioContent = new Text(this.musician.bioText, TEXT_STYLE_BIO_P);
-      bioContent.anchor.set(0, 0);
+      bioContent.anchor.set(0.5, 0);
       this.focusContent.addChild(bioContent);
-      bioContent.position.set(BIO_CONTENT_PADDING, bioName.height + BIO_CONTENT_PADDING * 2);
+      bioContent.position.set(BIO_WIDTH / 2 + BIO_BOX_X, subTitle.position.y + subTitle.height + BIO_CONTENT_SPACING);
     }
 
-    // Video playet
+    // Video player
     if(this.musician.video) {
       const player = new VideoPlayer(this.musician.video);
       this.focusContent.addChild(player);
@@ -134,13 +145,21 @@ export class BioElement extends Container {
       player.preload();
     }
 
+    let contentHeight = this.focusContent.height;
     // Rectangle background
-    graphicsBkg.beginFill(INSTRUMENT_COLORS[this.musician.instrument]);
-    graphicsBkg.lineStyle(0);
+    graphicsBkg.beginFill(0, 0.5);
+    graphicsBkg.lineStyle(BOX_LINE_THICK, color, 1, 0);
     // Main bkg for text
-    graphicsBkg.drawRect(0, 0, this.focusContent.width + BIO_CONTENT_PADDING, this.focusContent.height + BIO_CONTENT_PADDING);
+    graphicsBkg.drawRect(BIO_BOX_X, 0, BIO_WIDTH, contentHeight + BIO_CONTENT_PADDING);
     graphicsBkg.endFill();
+    // Draw connecting line
 
+    contentHeight = this.focusContent.height;
+    graphicsBkg.lineStyle(LINE_THICK, color, 1, 0.5);
+    graphicsBkg.moveTo(calculatedOuterRad, contentHeight / 2);
+    graphicsBkg.lineTo(BIO_BOX_X, contentHeight / 2);
+
+    this.focusContent.position.set(0, -this.focusContent.height / 2);
   }
 
   draw() {
@@ -150,23 +169,29 @@ export class BioElement extends Container {
     const alpha = this.isVisited && !this.isFocused ? 0.1 : 1;
 
     // This invisible circle gives the element a click area
-    if(!this.isVisited) {
-      this.graphics.beginFill(0, 0.01);
-    } else {
+    if(this.isFocused) {
+      this.graphics.beginFill(0, 0.5);
+    } else if(this.isVisited) {
       this.graphics.beginFill(color, 0.4);
+    } else {
+      this.graphics.beginFill(0, 0.01);
     }
+
     if(this.musician.bioText || this.musician.video) {
       this.graphics.drawCircle(0, 0, OUTER_RADIUS);
     } else {
       this.graphics.drawCircle(0, 0, INNER_RADIUS);
     }
+
     this.graphics.endFill();
 
 
     this.graphics.lineStyle(LINE_THICK, color, alpha, 0);
 
-    if(this.musician.bioText || this.musician.video) {
-      this.graphics.drawCircle(0, 0, OUTER_RADIUS);
+    if(!this.isFocused) {
+      if(this.musician.bioText || this.musician.video) {
+        this.graphics.drawCircle(0, 0, OUTER_RADIUS);
+      }
     }
 
     if(this.musician.video) {
@@ -182,7 +207,8 @@ export class BioElement extends Container {
       this.graphics.endFill();
     }
 
-    this.graphics.drawCircle(0, 0, INNER_RADIUS);
-    this.graphics.endFill();
+    if(!this.isFocused) {
+      this.graphics.drawCircle(0, 0, INNER_RADIUS);
+    }
   }
 }

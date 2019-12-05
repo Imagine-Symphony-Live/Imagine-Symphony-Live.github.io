@@ -105,7 +105,7 @@ window.onload = async () => {
     autoDensity: true,
     resolution: 2, // TODO: auto
     resizeTo: window,
-    backgroundColor: 0x000011,
+    backgroundColor: 0xC4C4C4,
   });
 
   const viewport = new FancyViewport({

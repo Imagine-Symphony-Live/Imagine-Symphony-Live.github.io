@@ -36,6 +36,7 @@ export async function loadFonts() {
 
 export const TEXT_STYLE_H2 = new TextStyle({
   fill: "#ffffff",
+  fontSize: 24,
   fontFamily: "Roboto",
 })
 
@@ -43,5 +44,12 @@ export const TEXT_STYLE_BIO_P = new TextStyle({
   fill: "#ffffff",
   fontFamily: "Roboto",
   wordWrap: true,
-  wordWrapWidth: 800,
+  wordWrapWidth: 400,
+  fontSize: 12,
 })
+
+export const TET_STYLE_BIO_SUBTITLE = new TextStyle({
+  fill: "#EF7700",
+  fontFamily: "Roboto",
+  fontSize: 12,
+});
