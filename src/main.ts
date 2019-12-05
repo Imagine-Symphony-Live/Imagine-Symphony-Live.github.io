@@ -1,7 +1,6 @@
 import './css/styles.css';
 import { Application, Container } from 'pixi.js';
 import { BioElement } from './bio-element';
-import { Musician } from './types/musician';
 import { WORLD_WIDTH, WORLD_HEIGHT } from './constants';
 import TWEEN from '@tweenjs/tween.js';
 import { NucleusElement } from './nucleus-element';
