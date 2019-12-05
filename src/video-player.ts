@@ -1,25 +1,33 @@
-import { Container, Loader, Texture, Sprite, Graphics, Text } from "pixi.js";
+import { Container, Loader, Texture, Sprite, Graphics, Text, Point } from "pixi.js";
 import { TEXT_STYLE_BIO_P } from "./styles";
-
-const PLAYER_WIDTH = 256;
 
 export class VideoPlayer extends Container {
   isLoaded: boolean = false;
-  private videoSprite: Sprite;
-  private videoData: HTMLVideoElement;
-  private overlayGrpahics: Graphics;
-  private statusText: Text;
+  protected videoSprite: Sprite;
+  public nativeWidth: number;
+  public nativeHeight: number;
+  public nativeRatio: number;
+  protected videoData: HTMLVideoElement;
+  protected overlayGraphics: Graphics;
+  protected statusText: Text;
 
-  constructor(public videoUrl: string) {
+  constructor(public videoUrl: string, public playerWidth: number = 256) {
     super();
 
-    this.overlayGrpahics = new Graphics();
-    this.overlayGrpahics.beginFill(0xeeeeee);
-    this.overlayGrpahics.drawCircle(0,0,32);
-    this.overlayGrpahics.endFill();
-    this.overlayGrpahics.position.set(PLAYER_WIDTH / 2, 0);
+    this.overlayGraphics = new Graphics();
+    this.overlayGraphics.beginFill(0xeeeeee);
+    const r = 32;
+    const c = Math.cos(Math.PI * 2/3);
+    const s = Math.sin(Math.PI * 2/3);
+    this.overlayGraphics.drawPolygon([
+      new Point(c * r, -s * r),
+      new Point(r, 0),
+      new Point(c * r, s * r),
+    ])
+    this.overlayGraphics.endFill();
+    this.overlayGraphics.position.set(this.playerWidth / 2, 0);
 
-    this.addChild(this.overlayGrpahics);
+    this.addChild(this.overlayGraphics);
 
     this.statusText = new Text('Unloaded', TEXT_STYLE_BIO_P);
     this.addChild(this.statusText);
@@ -35,11 +43,11 @@ export class VideoPlayer extends Container {
       if(this.videoData.paused) {
         this.videoData.play();
         this.statusText.text = "Playing";
-        this.overlayGrpahics.alpha = 0;
+        this.overlayGraphics.alpha = 0;
       } else {
         this.videoData.pause();
         this.statusText.text = "Paused";
-        this.overlayGrpahics.alpha = 1;
+        this.overlayGraphics.alpha = 1;
       }
     }
   }
@@ -47,7 +55,7 @@ export class VideoPlayer extends Container {
   async preload() {
     this.statusText.text = "Loading";
     if(!Loader.shared.resources[this.videoUrl]) {
-      // If not alreayd loaded
+      // If not already loaded
       await new Promise((resolve) => {
         Loader.shared.add(this.videoUrl).load(resolve)
       });
@@ -62,21 +70,24 @@ export class VideoPlayer extends Container {
     }, 0);
 
     this.videoSprite = Sprite.from(videoBaseTexture);
-    const scale = 256 / this.videoSprite.width;
+    this.nativeWidth = this.videoSprite.width;
+    this.nativeHeight = this.videoSprite.height;
+    this.nativeRatio = this.nativeWidth / this.nativeHeight;
+
+    const scale = this.playerWidth / this.nativeWidth;
     this.videoSprite.scale.set(scale);
     this.addChild(this.videoSprite);
     this.videoSprite.position.set(0,0);
     this.isLoaded = true;
 
     // Bring overlay back to top
-    this.removeChild(this.overlayGrpahics);
-    this.addChild(this.overlayGrpahics);
+    this.removeChild(this.overlayGraphics);
+    this.addChild(this.overlayGraphics);
     this.removeChild(this.statusText);
     this.addChild(this.statusText);
 
-
     this.statusText.text = "Paused";
-    this.overlayGrpahics.position.set(PLAYER_WIDTH / 2, this.videoSprite.height / 2);
+    this.overlayGraphics.position.set(this.playerWidth / 2, this.videoSprite.height / 2);
   }
 
   destroy() {
