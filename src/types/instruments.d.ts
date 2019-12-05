@@ -24,10 +24,12 @@ export type BrassInstrument =
   "Trumpet" |
   "Cornet" |
   "Slide Trombone" |
+  "Bass Trombone" |
   "Tuba";
 
 
 export type PercussionInstrument =
+  "Percussion" |
   "Timpani" |
   "Bass Drum" |
   "Snare Drum" |
@@ -38,6 +40,7 @@ export type PercussionInstrument =
   "Glockenspiel" |
   "Xylophone" |
   "Castanets" |
+  "Piano" |
   "Tambourine";
 
 

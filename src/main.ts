@@ -27,7 +27,7 @@ import track13 from '../assets/music/track-13.ogg';
 import track14 from '../assets/music/track-14.ogg';
 //import track15 from '../assets/music/track-15.ogg';
 
-import interiewdemo from '../assets/video/interviews/demo-interview.mp4';
+import {BIO_DATA} from './bio-data';
 
 window.onload = async () => {
   const sounds = new SoundManager([
@@ -129,52 +129,6 @@ window.onload = async () => {
   const nucleus = new NucleusElement();
   viewport.addChild(nucleus);
 
-  const listOfInstruments: Array<Instrument> = [
-    "Violin",
-    "Viola",
-    "Cello",
-    "Bass",
-    "Harp",
-    // "Flute",
-    // "Piccolo",
-    // "Oboe",
-    // "English Horn",
-    // "Clarinet",
-    // "Basset Horn",
-    // "Bass Clarinet",
-    // "Bassoon",
-    // "Double Bassoon",
-    // "Saxophone",
-    "French Horn",
-    "Trumpet",
-    "Cornet",
-    // "Slide Trombone",
-    // "Tuba",
-    // "Timpani",
-    // "Bass Drum",
-    // "Snare Drum",
-    // "Chimes",
-    // "Cymbals",
-    // "Gong",
-    // "Triangle",
-    "Glockenspiel",
-    "Xylophone",
-    // "Castanets",
-    // "Tambourine",
-  ];
-
-  const musicians: Array<Musician> = [];
-
-  for (let i = 0; i < 200; i++) {
-    musicians.push({
-      name: `Chris Thomas`,
-      instrument: listOfInstruments[Math.floor(Math.random()*listOfInstruments.length)],
-      date: new Date(),
-      video: interiewdemo,
-      biography: Math.random() > 0.5 ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.": undefined
-    });
-  }
-
   function unFocusAllExcept(allBios: Array<BioElement>, except: BioElement) {
     for (let i = 0; i < allBios.length; i++) {
       if(allBios[i] !== except) {
@@ -187,7 +141,7 @@ window.onload = async () => {
   bioContainer.sortableChildren = true;
   viewport.addChild(bioContainer);
 
-  const musicianBios = musicians.map((m) => new BioElement(m));
+  const musicianBios = BIO_DATA.map((m) => new BioElement(m));
   const activeInstruments: Array<Instrument> = [];
   musicianBios.forEach((b) => {
     b.on("focused", () => {

@@ -112,8 +112,8 @@ export class BioElement extends Container {
     bioName.position.set(BIO_CONTENT_PADDING, BIO_CONTENT_PADDING);
 
     // Musicians Bio Content
-    if(this.musician.biography) {
-      const bioContent = new Text(this.musician.biography, TEXT_STYLE_BIO_P);
+    if(this.musician.bioText) {
+      const bioContent = new Text(this.musician.bioText, TEXT_STYLE_BIO_P);
       bioContent.anchor.set(0, 0);
       this.focusContent.addChild(bioContent);
       bioContent.position.set(BIO_CONTENT_PADDING, bioName.height + BIO_CONTENT_PADDING * 2);
