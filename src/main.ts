@@ -9,6 +9,7 @@ import { Toolbar } from './toolbar';
 import { FancyViewport } from './fancy-viewport';
 import { Instrument } from './types/instruments';
 import { SoundManager } from './sound-manager';
+import { loadFonts } from './styles';
 
 
 //import track1 from '../assets/music/track-1.ogg';
@@ -48,7 +49,10 @@ window.onload = async () => {
     //track15,
   ]);
 
-  await sounds.loadSounds();
+  await Promise.all([
+    loadFonts(),
+    sounds.loadSounds(),
+  ]);
 
   function instrumentSoundActivate(name: Instrument) {
     switch (name) {
