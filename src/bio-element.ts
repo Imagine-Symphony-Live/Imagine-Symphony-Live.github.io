@@ -1,11 +1,13 @@
-import { Container, Graphics, Text, Rectangle } from "pixi.js";
+import { Container, Graphics, Text, Point } from "pixi.js";
 import { Musician } from "./types/musician";
 import TWEEN from "@tweenjs/tween.js";
 import { INSTRUMENT_COLORS, DEFAULT_INSTRUMENT_COLOR } from "./colors";
 import { TEXT_STYLE_H2, TEXT_STYLE_BIO_P } from "./styles";
 import { VideoPlayer } from "./video-player";
 
-const BIO_RADIUS = 32;
+const OUTER_RADIUS = 32;
+const INNER_RADIUS = 25;
+const LINE_THICK = 3;
 const BIO_CONTENT_PADDING = 10;
 
 export class BioElement extends Container {
@@ -13,6 +15,7 @@ export class BioElement extends Container {
   private focusContent: Container = new Container();
   public isActive = false;
   public isFocused = false;
+  public isVisited = false;
 
   constructor(public musician: Musician) {
     super();
@@ -28,6 +31,7 @@ export class BioElement extends Container {
   focus() {
     if(this.isFocused) return;
     this.isFocused = true;
+    this.isVisited = true;
     this.zIndex = 1;
 
     this.prepareFocusContet();
@@ -48,6 +52,8 @@ export class BioElement extends Container {
     // Also activate if not already
     if(!this.isActive) {
       this.activate();
+    } else {
+      this.draw();
     }
   }
 
@@ -69,6 +75,7 @@ export class BioElement extends Container {
       .onComplete(() => {
         this.focusContent.visible = false;
         this.clearFocusContent();
+        this.draw();
       })
       .start();
 
@@ -100,7 +107,7 @@ export class BioElement extends Container {
   prepareFocusContet() {
     if(this.focusContent.children.length > 0) return;
 
-    this.focusContent.position.set(BIO_RADIUS, -BIO_RADIUS);
+    this.focusContent.position.set(OUTER_RADIUS, -OUTER_RADIUS);
 
     const graphicsBkg = new Graphics();
     this.focusContent.addChild(graphicsBkg);
@@ -138,16 +145,44 @@ export class BioElement extends Container {
 
   draw() {
     this.graphics.clear();
-    if(this.isActive) {
-      if(INSTRUMENT_COLORS[this.musician.instrument]) {
-        this.graphics.beginFill(INSTRUMENT_COLORS[this.musician.instrument]);
-      } else {
-        this.graphics.beginFill(DEFAULT_INSTRUMENT_COLOR);
-      }
+
+    const color = INSTRUMENT_COLORS[this.musician.instrument] || DEFAULT_INSTRUMENT_COLOR;
+    const alpha = this.isVisited && !this.isFocused ? 0.1 : 1;
+
+    // This invisible circle gives the element a click area
+    if(!this.isVisited) {
+      this.graphics.beginFill(0, 0.01);
     } else {
-      this.graphics.beginFill(0xdddddd, 0.3);
+      this.graphics.beginFill(color, 0.4);
     }
-    this.graphics.drawCircle(0, 0, BIO_RADIUS);
+    if(this.musician.bioText || this.musician.video) {
+      this.graphics.drawCircle(0, 0, OUTER_RADIUS);
+    } else {
+      this.graphics.drawCircle(0, 0, INNER_RADIUS);
+    }
+    this.graphics.endFill();
+
+
+    this.graphics.lineStyle(LINE_THICK, color, alpha, 0);
+
+    if(this.musician.bioText || this.musician.video) {
+      this.graphics.drawCircle(0, 0, OUTER_RADIUS);
+    }
+
+    if(this.musician.video) {
+      this.graphics.beginFill(color, alpha);
+      const r = INNER_RADIUS-LINE_THICK*3;
+      const c = Math.cos(Math.PI * 2/3);
+      const s = Math.sin(Math.PI * 2/3);
+      this.graphics.drawPolygon([
+        new Point(c * r, -s * r),
+        new Point(r, 0),
+        new Point(c * r, s * r),
+      ])
+      this.graphics.endFill();
+    }
+
+    this.graphics.drawCircle(0, 0, INNER_RADIUS);
     this.graphics.endFill();
   }
 }

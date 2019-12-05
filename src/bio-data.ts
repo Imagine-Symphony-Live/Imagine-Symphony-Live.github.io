@@ -7,6 +7,7 @@ const BIO_DATA: Array<Musician> = [
     name: "Adrienne Brown",
     instrument: "Viola",
     whichSymphony: "COS",
+    bioText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     name: "Ali Bylund",
@@ -22,6 +23,7 @@ const BIO_DATA: Array<Musician> = [
     name: "Amy Anderson",
     instrument: "French Horn",
     whichSymphony: "COS",
+    bioText: "Et netus et malesuada fames.",
   },
   {
     name: "Amy Wheeler",
@@ -32,6 +34,7 @@ const BIO_DATA: Array<Musician> = [
     name: "Barry Crenshaw",
     instrument: "Tuba",
     whichSymphony: "COS",
+    bioText: "Consectetur adipiscing elit duis tristique sollicitudin nibh sit amet.",
   },
   {
     name: "Ben Kroeker",
@@ -222,6 +225,7 @@ const BIO_DATA: Array<Musician> = [
     name: "Liliana Newman",
     instrument: "Violin",
     whichSymphony: "COS",
+    bioText: "Morbi quis commodo odio aenean sed.",
   },
   {
     name: "Lynn Lakin",
@@ -236,12 +240,14 @@ const BIO_DATA: Array<Musician> = [
   {
     name: "Mateo Garza",
     instrument: "Violin",
+    bioText: "Cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl.",
     whichSymphony: "COS",
   },
   {
     name: "Melissa Frantz",
     instrument: "Violin",
     whichSymphony: "COS",
+    bioText: "Nunc non blandit massa enim nec dui nunc mattis enim.",
   },
   {
     name: "Reid Kajikawa",
@@ -277,11 +283,13 @@ const BIO_DATA: Array<Musician> = [
     name: "Sarah Ruzicka",
     instrument: "Violin",
     whichSymphony: "COS",
+    bioText: "In fermentum et sollicitudin ac orci phasellus egestas tellus rutrum.",
   },
   {
     name: "Sean Van Hatten",
     instrument: "Bassoon",
     whichSymphony: "COS",
+    bioText: "Dui ut ornare lectus sit amet est.",
   },
   {
     name: "Skylar Grayson",
@@ -312,11 +320,13 @@ const BIO_DATA: Array<Musician> = [
     name: "Travis Allen",
     instrument: "Cello",
     whichSymphony: "COS",
+    bioText: "Mi tempus imperdiet nulla malesuada pellentesque.",
   },
   {
     name: "Wendy Bloom",
     instrument: "Bassoon",
     whichSymphony: "COS",
+    bioText: "At urna condimentum mattis pellentesque id nibh tortor id aliquet.",
   },
   {
     name: "Amy Mitchell",
@@ -479,6 +489,7 @@ const BIO_DATA: Array<Musician> = [
     instrument: "Oboe",
     whichSymphony: "COS",
     video: interiewdemo,
+    bioText: "Vel turpis nunc eget lorem dolor sed.",
   },
   {
     name: "Zeta Gesme",
