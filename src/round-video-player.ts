@@ -1,19 +1,23 @@
 import { VideoPlayer } from "./video-player";
 import { Graphics } from "pixi.js";
-const PLAYER_RADIUS = 64;
 
 export class RoundVideoPlayer extends VideoPlayer {
-  maskGraphic: Graphics;
+  protected maskGraphic: Graphics;
 
-  constructor(public videoUrl: string) {
-    super(videoUrl, PLAYER_RADIUS * 2);
+  constructor(public videoUrl: string, public playerRadius: number = 64) {
+    super(videoUrl, playerRadius * 2);
 
+    const background = new Graphics();
+    background.beginFill(0x000000);
+    background.drawRect(0,0,this.playerRadius*2, this.playerRadius*2);
+    background.endFill();
+    this.addChild(background);
     this.maskGraphic = new Graphics();
     this.addChild(this.maskGraphic);
     this.mask = this.maskGraphic;
     this.maskGraphic.position.set(0,0);
     this.maskGraphic.beginFill(0xffffff, 1);
-    this.maskGraphic.drawCircle(PLAYER_RADIUS,PLAYER_RADIUS,PLAYER_RADIUS);
+    this.maskGraphic.drawCircle(this.playerRadius,this.playerRadius,this.playerRadius);
     this.maskGraphic.endFill();
   }
 
@@ -21,11 +25,11 @@ export class RoundVideoPlayer extends VideoPlayer {
     await super.preload();
 
     // Calculate video sprite size based on target radius
-    this.videoSprite.height = PLAYER_RADIUS*2;
+    this.videoSprite.height = this.playerRadius*2;
     this.videoSprite.width = this.nativeRatio * this.videoSprite.height;
 
     // Recenter video
-    const x = - (this.videoSprite.width - PLAYER_RADIUS * 2) / 2;
+    const x = - (this.videoSprite.width - this.playerRadius * 2) / 2;
     this.videoSprite.position.set(x,0);
 
     // Recenter graphics

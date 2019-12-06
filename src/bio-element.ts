@@ -25,6 +25,8 @@ export class BioElement extends Container {
   constructor(public musician: Musician) {
     super();
 
+    this.sortableChildren = true;
+    this.graphics.zIndex = -1;
     this.clearFocusContent();
     this.graphics.interactive = true;
     this.graphics.cursor = "pointer";
@@ -138,14 +140,6 @@ export class BioElement extends Container {
       bioContent.position.set(BIO_WIDTH / 2 + BIO_BOX_X, subTitle.position.y + subTitle.height + BIO_CONTENT_SPACING);
     }
 
-    // Video player
-    if(this.musician.video) {
-      const player = new RoundVideoPlayer(this.musician.video);
-      this.focusContent.addChild(player);
-      player.position.set(BIO_CONTENT_PADDING, this.focusContent.height + BIO_CONTENT_PADDING);
-      player.preload();
-    }
-
     let contentHeight = this.focusContent.height;
     // Rectangle background
     graphicsBkg.beginFill(0, 0.5);
@@ -161,6 +155,14 @@ export class BioElement extends Container {
     graphicsBkg.lineTo(BIO_BOX_X, contentHeight / 2);
 
     this.focusContent.position.set(0, -this.focusContent.height / 2);
+
+    // Video player
+    if(this.musician.video) {
+      const player = new RoundVideoPlayer(this.musician.video, 64);
+      this.focusContent.addChild(player);
+      player.position.set(-64, (contentHeight / 2) - 64);
+      player.preload();
+    }
   }
 
   draw() {
