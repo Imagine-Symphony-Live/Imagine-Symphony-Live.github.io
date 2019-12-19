@@ -28,6 +28,7 @@ import track14 from '../assets/music/track-14.ogg';
 //import track15 from '../assets/music/track-15.ogg';
 
 import {BIO_DATA} from './bio-data';
+import { ClickEventData } from 'pixi-viewport';
 
 window.onload = async () => {
   const sounds = new SoundManager([
