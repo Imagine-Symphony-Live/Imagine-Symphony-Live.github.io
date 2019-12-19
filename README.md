@@ -2,6 +2,9 @@
 
 ## TODO
 
+**Bugs**
+ - [ ] Issues with video playback in chrome. Need to have user interact with page before autoloading anything.
+
 **Bio Elements**
  - [x] Expand/collapse animations
  - [x] Various state indicators (active, focused, hinted)
