@@ -3,7 +3,6 @@ import { Musician } from "./types/musician";
 import TWEEN from "@tweenjs/tween.js";
 import { INSTRUMENT_COLORS, DEFAULT_INSTRUMENT_COLOR } from "./colors";
 import { TEXT_STYLE_H2, TEXT_STYLE_BIO_P, TET_STYLE_BIO_SUBTITLE } from "./styles";
-import { VideoPlayer } from "./video-player";
 import { RoundVideoPlayer } from "./round-video-player";
 
 const OUTER_RADIUS = 32;
@@ -34,7 +33,7 @@ export class BioElement extends Container {
     this.graphics.cursor = "pointer";
     this.draw();
     this.addChild(this.graphics);
-    this.graphics.on("pointertap", this.focus.bind(this));
+    this.graphics.on("click", this.focus.bind(this));
   }
 
   focus() {
