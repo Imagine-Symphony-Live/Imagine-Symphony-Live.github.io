@@ -132,23 +132,36 @@ window.onload = async () => {
   const nucleus = new NucleusElement();
   viewport.addChild(nucleus);
 
-  function unFocusAllExcept(allBios: Array<BioElement>, except: BioElement) {
+  function unFocusAll(allBios: Array<BioElement>, except?: BioElement) {
     for (let i = 0; i < allBios.length; i++) {
-      if(allBios[i] !== except) {
+      if(except === undefined || allBios[i] !== except) {
         allBios[i].unfocus();
       }
     }
   }
 
+  viewport.viewPort.on("clicked", (d: ClickEventData) => {
+    const {x, y} = d.screen;
+    for (let i = 0; i < musicianBios.length; i++) {
+      const b = musicianBios[i].getBounds(true);
+      if(x < b.x) continue;
+      if(x > b.x + b.width) continue;
+      if(y < b.y) continue;
+      if(y > b.y + b.height) continue;
+      return; // Cannot unfocus all, we've collided with a bioelement
+    }
+    unFocusAll(musicianBios);
+  });
+
   const bioContainer = new Container();
   bioContainer.sortableChildren = true;
   viewport.addChild(bioContainer);
 
-  const musicianBios = BIO_DATA.map((m) => new BioElement(m));
+  const musicianBios: Array<BioElement> = BIO_DATA.map((m) => new BioElement(m));
   const activeInstruments: Array<Instrument> = [];
   musicianBios.forEach((b) => {
     b.on("focused", () => {
-      unFocusAllExcept(musicianBios, b);
+      unFocusAll(musicianBios, b);
       viewport.transitionCenter(b.position.x, b.position.y, 500);
     });
     b.on("activated", () => {

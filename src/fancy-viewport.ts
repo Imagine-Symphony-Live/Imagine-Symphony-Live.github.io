@@ -4,7 +4,7 @@ import { Container, DisplayObject } from "pixi.js";
 
 export class FancyViewport extends Container {
   private moveTween?: TWEEN.Tween;
-  private viewPort: Viewport;
+  public viewPort: Viewport;
 
   constructor(options: ViewportOptions) {
     super();
