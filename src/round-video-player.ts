@@ -1,11 +1,14 @@
 import { VideoPlayer } from "./video-player";
 import { Graphics } from "pixi.js";
 
+const PLAYER_SCRUB_SIZE = 4;
+
 export class RoundVideoPlayer extends VideoPlayer {
   protected maskGraphic: Graphics;
 
-  constructor(public videoUrl: string, public playerRadius: number = 64) {
-    super(videoUrl, playerRadius * 2);
+  constructor(public videoUrl: string, public playerRadius: number = 64, public accentColor: number = 0xffffff) {
+    super(videoUrl, playerRadius * 2, accentColor);
+    this.updateGraphics();
 
     const background = new Graphics();
     background.beginFill(0x000000);
@@ -19,6 +22,25 @@ export class RoundVideoPlayer extends VideoPlayer {
     this.maskGraphic.beginFill(0xffffff, 1);
     this.maskGraphic.drawCircle(this.playerRadius,this.playerRadius,this.playerRadius);
     this.maskGraphic.endFill();
+
+  }
+
+  updateGraphics() {
+    super.updateGraphics();
+    this.overlayGraphics.lineStyle(PLAYER_SCRUB_SIZE, 0x000000, 0.6, 0);
+    this.overlayGraphics.drawCircle(0, 0, this.playerRadius);
+    if(this.videoData) {
+      const percent = this.currentTime / this.duration;
+      if(percent !== NaN && percent > 0) {
+        this.overlayGraphics.lineStyle(PLAYER_SCRUB_SIZE, this.accentColor, 1, 0);
+        if(percent >= 1) {
+          this.overlayGraphics.drawCircle(0, 0, this.playerRadius);
+        } else {
+          const arc =  Math.PI * 2 * percent;
+          this.overlayGraphics.arc(0, 0, this.playerRadius, -Math.PI / 2, -Math.PI / 2 + arc);
+        }
+      }
+    }
   }
 
   async preload() {

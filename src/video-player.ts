@@ -10,26 +10,18 @@ export class VideoPlayer extends Container {
   protected videoData: HTMLVideoElement;
   protected overlayGraphics: Graphics;
   protected statusText: Text;
+  private animationFrameId: number;
 
-  constructor(public videoUrl: string, public playerWidth: number = 256) {
+  constructor(public videoUrl: string, public playerWidth: number = 256, public accentColor: number = 0xeeeeee) {
     super();
 
     this.overlayGraphics = new Graphics();
-    this.overlayGraphics.beginFill(0xeeeeee);
-    const r = 32;
-    const c = Math.cos(Math.PI * 2/3);
-    const s = Math.sin(Math.PI * 2/3);
-    this.overlayGraphics.drawPolygon([
-      new Point(c * r, -s * r),
-      new Point(r, 0),
-      new Point(c * r, s * r),
-    ])
-    this.overlayGraphics.endFill();
-    this.overlayGraphics.position.set(this.playerWidth / 2, 0);
-
     this.addChild(this.overlayGraphics);
+    this.overlayGraphics.position.set(this.playerWidth / 2, 0);
+    this.updateGraphics();
 
     this.statusText = new Text('Unloaded', TEXT_STYLE_BIO_P);
+    this.statusText.visible = false;
     this.addChild(this.statusText);
     this.statusText.anchor.set(0,0);
     this.statusText.position.set(0, 0);
@@ -44,13 +36,26 @@ export class VideoPlayer extends Container {
       if(this.videoData.paused) {
         this.videoData.play();
         this.statusText.text = "Playing";
-        this.overlayGraphics.alpha = 0;
+        if(this.animationFrameId === -1) {
+          this.animationFrameId = window.requestAnimationFrame(this.updateGraphics.bind(this));
+        }
       } else {
         this.videoData.pause();
         this.statusText.text = "Paused";
-        this.overlayGraphics.alpha = 1;
+        this.updateGraphics();
+        if(this.animationFrameId !== -1) {
+          window.cancelAnimationFrame(this.animationFrameId);
+          this.animationFrameId = -1;
+        }
       }
     }
+  }
+
+  get currentTime(): number {
+    return this.videoData.currentTime
+  }
+  get duration(): number {
+    return this.videoData.duration;
   }
 
   async preload() {
@@ -89,6 +94,25 @@ export class VideoPlayer extends Container {
 
     this.statusText.text = "Paused";
     this.overlayGraphics.position.set(this.playerWidth / 2, this.videoSprite.height / 2);
+  }
+
+  updateGraphics() {
+    this.animationFrameId = window.requestAnimationFrame(this.updateGraphics.bind(this));
+    this.overlayGraphics.clear();
+    if(this.videoData) {
+      if(this.videoData.paused) {
+        this.overlayGraphics.beginFill(this.accentColor);
+        const r = this.playerWidth/10;
+        const c = Math.cos(Math.PI * 2/3);
+        const s = Math.sin(Math.PI * 2/3);
+        this.overlayGraphics.drawPolygon([
+          new Point(c * r, -s * r),
+          new Point(r, 0),
+          new Point(c * r, s * r),
+        ])
+        this.overlayGraphics.endFill();
+      }
+    }
   }
 
   destroy() {

@@ -160,7 +160,7 @@ export class BioElement extends Container {
 
     // Video player
     if(this.musician.video) {
-      this.videoPlayer = new RoundVideoPlayer(this.musician.video, VIDEO_PLAYER_RADIUS);
+      this.videoPlayer = new RoundVideoPlayer(this.musician.video, VIDEO_PLAYER_RADIUS, color);
       this.focusContent.addChild(this.videoPlayer);
       this.videoPlayer.position.set(-VIDEO_PLAYER_RADIUS, (contentHeight / 2) - VIDEO_PLAYER_RADIUS);
       this.videoPlayer.preload();
