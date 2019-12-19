@@ -32,12 +32,12 @@ export class RoundVideoPlayer extends VideoPlayer {
     if(this.videoData) {
       const percent = this.currentTime / this.duration;
       if(percent !== NaN && percent > 0) {
-        this.overlayGraphics.lineStyle(PLAYER_SCRUB_SIZE, this.accentColor, 1, 0);
+        this.overlayGraphics.lineStyle(PLAYER_SCRUB_SIZE + 5, this.accentColor, 1, 0);
         if(percent >= 1) {
-          this.overlayGraphics.drawCircle(0, 0, this.playerRadius);
+          this.overlayGraphics.drawCircle(0, 0, this.playerRadius + 5);
         } else {
           const arc =  Math.PI * 2 * percent;
-          this.overlayGraphics.arc(0, 0, this.playerRadius, -Math.PI / 2, -Math.PI / 2 + arc);
+          this.overlayGraphics.arc(0, 0, this.playerRadius + 5, -Math.PI / 2, -Math.PI / 2 + arc);
         }
       }
     }
