@@ -33,7 +33,7 @@ export class BioElement extends Container {
     this.graphics.cursor = "pointer";
     this.draw();
     this.addChild(this.graphics);
-    this.graphics.on("click", this.focus.bind(this));
+    this.graphics.on("pointertap", this.focus.bind(this));
   }
 
   focus() {
