@@ -7,6 +7,7 @@ import { VideoPlayer } from "./video-player";
 import { RoundVideoPlayer } from "./round-video-player";
 
 const OUTER_RADIUS = 32;
+const VIDEO_PLAYER_RADIUS = 64;
 const INNER_RADIUS = 25;
 const LINE_THICK = 3;
 const BOX_LINE_THICK = 7;
@@ -21,6 +22,7 @@ export class BioElement extends Container {
   public isActive = false;
   public isFocused = false;
   public isVisited = false;
+  private videoPlayer: RoundVideoPlayer;
 
   constructor(public musician: Musician) {
     super();
@@ -158,10 +160,10 @@ export class BioElement extends Container {
 
     // Video player
     if(this.musician.video) {
-      const player = new RoundVideoPlayer(this.musician.video, 64);
-      this.focusContent.addChild(player);
-      player.position.set(-64, (contentHeight / 2) - 64);
-      player.preload();
+      this.videoPlayer = new RoundVideoPlayer(this.musician.video, VIDEO_PLAYER_RADIUS);
+      this.focusContent.addChild(this.videoPlayer);
+      this.videoPlayer.position.set(-VIDEO_PLAYER_RADIUS, (contentHeight / 2) - VIDEO_PLAYER_RADIUS);
+      this.videoPlayer.preload();
     }
   }
 
