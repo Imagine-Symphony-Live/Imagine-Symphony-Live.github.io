@@ -75,7 +75,7 @@ export class VideoPlayer extends Container {
       this.videoData.pause();
     }, 0);
 
-    this.videoSprite = Sprite.from(videoBaseTexture);
+    this.videoSprite = new Sprite(videoBaseTexture);
     this.nativeWidth = this.videoSprite.width;
     this.nativeHeight = this.videoSprite.height;
     this.nativeRatio = this.nativeWidth / this.nativeHeight;
