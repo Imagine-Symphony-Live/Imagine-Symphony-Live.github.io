@@ -3,13 +3,13 @@
 ## TODO
 
 **Bio Elements**
- - [ ] Expand/collapse animations
- - [ ] Various state indicators (active, focused, hinted)
- - [ ] Instrument indicator
- - [ ] Dates indicator
- - [ ] Interview video
+ - [x] Expand/collapse animations
+ - [x] Various state indicators (active, focused, hinted)
+ - [x] Instrument indicator
+ - [x] Dates indicator
+ - [x] Interview video
  - [ ] Picture
- - [ ] Bio paragraph
+ - [x] Bio paragraph
 
 **Music**
  - [X] Activate music tracks
@@ -28,6 +28,10 @@
  - [X] Snap to center button
 
 ## Updates
+
+**12/18/2019**
+ - Bio elements refined and working with new schema
+ - Video player works well, includes position marker
 
 **08/18/2019**
  - Focus and activation states for bio elements
