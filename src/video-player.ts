@@ -35,6 +35,7 @@ export class VideoPlayer extends Container {
     this.statusText.position.set(0, 0);
 
     this.interactive = true;
+    this.cursor = "pointer";
     this.on('pointerdown', this.interact.bind(this));
   }
 
