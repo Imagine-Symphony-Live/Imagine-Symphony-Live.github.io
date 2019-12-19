@@ -145,6 +145,7 @@ window.onload = async () => {
     const {x, y} = d.screen;
     for (let i = 0; i < musicianBios.length; i++) {
       const b = musicianBios[i].getBounds(true);
+      // Basic rectable*point collision
       if(x < b.x) continue;
       if(x > b.x + b.width) continue;
       if(y < b.y) continue;
@@ -163,7 +164,13 @@ window.onload = async () => {
   musicianBios.forEach((b) => {
     b.on("focused", () => {
       unFocusAll(musicianBios, b);
-      viewport.transitionCenter(b.position.x, b.position.y, 500);
+      setTimeout(() => {
+        const bounds = b.getLocalBounds();
+        console.log(bounds);
+        const panx = bounds.x + bounds.width / 2 + b.position.x;
+        const pany = bounds.y + bounds.height / 2 + b.position.y;
+        viewport.transitionCenter(panx, pany, 500);
+      }, 100);
     });
     b.on("activated", () => {
       // Activate other bios with same instrument
