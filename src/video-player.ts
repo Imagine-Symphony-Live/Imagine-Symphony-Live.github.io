@@ -54,8 +54,13 @@ export class VideoPlayer extends Container {
   get currentTime(): number {
     return this.videoData.currentTime
   }
+
   get duration(): number {
     return this.videoData.duration;
+  }
+
+  playerEnded() {
+    this.emit("ended");
   }
 
   async preload() {
@@ -69,6 +74,8 @@ export class VideoPlayer extends Container {
 
     this.videoData = Loader.shared.resources[this.videoUrl].data
     const videoBaseTexture: Texture = Texture.from(this.videoData);
+
+    this.videoData.addEventListener("ended", this.playerEnded.bind(this));
 
     setTimeout(() => {
       this.videoData.currentTime = 0;
@@ -119,6 +126,7 @@ export class VideoPlayer extends Container {
     // @TODO - clear loading of video if still in progress
     super.destroy();
     if(this.videoData) {
+      this.videoData.removeEventListener("ended", this.playerEnded.bind(this));
       this.videoData.currentTime = 0;
       this.videoData.pause();
     }
