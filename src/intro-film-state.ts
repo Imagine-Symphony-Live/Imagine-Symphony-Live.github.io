@@ -23,6 +23,11 @@ export default class IntroFilmState extends State {
     return container;
   }
 
+  onResize(size: {width: number, height: number}) {
+    this.videoPlayer.resizeVideo(size.width);
+    this.videoPlayer.position.set(0, (size.height - this.videoPlayer.height) / 2)
+  }
+
   async cleanUp() {
     this.videoPlayer.destroy();
   }

@@ -15,6 +15,10 @@ export default abstract class State {
     this.events.get(event).unsubscribe(fn);
   }
 
+  onResize(size: {width: number, height: number}) {
+
+  }
+
   abstract createContainer(app: Application): Promise<Container>;
 
   abstract cleanUp(): Promise<void>;

@@ -11,14 +11,35 @@ export class StateMachine {
   protected currentStateName: string;
   protected currentState: State;
   protected currentStateContainer: Container;
+  private resizePollInterval = 500;
+  private previousWindowDimensions: {width: number, height: number} = {width: window.innerWidth, height: window.innerHeight};
+  private windowDimensions: {width: number, height: number} = {width: window.innerWidth, height: window.innerHeight};
 
   constructor(public app: Application) {
+
+    setInterval(this.checkResizeEvent.bind(this), this.resizePollInterval);
+
+    window.addEventListener("resize", () => {
+      this.windowDimensions.width = window.innerWidth;
+      this.windowDimensions.height = window.innerHeight;
+    });
+
     this.addState("intro", new IntroFilmState());
     this.addState("overworld", new OverWorldState());
 
     this.addStateCondition("intro", "complete", "overworld");
 
     this.setState("intro");
+  }
+
+  checkResizeEvent() {
+    if(this.windowDimensions.height !== this.previousWindowDimensions.height || this.windowDimensions.width !== this.previousWindowDimensions.width) {
+      this.previousWindowDimensions.height = this.windowDimensions.height;
+      this.previousWindowDimensions.width = this.windowDimensions.width;
+      if(this.currentState) {
+        this.currentState.onResize(this.windowDimensions);
+      }
+    }
   }
 
   addState(name: StateNames, state: State) {
@@ -40,6 +61,7 @@ export class StateMachine {
       throw new Error(`State ${findName} unknown`);
     }
     const newContainer = await stateF.state.createContainer(this.app);
+    stateF.state.onResize(this.windowDimensions);
     if(this.currentState) {
       await this.currentState.cleanUp();
     }

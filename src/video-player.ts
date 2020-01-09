@@ -17,7 +17,6 @@ export class VideoPlayer extends Container {
 
     this.overlayGraphics = new Graphics();
     this.addChild(this.overlayGraphics);
-    this.overlayGraphics.position.set(this.playerWidth / 2, 0);
     this.updateGraphics();
 
     this.statusText = new Text('Unloaded', TEXT_STYLE_BIO_P);
@@ -87,8 +86,6 @@ export class VideoPlayer extends Container {
     this.nativeHeight = this.videoSprite.height;
     this.nativeRatio = this.nativeWidth / this.nativeHeight;
 
-    const scale = this.playerWidth / this.nativeWidth;
-    this.videoSprite.scale.set(scale);
     this.addChild(this.videoSprite);
     this.videoSprite.position.set(0,0);
     this.isLoaded = true;
@@ -100,10 +97,23 @@ export class VideoPlayer extends Container {
     this.addChild(this.statusText);
 
     this.statusText.text = "Paused";
-    this.overlayGraphics.position.set(this.playerWidth / 2, this.videoSprite.height / 2);
+    this.resizeVideo(this.playerWidth);
+  }
+
+  resizeVideo(playerWidth: number) {
+    this.playerWidth = playerWidth;
+    const scale = this.playerWidth / this.nativeWidth;
+    this.videoSprite.scale.set(scale);
+    this.updateGraphics();
   }
 
   updateGraphics() {
+    if(this.videoSprite) {
+      this.overlayGraphics.visible = true;
+      this.overlayGraphics.position.set(this.playerWidth / 2, this.videoSprite.height / 2);
+    } else {
+      this.overlayGraphics.visible = false;
+    }
     this.animationFrameId = window.requestAnimationFrame(this.updateGraphics.bind(this));
     this.overlayGraphics.clear();
     if(this.videoData) {
