@@ -11,6 +11,7 @@
  - [ ] After 5 bio views, "conductor bio" appears
 
 **Bugs**
+ - [ ] Bio video continues to play after closing bio
  - [ ] Issues with video playback in chrome. Need to have user interact with page before autoloading anything.
 
 **Bio Elements**
