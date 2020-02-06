@@ -2,8 +2,6 @@ import './css/styles.css';
 import { Application, Graphics } from 'pixi.js';
 import TWEEN from '@tweenjs/tween.js';
 import { loadFonts } from './styles';
-import loadOverWorld from './overworld-state';
-import introFilm from './intro-film-state';
 import { StateMachine } from './state-machine';
 
 window.onload = async () => {
@@ -23,7 +21,7 @@ window.onload = async () => {
 
   document.body.appendChild(app.view);
 
-  //loadOverWorld(app);
+  // @TODO - this is necessary to prevent black screens on video playback
   // const bigPlayButton = new Graphics();
   // bigPlayButton
   //   .beginFill(0xff0000)
@@ -34,10 +32,8 @@ window.onload = async () => {
 
   // bigPlayButton.on("pointerdown", async () => {
   //   app.stage.removeChild(bigPlayButton);
-  //   await introFilm(app);
-  // });
-
-  const stateManager = new StateMachine(app);
+    const stateManager = new StateMachine(app);
+  //});
 
   function animate(time: number) {
     requestAnimationFrame(animate);
