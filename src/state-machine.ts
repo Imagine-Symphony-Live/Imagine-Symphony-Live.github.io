@@ -3,8 +3,9 @@ import State from "./state";
 import IntroFilmState from "./intro-film-state";
 import { StateEvents } from "./types/state-events";
 import OverWorldState from "./overworld-state";
+import SoundVisualState from './sound-visual-state';
 
-type StateNames = "intro" | "overworld";
+type StateNames = "intro" | "overworld" | "soundvisual";
 
 export class StateMachine {
   protected states: Array<{name: string, state: State}> = new Array();
@@ -26,10 +27,11 @@ export class StateMachine {
 
     this.addState("intro", new IntroFilmState());
     this.addState("overworld", new OverWorldState());
+    this.addState("soundvisual", new SoundVisualState());
 
     this.addStateCondition("intro", "complete", "overworld");
 
-    this.setState("intro");
+    this.setState("soundvisual");
   }
 
   checkResizeEvent() {

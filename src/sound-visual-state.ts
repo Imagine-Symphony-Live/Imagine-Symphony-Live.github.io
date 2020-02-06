@@ -86,7 +86,7 @@ const InstrumentExpressionData: Array<InstrumentExpression> = [
   }
 ]
 
-export default class PerformanceState extends State {
+export default class SoundVisualState extends State {
 
   protected track: HTMLAudioElement;
 
@@ -98,10 +98,8 @@ export default class PerformanceState extends State {
 
     const cues: Array<[number, NoteCue]> = [];
 
-    const instruments = InstrumentExpressionData.map(({name, color, cues: theseCues, ramp = 1}) => {
+    const visuals = InstrumentExpressionData.map(({name, color, cues: theseCues, ramp = 1}) => {
       const visual = new InstrumentVisual(148, color, ramp);
-      container.addChild(visual);
-      visual.position.set(Math.random() * (window.innerWidth - 400) + 200 , Math.random() * (window.innerHeight - 400) + 200);
 
       cues.push(...theseCues.map<[number, NoteCue]>(([a,b,c]) => [
           (a - 1) * 6 + (b - 1),
@@ -114,6 +112,11 @@ export default class PerformanceState extends State {
 
       return visual;
     });
+
+    visuals.forEach((visual) => {
+      visual.position.set(Math.random() * (window.innerWidth - 400) + 200 , Math.random() * (window.innerHeight - 400) + 200);
+      container.addChild(visual);
+    })
 
     cues.sort((a, b) => Math.sign(a[0] - b[0]));
 
