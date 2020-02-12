@@ -36,7 +36,7 @@ window.onload = async () => {
   //});
 
 
-  // @TODO - replace thi with app.ticker.add?
+  // @TODO - replace this with app.ticker.add?
   function animate(time: number) {
     requestAnimationFrame(animate);
     TWEEN.update(time);
