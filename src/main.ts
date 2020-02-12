@@ -35,6 +35,8 @@ window.onload = async () => {
     const stateManager = new StateMachine(app);
   //});
 
+
+  // @TODO - replace thi with app.ticker.add?
   function animate(time: number) {
     requestAnimationFrame(animate);
     TWEEN.update(time);
