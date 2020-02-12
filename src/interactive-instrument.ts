@@ -23,6 +23,18 @@ export class InteractiveInstrument extends Container {
     this.addChild(this.dynamicGraphics);
   }
 
+  onDrop(e: PIXI.interaction.InteractionEvent) {
+    const pos = this.getGlobalPosition();
+    const distance = Math.sqrt(Math.pow(pos.x - e.data.global.x + this.centerPoint.x, 2) + Math.pow(pos.y - e.data.global.y + this.centerPoint.y, 2));
+    if(distance > 64) {
+      return;
+    }
+  }
+
+  onTick() {
+    this.drawDynamics();
+  }
+
   updateMask() {
     this.maskGraphics
       .clear()
@@ -40,7 +52,7 @@ export class InteractiveInstrument extends Container {
     this.dynamicGraphics
       .clear()
       .lineStyle(4, 0xffffff, 1, 0)
-    // .drawCircle(this.centerPoint.x, this.centerPoint.y, 30)
+      .drawCircle(this.centerPoint.x, this.centerPoint.y, 48 )
     // .drawCircle(this.centerPoint.x, this.centerPoint.y, 50)
     // .drawCircle(this.centerPoint.x, this.centerPoint.y, 100)
     // .drawCircle(this.centerPoint.x, this.centerPoint.y, 150)
@@ -48,12 +60,12 @@ export class InteractiveInstrument extends Container {
 
     // // Draw center line
     // const halfRad = (this.endRad - this.startRad) / 2 + this.startRad;
-    // const arcPadding = 80 / (Math.PI * halfRad);
+    // const arcPadding = (Math.sin(this.iTemp / 10) * (100) + 150 ) / (Math.PI * halfRad);
 
-    // this.bkgGraphics
-    //   .lineStyle(1, this.color, 1, 0);
+    // this.dynamicGraphics
+    //   .lineStyle(3, this.color, 1, 0);
 
-    // drawFilledArc(this.bkgGraphics, this.startArc + arcPadding, this.endArc - arcPadding, halfRad - 10, halfRad + 10, 100);
+    // drawFilledArc(this.dynamicGraphics, this.startArc + arcPadding, this.endArc - arcPadding, halfRad - (Math.sin(this.iTemp / 10) * (10) + 15 ), halfRad + (Math.sin(this.iTemp / 10) * (10) + 15 ), 10);
 
   }
 

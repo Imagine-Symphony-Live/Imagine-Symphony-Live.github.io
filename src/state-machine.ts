@@ -26,6 +26,8 @@ export class StateMachine {
       this.windowDimensions.height = window.innerHeight;
     });
 
+    app.ticker.add(this.tick, this);
+
     this.addState("intro", new IntroFilmState());
     this.addState("overworld", new OverWorldState());
     this.addState("soundvisual", new SoundVisualState());
@@ -34,6 +36,12 @@ export class StateMachine {
     this.addStateCondition("intro", "complete", "overworld");
 
     this.setState("performance");
+  }
+
+  tick() {
+    if(this.currentState) {
+      this.currentState.onTick();
+    }
   }
 
   checkResizeEvent() {

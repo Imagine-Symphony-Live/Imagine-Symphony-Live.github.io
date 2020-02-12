@@ -1,9 +1,10 @@
-import { Container, Application } from "pixi.js";
+import { Container, Application, DisplayObject } from "pixi.js";
 import fullSong from '../assets/music/full-composition.ogg';
 import ClickTrack from 'click-track';
 import State from "./state";
 import { InteractiveInstrument } from "./interactive-instrument";
 import { Instrument } from "./types/instruments";
+import { Draggable } from "./dragable";
 
 type InstrumentTrack = {
   name: Instrument,
@@ -151,8 +152,11 @@ const InstrumentTracks: Array<InstrumentTrack> = [
 export default class PerformanceState extends State {
 
   protected track: HTMLAudioElement;
+  protected interactives: Array<InteractiveInstrument>;
+  private app: Application;
 
   async createContainer(app: Application): Promise<Container> {
+    this.app = app;
 
     const container = new Container();
     const track: HTMLAudioElement = new Audio(fullSong);
@@ -175,11 +179,21 @@ export default class PerformanceState extends State {
 
     const multiplier = (window.innerHeight -  50) * 3 / 40;
 
-    interactiveDefinitions.forEach((d) => {
-      const s1 = new InteractiveInstrument(d.sR*multiplier, d.eR*multiplier, d.sA, d.eA, d.color);
+    const interactivesContainer = new Container();
+    container.addChild(interactivesContainer);
+
+    this.interactives = interactiveDefinitions.map((d) => new InteractiveInstrument(d.sR*multiplier, d.eR*multiplier, d.sA, d.eA, d.color));
+
+    this.interactives.forEach((s1) => {
       s1.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
-      container.addChild(s1);
+      s1.interactive = true;
+      interactivesContainer.addChild(s1);
     });
+
+    const dragCircle = new Draggable();
+    dragCircle.setOrigin(window.innerWidth / 2, window.innerHeight * 3 / 4);
+    container.addChild(dragCircle);
+    dragCircle.on("dragged", this.onCircleDrag.bind(this, interactivesContainer));
 
     const clickTrack = new ClickTrack<InteractiveInstrument>({
       timerSource: () => track.currentTime,
@@ -195,6 +209,21 @@ export default class PerformanceState extends State {
     app.renderer.backgroundColor = 0x55aacc;
 
     return container;
+  }
+
+  onCircleDrag(container: Container, e: PIXI.interaction.InteractionEvent) {
+    if(this.app) {
+      const i = this.app.renderer.plugins.interaction.hitTest(e.data.global, container);
+      if(i && i instanceof InteractiveInstrument) {
+        i.onDrop(e);
+      }
+    }
+  }
+
+  onTick() {
+    for (let i = 0; i < this.interactives.length; i++) {
+       this.interactives[i].onTick();
+    }
   }
 
   onResize(size: {width: number, height: number}) {

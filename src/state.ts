@@ -19,6 +19,10 @@ export default abstract class State {
 
   }
 
+  onTick() {
+
+  }
+
   abstract createContainer(app: Application): Promise<Container>;
 
   abstract cleanUp(): Promise<void>;
