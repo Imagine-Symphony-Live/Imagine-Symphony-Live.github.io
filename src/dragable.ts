@@ -42,9 +42,9 @@ export class Draggable extends Container{
   onDragMove(e: PIXI.interaction.InteractionEvent) {
     if (this.dragging)
     {
-        const newPosition = e.data.getLocalPosition(this.parent);
-        this.position.x = newPosition.x;
-        this.position.y = newPosition.y;
+      const newPosition = e.data.getLocalPosition(this.parent);
+      this.position.x = newPosition.x;
+      this.position.y = newPosition.y;
     }
   }
 
