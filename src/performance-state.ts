@@ -51,7 +51,12 @@ export default class PerformanceState extends State {
 
     const container = new Container();
 
-    const {interactives, trackUrl} = mainTrack();
+    const {
+      interactives,
+      trackUrl,
+      tempo,
+      offset,
+    } = mainTrack();
 
     const track: HTMLAudioElement = new Audio(trackUrl);
     track.playbackRate = 1;
@@ -91,8 +96,8 @@ export default class PerformanceState extends State {
 
     const clickTrack = new ClickTrack<InteractiveInstrument>({
       timerSource: () => track.currentTime,
-      tempo: 148,
-      offset: -0.2,
+      tempo,
+      offset,
       cues: cues
     });
 
