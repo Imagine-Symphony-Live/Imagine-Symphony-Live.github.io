@@ -1,126 +1,17 @@
-import { Container, Application, DisplayObject } from "pixi.js";
-import fullSong from '../assets/music/full-composition.ogg';
+import { Container, Application } from "pixi.js";
 import ClickTrack from 'click-track';
 import State from "./state";
 import { InteractiveInstrument } from "./interactive-instrument";
 import { Instrument } from "./types/instruments";
 import { Draggable } from "./dragable";
+import { Interactive } from "./interactive";
+import mainTrack from "./tracks/main/";
 
 type InstrumentTrack = {
   name: Instrument,
   color: number,
   cues: Array<[number, number]>
 }
-
-function hue2rgb(p: number, q: number, t: number) {
-  if (t < 0) t += 1;
-  if (t > 1) t -= 1;
-  if (t < 1/6) return p + (q - p) * 6 * t;
-  if (t < 1/2) return q;
-  if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
-  return p;
-}
-
-function hslToRgb(h: number, s: number, l: number) {
-  var r, g, b;
-
-  if (s == 0) {
-    r = g = b = l; // achromatic
-  } else {
-
-
-    var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-    var p = 2 * l - q;
-
-    r = hue2rgb(p, q, h + 1/3);
-    g = hue2rgb(p, q, h);
-    b = hue2rgb(p, q, h - 1/3);
-  }
-
-  return r * 255 * Math.pow(256,2) + g * 255 * 256 + b * 255;
-}
-
-const interactiveDefinitions: Array<{
-  name: Instrument,
-  color: number,
-  sA: number,
-  eA: number,
-  sR: number,
-  eR: number
-}> = [
-  {
-    name: "Cello",
-    color: hslToRgb(Math.random(), 1, 0.5),
-    sA: 0,
-    eA: Math.PI / 6,
-    sR: 3,
-    eR: 7
-  },
-  {
-    name: "Viola",
-    color: hslToRgb(Math.random(), 1, 0.5),
-    sA: Math.PI / 6,
-    eA: Math.PI * 2 / 6,
-    sR: 3,
-    eR: 7
-  },
-  {
-    name: "Bass",
-    color: hslToRgb(Math.random(), 1, 0.5),
-    sA: 0,
-    eA: Math.PI * 2 / 6,
-    sR: 7,
-    eR: 10
-  },
-  {
-    name: "Trumpet",
-    color: hslToRgb(Math.random(), 1, 0.5),
-    sA: Math.PI * 2 / 6,
-    eA: Math.PI * 10 / 18,
-    sR: 8,
-    eR: 10
-  },
-  {
-    name: "Timpani",
-    color: hslToRgb(Math.random(), 1, 0.5),
-    sA: Math.PI * 10 / 18,
-    eA: Math.PI * 11 / 18,
-    sR: 8,
-    eR: 10
-  },
-  {
-    name: "Xylophone",
-    color: hslToRgb(Math.random(), 1, 0.5),
-    sA: Math.PI * 11 / 18,
-    eA: Math.PI * 5 / 6,
-    sR: 8,
-    eR: 10
-  },
-  {
-    name: "Clarinet",
-    color: hslToRgb(Math.random(), 1, 0.5),
-    sA: Math.PI * 2 / 6,
-    eA: Math.PI * 4 / 6,
-    sR: 3,
-    eR: 8
-  },
-  {
-    name: "Violin",
-    color: hslToRgb(Math.random(), 1, 0.5),
-    sA: Math.PI * 4 / 6,
-    eA: Math.PI * 5 / 6,
-    sR: 3,
-    eR: 8
-  },
-  {
-    name: "Violin",
-    color: hslToRgb(Math.random(), 1, 0.5),
-    sA: Math.PI * 5 / 6,
-    eA: Math.PI,
-    sR: 3,
-    eR: 10
-  },
-]
 
 const InstrumentTracks: Array<InstrumentTrack> = [
   {
@@ -152,14 +43,17 @@ const InstrumentTracks: Array<InstrumentTrack> = [
 export default class PerformanceState extends State {
 
   protected track: HTMLAudioElement;
-  protected interactives: Array<InteractiveInstrument>;
+  protected interactives: Array<Interactive>;
   private app: Application;
 
   async createContainer(app: Application): Promise<Container> {
     this.app = app;
 
     const container = new Container();
-    const track: HTMLAudioElement = new Audio(fullSong);
+
+    const {interactives, trackUrl} = mainTrack();
+
+    const track: HTMLAudioElement = new Audio(trackUrl);
     track.playbackRate = 1;
 
     const cues: Array<[number, InteractiveInstrument]> = [];
@@ -177,23 +71,23 @@ export default class PerformanceState extends State {
     // This triggers when music track is fully loaded
     //track.addEventListener('canplaythrough', start);
 
-    const multiplier = (window.innerHeight -  50) * 3 / 40;
-
     const interactivesContainer = new Container();
     container.addChild(interactivesContainer);
 
-    this.interactives = interactiveDefinitions.map((d) => new InteractiveInstrument(d.sR*multiplier, d.eR*multiplier, d.sA, d.eA, d.color));
+    this.interactives = interactives;
 
     this.interactives.forEach((s1) => {
-      s1.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
       s1.interactive = true;
       interactivesContainer.addChild(s1);
     });
 
-    const dragCircle = new Draggable();
-    dragCircle.setOrigin(window.innerWidth / 2, window.innerHeight * 3 / 4);
-    container.addChild(dragCircle);
-    dragCircle.on("dragged", this.onCircleDrag.bind(this, interactivesContainer));
+    // Create some draggables
+    for (let i = 0; i < 5; i++) {
+      const dragCircle = new Draggable();
+      dragCircle.setOrigin(window.innerWidth / 2 + (i - 2) * 64, window.innerHeight * 3 / 4 + 100);
+      container.addChild(dragCircle);
+      dragCircle.on("dragged", this.onCircleDrag.bind(this, interactivesContainer));
+    }
 
     const clickTrack = new ClickTrack<InteractiveInstrument>({
       timerSource: () => track.currentTime,
@@ -212,9 +106,9 @@ export default class PerformanceState extends State {
   }
 
   onCircleDrag(container: Container, e: PIXI.interaction.InteractionEvent) {
-    if(this.app) {
+    if (this.app) {
       const i = this.app.renderer.plugins.interaction.hitTest(e.data.global, container);
-      if(i && i instanceof InteractiveInstrument) {
+      if (i && i instanceof InteractiveInstrument) {
         i.onDrop(e);
       }
     }
@@ -222,12 +116,16 @@ export default class PerformanceState extends State {
 
   onTick() {
     for (let i = 0; i < this.interactives.length; i++) {
-       this.interactives[i].onTick();
+      this.interactives[i].onTick();
     }
   }
 
-  onResize(size: {width: number, height: number}) {
-
+  onResize(size: { width: number, height: number }) {
+    const multiplier = (size.height - 50) * 3 / 40;
+    this.interactives.forEach((s1) => {
+      s1.multiplierResize(multiplier);
+      s1.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
+    });
   }
 
   async cleanUp() {

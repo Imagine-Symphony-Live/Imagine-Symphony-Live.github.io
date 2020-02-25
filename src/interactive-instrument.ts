@@ -1,26 +1,57 @@
-import { Container, Graphics, Point } from "pixi.js";
+import { Graphics, Point } from "pixi.js";
 import { drawFilledArc } from "./draw-util";
+import { Interactive } from "./interactive";
 
-export class InteractiveInstrument extends Container {
+export class InteractiveInstrument extends Interactive {
   private bkgGraphics: Graphics = new Graphics();
   private dynamicGraphics: Graphics = new Graphics();
   private maskGraphics: Graphics = new Graphics();
   private centerPoint: Point = new Point();
+  private initialStartRad: number;
+  private initialEndRad: number;
+  private rTemp = 0;
 
-  constructor(public startRad: number, public endRad: number, public startArc: number, public endArc: number, public color: number) {
+  constructor(public color: number, public startArc: number, public endArc: number, public startRad: number, public endRad: number) {
     super();
+    this.initialStartRad = startRad;
+    this.initialEndRad = endRad;
 
-    const centerArc = this.startArc + (this.endArc - this.startArc) / 2;
-    const centerRad = this.startRad + (this.endRad - this.startRad) / 2;
-    this.centerPoint.set(Math.cos(centerArc) * centerRad, -Math.sin(centerArc) * centerRad);
+    this.updateSize({
+      startRad,
+      endRad,
+      startArc,
+      endArc,
+    });
 
     this.mask = this.maskGraphics;
-    this.updateMask();
-    this.draw();
-    this.drawDynamics();
     this.addChild(this.bkgGraphics);
     this.addChild(this.maskGraphics);
     this.addChild(this.dynamicGraphics);
+  }
+
+  multiplierResize(multiplier: number) {
+    this.updateSize({
+      startRad: this.initialStartRad*multiplier,
+      endRad: this.initialEndRad*multiplier,
+    });
+  }
+
+  updateSize(options: {
+    startRad?: number,
+    endRad?: number,
+    startArc?: number,
+    endArc?: number
+  }) {
+    if(options.startRad) this.startRad = options.startRad;
+    if(options.endRad) this.endRad = options.endRad;
+    if(options.startArc) this.startArc = options.startArc;
+    if(options.endArc) this.endArc = options.endArc;
+    const centerArc = this.startArc + (this.endArc - this.startArc) / 2;
+    const centerRad = this.startRad + (this.endRad - this.startRad) / 2;
+    this.centerPoint.set(Math.cos(centerArc) * centerRad, -Math.sin(centerArc) * centerRad);
+    this.updateMask();
+    this.draw();
+    this.drawDynamics();
   }
 
   onDrop(e: PIXI.interaction.InteractionEvent) {
@@ -29,9 +60,15 @@ export class InteractiveInstrument extends Container {
     if(distance > 64) {
       return;
     }
+    this.rTemp = 1;
   }
 
   onTick() {
+    if(this.rTemp > 0) {
+      this.rTemp -= 0.05;
+    } else {
+      this.rTemp = 0;
+    }
     this.drawDynamics();
   }
 
@@ -51,21 +88,21 @@ export class InteractiveInstrument extends Container {
   drawDynamics() {
     this.dynamicGraphics
       .clear()
-      .lineStyle(4, 0xffffff, 1, 0)
-      .drawCircle(this.centerPoint.x, this.centerPoint.y, 48 )
-    // .drawCircle(this.centerPoint.x, this.centerPoint.y, 50)
-    // .drawCircle(this.centerPoint.x, this.centerPoint.y, 100)
-    // .drawCircle(this.centerPoint.x, this.centerPoint.y, 150)
-    //   .beginFill(this.color, 0.5);
+      .lineStyle(4, 0xffffff, 0.5, 0);
 
-    // // Draw center line
-    // const halfRad = (this.endRad - this.startRad) / 2 + this.startRad;
-    // const arcPadding = (Math.sin(this.iTemp / 10) * (100) + 150 ) / (Math.PI * halfRad);
+    this.dynamicGraphics.drawCircle(this.centerPoint.x, this.centerPoint.y, 48 );
 
-    // this.dynamicGraphics
-    //   .lineStyle(3, this.color, 1, 0);
-
-    // drawFilledArc(this.dynamicGraphics, this.startArc + arcPadding, this.endArc - arcPadding, halfRad - (Math.sin(this.iTemp / 10) * (10) + 15 ), halfRad + (Math.sin(this.iTemp / 10) * (10) + 15 ), 10);
+    if(this.rTemp > 0) {
+      this.dynamicGraphics
+        .lineStyle(4, 0xffffff, this.rTemp*0.5)
+        .drawCircle(this.centerPoint.x, this.centerPoint.y, 48 + (1 - this.rTemp) * 32 )
+        .lineStyle(1, 0xffffff, this.rTemp)
+        .drawCircle(this.centerPoint.x, this.centerPoint.y, 48 + (1 - this.rTemp) * 64 );
+      this.dynamicGraphics.beginFill(0xffffff, 0.5 * this.rTemp)
+        .lineStyle(0)
+        .drawCircle(this.centerPoint.x, this.centerPoint.y, 32)
+        .endFill();
+    }
 
   }
 
