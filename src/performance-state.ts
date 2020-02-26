@@ -73,7 +73,6 @@ export default class PerformanceState extends State {
 
     clickTrack.on("cue", (clicktrack, cue) => {
       if(cue.data) {
-        console.log("CUE", cue.data.name);
         cue.data.onCue(cue.cue);
       }
     });
