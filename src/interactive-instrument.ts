@@ -80,7 +80,17 @@ export class InteractiveInstrument extends Interactive {
   }
 
   onCue(cue: number, state: number) {
-    switch (state) {
+    this.setState(state);
+  }
+
+  setState(newState: InstrumentState) {
+    if(newState === this.state) {
+      return; // nothing happens
+    }
+
+    this.state = newState;
+
+    switch (this.state) {
       case InstrumentState.count3:
         this.dynamicText.text = "3";
         break;
@@ -91,17 +101,18 @@ export class InteractiveInstrument extends Interactive {
         this.dynamicText.text = "1";
         break;
       case InstrumentState.hit:
-        //this.dynamicText.text = "";
+        this.dynamicText.text = "";
         break;
 
       default:
         break;
     }
-    this.state = state;
-    if(state !== InstrumentState.idle) {
+
+    if(this.state !== InstrumentState.idle) {
       this.stateCountdown = 1;
     } else {
       this.stateCountdown = 0;
+      this.dynamicText.text = "";
     }
   }
 
@@ -114,7 +125,7 @@ export class InteractiveInstrument extends Interactive {
     if(this.stateCountdown > 0) {
       this.stateCountdown -= 0.05;
       if(this.stateCountdown <= 0) {
-        this.state = InstrumentState.idle;
+        this.setState(InstrumentState.idle);
       }
     }
     this.drawDynamics();

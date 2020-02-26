@@ -8,13 +8,13 @@ function m2b(measure: number, beat: number): number {
 
 function countdown(cueAt: number, countIn: number, interval: number = 1): Array<[number, InstrumentState]> {
   const cues: Array<[number, InstrumentState]> = [];
-  for (let i = 0; i < countIn; i += 1) {
-    if(countIn - i >= 3) {
-      cues.push([cueAt - i * interval, InstrumentState.count1]);
-    } else if(countIn - i == 2) {
-      cues.push([cueAt - i * interval, InstrumentState.count2]);
-    } else if(countIn - i == 1) {
+  for (let i = countIn; i > 0; i -= 1) {
+    if(i >= 3) {
       cues.push([cueAt - i * interval, InstrumentState.count3]);
+    } else if(i == 2) {
+      cues.push([cueAt - i * interval, InstrumentState.count2]);
+    } else if(i == 1) {
+      cues.push([cueAt - i * interval, InstrumentState.count1]);
     }
   }
   cues.push([cueAt, InstrumentState.hit]);
