@@ -6,18 +6,11 @@ function m2b(measure: number, beat: number): number {
   return (measure - 1) * 6 + (beat - 1)
 }
 
-function countdown(cueAt: number, countIn: number, interval: number = 1): Array<[number, InstrumentState]> {
-  const cues: Array<[number, InstrumentState]> = [];
-  for (let i = countIn; i > 0; i -= 1) {
-    if(i >= 3) {
-      cues.push([cueAt - i * interval, InstrumentState.count3]);
-    } else if(i == 2) {
-      cues.push([cueAt - i * interval, InstrumentState.count2]);
-    } else if(i == 1) {
-      cues.push([cueAt - i * interval, InstrumentState.count1]);
-    }
-  }
-  cues.push([cueAt, InstrumentState.hit]);
+function countdown(cueAt: number, countIn: number): Array<[number, InstrumentState, number]> {
+  const cues: Array<[number, InstrumentState, number]> = [];
+  cues.push([cueAt - countIn, InstrumentState.COUNT_IN, cueAt]);
+  cues.push([cueAt, InstrumentState.HIT, 1]);
+  cues.push([cueAt + 1, InstrumentState.IDLE, 0]);
   return cues;
 }
 
@@ -28,7 +21,7 @@ export const interactives: Array<{
   eA: number,
   sR: number,
   eR: number,
-  cues: Array<[number, InstrumentState]>
+  cues: Array<[number, InstrumentState, number]>
 }> = [
     {
       name: "Cello",
@@ -47,7 +40,7 @@ export const interactives: Array<{
       sR: 3,
       eR: 7,
       cues: [
-        ...countdown(m2b(25, 1.0), 3),
+        ...countdown(m2b(25, 1.0), 6),
       ],
     },
     {
@@ -94,8 +87,8 @@ export const interactives: Array<{
       sR: 3,
       eR: 8,
       cues: [
-        ...countdown(m2b(15, 2.0), 3), // flute
-        ...countdown(m2b(17, 1.0), 3), // bass clarinet
+        ...countdown(m2b(15, 2.0), 6), // flute
+        ...countdown(m2b(17, 1.0), 6), // bass clarinet
       ],
     },
     {

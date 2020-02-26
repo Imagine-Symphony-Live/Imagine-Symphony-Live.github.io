@@ -4,11 +4,9 @@ import { Interactive } from "./interactive";
 import { TEXT_STYLE_INTERACTIVE_NUM } from "./styles";
 
 export enum InstrumentState {
-  idle,
-  count3,
-  count2,
-  count1,
-  hit,
+  IDLE,
+  COUNT_IN,
+  HIT,
 }
 
 export class InteractiveInstrument extends Interactive {
@@ -20,8 +18,8 @@ export class InteractiveInstrument extends Interactive {
   private initialStartRad: number;
   private initialEndRad: number;
   private rTemp = 0;
-  public state: InstrumentState = InstrumentState.idle;
-  private stateCountdown = 0;
+  public state: InstrumentState = InstrumentState.IDLE;
+  public stateValue: number = 0;
 
   constructor(public color: number, public startArc: number, public endArc: number, public startRad: number, public endRad: number) {
     super();
@@ -79,28 +77,19 @@ export class InteractiveInstrument extends Interactive {
     this.rTemp = 1;
   }
 
-  onCue(cue: number, state: number) {
-    this.setState(state);
+  onCue(cue: number, state: number, value: number = 0) {
+    this.setState(state, value);
   }
 
-  setState(newState: InstrumentState) {
-    if(newState === this.state) {
-      return; // nothing happens
-    }
-
+  setState(newState: InstrumentState, value: number = 0) {
     this.state = newState;
+    this.stateValue = value;
 
     switch (this.state) {
-      case InstrumentState.count3:
-        this.dynamicText.text = "3";
+      case InstrumentState.COUNT_IN:
+        this.dynamicText.text = "";
         break;
-      case InstrumentState.count2:
-        this.dynamicText.text = "2";
-        break;
-      case InstrumentState.count1:
-        this.dynamicText.text = "1";
-        break;
-      case InstrumentState.hit:
+      case InstrumentState.HIT:
         this.dynamicText.text = "";
         break;
 
@@ -108,25 +97,19 @@ export class InteractiveInstrument extends Interactive {
         break;
     }
 
-    if(this.state !== InstrumentState.idle) {
-      this.stateCountdown = 1;
-    } else {
-      this.stateCountdown = 0;
+    if(this.state === InstrumentState.IDLE) {
       this.dynamicText.text = "";
     }
   }
 
-  onTick() {
+  onTick(currentBeat: number) {
     if(this.rTemp > 0) {
       this.rTemp -= 0.05;
     } else {
       this.rTemp = 0;
     }
-    if(this.stateCountdown > 0) {
-      this.stateCountdown -= 0.05;
-      if(this.stateCountdown <= 0) {
-        this.setState(InstrumentState.idle);
-      }
+    if(this.state === InstrumentState.COUNT_IN) {
+      this.dynamicText.text = `${Math.ceil(this.stateValue - currentBeat)}`;
     }
     this.drawDynamics();
   }
@@ -146,13 +129,15 @@ export class InteractiveInstrument extends Interactive {
 
   drawDynamics() {
     this.dynamicGraphics
-      .clear()
-      .lineStyle(4, 0xffffff, 0.5, 0);
+      .clear();
 
-
-    if(this.state !== InstrumentState.idle) {
-      this.dynamicGraphics.drawCircle(this.centerPoint.x, this.centerPoint.y, 48 );
+    if(this.state !== InstrumentState.IDLE) {
+      this.dynamicGraphics.lineStyle(4, 0xffffff, 0.5, 0);
+    } else {
+      this.dynamicGraphics.lineStyle(4, 0xffffff, 0.1, 0);
     }
+
+    this.dynamicGraphics.drawCircle(this.centerPoint.x, this.centerPoint.y, 48 );
 
     if(this.rTemp > 0) {
       this.dynamicGraphics

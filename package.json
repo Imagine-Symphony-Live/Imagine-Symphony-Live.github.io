@@ -41,7 +41,7 @@
   "dependencies": {
     "@tweenjs/tween.js": "^17.4.0",
     "@types/howler": "^2.1.1",
-    "click-track": "^0.1.9",
+    "click-track": "^0.2.0",
     "howler": "^2.1.2",
     "pixi-viewport": "^4.2.0",
     "pixi.js": "^5.1.0",

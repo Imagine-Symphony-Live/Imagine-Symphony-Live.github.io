@@ -5,18 +5,24 @@ import { InteractiveInstrument } from "./interactive-instrument";
 import { Draggable } from "./dragable";
 import { Interactive } from "./interactive";
 import mainTrack from "./tracks/main/";
+import { CueEvent } from "click-track/dist/src/definitions/cue-event";
+
+type InteractiveCue = [Interactive, number, number];
 
 export default class PerformanceState extends State {
 
   protected track: HTMLAudioElement;
   protected interactives: Array<Interactive>;
   private app: Application;
+  private clickTrack: ClickTrack<InteractiveCue>;
 
   async createContainer(app: Application): Promise<Container> {
     this.app = app;
 
+    // The container to be returned
     const container = new Container();
 
+    // Get music track information
     const {
       interactives,
       trackUrl,
@@ -27,25 +33,15 @@ export default class PerformanceState extends State {
     const track: HTMLAudioElement = new Audio(trackUrl);
     track.playbackRate = 1;
 
-    const cues: Array<[number, [Interactive, number]]> = [];
-
-    // Combine cues from all interactives
-    interactives.forEach((ii) => {
-      cues.push(...ii.cues.map<[number, [Interactive, number]]>((cue) => [cue[0], [ii, cue[1]]]));
-    });
-
-    // Sort all cues ascending
-    cues.sort((a, b) => Math.sign(a[0] - b[0]));
-
     const start = () => {
       track.currentTime = 13 * 6 * (60 / 148);
       track.play();
       track.removeEventListener('canplaythrough', start);
     };
-
     // This triggers when music track is fully loaded
     track.addEventListener('canplaythrough', start);
 
+    // Assemble interactive things
     const interactivesContainer = new Container();
     container.addChild(interactivesContainer);
 
@@ -64,22 +60,38 @@ export default class PerformanceState extends State {
       dragCircle.on("dragged", this.onCircleDrag.bind(this, interactivesContainer));
     }
 
-    const clickTrack = new ClickTrack<[Interactive, number]>({
+    // Assemble cues
+    const cues: Array<[number, InteractiveCue]> = [];
+
+    // Combine cues from all interactives
+    interactives.forEach((ii) => {
+      cues.push(...ii.cues.map<[number, InteractiveCue]>((cue) => [cue[0], [ii, cue[1], cue[2]]]));
+    });
+
+    // Sort all cues ascending
+    cues.sort((a, b) => Math.sign(a[0] - b[0]));
+
+
+    // Click track for syncing up
+    this.clickTrack = new ClickTrack<InteractiveCue>({
       timerSource: () => track.currentTime,
       tempo,
       offset,
       cues: cues
     });
 
-    clickTrack.on("cue", (clicktrack, cue) => {
-      if(cue.data && cue.data[0]) {
-        cue.data[0].onCue(cue.cue, cue.data[1]);
-      }
-    });
+    this.clickTrack.on("cue", this.handleClickCue.bind(this));
 
     app.renderer.backgroundColor = 0x55aacc;
 
     return container;
+  }
+
+  handleClickCue(clicktrack: ClickTrack, cue: CueEvent<InteractiveCue>) {
+    if(cue.data && cue.data[0]) {
+      const [interactive, state, value] = cue.data;
+      interactive.onCue(cue.cue, state, value);
+    }
   }
 
   onCircleDrag(container: Container, e: PIXI.interaction.InteractionEvent) {
@@ -92,8 +104,9 @@ export default class PerformanceState extends State {
   }
 
   onTick() {
+    const currentBeat = this.clickTrack.beat;
     for (let i = 0; i < this.interactives.length; i++) {
-      this.interactives[i].onTick();
+      this.interactives[i].onTick(currentBeat);
     }
   }
 
