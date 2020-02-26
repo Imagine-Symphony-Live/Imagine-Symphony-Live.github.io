@@ -6,5 +6,8 @@ export abstract class Interactive extends Container {
   name: string = "";
   abstract multiplierResize(multiplier: number): void;
   abstract onTick(beat: number): void;
-  abstract onCue(cue: number, state: number, value: number): void;
+  abstract setState(newState: number, value: number): void;
+  onCue(cue: number, state: number, value: number) {
+    this.setState(state, value);
+  }
 }

@@ -77,25 +77,9 @@ export class InteractiveInstrument extends Interactive {
     this.rTemp = 1;
   }
 
-  onCue(cue: number, state: number, value: number = 0) {
-    this.setState(state, value);
-  }
-
   setState(newState: InstrumentState, value: number = 0) {
     this.state = newState;
     this.stateValue = value;
-
-    switch (this.state) {
-      case InstrumentState.COUNT_IN:
-        this.dynamicText.text = "";
-        break;
-      case InstrumentState.HIT:
-        this.dynamicText.text = "";
-        break;
-
-      default:
-        break;
-    }
 
     if(this.state === InstrumentState.IDLE) {
       this.dynamicText.text = "";
@@ -128,13 +112,12 @@ export class InteractiveInstrument extends Interactive {
   }
 
   drawDynamics() {
-    this.dynamicGraphics
-      .clear();
+    this.dynamicGraphics.clear();
 
-    if(this.state !== InstrumentState.IDLE) {
-      this.dynamicGraphics.lineStyle(4, 0xffffff, 0.5, 0);
+    if(this.state === InstrumentState.IDLE) {
+      this.dynamicGraphics.lineStyle(2, 0xffffff, 0.1, 0);
     } else {
-      this.dynamicGraphics.lineStyle(4, 0xffffff, 0.1, 0);
+      this.dynamicGraphics.lineStyle(4, 0xffffff, 0.5, 0);
     }
 
     this.dynamicGraphics.drawCircle(this.centerPoint.x, this.centerPoint.y, 48 );
