@@ -63,6 +63,10 @@ export class InteractiveInstrument extends Interactive {
     this.rTemp = 1;
   }
 
+  onCue(cue: number) {
+    this.rTemp = 1;
+  }
+
   onTick() {
     if(this.rTemp > 0) {
       this.rTemp -= 0.05;

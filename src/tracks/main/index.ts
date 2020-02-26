@@ -6,8 +6,10 @@ import fullSong from '../../../assets/music/full-composition.ogg';
 export default function (): InteractiveTrack {
   return {
     interactives: interactives.map((i) => {
-      // i.name
-      return new InteractiveInstrument(i.color, i.sA, i.eA, i.sR, i.eR)
+      const o = new InteractiveInstrument(i.color, i.sA, i.eA, i.sR, i.eR);
+      o.cues = i.cues;
+      o.name = i.name;
+      return o;
     }),
     trackUrl: fullSong,
     tempo: 148,

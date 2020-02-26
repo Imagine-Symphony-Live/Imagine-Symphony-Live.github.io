@@ -2,43 +2,9 @@ import { Container, Application } from "pixi.js";
 import ClickTrack from 'click-track';
 import State from "./state";
 import { InteractiveInstrument } from "./interactive-instrument";
-import { Instrument } from "./types/instruments";
 import { Draggable } from "./dragable";
 import { Interactive } from "./interactive";
 import mainTrack from "./tracks/main/";
-
-type InstrumentTrack = {
-  name: Instrument,
-  color: number,
-  cues: Array<[number, number]>
-}
-
-const InstrumentTracks: Array<InstrumentTrack> = [
-  {
-    name: "Flute",
-    color: 0xffff00,
-    cues: [
-      // Measure, beat
-      [15, 2.0],
-    ]
-  },
-  {
-    name: "Bass Clarinet",
-    color: 0xffaa00,
-    cues: [
-      // Measure, beat
-      [17, 1.0]
-    ]
-  },
-  {
-    name: "Viola",
-    color: 0x00ffaa,
-    cues: [
-      // Measure, beat
-      [25, 1.0]
-    ]
-  }
-];
 
 export default class PerformanceState extends State {
 
@@ -61,10 +27,14 @@ export default class PerformanceState extends State {
     const track: HTMLAudioElement = new Audio(trackUrl);
     track.playbackRate = 1;
 
-    const cues: Array<[number, InteractiveInstrument]> = [];
+    const cues: Array<[number, Interactive]> = [];
 
-    // Assemble cues here
+    // Combine cues from all interactives
+    interactives.forEach((ii) => {
+      cues.push(...ii.cues.map<[number, Interactive]>((cue) => [cue, ii]));
+    });
 
+    // Sort all cues ascending
     cues.sort((a, b) => Math.sign(a[0] - b[0]));
 
     const start = () => {
@@ -74,7 +44,7 @@ export default class PerformanceState extends State {
     };
 
     // This triggers when music track is fully loaded
-    //track.addEventListener('canplaythrough', start);
+    track.addEventListener('canplaythrough', start);
 
     const interactivesContainer = new Container();
     container.addChild(interactivesContainer);
@@ -94,7 +64,7 @@ export default class PerformanceState extends State {
       dragCircle.on("dragged", this.onCircleDrag.bind(this, interactivesContainer));
     }
 
-    const clickTrack = new ClickTrack<InteractiveInstrument>({
+    const clickTrack = new ClickTrack<Interactive>({
       timerSource: () => track.currentTime,
       tempo,
       offset,
@@ -102,7 +72,10 @@ export default class PerformanceState extends State {
     });
 
     clickTrack.on("cue", (clicktrack, cue) => {
-      //cue.data?.instrument.note(cue.data.duration);
+      if(cue.data) {
+        console.log("CUE", cue.data.name);
+        cue.data.onCue(cue.cue);
+      }
     });
 
     app.renderer.backgroundColor = 0x55aacc;
