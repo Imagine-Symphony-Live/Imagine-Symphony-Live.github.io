@@ -41,8 +41,8 @@ export const TEXT_STYLE_H2 = new TextStyle({
 })
 
 export const TEXT_STYLE_INTERACTIVE_NUM = new TextStyle({
-  fill: "#ffffff",
-  fontSize: 24,
+  fill: "#ffffffaa",
+  fontSize: 48,
   fontFamily: "Roboto",
 })
 
