@@ -1,15 +1,27 @@
-import { Graphics, Point } from "pixi.js";
+import { Graphics, Point, Text } from "pixi.js";
 import { drawFilledArc } from "./draw-util";
 import { Interactive } from "./interactive";
+import { TEXT_STYLE_INTERACTIVE_NUM } from "./styles";
+
+export enum InstrumentState {
+  idle,
+  count3,
+  count2,
+  count1,
+  hit,
+}
 
 export class InteractiveInstrument extends Interactive {
   private bkgGraphics: Graphics = new Graphics();
   private dynamicGraphics: Graphics = new Graphics();
+  private dynamicText: Text = new Text("", TEXT_STYLE_INTERACTIVE_NUM);
   private maskGraphics: Graphics = new Graphics();
   private centerPoint: Point = new Point();
   private initialStartRad: number;
   private initialEndRad: number;
   private rTemp = 0;
+  public state: InstrumentState = InstrumentState.idle;
+  private stateCountdown = 0;
 
   constructor(public color: number, public startArc: number, public endArc: number, public startRad: number, public endRad: number) {
     super();
@@ -27,6 +39,9 @@ export class InteractiveInstrument extends Interactive {
     this.addChild(this.bkgGraphics);
     this.addChild(this.maskGraphics);
     this.addChild(this.dynamicGraphics);
+    this.addChild(this.dynamicText);
+    this.dynamicText.anchor.set(0.5,0.5);
+    this.dynamicText.position.set(this.centerPoint.x, this.centerPoint.y);
   }
 
   multiplierResize(multiplier: number) {
@@ -49,6 +64,7 @@ export class InteractiveInstrument extends Interactive {
     const centerArc = this.startArc + (this.endArc - this.startArc) / 2;
     const centerRad = this.startRad + (this.endRad - this.startRad) / 2;
     this.centerPoint.set(Math.cos(centerArc) * centerRad, -Math.sin(centerArc) * centerRad);
+    this.dynamicText.position.set(this.centerPoint.x, this.centerPoint.y);
     this.updateMask();
     this.draw();
     this.drawDynamics();
@@ -63,8 +79,30 @@ export class InteractiveInstrument extends Interactive {
     this.rTemp = 1;
   }
 
-  onCue(cue: number) {
-    this.rTemp = 1;
+  onCue(cue: number, state: number) {
+    switch (state) {
+      case InstrumentState.count3:
+        this.dynamicText.text = "3";
+        break;
+      case InstrumentState.count2:
+        this.dynamicText.text = "2";
+        break;
+      case InstrumentState.count1:
+        this.dynamicText.text = "1";
+        break;
+      case InstrumentState.hit:
+        //this.dynamicText.text = "";
+        break;
+
+      default:
+        break;
+    }
+    this.state = state;
+    if(state !== InstrumentState.idle) {
+      this.stateCountdown = 1;
+    } else {
+      this.stateCountdown = 0;
+    }
   }
 
   onTick() {
@@ -72,6 +110,12 @@ export class InteractiveInstrument extends Interactive {
       this.rTemp -= 0.05;
     } else {
       this.rTemp = 0;
+    }
+    if(this.stateCountdown > 0) {
+      this.stateCountdown -= 0.05;
+      if(this.stateCountdown <= 0) {
+        this.state = InstrumentState.idle;
+      }
     }
     this.drawDynamics();
   }
@@ -94,7 +138,10 @@ export class InteractiveInstrument extends Interactive {
       .clear()
       .lineStyle(4, 0xffffff, 0.5, 0);
 
-    this.dynamicGraphics.drawCircle(this.centerPoint.x, this.centerPoint.y, 48 );
+
+    if(this.state !== InstrumentState.idle) {
+      this.dynamicGraphics.drawCircle(this.centerPoint.x, this.centerPoint.y, 48 );
+    }
 
     if(this.rTemp > 0) {
       this.dynamicGraphics

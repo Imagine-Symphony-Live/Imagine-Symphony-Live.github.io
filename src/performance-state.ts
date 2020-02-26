@@ -27,11 +27,11 @@ export default class PerformanceState extends State {
     const track: HTMLAudioElement = new Audio(trackUrl);
     track.playbackRate = 1;
 
-    const cues: Array<[number, Interactive]> = [];
+    const cues: Array<[number, [Interactive, number]]> = [];
 
     // Combine cues from all interactives
     interactives.forEach((ii) => {
-      cues.push(...ii.cues.map<[number, Interactive]>((cue) => [cue, ii]));
+      cues.push(...ii.cues.map<[number, [Interactive, number]]>((cue) => [cue[0], [ii, cue[1]]]));
     });
 
     // Sort all cues ascending
@@ -64,7 +64,7 @@ export default class PerformanceState extends State {
       dragCircle.on("dragged", this.onCircleDrag.bind(this, interactivesContainer));
     }
 
-    const clickTrack = new ClickTrack<Interactive>({
+    const clickTrack = new ClickTrack<[Interactive, number]>({
       timerSource: () => track.currentTime,
       tempo,
       offset,
@@ -72,8 +72,8 @@ export default class PerformanceState extends State {
     });
 
     clickTrack.on("cue", (clicktrack, cue) => {
-      if(cue.data) {
-        cue.data.onCue(cue.cue);
+      if(cue.data && cue.data[0]) {
+        cue.data[0].onCue(cue.cue, cue.data[1]);
       }
     });
 

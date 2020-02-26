@@ -40,6 +40,12 @@ export const TEXT_STYLE_H2 = new TextStyle({
   fontFamily: "Roboto",
 })
 
+export const TEXT_STYLE_INTERACTIVE_NUM = new TextStyle({
+  fill: "#ffffff",
+  fontSize: 24,
+  fontFamily: "Roboto",
+})
+
 export const TEXT_STYLE_BIO_P = new TextStyle({
   fill: "#ffffff",
   fontFamily: "Roboto",
