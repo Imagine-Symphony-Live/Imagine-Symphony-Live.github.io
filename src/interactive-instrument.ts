@@ -84,6 +84,9 @@ export class InteractiveInstrument extends Interactive {
     if(this.state === InstrumentState.IDLE) {
       this.dynamicText.text = "";
     }
+    if(this.state === InstrumentState.HIT) {
+      this.dynamicText.text = "";
+    }
   }
 
   onTick(currentBeat: number) {
@@ -121,6 +124,14 @@ export class InteractiveInstrument extends Interactive {
     }
 
     this.dynamicGraphics.drawCircle(this.centerPoint.x, this.centerPoint.y, 48 );
+
+    if(this.state === InstrumentState.HIT) {
+      this.dynamicGraphics
+        .lineStyle(0)
+        .beginFill(0xffffff, 0.1)
+        .drawCircle(this.centerPoint.x, this.centerPoint.y, 42 )
+        .endFill();
+    }
 
     if(this.rTemp > 0) {
       this.dynamicGraphics
