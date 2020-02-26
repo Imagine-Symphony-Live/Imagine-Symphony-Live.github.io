@@ -1,8 +1,14 @@
-import { Container, Graphics, Point } from "pixi.js";
+import { Graphics, Point } from "pixi.js";
+import { Interactive } from "./interactive";
 
-export class Draggable extends Container{
-  private graphics: Graphics = new Graphics();
-  private dragging = false;
+export enum DraggableState {
+  HIDDEN,
+  VISIBLE,
+}
+
+export class Draggable extends Interactive {
+  protected graphics: Graphics = new Graphics();
+  protected dragging = false;
   public origin: Point = new Point();
 
   constructor() {
@@ -46,6 +52,18 @@ export class Draggable extends Container{
       this.position.x = newPosition.x;
       this.position.y = newPosition.y;
     }
+  }
+
+  multiplierResize(multiplier: number) {
+    //
+  }
+
+  onTick(beat: number) {
+    //
+  }
+
+  setState(newState: DraggableState, value: number) {
+    //
   }
 
 }

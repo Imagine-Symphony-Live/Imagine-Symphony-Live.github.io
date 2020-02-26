@@ -6,6 +6,7 @@ import { Draggable } from "./dragable";
 import { Interactive } from "./interactive";
 import mainTrack from "./tracks/main/";
 import { CueEvent } from "click-track/dist/src/definitions/cue-event";
+import { Fermata } from "./fermata";
 
 type InteractiveCue = [Interactive, number, number];
 
@@ -15,6 +16,7 @@ export default class PerformanceState extends State {
   protected interactives: Array<Interactive>;
   private app: Application;
   private clickTrack: ClickTrack<InteractiveCue>;
+  private interactivesContainer: Container;
 
   async createContainer(app: Application): Promise<Container> {
     this.app = app;
@@ -42,14 +44,15 @@ export default class PerformanceState extends State {
     track.addEventListener('canplaythrough', start);
 
     // Assemble interactive things
-    const interactivesContainer = new Container();
-    container.addChild(interactivesContainer);
+    this.interactivesContainer = new Container();
+    container.addChild(this.interactivesContainer);
+    this.interactivesContainer.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
 
     this.interactives = interactives;
 
     this.interactives.forEach((s1) => {
       s1.interactive = true;
-      interactivesContainer.addChild(s1);
+      this.interactivesContainer.addChild(s1);
     });
 
     // Create some draggables
@@ -57,8 +60,19 @@ export default class PerformanceState extends State {
       const dragCircle = new Draggable();
       dragCircle.setOrigin(window.innerWidth / 2 + (i - 2) * 64, window.innerHeight * 3 / 4 + 100);
       container.addChild(dragCircle);
-      dragCircle.on("dragged", this.onCircleDrag.bind(this, interactivesContainer));
+      dragCircle.on("dragged", this.onCircleDrag.bind(this, this.interactivesContainer));
+      interactives.push(dragCircle);
     }
+
+    // Demo fermata
+    const fermataCircle = new Fermata();
+    fermataCircle.setOrigin(window.innerWidth / 2 + 6 * 64, window.innerHeight * 3 / 4 + 100);
+    container.addChild(fermataCircle);
+    interactives.push(fermataCircle);
+
+    setInterval(() => {
+      track.playbackRate = 1 - fermataCircle.value * 0.5;
+    }, 100);
 
     // Assemble cues
     const cues: Array<[number, InteractiveCue]> = [];
@@ -112,9 +126,9 @@ export default class PerformanceState extends State {
 
   onResize(size: { width: number, height: number }) {
     const multiplier = (size.height - 50) * 3 / 40;
+    this.interactivesContainer.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
     this.interactives.forEach((s1) => {
       s1.multiplierResize(multiplier);
-      s1.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
     });
   }
 
