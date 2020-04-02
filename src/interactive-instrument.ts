@@ -1,5 +1,5 @@
-import { Graphics, Point, Text } from "pixi.js";
-import { drawFilledArc } from "./draw-util";
+import { Graphics, Point, Text, Matrix } from "pixi.js";
+import { drawDoubleClosedArc } from "./draw-util";
 import { Interactive } from "./interactive";
 import { TEXT_STYLE_INTERACTIVE_NUM } from "./styles";
 
@@ -18,6 +18,8 @@ export class InteractiveInstrument extends Interactive {
   private initialStartRad: number;
   private initialEndRad: number;
   private rTemp = 0;
+  private tMatrix = new Matrix(1, 0, 0, 0.5, 0, 0);
+
   public state: InstrumentState = InstrumentState.IDLE;
   public stateValue: number = 0;
 
@@ -39,7 +41,8 @@ export class InteractiveInstrument extends Interactive {
     this.addChild(this.dynamicGraphics);
     this.addChild(this.dynamicText);
     this.dynamicText.anchor.set(0.5,0.5);
-    this.dynamicText.position.set(this.centerPoint.x, this.centerPoint.y);
+    const mCenterPoint = this.tMatrix.apply(this.centerPoint);
+    this.dynamicText.position.set(mCenterPoint.x, mCenterPoint.y);
   }
 
   multiplierResize(multiplier: number) {
@@ -62,7 +65,10 @@ export class InteractiveInstrument extends Interactive {
     const centerArc = this.startArc + (this.endArc - this.startArc) / 2;
     const centerRad = this.startRad + (this.endRad - this.startRad) / 2;
     this.centerPoint.set(Math.cos(centerArc) * centerRad, -Math.sin(centerArc) * centerRad);
-    this.dynamicText.position.set(this.centerPoint.x, this.centerPoint.y);
+
+    const mCenterPoint = this.tMatrix.apply(this.centerPoint);
+    this.dynamicText.position.set(mCenterPoint.x, mCenterPoint.y);
+
     this.updateMask();
     this.draw();
     this.drawDynamics();
@@ -104,18 +110,20 @@ export class InteractiveInstrument extends Interactive {
   updateMask() {
     this.maskGraphics
       .clear()
+      .setMatrix(this.tMatrix)
       // @TODO - why doesn't this mask as expected?
       .lineStyle(10, 0x000000, 1, 0)
       .beginFill(0xffffff, 1);
 
-    drawFilledArc(this.maskGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100);
+    drawDoubleClosedArc(this.maskGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100);
 
     this.maskGraphics.endFill();
 
   }
 
   drawDynamics() {
-    this.dynamicGraphics.clear();
+    this.dynamicGraphics.clear()
+      .setMatrix(this.tMatrix);
 
     if(this.state === InstrumentState.IDLE) {
       this.dynamicGraphics.lineStyle(2, 0xffffff, 0.1, 0);
@@ -134,15 +142,24 @@ export class InteractiveInstrument extends Interactive {
     }
 
     if(this.rTemp > 0) {
-      this.dynamicGraphics
-        .lineStyle(4, 0xffffff, this.rTemp*0.5)
-        .drawCircle(this.centerPoint.x, this.centerPoint.y, 48 + (1 - this.rTemp) * 32 )
-        .lineStyle(1, 0xffffff, this.rTemp)
-        .drawCircle(this.centerPoint.x, this.centerPoint.y, 48 + (1 - this.rTemp) * 64 );
-      this.dynamicGraphics.beginFill(0xffffff, 0.5 * this.rTemp)
-        .lineStyle(0)
-        .drawCircle(this.centerPoint.x, this.centerPoint.y, 32)
-        .endFill();
+      this.dynamicGraphics.lineStyle(1, 0xffffff, this.rTemp*0.75, -5 + 40 * (1-this.rTemp))
+      drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
+
+      this.dynamicGraphics.lineStyle(6, 0xffffff, this.rTemp, 2 * (1-this.rTemp))
+      drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
+
+      // this.dynamicGraphics.lineStyle(2, 0xffffff, this.rTemp, - 10 * (1-this.rTemp))
+      // drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
+
+      this.dynamicGraphics.lineStyle(1, 0xffffff, this.rTemp, -5 + 20 * (1-this.rTemp))
+      drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
+
+        // .lineStyle(1, 0xffffff, this.rTemp)
+        // .drawCircle(this.centerPoint.x, this.centerPoint.y, 48 + (1 - this.rTemp) * 64 );
+      // this.dynamicGraphics.beginFill(0xffffff, 0.5 * this.rTemp)
+      //   .lineStyle(0)
+      //   .drawCircle(this.centerPoint.x, this.centerPoint.y, 32)
+      //   .endFill();
     }
 
   }
@@ -151,10 +168,11 @@ export class InteractiveInstrument extends Interactive {
 
     this.bkgGraphics
       .clear()
+      .setMatrix(this.tMatrix)
       //.lineStyle(10, 0x55aacc, 1, 0)
       .beginFill(this.color, 0.5);
 
-    drawFilledArc(this.bkgGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100);
+    drawDoubleClosedArc(this.bkgGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100);
 
     this.bkgGraphics.endFill();
 

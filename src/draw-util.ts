@@ -1,6 +1,6 @@
 import { Graphics } from "pixi.js";
 
-export function drawFilledArc(graphics: Graphics, startArc: number, endArc: number, startRadius: number, endRadius: number, steps: number = 100) {
+export function drawDoubleClosedArc(graphics: Graphics, startArc: number, endArc: number, startRadius: number, endRadius: number, steps: number = 100, overlapEnd = false) {
 
   const stepArc = (endArc - startArc) / steps;
 
@@ -19,5 +19,9 @@ export function drawFilledArc(graphics: Graphics, startArc: number, endArc: numb
 
   graphics.lineTo(Math.cos(startArc) * endRadius, -Math.sin(startArc) * endRadius);
   graphics.lineTo(Math.cos(startArc) * startRadius, -Math.sin(startArc) * startRadius);
+
+  if(overlapEnd) {
+    graphics.lineTo(Math.cos(startArc + stepArc) * startRadius, -Math.sin(startArc + stepArc) * startRadius);
+  }
 
 }
