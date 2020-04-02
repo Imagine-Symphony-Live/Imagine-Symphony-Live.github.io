@@ -104,6 +104,11 @@ export class InteractiveInstrument extends Interactive {
     if(this.state === InstrumentState.COUNT_IN) {
       this.dynamicText.text = `${Math.ceil(this.stateValue - currentBeat)}`;
     }
+    if(this.dragHover) {
+      this.bkgGraphics.alpha = 1;
+    } else {
+      this.bkgGraphics.alpha = 0.5;
+    }
     this.drawDynamics();
   }
 
