@@ -1,4 +1,4 @@
-import { Container, Application } from "pixi.js";
+import { Container, Application, Point } from "pixi.js";
 import ClickTrack from 'click-track';
 import State from "./state";
 import { InteractiveInstrument } from "./interactive-instrument";
@@ -17,6 +17,12 @@ export default class PerformanceState extends State {
   private app: Application;
   private clickTrack: ClickTrack<InteractiveCue>;
   private interactivesContainer: Container;
+
+  // DIY interaction management
+  private interactiveHovering?: Interactive;
+  private mousePos: Point;
+  private mouseChecked: boolean = true;
+  private draggingObject?: Draggable;
 
   async createContainer(app: Application): Promise<Container> {
     this.app = app;
@@ -48,6 +54,10 @@ export default class PerformanceState extends State {
     container.addChild(this.interactivesContainer);
     this.interactivesContainer.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
 
+    // DIY interaction management
+    this.interactivesContainer.interactive = true;
+    this.interactivesContainer.on("mousemove", this.onMove.bind(this));
+
     this.interactives = interactives;
 
     this.interactives.forEach((s1) => {
@@ -60,7 +70,9 @@ export default class PerformanceState extends State {
       const dragCircle = new Draggable();
       dragCircle.setOrigin(window.innerWidth / 2 + (i - 2) * 64, window.innerHeight * 3 / 4 + 100);
       container.addChild(dragCircle);
-      dragCircle.on("dragged", this.onCircleDrag.bind(this, this.interactivesContainer));
+      dragCircle.on("dragged", this.onCircleDrag.bind(this));
+      dragCircle.on("dragActive", this.onActiveDrag.bind(this));
+      dragCircle.on("dragInactive", this.onInctiveDrag.bind(this));
       interactives.push(dragCircle);
     }
 
@@ -108,19 +120,60 @@ export default class PerformanceState extends State {
     }
   }
 
-  onCircleDrag(container: Container, e: PIXI.interaction.InteractionEvent) {
+  onCircleDrag(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
     if (this.app) {
-      const i = this.app.renderer.plugins.interaction.hitTest(e.data.global, container);
+      const i = this.app.renderer.plugins.interaction.hitTest(e.data.global, this.interactivesContainer);
       if (i && i instanceof InteractiveInstrument) {
-        i.onDrop(e);
+        i.emit("mousedragout", this.mousePos);
+        i.emit("drop", dragging, e);
       }
     }
+  }
+
+  onActiveDrag(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
+    if(!this.draggingObject) {
+      this.draggingObject = dragging;
+    }
+  }
+
+  onInctiveDrag(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
+    if(dragging == this.draggingObject) {
+      this.draggingObject = undefined;
+    }
+  }
+
+  onMove(e: PIXI.interaction.InteractionEvent) {
+    this.mousePos = e.data.global;
+    this.mouseChecked = false;
   }
 
   onTick() {
     const currentBeat = this.clickTrack.beat;
     for (let i = 0; i < this.interactives.length; i++) {
       this.interactives[i].onTick(currentBeat);
+    }
+
+    // DIY mouse enter/mouse out interaction handling
+    // This is here because while draggin draggables, mouseenter and mouseout events aren't triggered
+    if(this.draggingObject && this.app && !this.mouseChecked) {
+      this.mouseChecked = true;
+      const object = this.app.renderer.plugins.interaction.hitTest(this.mousePos, this.interactivesContainer);
+      if (object && object instanceof Interactive) {
+        if(!this.interactiveHovering) {
+          // Mouse enter
+          this.interactiveHovering = object;
+          this.interactiveHovering.emit("mousedragover", this.mousePos);
+        } else if(this.interactiveHovering !== object) {
+          // Mouse enter and out (new object)
+          object.emit("mousedragover", this.mousePos);
+          this.interactiveHovering.emit("mousedragout", this.mousePos);
+          this.interactiveHovering = object;
+        }
+      } else if(this.interactiveHovering) {
+        // mouse out
+        this.interactiveHovering.emit("mousedragout", this.mousePos);
+        this.interactiveHovering = undefined;
+      }
     }
   }
 
