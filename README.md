@@ -3,8 +3,17 @@
 ## TODO
 
 **Music Game**
- - [ ] Conductor aims at sections for each part of song
- - [ ] Clicking conductor bio activates music game
+ - [ ] Intro
+ - [ ] Lake
+ - [ ] Desert
+ - [ ] Forest
+ - [ ] Transition
+ - [ ] Mountain
+ - [ ] Bus
+ - [ ] Coffee Shop
+ - [ ] Recap
+ - [ ] ~~Conductor aims at sections for each part of song~~
+ - [ ] ~~Clicking conductor bio activates music game~~
 
 **Progressive Engagement**
  - [ ] Each bio view changes visuals
@@ -30,5 +39,5 @@
 
 **Misc**
  - [ ] BUG: Pinching and zooming on mobile sometimes stops working
- - [X] Request full screen butt
+ - [X] Request full screen button
  - [X] Snap to center button
