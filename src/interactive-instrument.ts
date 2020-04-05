@@ -13,8 +13,10 @@ export enum InstrumentState {
 export class InteractiveInstrument extends Interactive {
   private bkgGraphics: Graphics = new Graphics();
   private dynamicGraphics: Graphics = new Graphics();
+  private indicatorGraphics: Graphics = new Graphics();
   private maskGraphics: Graphics = new Graphics();
   private centerPoint: Point = new Point();
+  private mCenterPoint: Point = new Point();
   private initialStartRad: number;
   private initialEndRad: number;
   private tMatrix = new Matrix(1, 0, 0, 0.5, 0, 0);
@@ -40,6 +42,7 @@ export class InteractiveInstrument extends Interactive {
     this.addChild(this.bkgGraphics);
     //this.addChild(this.maskGraphics);
     this.addChild(this.dynamicGraphics);
+    this.addChild(this.indicatorGraphics);
   }
 
   multiplierResize(multiplier: number) {
@@ -62,6 +65,7 @@ export class InteractiveInstrument extends Interactive {
     const centerArc = this.startArc + (this.endArc - this.startArc) / 2;
     const centerRad = this.startRad + (this.endRad - this.startRad) / 2;
     this.centerPoint.set(Math.cos(centerArc) * centerRad, -Math.sin(centerArc) * centerRad);
+    this.mCenterPoint = this.tMatrix.apply(this.centerPoint);
 
     this.updateMask();
     this.draw();
@@ -102,6 +106,14 @@ export class InteractiveInstrument extends Interactive {
     if(this.state === InstrumentState.HIT && this.stateFade >= 1) {
       this.setState(InstrumentState.IDLE);
     }
+    if(this.state === InstrumentState.CUED) {
+      this.indicatorGraphics.alpha = 1;
+    } else if (this.state === InstrumentState.HIT) {
+      this.indicatorGraphics.alpha = 1 - this.stateFade;
+    } else {
+      this.indicatorGraphics.alpha = 0;
+    }
+
     if(this.dragHover && this.state === InstrumentState.CUE_READY) {
       this.bkgGraphics.alpha = 1;
     } else {
@@ -128,14 +140,14 @@ export class InteractiveInstrument extends Interactive {
     this.dynamicGraphics.clear()
       .setMatrix(this.tMatrix);
 
-    if(this.state === InstrumentState.CUE_READY) {
+    if(this.state === InstrumentState.CUE_READY || this.state === InstrumentState.CUED) {
       this.dynamicGraphics
         .lineStyle(2,0xffffff, 0.1 * this.stateFade)
         .drawCircle(this.centerPoint.x, this.centerPoint.y, 42 );
     }
 
     if(this.state === InstrumentState.CUED) {
-      this.dynamicGraphics.lineStyle(2, 0xffffff, 1, 0)
+      this.dynamicGraphics.lineStyle(2, 0xffffff, 1, 0);
       drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
     }
 
@@ -148,6 +160,7 @@ export class InteractiveInstrument extends Interactive {
 
       this.dynamicGraphics.lineStyle(1, 0xffffff, (1-this.stateFade), -5 + 20 * this.stateFade)
       drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
+
     }
 
   }
@@ -163,6 +176,14 @@ export class InteractiveInstrument extends Interactive {
     drawDoubleClosedArc(this.bkgGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100);
 
     this.bkgGraphics.endFill();
+
+    this.indicatorGraphics
+      .clear()
+      .beginFill(0xffffff)
+      .drawCircle(0, 0, 32)
+      .endFill();
+
+    this.indicatorGraphics.position.set(this.mCenterPoint.x, this.mCenterPoint.y - 32);
 
   }
 }
