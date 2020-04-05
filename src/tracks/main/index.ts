@@ -1,5 +1,5 @@
 import { InteractiveInstrument } from "../../interactive-instrument";
-import { interactives } from "./interactives";
+import { interactives } from "./track-interactives";
 import { InteractiveTrack } from "../../types/interactive-track";
 import fullSong from '../../../assets/music/full-composition.ogg';
 
