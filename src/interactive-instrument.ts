@@ -2,6 +2,7 @@ import { Graphics, Point, Matrix } from "pixi.js";
 import { drawDoubleClosedArc } from "./draw-util";
 import { Interactive } from "./interactive";
 import { Draggable } from "./dragable";
+import { linearLerpPoint, powLerpPoint } from "./lerp";
 
 export enum InstrumentState {
   IDLE,
@@ -14,6 +15,9 @@ export class InteractiveInstrument extends Interactive {
   private bkgGraphics: Graphics = new Graphics();
   private dynamicGraphics: Graphics = new Graphics();
   private indicatorGraphics: Graphics = new Graphics();
+  private indicatorPoint: Point = new Point();
+  private indicatorStartPoint: Point = new Point();
+  private indicatorHomePoint: Point = new Point(0, -32);
   private maskGraphics: Graphics = new Graphics();
   private centerPoint: Point = new Point();
   private mCenterPoint: Point = new Point();
@@ -75,6 +79,9 @@ export class InteractiveInstrument extends Interactive {
   onDrop(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
     if(this.state === InstrumentState.CUE_READY) {
       this.setState(InstrumentState.CUED);
+      const cursorPpoint = e.data.getLocalPosition(this);
+      this.indicatorStartPoint.x = cursorPpoint.x - this.mCenterPoint.x;
+      this.indicatorStartPoint.y = cursorPpoint.y - this.mCenterPoint.y;
     }
   }
 
@@ -107,9 +114,15 @@ export class InteractiveInstrument extends Interactive {
       this.setState(InstrumentState.IDLE);
     }
     if(this.state === InstrumentState.CUED) {
-      this.indicatorGraphics.alpha = 1;
+      this.indicatorGraphics.alpha = 0.5;
+      if(this.stateFade < 1) {
+        this.indicatorPoint.copyFrom(powLerpPoint(this.indicatorStartPoint, this.indicatorHomePoint, this.stateFade, 0.1));
+      } else {
+        this.indicatorPoint.copyFrom(this.indicatorHomePoint);
+      }
+      this.indicatorGraphics.position.set(this.mCenterPoint.x + this.indicatorPoint.x, this.mCenterPoint.y + this.indicatorPoint.y);
     } else if (this.state === InstrumentState.HIT) {
-      this.indicatorGraphics.alpha = 1 - this.stateFade;
+      this.indicatorGraphics.alpha = 0.5 - this.stateFade / 2;
     } else {
       this.indicatorGraphics.alpha = 0;
     }
@@ -182,8 +195,6 @@ export class InteractiveInstrument extends Interactive {
       .beginFill(0xffffff)
       .drawCircle(0, 0, 32)
       .endFill();
-
-    this.indicatorGraphics.position.set(this.mCenterPoint.x, this.mCenterPoint.y - 32);
 
   }
 }
