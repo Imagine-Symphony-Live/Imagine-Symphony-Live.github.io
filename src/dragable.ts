@@ -35,13 +35,15 @@ export class Draggable extends Interactive {
 
   onDragStart(e: PIXI.interaction.InteractionEvent) {
     this.dragging = true;
+    this.emit("dragActive", this, e);
     this.graphics.on('pointermove', this.onDragMove.bind(this));
   }
 
   onDragEnd(e: PIXI.interaction.InteractionEvent) {
     this.dragging = false;
+    this.emit("dragInactive", this, e);
     this.graphics.off('pointermove', this.onDragMove.bind(this));
-    this.emit("dragged", e);
+    this.emit("dragged", this, e);
     this.position.set(this.origin.x, this.origin.y);
   }
 
