@@ -4,9 +4,10 @@ export abstract class Interactive extends Container {
   // beat, state, value
   cues: Array<[number, number, number]> = [];
   name: string = "";
+  protected stateFade = 0;
+  protected stateFadeTime = 1;
   protected dragHover: boolean = false;
   abstract multiplierResize(multiplier: number): void;
-  abstract onTick(beat: number): void;
   abstract setState(newState: number, value: number): void;
   onCue(cue: number, state: number, value: number) {
     this.setState(state, value);
@@ -18,6 +19,15 @@ export abstract class Interactive extends Container {
 
   onDragOut(e: PIXI.interaction.InteractionEvent) {
     this.dragHover = false;
+  }
+
+  onTick(currentBeat: number) {
+    if(this.stateFade < 1) {
+      this.stateFade += this.stateFadeTime;
+      if(this.stateFade > 1) {
+        this.stateFade = 1;
+      }
+    }
   }
 
   constructor() {

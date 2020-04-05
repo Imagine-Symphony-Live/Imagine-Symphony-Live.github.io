@@ -1,23 +1,22 @@
-import { Graphics, Point, Text, Matrix } from "pixi.js";
+import { Graphics, Point, Matrix } from "pixi.js";
 import { drawDoubleClosedArc } from "./draw-util";
 import { Interactive } from "./interactive";
-import { TEXT_STYLE_INTERACTIVE_NUM } from "./styles";
+import { Draggable } from "./dragable";
 
 export enum InstrumentState {
   IDLE,
-  COUNT_IN,
+  CUE_READY,
+  CUED,
   HIT,
 }
 
 export class InteractiveInstrument extends Interactive {
   private bkgGraphics: Graphics = new Graphics();
   private dynamicGraphics: Graphics = new Graphics();
-  private dynamicText: Text = new Text("", TEXT_STYLE_INTERACTIVE_NUM);
   private maskGraphics: Graphics = new Graphics();
   private centerPoint: Point = new Point();
   private initialStartRad: number;
   private initialEndRad: number;
-  private rTemp = 0;
   private tMatrix = new Matrix(1, 0, 0, 0.5, 0, 0);
 
   public state: InstrumentState = InstrumentState.IDLE;
@@ -35,14 +34,12 @@ export class InteractiveInstrument extends Interactive {
       endArc,
     });
 
-    this.mask = this.maskGraphics;
+    this.on("drop", this.onDrop.bind(this));
+
+    //this.mask = this.maskGraphics;
     this.addChild(this.bkgGraphics);
-    this.addChild(this.maskGraphics);
+    //this.addChild(this.maskGraphics);
     this.addChild(this.dynamicGraphics);
-    this.addChild(this.dynamicText);
-    this.dynamicText.anchor.set(0.5,0.5);
-    const mCenterPoint = this.tMatrix.apply(this.centerPoint);
-    this.dynamicText.position.set(mCenterPoint.x, mCenterPoint.y);
   }
 
   multiplierResize(multiplier: number) {
@@ -66,45 +63,46 @@ export class InteractiveInstrument extends Interactive {
     const centerRad = this.startRad + (this.endRad - this.startRad) / 2;
     this.centerPoint.set(Math.cos(centerArc) * centerRad, -Math.sin(centerArc) * centerRad);
 
-    const mCenterPoint = this.tMatrix.apply(this.centerPoint);
-    this.dynamicText.position.set(mCenterPoint.x, mCenterPoint.y);
-
     this.updateMask();
     this.draw();
     this.drawDynamics();
   }
 
-  onDrop(e: PIXI.interaction.InteractionEvent) {
-    const pos = this.getGlobalPosition();
-    const distance = Math.sqrt(Math.pow(pos.x - e.data.global.x + this.centerPoint.x, 2) + Math.pow(pos.y - e.data.global.y + this.centerPoint.y, 2));
-    if(distance > 64) {
-      return;
+  onDrop(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
+    if(this.state === InstrumentState.CUE_READY) {
+      this.setState(InstrumentState.CUED);
     }
-    this.rTemp = 1;
   }
 
   setState(newState: InstrumentState, value: number = 0) {
+    // TEMP
+    if(newState === this.state) return;
+
+    switch (newState) {
+      case InstrumentState.CUED:
+      case InstrumentState.CUE_READY:
+        this.stateFadeTime = 0.1;
+        break;
+
+      case InstrumentState.HIT:
+        this.stateFadeTime = 0.05;
+        break;
+
+      default:
+        this.stateFadeTime = 1;
+    }
+    this.stateFade = 0;
     this.state = newState;
     this.stateValue = value;
-
-    if(this.state === InstrumentState.IDLE) {
-      this.dynamicText.text = "";
-    }
-    if(this.state === InstrumentState.HIT) {
-      this.dynamicText.text = "";
-    }
   }
 
   onTick(currentBeat: number) {
-    if(this.rTemp > 0) {
-      this.rTemp -= 0.05;
-    } else {
-      this.rTemp = 0;
+    super.onTick(currentBeat);
+
+    if(this.state === InstrumentState.HIT && this.stateFade >= 1) {
+      this.setState(InstrumentState.IDLE);
     }
-    if(this.state === InstrumentState.COUNT_IN) {
-      this.dynamicText.text = `${Math.ceil(this.stateValue - currentBeat)}`;
-    }
-    if(this.dragHover) {
+    if(this.dragHover && this.state === InstrumentState.CUE_READY) {
       this.bkgGraphics.alpha = 1;
     } else {
       this.bkgGraphics.alpha = 0.5;
@@ -130,41 +128,26 @@ export class InteractiveInstrument extends Interactive {
     this.dynamicGraphics.clear()
       .setMatrix(this.tMatrix);
 
-    if(this.state === InstrumentState.IDLE) {
-      this.dynamicGraphics.lineStyle(2, 0xffffff, 0.1, 0);
-    } else {
-      this.dynamicGraphics.lineStyle(4, 0xffffff, 0.5, 0);
+    if(this.state === InstrumentState.CUE_READY) {
+      this.dynamicGraphics
+        .lineStyle(2,0xffffff, 0.1 * this.stateFade)
+        .drawCircle(this.centerPoint.x, this.centerPoint.y, 42 );
     }
 
-    this.dynamicGraphics.drawCircle(this.centerPoint.x, this.centerPoint.y, 48 );
+    if(this.state === InstrumentState.CUED) {
+      this.dynamicGraphics.lineStyle(2, 0xffffff, 1, 0)
+      drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
+    }
 
     if(this.state === InstrumentState.HIT) {
-      this.dynamicGraphics
-        .lineStyle(0)
-        .beginFill(0xffffff, 0.1)
-        .drawCircle(this.centerPoint.x, this.centerPoint.y, 42 )
-        .endFill();
-    }
-
-    if(this.rTemp > 0) {
-      this.dynamicGraphics.lineStyle(1, 0xffffff, this.rTemp*0.75, -5 + 40 * (1-this.rTemp))
+      this.dynamicGraphics.lineStyle(1, 0xffffff, (1-this.stateFade)*0.75, -5 + 40 * this.stateFade)
       drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
 
-      this.dynamicGraphics.lineStyle(6, 0xffffff, this.rTemp, 2 * (1-this.rTemp))
+      this.dynamicGraphics.lineStyle(6, 0xffffff, (1-this.stateFade), 2 * this.stateFade)
       drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
 
-      // this.dynamicGraphics.lineStyle(2, 0xffffff, this.rTemp, - 10 * (1-this.rTemp))
-      // drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
-
-      this.dynamicGraphics.lineStyle(1, 0xffffff, this.rTemp, -5 + 20 * (1-this.rTemp))
+      this.dynamicGraphics.lineStyle(1, 0xffffff, (1-this.stateFade), -5 + 20 * this.stateFade)
       drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
-
-        // .lineStyle(1, 0xffffff, this.rTemp)
-        // .drawCircle(this.centerPoint.x, this.centerPoint.y, 48 + (1 - this.rTemp) * 64 );
-      // this.dynamicGraphics.beginFill(0xffffff, 0.5 * this.rTemp)
-      //   .lineStyle(0)
-      //   .drawCircle(this.centerPoint.x, this.centerPoint.y, 32)
-      //   .endFill();
     }
 
   }
