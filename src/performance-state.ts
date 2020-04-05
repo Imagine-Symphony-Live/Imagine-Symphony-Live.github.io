@@ -6,7 +6,6 @@ import { Draggable } from "./dragable";
 import { Interactive } from "./interactive";
 import mainTrack from "./tracks/main/";
 import { CueEvent } from "click-track/dist/src/definitions/cue-event";
-import { Fermata } from "./fermata";
 
 type InteractiveCue = [Interactive, number, number];
 
@@ -42,7 +41,6 @@ export default class PerformanceState extends State {
     track.playbackRate = 1;
 
     const start = () => {
-      track.currentTime = 13 * 6 * (60 / 148);
       track.play();
       track.removeEventListener('canplaythrough', start);
     };
@@ -65,26 +63,14 @@ export default class PerformanceState extends State {
       this.interactivesContainer.addChild(s1);
     });
 
-    // Create some draggables
-    for (let i = 0; i < 5; i++) {
-      const dragCircle = new Draggable();
-      dragCircle.setOrigin(window.innerWidth / 2 + (i - 2) * 64, window.innerHeight * 3 / 4 + 100);
-      container.addChild(dragCircle);
-      dragCircle.on("dragged", this.onCircleDrag.bind(this));
-      dragCircle.on("dragActive", this.onActiveDrag.bind(this));
-      dragCircle.on("dragInactive", this.onInctiveDrag.bind(this));
-      interactives.push(dragCircle);
-    }
-
-    // Demo fermata
-    const fermataCircle = new Fermata();
-    fermataCircle.setOrigin(window.innerWidth / 2 + 6 * 64, window.innerHeight * 3 / 4 + 100);
-    container.addChild(fermataCircle);
-    interactives.push(fermataCircle);
-
-    setInterval(() => {
-      track.playbackRate = 1 - fermataCircle.value * 0.5;
-    }, 100);
+    // Create draggable
+    const dragCircle = new Draggable();
+    dragCircle.setOrigin(window.innerWidth / 2, window.innerHeight * 3 / 4);
+    container.addChild(dragCircle);
+    dragCircle.on("dragged", this.onCircleDrag.bind(this));
+    dragCircle.on("dragActive", this.onActiveDrag.bind(this));
+    dragCircle.on("dragInactive", this.onInctiveDrag.bind(this));
+    interactives.push(dragCircle);
 
     // Assemble cues
     const cues: Array<[number, InteractiveCue]> = [];
