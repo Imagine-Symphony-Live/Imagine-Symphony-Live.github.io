@@ -1,5 +1,6 @@
 import { Graphics, Point } from "pixi.js";
 import { Interactive } from "./interactive";
+import { DRAGGABLE_RADIUS } from "./constants";
 
 export enum DraggableState {
   HIDDEN,
@@ -16,7 +17,7 @@ export class Draggable extends Interactive {
     this.graphics
       .clear()
       .beginFill(0xffffff, 0.5)
-      .drawCircle(0, 0, 32)
+      .drawCircle(0, 0, DRAGGABLE_RADIUS)
       .endFill();
     this.addChild(this.graphics);
 

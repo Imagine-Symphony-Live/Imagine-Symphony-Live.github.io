@@ -2,7 +2,8 @@ import { Graphics, Point, Matrix } from "pixi.js";
 import { drawDoubleClosedArc } from "./draw-util";
 import { Interactive } from "./interactive";
 import { Draggable } from "./dragable";
-import { linearLerpPoint, powLerpPoint } from "./lerp";
+import { powLerpPoint } from "./lerp";
+import { DRAGGABLE_RADIUS } from "./constants";
 
 export enum InstrumentState {
   IDLE,
@@ -17,7 +18,7 @@ export class InteractiveInstrument extends Interactive {
   private indicatorGraphics: Graphics = new Graphics();
   private indicatorPoint: Point = new Point();
   private indicatorStartPoint: Point = new Point();
-  private indicatorHomePoint: Point = new Point(0, -32);
+  private indicatorHomePoint: Point = new Point(0, -DRAGGABLE_RADIUS);
   private maskGraphics: Graphics = new Graphics();
   private centerPoint: Point = new Point();
   private mCenterPoint: Point = new Point();
@@ -193,7 +194,7 @@ export class InteractiveInstrument extends Interactive {
     this.indicatorGraphics
       .clear()
       .beginFill(0xffffff)
-      .drawCircle(0, 0, 32)
+      .drawCircle(0, 0, DRAGGABLE_RADIUS)
       .endFill();
 
   }
