@@ -1,7 +1,7 @@
 import { Graphics, Point, Matrix } from "pixi.js";
 import { drawDoubleClosedArc } from "./draw-util";
 import { Interactive } from "./interactive";
-import { Draggable } from "./dragable";
+import { Draggable } from "./draggable";
 import { powLerpPoint } from "./lerp";
 import { DRAGGABLE_RADIUS } from "./constants";
 

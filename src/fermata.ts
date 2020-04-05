@@ -1,4 +1,4 @@
-import { Draggable } from "./dragable";
+import { Draggable } from "./draggable";
 
 const beatsToOrigin = 6;
 

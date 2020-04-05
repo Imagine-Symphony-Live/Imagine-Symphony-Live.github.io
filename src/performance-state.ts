@@ -2,7 +2,7 @@ import { Container, Application, Point } from "pixi.js";
 import ClickTrack from 'click-track';
 import State from "./state";
 import { InteractiveInstrument } from "./interactive-instrument";
-import { Draggable } from "./dragable";
+import { Draggable } from "./draggable";
 import { Interactive } from "./interactive";
 import mainTrack from "./tracks/main/";
 import { CueEvent } from "click-track/dist/src/definitions/cue-event";
