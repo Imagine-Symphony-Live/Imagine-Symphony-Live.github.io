@@ -8,9 +8,9 @@ function m2b(measure: number, beat: number): number {
 
 function countdown(cueAt: number, countIn: number): Array<[number, InstrumentState, number]> {
   const cues: Array<[number, InstrumentState, number]> = [];
-  cues.push([cueAt - countIn, InstrumentState.COUNT_IN, cueAt]);
+  cues.push([cueAt - countIn, InstrumentState.CUE_READY, cueAt]);
   cues.push([cueAt, InstrumentState.HIT, 1]);
-  cues.push([cueAt + 1, InstrumentState.IDLE, 0]);
+  //cues.push([cueAt + 1, InstrumentState.IDLE, 0]);
   return cues;
 }
 
@@ -30,7 +30,9 @@ export const interactives: Array<{
       eA: Math.PI / 6,
       sR: 3,
       eR: 7,
-      cues: [],
+      cues: [
+        ...countdown(m2b(6, 4), 12)
+      ],
     },
     {
       name: "Viola",
@@ -40,7 +42,7 @@ export const interactives: Array<{
       sR: 3,
       eR: 7,
       cues: [
-        ...countdown(m2b(25, 1.0), 6),
+        ...countdown(m2b(7, 1.0), 12),
       ],
     },
     {
@@ -68,16 +70,29 @@ export const interactives: Array<{
       eA: Math.PI * 11 / 18,
       sR: 8,
       eR: 10,
-      cues: [],
+      cues: [
+        ...countdown(m2b(9, 6), 5)
+      ],
     },
     {
       name: "Xylophone",
       color: hslToRgb(Math.random(), 1, 0.5),
       sA: Math.PI * 11 / 18,
-      eA: Math.PI * 5 / 6,
+      eA: Math.PI * 14 / 18,
       sR: 8,
       eR: 10,
       cues: [],
+    },
+    {
+      name: "Harp",
+      color: hslToRgb(Math.random(), 1, 0.5),
+      sA: Math.PI * 14 / 18,
+      eA: Math.PI * 15 / 18,
+      sR: 8,
+      eR: 10,
+      cues: [
+        ...countdown(m2b(11, 1), 6)
+      ]
     },
     {
       name: "Clarinet",
@@ -87,8 +102,8 @@ export const interactives: Array<{
       sR: 3,
       eR: 8,
       cues: [
-        ...countdown(m2b(15, 2.0), 6), // flute
-        ...countdown(m2b(17, 1.0), 6), // bass clarinet
+        //...countdown(m2b(15, 2.0), 12), // flute
+        //...countdown(m2b(17, 1.0), 12), // bass clarinet
       ],
     },
     {
@@ -98,7 +113,9 @@ export const interactives: Array<{
       eA: Math.PI * 5 / 6,
       sR: 3,
       eR: 8,
-      cues: [],
+      cues: [
+        ...countdown(m2b(6, 1), 12)
+      ],
     },
     {
       name: "Violin",
@@ -106,7 +123,21 @@ export const interactives: Array<{
       sA: Math.PI * 5 / 6,
       eA: Math.PI,
       sR: 3,
+      eR: 7,
+      cues: [
+        ...countdown(m2b(3, 1), 12),
+        ...countdown(m2b(8, 2), 12),
+      ],
+    },
+    {
+      name: "Piano",
+      color: hslToRgb(Math.random(), 1, 0.5),
+      sA: Math.PI * 5 / 6,
+      eA: Math.PI,
+      sR: 7,
       eR: 10,
-      cues: [],
+      cues: [
+        ...countdown(m2b(4, 4), 12)
+      ],
     },
   ];
