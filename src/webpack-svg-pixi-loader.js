@@ -16,7 +16,6 @@ module.exports = function (source) {
 
   if(!pathString) throw new Error(`Path ${options.path} missing 'd' attribute`);
 
-  console.log(pathToCode(pathString));
   const code = `export default function() {${pathToCode(pathString)}}`;
 
   return code;
