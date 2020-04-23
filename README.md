@@ -3,7 +3,7 @@
 ## TODO
 
 **Core**
- - [ ] Rework graphics pipeline.
+ - [x] Rework graphics pipeline.
 
 **Music Game**
  - [ ] Intro
