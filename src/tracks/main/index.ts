@@ -7,9 +7,12 @@ import fullSong from '../../../assets/music/full-composition.ogg';
 export default function (): InteractiveTrack {
   return {
     interactives: interactives.map((i) => {
-      const o = new InteractiveInstrument(i.color, i.sA, i.eA, i.sR, i.eR);
+      const o = new InteractiveInstrument(i.color, i.graphicsPath);
       o.cues = i.cues;
       o.name = i.name;
+      // SVG group size: 828 131.65
+      // Set instrument position to SVG group center
+      o.position.set(-414, -131.65);
       return o;
     }),
     particleCues: particles,
