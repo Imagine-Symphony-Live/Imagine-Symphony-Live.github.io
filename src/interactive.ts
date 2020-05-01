@@ -32,9 +32,6 @@ export abstract class Interactive extends Container {
 
   constructor() {
     super();
-    this.interactive = true;
-    this.on("mousedragover", this.onDragOver.bind(this));
-    this.on("mousedragout", this.onDragOut.bind(this));
   }
 
 }

@@ -19,66 +19,43 @@ export class InteractiveInstrument extends Interactive {
   private indicatorPoint: Point = new Point();
   private indicatorStartPoint: Point = new Point();
   private indicatorHomePoint: Point = new Point(0, -DRAGGABLE_RADIUS);
-  private maskGraphics: Graphics = new Graphics();
-  private centerPoint: Point = new Point();
+  private centerPoint: Point = new Point(); // @TODO
   private mCenterPoint: Point = new Point();
-  private initialStartRad: number;
-  private initialEndRad: number;
-  private tMatrix = new Matrix(1, 0, 0, 0.5, 0, 0);
 
   public state: InstrumentState = InstrumentState.IDLE;
   public stateValue: number = 0;
 
-  constructor(public color: number, public startArc: number, public endArc: number, public startRad: number, public endRad: number) {
+  constructor(public color: number, private graphicsDraw: () => void) {
     super();
-    this.initialStartRad = startRad;
-    this.initialEndRad = endRad;
 
-    this.updateSize({
-      startRad,
-      endRad,
-      startArc,
-      endArc,
-    });
+    this.updateSize();
 
     this.on("drop", this.onDrop.bind(this));
 
-    //this.mask = this.maskGraphics;
+    this.interactive = true;
+    this.on("mousedragover", this.onDragOver.bind(this));
+    this.on("mousedragout", this.onDragOut.bind(this));
+
     this.addChild(this.bkgGraphics);
-    //this.addChild(this.maskGraphics);
     this.addChild(this.dynamicGraphics);
     this.addChild(this.indicatorGraphics);
   }
 
   multiplierResize(multiplier: number) {
-    this.updateSize({
-      startRad: this.initialStartRad*multiplier,
-      endRad: this.initialEndRad*multiplier,
-    });
+    // @TODO - scale it
+    this.updateSize();
   }
 
-  updateSize(options: {
-    startRad?: number,
-    endRad?: number,
-    startArc?: number,
-    endArc?: number
-  }) {
-    if(options.startRad) this.startRad = options.startRad;
-    if(options.endRad) this.endRad = options.endRad;
-    if(options.startArc) this.startArc = options.startArc;
-    if(options.endArc) this.endArc = options.endArc;
-    const centerArc = this.startArc + (this.endArc - this.startArc) / 2;
-    const centerRad = this.startRad + (this.endRad - this.startRad) / 2;
-    this.centerPoint.set(Math.cos(centerArc) * centerRad, -Math.sin(centerArc) * centerRad);
-    this.mCenterPoint = this.tMatrix.apply(this.centerPoint);
+  updateSize() {
+    // this.mCenterPoint =// @TODO
 
-    this.updateMask();
     this.draw();
     this.drawDynamics();
   }
 
   onDrop(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
     if(this.state === InstrumentState.CUE_READY) {
+      //dragging.parent.removeChild(dragging);
       this.setState(InstrumentState.CUED);
       const cursorPpoint = e.data.getLocalPosition(this);
       this.indicatorStartPoint.x = cursorPpoint.x - this.mCenterPoint.x;
@@ -128,7 +105,7 @@ export class InteractiveInstrument extends Interactive {
       this.indicatorGraphics.alpha = 0;
     }
 
-    if(this.dragHover && this.state === InstrumentState.CUE_READY) {
+    if(this.dragHover ) {//&& this.state === InstrumentState.CUE_READY
       this.bkgGraphics.alpha = 1;
     } else {
       this.bkgGraphics.alpha = 0.5;
@@ -136,61 +113,41 @@ export class InteractiveInstrument extends Interactive {
     this.drawDynamics();
   }
 
-  updateMask() {
-    this.maskGraphics
-      .clear()
-      .setMatrix(this.tMatrix)
-      // @TODO - why doesn't this mask as expected?
-      .lineStyle(10, 0x000000, 1, 0)
-      .beginFill(0xffffff, 1);
-
-    drawDoubleClosedArc(this.maskGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100);
-
-    this.maskGraphics.endFill();
-
-  }
-
   drawDynamics() {
     this.dynamicGraphics.clear()
-      .setMatrix(this.tMatrix);
 
     if(this.state === InstrumentState.CUE_READY || this.state === InstrumentState.CUED) {
+      this.dynamicGraphics.position.y = 0;
       this.dynamicGraphics
         .lineStyle(2,0xffffff, 0.1 * this.stateFade)
-        .drawCircle(this.centerPoint.x, this.centerPoint.y, 42 );
+        .drawEllipse(this.mCenterPoint.x, this.mCenterPoint.y, 42 , 42 * 0.5);
     }
 
     if(this.state === InstrumentState.CUED) {
       this.dynamicGraphics.lineStyle(2, 0xffffff, 1, 0);
-      drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
+      this.graphicsDraw.apply(this.dynamicGraphics);
     }
 
     if(this.state === InstrumentState.HIT) {
-      this.dynamicGraphics.lineStyle(1, 0xffffff, (1-this.stateFade)*0.75, -5 + 40 * this.stateFade)
-      drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
-
-      this.dynamicGraphics.lineStyle(6, 0xffffff, (1-this.stateFade), 2 * this.stateFade)
-      drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
-
-      this.dynamicGraphics.lineStyle(1, 0xffffff, (1-this.stateFade), -5 + 20 * this.stateFade)
-      drawDoubleClosedArc(this.dynamicGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100, true);
-
+      this.dynamicGraphics.lineStyle(2, 0xffffff, (1-this.stateFade)*0.75, -2 - 4 * this.stateFade);
+      this.graphicsDraw.apply(this.dynamicGraphics );
+      this.dynamicGraphics.position.y = Math.sqrt(this.stateFade)*-20;
     }
 
   }
 
   draw() {
 
-    this.bkgGraphics
-      .clear()
-      .setMatrix(this.tMatrix)
-      //.lineStyle(10, 0x55aacc, 1, 0)
-      .beginFill(this.color, 0.5);
+    // For some reason cacheing clips it incorrectly
+    //this.bkgGraphics.cacheAsBitmap = true;
 
-    drawDoubleClosedArc(this.bkgGraphics, this.startArc, this.endArc, this.startRad, this.endRad, 100);
+    this.bkgGraphics.clear().beginFill(this.color, 0.5);
+
+    this.graphicsDraw.apply(this.bkgGraphics);
 
     this.bkgGraphics.endFill();
 
+    this.indicatorGraphics.cacheAsBitmap = true;
     this.indicatorGraphics
       .clear()
       .beginFill(0xffffff)
