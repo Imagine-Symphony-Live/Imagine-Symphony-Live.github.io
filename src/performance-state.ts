@@ -6,6 +6,8 @@ import { Draggable } from "./draggable";
 import { Interactive } from "./interactive";
 import mainTrack from "./tracks/main/";
 import { CueEvent } from "click-track/dist/src/definitions/cue-event";
+import { Emitter } from "pixi-particles";
+import { ParticleCue } from "./types/particle-cue";
 
 type InteractiveCue = [Interactive, number, number];
 
@@ -15,7 +17,11 @@ export default class PerformanceState extends State {
   protected interactives: Array<Interactive>;
   private app: Application;
   private clickTrack: ClickTrack<InteractiveCue>;
+  private clickTrackParticles: ClickTrack<ParticleCue>;
   private interactivesContainer: Container;
+  private particleContainer: Container;
+  private emitters: Array<Emitter> = [];
+  private lastBeat: number = 0;
 
   // DIY interaction management
   private interactiveHovering?: Interactive;
@@ -35,6 +41,7 @@ export default class PerformanceState extends State {
       trackUrl,
       tempo,
       offset,
+      particleCues,
     } = mainTrack();
 
     const track: HTMLAudioElement = new Audio(trackUrl);
@@ -72,6 +79,7 @@ export default class PerformanceState extends State {
     dragCircle.on("dragInactive", this.onInctiveDrag.bind(this));
     interactives.push(dragCircle);
 
+
     // Assemble cues
     const cues: Array<[number, InteractiveCue]> = [];
 
@@ -83,7 +91,6 @@ export default class PerformanceState extends State {
     // Sort all cues ascending
     cues.sort((a, b) => Math.sign(a[0] - b[0]));
 
-
     // Click track for syncing up
     this.clickTrack = new ClickTrack<InteractiveCue>({
       timerSource: () => track.currentTime,
@@ -94,6 +101,22 @@ export default class PerformanceState extends State {
 
     this.clickTrack.on("cue", this.handleClickCue.bind(this));
 
+    // Sort all cues ascending
+    particleCues.sort((a, b) => Math.sign(a[0] - b[0]));
+
+    this.clickTrackParticles = new ClickTrack<ParticleCue>({
+      timerSource: () => track.currentTime,
+      tempo,
+      offset,
+      cues: particleCues
+    });
+
+    this.clickTrackParticles.on("cue", this.handleParticleCue.bind(this));
+
+    this.particleContainer = new Container();
+    this.particleContainer.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
+    container.addChild(this.particleContainer);
+
     app.renderer.backgroundColor = 0x55aacc;
 
     return container;
@@ -103,6 +126,21 @@ export default class PerformanceState extends State {
     if(cue.data && cue.data[0]) {
       const [interactive, state, value] = cue.data;
       interactive.onCue(cue.cue, state, value);
+    }
+  }
+
+  handleParticleCue(clicktrack: ClickTrack, cue: CueEvent<ParticleCue>) {
+    if(cue.data) {
+      const emitter = new Emitter(
+        this.particleContainer,
+        cue.data[0],
+        {
+          ...cue.data[1],
+          autoUpdate: false,
+        }
+      );
+
+      this.emitters.push(emitter);
     }
   }
 
@@ -138,6 +176,21 @@ export default class PerformanceState extends State {
     for (let i = 0; i < this.interactives.length; i++) {
       this.interactives[i].onTick(currentBeat);
     }
+
+    const beatDelta = currentBeat - this.lastBeat;
+
+    for (let i = this.emitters.length - 1; i >= 0; i--) {
+      if(this.emitters[i].parent === null) {
+        // remove from array, it's destroyed
+        this.emitters.splice(i, 1);
+        continue;
+      }
+
+      // Perform update using beats
+      this.emitters[i].update(beatDelta);
+    }
+
+    this.lastBeat = currentBeat;
 
     // DIY mouse enter/mouse out interaction handling
     // This is here because while draggin draggables, mouseenter and mouseout events aren't triggered
