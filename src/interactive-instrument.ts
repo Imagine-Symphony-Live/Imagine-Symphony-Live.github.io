@@ -120,7 +120,7 @@ export class InteractiveInstrument extends Interactive {
       this.dynamicGraphics.position.y = 0;
       this.dynamicGraphics
         .lineStyle(2,0xffffff, 0.1 * this.stateFade)
-        .drawEllipse(this.mCenterPoint.x, this.mCenterPoint.y, 42 , 42 * 0.5);
+        .drawEllipse(this.mCenterPoint.x, this.mCenterPoint.y, 32 , 32 * 0.5);
     }
 
     if(this.state === InstrumentState.CUED) {
@@ -146,6 +146,10 @@ export class InteractiveInstrument extends Interactive {
     this.graphicsDraw.apply(this.bkgGraphics);
 
     this.bkgGraphics.endFill();
+
+    const bkgBounds = this.bkgGraphics.getLocalBounds();
+
+    this.mCenterPoint.set(bkgBounds.x + bkgBounds.width / 2, bkgBounds.y + bkgBounds.height / 2);
 
     this.indicatorGraphics.cacheAsBitmap = true;
     this.indicatorGraphics

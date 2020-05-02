@@ -2,15 +2,15 @@ import { Instrument } from "../../types/instruments";
 import { hslToRgb } from "../../color-utils";
 import { InstrumentState } from "../../interactive-instrument";
 
-import violinsGraphics from '../../../assets/images/instrumentsection.svg?path=g#violins path&svg-path-loader';
-import percussionGraphics from '../../../assets/images/instrumentsection.svg?path=g#percussion path&svg-path-loader';
-import timpaniGraphics from '../../../assets/images/instrumentsection.svg?path=g#timpani path&svg-path-loader';
-import brassGraphics from '../../../assets/images/instrumentsection.svg?path=g#brass path&svg-path-loader';
-import woodwindsGraphics from '../../../assets/images/instrumentsection.svg?path=g#woodwinds path&svg-path-loader';
-import cello_1Graphics from '../../../assets/images/instrumentsection.svg?path=g#cello-1 path&svg-path-loader';
-import cello_2Graphics from '../../../assets/images/instrumentsection.svg?path=g#cello-2 path&svg-path-loader';
-import bassGraphics from '../../../assets/images/instrumentsection.svg?path=g#bass path&svg-path-loader';
-import violasGraphics from '../../../assets/images/instrumentsection.svg?path=g#violas path&svg-path-loader';
+import violinsGraphics from '../../../assets/images/instrumentsection.svg?path=g#violins path&svg-path-as-graphics';
+import percussionGraphics from '../../../assets/images/instrumentsection.svg?path=g#percussion path&svg-path-as-graphics';
+import timpaniGraphics from '../../../assets/images/instrumentsection.svg?path=g#timpani path&svg-path-as-graphics';
+import brassGraphics from '../../../assets/images/instrumentsection.svg?path=g#brass path&svg-path-as-graphics';
+import woodwindsGraphics from '../../../assets/images/instrumentsection.svg?path=g#woodwinds path&svg-path-as-graphics';
+import cello_1Graphics from '../../../assets/images/instrumentsection.svg?path=g#cello-1 path&svg-path-as-graphics';
+import cello_2Graphics from '../../../assets/images/instrumentsection.svg?path=g#cello-2 path&svg-path-as-graphics';
+import bassGraphics from '../../../assets/images/instrumentsection.svg?path=g#bass path&svg-path-as-graphics';
+import violasGraphics from '../../../assets/images/instrumentsection.svg?path=g#violas path&svg-path-as-graphics';
 
 function m2b(measure: number, beat: number): number {
   return (measure - 1) * 6 + (beat - 1)

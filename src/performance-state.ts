@@ -114,7 +114,10 @@ export default class PerformanceState extends State {
     this.clickTrackParticles.on("cue", this.handleParticleCue.bind(this));
 
     this.particleContainer = new Container();
-    this.particleContainer.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
+    // SVG group size: 828 131.65
+    // Set instrument position to SVG group center
+    // @TODO put this in one spot
+    this.particleContainer.position.set(window.innerWidth / 2 - 414, window.innerHeight * 3 / 4 -131.65);
     container.addChild(this.particleContainer);
 
     app.renderer.backgroundColor = 0x55aacc;

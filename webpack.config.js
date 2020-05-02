@@ -54,9 +54,6 @@ const frontBase = {
         use: [
           {
             loader: path.resolve('./src/webpack-svg-pixi-loader.js'),
-            options: {
-              myoption: 'test',
-            },
           },
         ],
       },
