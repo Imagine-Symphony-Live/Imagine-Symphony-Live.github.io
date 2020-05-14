@@ -1,5 +1,4 @@
-import { Graphics, Point, Matrix } from "pixi.js";
-import { drawDoubleClosedArc } from "./draw-util";
+import { Graphics, Point } from "pixi.js";
 import { Interactive } from "./interactive";
 import { Draggable } from "./draggable";
 import { powLerpPoint } from "./lerp";
