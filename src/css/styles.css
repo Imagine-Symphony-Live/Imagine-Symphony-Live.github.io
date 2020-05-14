@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+body.dragging {
+  cursor: none;
+}
+
 body > canvas {
   position: absolute;
   display: block;
