@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:parse-score": "nodejs -r esm ./src/score-parse ./src/score.xml ./src/tracks/main/score-export.json",
+    "build:parse-score": "nodejs -r esm ./src/score-parse ./src/tracks/main/score.xml ./src/tracks/main/score-export.json",
     "build": "npx webpack",
     "watch": "npx webpack --env.watch"
   },
