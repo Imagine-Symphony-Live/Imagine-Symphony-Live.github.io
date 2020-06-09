@@ -1,5 +1,3 @@
-import { Instrument } from "../../types/instruments";
-import { hslToRgb } from "../../color-utils";
 import { InstrumentState } from "../../interactive-instrument";
 
 import bassGraphics from '../../../assets/images/instrumentsection.svg?path=path#bass&svg-path-as-graphics';
