@@ -27,8 +27,15 @@ export const parseScore = (fileData) => {
   return {
     title: $('movement-title', $root).text(),
     author: $('identification creator', $root).text(),
-    parts: $('part-list > score-part[id]', $root).toArray().map(parseScorePart($, $root)),
+    parts: $('part-list > score-part[id]', $root).toArray().map(parseScorePart($, $root)).reduce(collectionToObject('id'), {}),
   }
+};
+
+export const collectionToObject = (property) => (acc = {}, o) => {
+  return {
+    ...acc,
+    [o[property]]: o,
+  };
 };
 
 export const parseScorePart = ($, $root) => (p) => {

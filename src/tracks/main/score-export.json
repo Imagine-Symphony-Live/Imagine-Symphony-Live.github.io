@@ -1,8 +1,8 @@
 {
   "title": "IMAGINE SYMPHONY LIVE",
   "author": "CHRIS THOMAS (BMI)",
-  "parts": [
-    {
+  "parts": {
+    "P1": {
       "id": "P1",
       "name": "Flute 1, 2",
       "measureCount": 119,
@@ -1741,7 +1741,7 @@
         }
       ]
     },
-    {
+    "P2": {
       "id": "P2",
       "name": "Oboe",
       "measureCount": 119,
@@ -3024,7 +3024,7 @@
         }
       ]
     },
-    {
+    "P3": {
       "id": "P3",
       "name": "English Horn (Optional)",
       "measureCount": 119,
@@ -4199,7 +4199,7 @@
         }
       ]
     },
-    {
+    "P4": {
       "id": "P4",
       "name": "Clarinet in Bb 1, 2",
       "measureCount": 119,
@@ -6170,7 +6170,7 @@
         }
       ]
     },
-    {
+    "P5": {
       "id": "P5",
       "name": "Bass Clarinet",
       "measureCount": 119,
@@ -6857,7 +6857,7 @@
         }
       ]
     },
-    {
+    "P6": {
       "id": "P6",
       "name": "Bassoon 1, 2",
       "measureCount": 119,
@@ -7616,7 +7616,7 @@
         }
       ]
     },
-    {
+    "P7": {
       "id": "P7",
       "name": "Contrabassoon (Optional)",
       "measureCount": 119,
@@ -7703,7 +7703,7 @@
         }
       ]
     },
-    {
+    "P8": {
       "id": "P8",
       "name": "Horn in F 1, 2",
       "measureCount": 119,
@@ -8446,7 +8446,7 @@
         }
       ]
     },
-    {
+    "P9": {
       "id": "P9",
       "name": "Horn in F 3 (&amp; 4)",
       "measureCount": 119,
@@ -8985,7 +8985,7 @@
         }
       ]
     },
-    {
+    "P10": {
       "id": "P10",
       "name": "Trumpet in Bb 1, 2",
       "measureCount": 119,
@@ -9356,7 +9356,7 @@
         }
       ]
     },
-    {
+    "P11": {
       "id": "P11",
       "name": "Trumpet in Bb 3",
       "measureCount": 119,
@@ -9603,7 +9603,7 @@
         }
       ]
     },
-    {
+    "P12": {
       "id": "P12",
       "name": "Trombone",
       "measureCount": 119,
@@ -9986,7 +9986,7 @@
         }
       ]
     },
-    {
+    "P13": {
       "id": "P13",
       "name": "Bass Trombone",
       "measureCount": 119,
@@ -10161,7 +10161,7 @@
         }
       ]
     },
-    {
+    "P14": {
       "id": "P14",
       "name": "Cimbasso (sub. Tuba or C.B Trombone)",
       "measureCount": 119,
@@ -10260,7 +10260,7 @@
         }
       ]
     },
-    {
+    "P15": {
       "id": "P15",
       "name": "Timpani",
       "measureCount": 119,
@@ -10511,7 +10511,7 @@
         }
       ]
     },
-    {
+    "P16": {
       "id": "P16",
       "name": "Cymbals",
       "measureCount": 119,
@@ -10646,7 +10646,7 @@
         }
       ]
     },
-    {
+    "P17": {
       "id": "P17",
       "name": "Tamtam",
       "measureCount": 119,
@@ -10785,7 +10785,7 @@
         }
       ]
     },
-    {
+    "P18": {
       "id": "P18",
       "name": "Electric Piano (Pre-Record)",
       "measureCount": 119,
@@ -15176,7 +15176,7 @@
         }
       ]
     },
-    {
+    "P19": {
       "id": "P19",
       "name": "Piano (Optional)",
       "measureCount": 119,
@@ -17243,7 +17243,7 @@
         }
       ]
     },
-    {
+    "P20": {
       "id": "P20",
       "name": "Celesta (Optioanl)",
       "measureCount": 119,
@@ -18290,7 +18290,7 @@
         }
       ]
     },
-    {
+    "P21": {
       "id": "P21",
       "name": "Harp",
       "measureCount": 119,
@@ -20741,7 +20741,7 @@
         }
       ]
     },
-    {
+    "P22": {
       "id": "P22",
       "name": "Soprano (Optional)",
       "measureCount": 119,
@@ -21000,7 +21000,7 @@
         }
       ]
     },
-    {
+    "P23": {
       "id": "P23",
       "name": "Alto (Optional)",
       "measureCount": 119,
@@ -21291,7 +21291,7 @@
         }
       ]
     },
-    {
+    "P24": {
       "id": "P24",
       "name": "Solo Violin I",
       "measureCount": 119,
@@ -21790,7 +21790,7 @@
         }
       ]
     },
-    {
+    "P25": {
       "id": "P25",
       "name": "Solo  Violin II",
       "measureCount": 119,
@@ -22197,7 +22197,7 @@
         }
       ]
     },
-    {
+    "P26": {
       "id": "P26",
       "name": "Solo Viola",
       "measureCount": 119,
@@ -22520,7 +22520,7 @@
         }
       ]
     },
-    {
+    "P27": {
       "id": "P27",
       "name": "Solo Cello",
       "measureCount": 119,
@@ -22819,7 +22819,7 @@
         }
       ]
     },
-    {
+    "P28": {
       "id": "P28",
       "name": "Violin I",
       "measureCount": 119,
@@ -24798,7 +24798,7 @@
         }
       ]
     },
-    {
+    "P29": {
       "id": "P29",
       "name": "Violin 1 DIV",
       "measureCount": 119,
@@ -26053,7 +26053,7 @@
         }
       ]
     },
-    {
+    "P30": {
       "id": "P30",
       "name": "Violin II",
       "measureCount": 119,
@@ -28032,7 +28032,7 @@
         }
       ]
     },
-    {
+    "P31": {
       "id": "P31",
       "name": "Violin II DIV",
       "measureCount": 119,
@@ -28583,7 +28583,7 @@
         }
       ]
     },
-    {
+    "P32": {
       "id": "P32",
       "name": "Viola",
       "measureCount": 119,
@@ -32066,7 +32066,7 @@
         }
       ]
     },
-    {
+    "P33": {
       "id": "P33",
       "name": "Viola DIV",
       "measureCount": 119,
@@ -32189,7 +32189,7 @@
         }
       ]
     },
-    {
+    "P34": {
       "id": "P34",
       "name": "Cello",
       "measureCount": 119,
@@ -34484,7 +34484,7 @@
         }
       ]
     },
-    {
+    "P35": {
       "id": "P35",
       "name": "Cello DIV",
       "measureCount": 119,
@@ -35783,7 +35783,7 @@
         }
       ]
     },
-    {
+    "P36": {
       "id": "P36",
       "name": "Double Bass",
       "measureCount": 119,
@@ -36734,5 +36734,5 @@
         }
       ]
     }
-  ]
+  }
 }
