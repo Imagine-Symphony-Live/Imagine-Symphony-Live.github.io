@@ -87,7 +87,7 @@ export const interactives: Array<{
   {
     name: "cello",
     graphicsPath: celloGraphics,
-    color: 0xffffff,
+    color: 0xaaaaaa,
     cues: getSoloCues([
       ...parts.P34.notes, // Cello
       ...parts.P35.notes // Cell div
@@ -96,7 +96,7 @@ export const interactives: Array<{
   {
     name: "bass",
     graphicsPath: bassGraphics,
-    color: 0xffffff,
+    color: 0xaaaaaa,
     cues: getSoloCues([
       ...parts.P36.notes // Double bass
     ]),
@@ -116,7 +116,7 @@ export const interactives: Array<{
   {
     name: "harp",
     graphicsPath: harpGraphics,
-    color: 0xffffff,
+    color: 0xaaaaaa,
     cues: getSoloCues([
       ...parts.P21.notes, // Harp
     ]),
@@ -124,7 +124,7 @@ export const interactives: Array<{
   {
     name: "horn",
     graphicsPath: hornGraphics,
-    color: 0xffffff,
+    color: 0xaaaaaa,
     cues: getSoloCues([
       ...parts.P8.notes, // Horn in F 1, 2
       ...parts.P9.notes, // Horn in F 3 (&amp; 4)
@@ -143,7 +143,7 @@ export const interactives: Array<{
   {
     name: "piano",
     graphicsPath: pianoGraphics,
-    color: 0xffffff,
+    color: 0xaaaaaa,
     cues: getSoloCues([
       ...parts.P18.notes, // Electric Piano (Pre-Record)
       ...parts.P19.notes, // Piano (Optional)
@@ -172,7 +172,7 @@ export const interactives: Array<{
   {
     name: "violin_2",
     graphicsPath: violin_2Graphics,
-    color: 0xffffff,
+    color: 0xaaaaaa,
     cues: getSoloCues([
       ...parts.P25.notes, // Solo  Violin II
       ...parts.P30.notes, // Violin II
