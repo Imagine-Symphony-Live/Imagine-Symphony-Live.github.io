@@ -1,4 +1,4 @@
-import { Graphics, Point } from "pixi.js";
+import { Graphics, Point, Filter } from "pixi.js";
 import { Interactive } from "./interactive";
 import { Draggable } from "./draggable";
 import { powLerpPoint } from "./lerp";
@@ -9,17 +9,18 @@ export enum InstrumentState {
   CUE_READY,
   CUED,
   HIT,
+  HIT_SUCCESS,
 }
 
 export class InteractiveInstrument extends Interactive {
   private bkgGraphics: Graphics = new Graphics();
-  private dynamicGraphics: Graphics = new Graphics();
   private indicatorGraphics: Graphics = new Graphics();
   private indicatorPoint: Point = new Point();
   private indicatorStartPoint: Point = new Point();
   private indicatorHomePoint: Point = new Point(0, -DRAGGABLE_RADIUS);
   private centerPoint: Point = new Point(); // @TODO
   private mCenterPoint: Point = new Point();
+  protected filter: Filter;
 
   public state: InstrumentState = InstrumentState.IDLE;
   public stateValue: number = 0;
@@ -35,8 +36,35 @@ export class InteractiveInstrument extends Interactive {
     this.on("mousedragover", this.onDragOver.bind(this));
     this.on("mousedragout", this.onDragOut.bind(this));
 
+    this.filter = new Filter(undefined, `
+      uniform bool isCue;
+      uniform bool isCueReady;
+      uniform bool isHover;
+      varying vec2 vTextureCoord;
+      uniform sampler2D uSampler;
+      void main() {
+        vec4 originalColor = texture2D(uSampler, vTextureCoord);
+        float colorScale = gl_FragCoord.x/500.0;
+        if(originalColor[3] > 0.0) {
+          if (isCue) {
+            gl_FragColor = vec4(1.0, 1.0, 0.0, 1.0) * originalColor[3]  * colorScale;
+          } else if(isHover && isCueReady) {
+            gl_FragColor = originalColor  * colorScale;
+          } else if(isCueReady) {
+            gl_FragColor = vec4(0.0, 0.7, 1.0, 1.0) * originalColor[3]  * colorScale;
+          } else {
+            gl_FragColor = originalColor * 0.5  * colorScale;
+          }
+        }
+      }
+    `, {
+      isCueReady: false,
+      isCue: false,
+      isHover: false,
+    });
+    this.bkgGraphics.filters = [this.filter];
+
     this.addChild(this.bkgGraphics);
-    this.addChild(this.dynamicGraphics);
     this.addChild(this.indicatorGraphics);
   }
 
@@ -49,7 +77,6 @@ export class InteractiveInstrument extends Interactive {
     // this.mCenterPoint =// @TODO
 
     this.draw();
-    this.drawDynamics();
   }
 
   onDrop(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
@@ -73,7 +100,11 @@ export class InteractiveInstrument extends Interactive {
         break;
 
       case InstrumentState.HIT:
-        this.stateFadeTime = 0.05;
+        this.stateFadeTime = 0.2;
+        if(this.state === InstrumentState.CUED){
+          newState = InstrumentState.HIT_SUCCESS;
+          this.stateFadeTime = 0.01;
+        }
         break;
 
       default:
@@ -87,60 +118,37 @@ export class InteractiveInstrument extends Interactive {
   onTick(currentBeat: number) {
     super.onTick(currentBeat);
 
-    if(this.state === InstrumentState.HIT && this.stateFade >= 1) {
+    if((this.state === InstrumentState.HIT || this.state === InstrumentState.HIT_SUCCESS) && this.stateFade >= 1) {
       this.setState(InstrumentState.IDLE);
     }
     if(this.state === InstrumentState.CUED) {
-      this.indicatorGraphics.alpha = 0.5;
+      this.indicatorGraphics.alpha = 1.0;
       if(this.stateFade < 1) {
         this.indicatorPoint.copyFrom(powLerpPoint(this.indicatorStartPoint, this.indicatorHomePoint, this.stateFade, 0.1));
       } else {
         this.indicatorPoint.copyFrom(this.indicatorHomePoint);
       }
       this.indicatorGraphics.position.set(this.mCenterPoint.x + this.indicatorPoint.x, this.mCenterPoint.y + this.indicatorPoint.y);
-    } else if (this.state === InstrumentState.HIT) {
-      this.indicatorGraphics.alpha = 0.5 - this.stateFade / 2;
+    } else if (this.state === InstrumentState.HIT_SUCCESS) {
+      // @TODO only fade if was cued
+      this.indicatorGraphics.alpha = 1.0 - this.stateFade / 2;
     } else {
       this.indicatorGraphics.alpha = 0;
     }
 
-    if(this.dragHover ) {//&& this.state === InstrumentState.CUE_READY
-      this.bkgGraphics.alpha = 1;
-    } else {
-      this.bkgGraphics.alpha = 0.5;
-    }
-    this.drawDynamics();
-  }
-
-  drawDynamics() {
-    this.dynamicGraphics.clear()
-
-    if(this.state === InstrumentState.CUE_READY || this.state === InstrumentState.CUED) {
-      this.dynamicGraphics.position.y = 0;
-      this.dynamicGraphics
-        .lineStyle(2,0xffffff, 0.1 * this.stateFade)
-        .drawEllipse(this.mCenterPoint.x, this.mCenterPoint.y, 32 , 32 * 0.5);
-    }
-
-    if(this.state === InstrumentState.CUED) {
-      this.dynamicGraphics.lineStyle(2, 0xffffff, 1, 0);
-      this.graphicsDraw.apply(this.dynamicGraphics);
-    }
-
-    if(this.state === InstrumentState.HIT) {
-      this.dynamicGraphics.lineStyle(2, 0xffffff, (1-this.stateFade)*0.75, -2 - 4 * this.stateFade);
-      this.graphicsDraw.apply(this.dynamicGraphics );
-      this.dynamicGraphics.position.y = Math.sqrt(this.stateFade)*-20;
-    }
+    this.filter.uniforms.isCue = this.state === InstrumentState.CUED;
+    this.filter.uniforms.isHover = this.dragHover;
+    this.filter.uniforms.isCueReady = this.state === InstrumentState.CUE_READY;
 
   }
+
 
   draw() {
 
     // For some reason cacheing clips it incorrectly
     //this.bkgGraphics.cacheAsBitmap = true;
 
-    this.bkgGraphics.clear().beginFill(this.color, 0.5);
+    this.bkgGraphics.clear().beginFill(this.color, 1);
 
     this.graphicsDraw.apply(this.bkgGraphics);
 
