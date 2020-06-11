@@ -38,9 +38,9 @@ export class StateMachine {
     this.setState("performance");
   }
 
-  tick() {
+  tick(deltams:number) {
     if(this.currentState) {
-      this.currentState.onTick();
+      this.currentState.onTick(deltams);
     }
   }
 

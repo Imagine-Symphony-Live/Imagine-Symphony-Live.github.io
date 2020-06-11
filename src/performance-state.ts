@@ -2,12 +2,19 @@ import { Container, Application, Point } from "pixi.js";
 import ClickTrack from 'click-track';
 import State from "./state";
 import { InteractiveInstrument } from "./interactive-instrument";
-import { Draggable } from "./draggable";
+import { DraggableSpawn } from "./draggable-spawn";
 import { Interactive } from "./interactive";
 import mainTrack from "./tracks/main/";
 import { CueEvent } from "click-track/dist/src/definitions/cue-event";
 import { Emitter } from "pixi-particles";
 import { ParticleCue } from "./types/particle-cue";
+import { Draggable } from "./draggable";
+
+
+
+// import { FilmVideoPlayer } from "./film-player";
+// import introFilmUrl from '../assets/video/film.mp4';
+
 
 type InteractiveCue = [Interactive, number, number];
 
@@ -22,12 +29,14 @@ export default class PerformanceState extends State {
   private particleContainer: Container;
   private emitters: Array<Emitter> = [];
   private lastBeat: number = 0;
+  protected intendedStageSize: [number, number];
+  protected centerStage: [number, number];
 
   // DIY interaction management
   private interactiveHovering?: Interactive;
   private mousePos: Point;
   private mouseChecked: boolean = true;
-  private draggingObject?: Draggable;
+  private dragSpawn: DraggableSpawn;
 
   async createContainer(app: Application): Promise<Container> {
     this.app = app;
@@ -42,7 +51,12 @@ export default class PerformanceState extends State {
       tempo,
       offset,
       particleCues,
+      stageSize,
+      stageCenter,
     } = mainTrack();
+
+    this.intendedStageSize = [stageSize[0] + 200, (stageSize[1] + 200)];
+    this.centerStage = stageCenter;
 
     const track: HTMLAudioElement = new Audio(trackUrl);
     track.playbackRate = 1;
@@ -71,13 +85,22 @@ export default class PerformanceState extends State {
     });
 
     // Create draggable
-    const dragCircle = new Draggable();
-    dragCircle.setOrigin(window.innerWidth / 2, window.innerHeight * 3 / 4);
-    container.addChild(dragCircle);
-    dragCircle.on("dragged", this.onCircleDrag.bind(this));
-    dragCircle.on("dragActive", this.onActiveDrag.bind(this));
-    dragCircle.on("dragInactive", this.onInctiveDrag.bind(this));
-    interactives.push(dragCircle);
+    this.dragSpawn = new DraggableSpawn();
+    // Origin set is handled in resize
+    //this.dragSpawn.setOrigin(window.innerWidth / 2, window.innerHeight * 3 / 4);
+    container.addChild(this.dragSpawn);
+    this.dragSpawn.on("dragged", this.onCircleDrag.bind(this));
+    interactives.push(this.dragSpawn);
+
+
+    // =========================
+    // const videoPlayer = new FilmVideoPlayer(introFilmUrl, 1024);
+
+    // await videoPlayer.preload();
+
+    // container.addChild(videoPlayer);
+    // videoPlayer.position.set(0,0);
+
 
 
     // Assemble cues
@@ -104,23 +127,23 @@ export default class PerformanceState extends State {
     // Sort all cues ascending
     particleCues.sort((a, b) => Math.sign(a[0] - b[0]));
 
-    this.clickTrackParticles = new ClickTrack<ParticleCue>({
-      timerSource: () => track.currentTime,
-      tempo,
-      offset,
-      cues: particleCues
-    });
+    // this.clickTrackParticles = new ClickTrack<ParticleCue>({
+    //   timerSource: () => track.currentTime,
+    //   tempo,
+    //   offset,
+    //   cues: particleCues
+    // });
 
-    this.clickTrackParticles.on("cue", this.handleParticleCue.bind(this));
+    //this.clickTrackParticles.on("cue", this.handleParticleCue.bind(this));
 
-    this.particleContainer = new Container();
+    //this.particleContainer = new Container();
     // SVG group size: 828 131.65
     // Set instrument position to SVG group center
     // @TODO put this in one spot
-    this.particleContainer.position.set(window.innerWidth / 2 - 414, window.innerHeight * 3 / 4 -131.65);
-    container.addChild(this.particleContainer);
+    //this.particleContainer.position.set(window.innerWidth / 2 - 414, window.innerHeight * 3 / 4 -131.65);
+    //container.addChild(this.particleContainer);
 
-    app.renderer.backgroundColor = 0x55aacc;
+    app.renderer.backgroundColor = 0;//0x55aacc;
 
     return container;
   }
@@ -157,30 +180,19 @@ export default class PerformanceState extends State {
     }
   }
 
-  onActiveDrag(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
-    if(!this.draggingObject) {
-      this.draggingObject = dragging;
-    }
-  }
-
-  onInctiveDrag(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
-    if(dragging == this.draggingObject) {
-      this.draggingObject = undefined;
-    }
-  }
-
   onMove(e: PIXI.interaction.InteractionEvent) {
     this.mousePos = e.data.global;
     this.mouseChecked = false;
   }
 
-  onTick() {
+  onTick(deltaMs: number) {
     const currentBeat = this.clickTrack.beat;
+    const beatDelta = (deltaMs / 1000) * this.clickTrack.tempo;
+
     for (let i = 0; i < this.interactives.length; i++) {
-      this.interactives[i].onTick(currentBeat);
+      this.interactives[i].onTick(currentBeat, beatDelta);
     }
 
-    const beatDelta = currentBeat - this.lastBeat;
 
     for (let i = this.emitters.length - 1; i >= 0; i--) {
       if(this.emitters[i].parent === null) {
@@ -193,11 +205,10 @@ export default class PerformanceState extends State {
       this.emitters[i].update(beatDelta);
     }
 
-    this.lastBeat = currentBeat;
 
     // DIY mouse enter/mouse out interaction handling
     // This is here because while draggin draggables, mouseenter and mouseout events aren't triggered
-    if(this.draggingObject && this.app && !this.mouseChecked) {
+    if(this.dragSpawn.isDragging && this.app && !this.mouseChecked) {
       this.mouseChecked = true;
       const object = this.app.renderer.plugins.interaction.hitTest(this.mousePos, this.interactivesContainer);
       if (object && object instanceof Interactive) {
@@ -220,11 +231,23 @@ export default class PerformanceState extends State {
   }
 
   onResize(size: { width: number, height: number }) {
-    const multiplier = (size.height - 50) * 3 / 40;
-    this.interactivesContainer.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
+    const multiplier = Math.min(size.width / this.intendedStageSize[0], size.height / this.intendedStageSize[1]);
+    //this.interactivesContainer.scale.set(multiplier, multiplier);
     this.interactives.forEach((s1) => {
       s1.multiplierResize(multiplier);
     });
+    const bounds = this.interactivesContainer.getBounds();
+    this.interactivesContainer.position.set(
+      (window.innerWidth - bounds.width) / 2,
+      (window.innerHeight - bounds.height) / 2);
+
+    this.dragSpawn.multiplierResize(multiplier);
+
+    this.dragSpawn.setOrigin(
+      this.interactivesContainer.position.x + multiplier * this.centerStage[0],
+      this.interactivesContainer.position.y + multiplier * this.centerStage[1],
+    );
+
   }
 
   async cleanUp() {

@@ -21,9 +21,9 @@ export abstract class Interactive extends Container {
     this.dragHover = false;
   }
 
-  onTick(currentBeat: number) {
+  onTick(currentBeat: number, deltaBeat: number) {
     if(this.stateFade < 1) {
-      this.stateFade += this.stateFadeTime;
+      this.stateFade += this.stateFadeTime * deltaBeat;
       if(this.stateFade > 1) {
         this.stateFade = 1;
       }

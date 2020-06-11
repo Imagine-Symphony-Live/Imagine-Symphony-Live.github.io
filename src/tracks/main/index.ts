@@ -10,11 +10,10 @@ export default function (): InteractiveTrack {
       const o = new InteractiveInstrument(i.color, i.graphicsPath);
       o.cues = i.cues;
       o.name = i.name;
-      // SVG group size: 787 203
-      // Set instrument position to SVG group center
-      o.position.set(-787/2, -203);
       return o;
     }),
+    stageSize: [787, 203],
+    stageCenter: [787 / 2, 203],
     particleCues: [],//particles,
     trackUrl: fullSong,
     tempo: 148,

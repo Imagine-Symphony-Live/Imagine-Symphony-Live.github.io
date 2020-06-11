@@ -14,11 +14,9 @@ export enum InstrumentState {
 
 export class InteractiveInstrument extends Interactive {
   private bkgGraphics: Graphics = new Graphics();
-  private indicatorGraphics: Graphics = new Graphics();
   private indicatorPoint: Point = new Point();
   private indicatorStartPoint: Point = new Point();
-  private indicatorHomePoint: Point = new Point(0, -DRAGGABLE_RADIUS);
-  private centerPoint: Point = new Point(); // @TODO
+  private draggables: Array<Draggable> = [];
   private mCenterPoint: Point = new Point();
   protected filter: Filter;
 
@@ -28,7 +26,7 @@ export class InteractiveInstrument extends Interactive {
   constructor(public color: number, private graphicsDraw: () => void) {
     super();
 
-    this.updateSize();
+    this.draw();
 
     this.on("drop", this.onDrop.bind(this));
 
@@ -40,11 +38,12 @@ export class InteractiveInstrument extends Interactive {
       uniform bool isCue;
       uniform bool isCueReady;
       uniform bool isHover;
+      uniform float maxXCoord;
       varying vec2 vTextureCoord;
       uniform sampler2D uSampler;
       void main() {
         vec4 originalColor = texture2D(uSampler, vTextureCoord);
-        float colorScale = gl_FragCoord.x/500.0;
+        float colorScale = gl_FragCoord.x/maxXCoord;
         if(originalColor[3] > 0.0) {
           if (isCue) {
             gl_FragColor = vec4(1.0, 1.0, 0.0, 1.0) * originalColor[3]  * colorScale;
@@ -60,32 +59,35 @@ export class InteractiveInstrument extends Interactive {
     `, {
       isCueReady: false,
       isCue: false,
+      maxXCoord: window.innerHeight,
       isHover: false,
     });
     this.bkgGraphics.filters = [this.filter];
 
     this.addChild(this.bkgGraphics);
-    this.addChild(this.indicatorGraphics);
   }
 
   multiplierResize(multiplier: number) {
-    // @TODO - scale it
-    this.updateSize();
-  }
+    this.filter.uniforms.maxXCoord = window.innerWidth;
+    this.scale.set(multiplier,multiplier);
 
-  updateSize() {
-    // this.mCenterPoint =// @TODO
-
-    this.draw();
+    const bkgBounds = this.bkgGraphics.getLocalBounds();
+    this.mCenterPoint.set(bkgBounds.x + bkgBounds.width / 2, bkgBounds.y + bkgBounds.height / 2  - DRAGGABLE_RADIUS);
   }
 
   onDrop(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
-    if(this.state === InstrumentState.CUE_READY) {
-      //dragging.parent.removeChild(dragging);
+    if(this.state === InstrumentState.CUE_READY && !this.draggables.length) {
+      const draggingPos = dragging.getGlobalPosition();
+      const thisGlobPosition = this.getGlobalPosition();
+      const dragParentOffset = new Point((draggingPos.x - thisGlobPosition.x) / this.scale.x, (draggingPos.y - thisGlobPosition.y) / this.scale.y);
+      const originOffset = new Point(dragging.position.x - dragging.origin.x, dragging.position.y - dragging.origin.y)
+      dragging.adopt(this);
+      this.draggables.push(dragging);
       this.setState(InstrumentState.CUED);
-      const cursorPpoint = e.data.getLocalPosition(this);
-      this.indicatorStartPoint.x = cursorPpoint.x - this.mCenterPoint.x;
-      this.indicatorStartPoint.y = cursorPpoint.y - this.mCenterPoint.y;
+      this.indicatorStartPoint.copyFrom(dragParentOffset);
+      dragging.position.copyFrom(this.indicatorStartPoint);
+      dragging.origin.x = dragging.position.x - originOffset.x;
+      dragging.origin.y = dragging.position.y - originOffset.y;
     }
   }
 
@@ -96,14 +98,14 @@ export class InteractiveInstrument extends Interactive {
     switch (newState) {
       case InstrumentState.CUED:
       case InstrumentState.CUE_READY:
-        this.stateFadeTime = 0.1;
+        this.stateFadeTime = 1.0;
         break;
 
       case InstrumentState.HIT:
-        this.stateFadeTime = 0.2;
+        this.stateFadeTime = 0.5;
         if(this.state === InstrumentState.CUED){
           newState = InstrumentState.HIT_SUCCESS;
-          this.stateFadeTime = 0.01;
+          this.stateFadeTime = 0.1;
         }
         break;
 
@@ -115,25 +117,36 @@ export class InteractiveInstrument extends Interactive {
     this.stateValue = value;
   }
 
-  onTick(currentBeat: number) {
-    super.onTick(currentBeat);
+  onTick(currentBeat: number, deltaBeat: number) {
+    super.onTick(currentBeat, deltaBeat);
+
+    this.draggables.forEach((d) => d.onTick(currentBeat, deltaBeat));
 
     if((this.state === InstrumentState.HIT || this.state === InstrumentState.HIT_SUCCESS) && this.stateFade >= 1) {
       this.setState(InstrumentState.IDLE);
+      let d = this.draggables.pop()
+      if(d) {
+        this.removeChild(d);
+        d.destroy();
+      }
     }
     if(this.state === InstrumentState.CUED) {
-      this.indicatorGraphics.alpha = 1.0;
       if(this.stateFade < 1) {
-        this.indicatorPoint.copyFrom(powLerpPoint(this.indicatorStartPoint, this.indicatorHomePoint, this.stateFade, 0.1));
+        this.indicatorPoint.copyFrom(powLerpPoint(this.indicatorStartPoint, this.mCenterPoint, this.stateFade, 0.1));
       } else {
-        this.indicatorPoint.copyFrom(this.indicatorHomePoint);
+        this.indicatorPoint.copyFrom(this.mCenterPoint);
       }
-      this.indicatorGraphics.position.set(this.mCenterPoint.x + this.indicatorPoint.x, this.mCenterPoint.y + this.indicatorPoint.y);
+      if(this.draggables[0]) {
+        this.draggables[0].position.copyFrom(this.indicatorPoint);
+      }
+      //this.indicatorGraphics.position.set(this.mCenterPoint.x + this.indicatorPoint.x, this.mCenterPoint.y + this.indicatorPoint.y);
     } else if (this.state === InstrumentState.HIT_SUCCESS) {
       // @TODO only fade if was cued
-      this.indicatorGraphics.alpha = 1.0 - this.stateFade / 2;
+      if(this.draggables[0]) {
+        this.draggables[0].alpha = 1.0 - this.stateFade;
+      }
     } else {
-      this.indicatorGraphics.alpha = 0;
+      //this.indicatorGraphics.alpha = 0;
     }
 
     this.filter.uniforms.isCue = this.state === InstrumentState.CUED;
@@ -146,7 +159,6 @@ export class InteractiveInstrument extends Interactive {
   draw() {
 
     // For some reason cacheing clips it incorrectly
-    //this.bkgGraphics.cacheAsBitmap = true;
 
     this.bkgGraphics.clear().beginFill(this.color, 1);
 
@@ -154,16 +166,6 @@ export class InteractiveInstrument extends Interactive {
 
     this.bkgGraphics.endFill();
 
-    const bkgBounds = this.bkgGraphics.getLocalBounds();
-
-    this.mCenterPoint.set(bkgBounds.x + bkgBounds.width / 2, bkgBounds.y + bkgBounds.height / 2);
-
-    this.indicatorGraphics.cacheAsBitmap = true;
-    this.indicatorGraphics
-      .clear()
-      .beginFill(0xffffff)
-      .drawCircle(0, 0, DRAGGABLE_RADIUS)
-      .endFill();
 
   }
 }

@@ -19,7 +19,7 @@ export default abstract class State {
 
   }
 
-  onTick() {
+  onTick(deltaMs: number) {
 
   }
 

@@ -7,4 +7,6 @@ export type InteractiveTrack = {
   trackUrl: string;
   tempo: number;
   offset: number;
+  stageSize: [number, number];
+  stageCenter: [number, number];
 }
