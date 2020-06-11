@@ -5,8 +5,9 @@ import bloomImage from '../assets/images/bloom-128x128.png';
 
 export enum DraggableState {
   HIDDEN,
-  VISIBLE,
-  SHRINKING,
+  IDLE,
+  SHRINK_OUT,
+  SHRINK_IN
 }
 
 export class Draggable extends Interactive {
@@ -33,6 +34,7 @@ export class Draggable extends Interactive {
     bloomSprite.scale.set(0.7);
     bloomSprite.blendMode = BLEND_MODES.SOFT_LIGHT;
     bloomSprite.anchor.set(0.5, 0.5);
+    this.setState(DraggableState.SHRINK_IN, 1.0);
 
     this.addChild(bloomSprite);
 
@@ -104,7 +106,7 @@ export class Draggable extends Interactive {
     const perspectivescale = Math.pow(2, ydiff / 200);
     this.scale.set(perspectivescale, perspectivescale)
 
-    if(this.state === DraggableState.SHRINKING) {
+    if(this.state === DraggableState.SHRINK_OUT) {
       this.position.set(this.position.x + this.velocity[0] * deltaBeat / 2, this.position.y + this.velocity[1] * deltaBeat / 2);
       this.graphics.scale.set(1 - this.stateFade);
       this.alpha = 1 - this.stateFade;
@@ -115,12 +117,24 @@ export class Draggable extends Interactive {
         this.destroy();
       }
     }
+
+    if(this.state === DraggableState.SHRINK_IN) {
+      this.graphics.scale.set(this.stateFade);
+      this.alpha = this.stateFade;
+      if(this.stateFade >= 1) {
+        this.setState(DraggableState.IDLE, 1.0);
+      }
+    }
   }
 
   multiplierResize(m: number) {}
 
   setState(newState: DraggableState, value: number) {
-    if(newState === DraggableState.SHRINKING) {
+    if(newState === DraggableState.SHRINK_OUT) {
+      this.stateFadeTime = 0.5;
+      this.stateFade = 1 - this.scale.x;
+    }
+    if(newState === DraggableState.SHRINK_IN) {
       this.stateFadeTime = 0.5;
       this.stateFade = 1 - this.scale.x;
     }
