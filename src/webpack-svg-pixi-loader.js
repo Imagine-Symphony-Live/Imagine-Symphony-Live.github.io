@@ -1,7 +1,6 @@
 
 const cheerio = require('cheerio');
 const querystring = require('querystring');
-const { pathDataToPolys } = require('svg-path-to-polygons');
 
 module.exports = function (source) {
   const options = querystring.parse(this.resourceQuery.replace(/^\?/, ''));
@@ -19,19 +18,8 @@ module.exports = function (source) {
   if(/&svg-path-as-graphics$/.test(this.resourceQuery)) {
     const code = `export default function() {this.${roundAllNumbers(pathToCode(pathString))};}`;
     return code;
-  } else if(/&svg-path-as-poly$/.test(this.resourceQuery)) {
-    const polyOptions = {
-      tolerance: options.tolerance ? options.tolerance : 1,
-      decimals: options.decimals ? options.decimals :  1
-    };
-    const polyPath = pathDataToPolys(pathString, polyOptions);
-    if(polyPath.length !== 1) {
-      throw new Error(`This svg path should only have 1 polygon, but has ${polyPath.length} (${this.resourceQuery})`);
-    }
-    const code = `export default ${JSON.stringify(polyPath[0])}`;
-    return code;
   } else {
-    throw Error(`Need to specify svg-path-as-poly or svg-path-as-graphics (${this.resourceQuery})`);
+    throw Error(`Need to specify svg-path-as-graphics (${this.resourceQuery})`);
   }
 }
 
