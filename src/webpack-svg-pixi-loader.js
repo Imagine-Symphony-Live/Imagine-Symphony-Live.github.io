@@ -17,7 +17,7 @@ module.exports = function (source) {
   if(!pathString) throw new Error(`Path ${options.path} missing 'd' attribute`);
 
   if(/&svg-path-as-graphics$/.test(this.resourceQuery)) {
-    const code = `export default function() {this.${pathToCode(pathString)};}`;
+    const code = `export default function() {this.${roundAllNumbers(pathToCode(pathString))};}`;
     return code;
   } else if(/&svg-path-as-poly$/.test(this.resourceQuery)) {
     const polyOptions = {
@@ -51,6 +51,10 @@ function pathToCode(pathString) {
   }
   if(!commandStrs.length) return '';
   return `${commandStrs.join('.')}`;
+}
+
+function roundAllNumbers(string) {
+  return string.replace(/\d+\.\d+/g, (num) => Math.round(parseFloat(num) * 100) / 100);
 }
 
 // adapted from https://github.com/bigtimebuddy/pixi-svg/blob/master/src/SVG.js
@@ -227,6 +231,7 @@ function parse(d) {
               sequence = getSequence("arc definition").map(makeCommand);
               break;
           case "Z":
+          case "z":
               sequence = [ { code: "Z" } ];
               break;
       }
