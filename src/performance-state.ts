@@ -16,7 +16,7 @@ import { Draggable } from "./draggable";
 // import introFilmUrl from '../assets/video/film.mp4';
 
 
-type InteractiveCue = [Interactive, number, number];
+type InteractiveCue = [Interactive, number, any];
 
 export default class PerformanceState extends State {
 

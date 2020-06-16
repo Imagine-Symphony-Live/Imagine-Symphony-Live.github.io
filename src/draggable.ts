@@ -1,4 +1,4 @@
-import { Graphics, Point, Sprite, BLEND_MODES, DisplayObject, Container } from "pixi.js";
+import { Graphics, Point, Sprite, BLEND_MODES, Container } from "pixi.js";
 import { Interactive } from "./interactive";
 import { DRAGGABLE_RADIUS } from "./constants";
 import bloomImage from '../assets/images/bloom-128x128.png';
@@ -20,6 +20,7 @@ export class Draggable extends Interactive {
   protected velocity: [number, number];
   protected velocityMeasurements: Array<[number, number]> = [];
   protected lastBeat: number = 0;
+  private bloomSprite: Sprite;
 
   constructor() {
     super();
@@ -30,13 +31,13 @@ export class Draggable extends Interactive {
       .endFill();
     this.addChild(this.graphics);
 
-    const bloomSprite = Sprite.from(bloomImage);
-    bloomSprite.scale.set(0.7);
-    bloomSprite.blendMode = BLEND_MODES.SOFT_LIGHT;
-    bloomSprite.anchor.set(0.5, 0.5);
+    this.bloomSprite = Sprite.from(bloomImage);
+    this.bloomSprite.scale.set(0.7);
+    this.bloomSprite.blendMode = BLEND_MODES.SOFT_LIGHT;
+    this.bloomSprite.anchor.set(0.5, 0.5);
     this.setState(DraggableState.SHRINK_IN, 1.0);
 
-    this.addChild(bloomSprite);
+    this.addChild(this.bloomSprite);
 
     this.graphics.interactive = true;
     this.graphics
@@ -125,6 +126,25 @@ export class Draggable extends Interactive {
         this.setState(DraggableState.IDLE, 1.0);
       }
     }
+  }
+
+  setIcon(dranFn: () => void) {
+    this.graphics
+      .clear()
+      .beginFill(0x0044ff, 1)
+      .lineStyle(1, 0x77aaff, 1)
+
+    dranFn.apply(this.graphics);
+
+    this.graphics.endFill();
+
+    const bb = this.graphics.getBounds();
+    const scale = 2;
+    this.graphics.scale.set(scale);
+    this.graphics.position.set(-bb.width/2 * scale, -bb.height/2 * scale);
+    this.bloomSprite.alpha = 0.1;
+    this.graphics.blendMode = BLEND_MODES.ADD;
+
   }
 
   multiplierResize(m: number) {}

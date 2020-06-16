@@ -21,7 +21,8 @@ export class InteractiveInstrument extends Interactive {
   protected filter: Filter;
 
   public state: InstrumentState = InstrumentState.IDLE;
-  public stateValue: number = 0;
+  public stateValue?: any = 0;
+  private nextCueGraphicsFn?: () => void;
 
   constructor(public color: number, private graphicsDraw: () => void) {
     super();
@@ -91,14 +92,22 @@ export class InteractiveInstrument extends Interactive {
     }
   }
 
-  setState(newState: InstrumentState, value: number = 0) {
-    // TEMP
+  setState(newState: InstrumentState, value?: any) {
     if(newState === this.state) return;
 
     switch (newState) {
       case InstrumentState.CUED:
+        this.stateFadeTime = 1.0;
+        if(this.nextCueGraphicsFn && this.draggables.length) {
+          this.draggables[0].setIcon(this.nextCueGraphicsFn);
+        }
+        break;
+
       case InstrumentState.CUE_READY:
         this.stateFadeTime = 1.0;
+        if(typeof value === 'function') {
+          this.nextCueGraphicsFn = value;
+        }
         break;
 
       case InstrumentState.HIT:
