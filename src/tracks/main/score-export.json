@@ -64,40 +64,12 @@
           "pitch": -3
         },
         {
-          "note": 84,
-          "words": "(solo)"
-        },
-        {
-          "note": 85,
-          "pitch": 7
-        },
-        {
-          "note": 86,
-          "pitch": 9
-        },
-        {
-          "note": 87,
-          "pitch": 10
-        },
-        {
-          "note": 88,
-          "pitch": 7
-        },
-        {
-          "note": 89,
-          "pitch": 3
-        },
-        {
-          "note": 90,
-          "pitch": 2
+          "note": 126,
+          "words": "a2"
         },
         {
           "note": 126,
           "pitch": -2
-        },
-        {
-          "note": 126,
-          "words": "a2"
         },
         {
           "note": 126.5,
@@ -201,11 +173,11 @@
         },
         {
           "note": 237,
-          "words": "a2"
+          "pitch": 9
         },
         {
           "note": 237,
-          "pitch": 9
+          "words": "a2"
         },
         {
           "note": 237.5,
@@ -276,8 +248,8 @@
           "pitch": 2
         },
         {
-          "note": 282,
-          "words": "(solo)"
+          "note": 283,
+          "words": "(cue)"
         },
         {
           "note": 283,
@@ -321,11 +293,11 @@
         },
         {
           "note": 318,
-          "pitch": -2
+          "words": "a2"
         },
         {
           "note": 318,
-          "words": "a2"
+          "pitch": -2
         },
         {
           "note": 318.5,
@@ -489,19 +461,19 @@
         },
         {
           "note": 414,
-          "pitch": 10
+          "pitch": 7
         },
         {
           "note": 414,
-          "pitch": 7
-        },
-        {
-          "note": 420,
           "pitch": 10
         },
         {
           "note": 420,
           "pitch": 7
+        },
+        {
+          "note": 420,
+          "pitch": 10
         },
         {
           "note": 426,
@@ -513,6 +485,10 @@
         },
         {
           "note": 450,
+          "words": "(cue)"
+        },
+        {
+          "note": 450,
           "pitch": 7
         },
         {
@@ -521,14 +497,10 @@
         },
         {
           "note": 450.75,
-          "pitch": 10
+          "pitch": 7
         },
         {
           "note": 450.75,
-          "pitch": 7
-        },
-        {
-          "note": 451,
           "pitch": 10
         },
         {
@@ -536,12 +508,16 @@
           "pitch": 7
         },
         {
-          "note": 451.5,
+          "note": 451,
           "pitch": 10
         },
         {
           "note": 451.5,
           "pitch": 7
+        },
+        {
+          "note": 451.5,
+          "pitch": 10
         },
         {
           "note": 452.25,
@@ -561,11 +537,11 @@
         },
         {
           "note": 453,
-          "pitch": 7
+          "pitch": 10
         },
         {
           "note": 453,
-          "pitch": 10
+          "pitch": 7
         },
         {
           "note": 453.75,
@@ -577,11 +553,11 @@
         },
         {
           "note": 454,
-          "pitch": 10
+          "pitch": 7
         },
         {
           "note": 454,
-          "pitch": 7
+          "pitch": 10
         },
         {
           "note": 454.5,
@@ -606,14 +582,14 @@
         {
           "note": 455.5,
           "pitch": 10
-        },
-        {
-          "note": 516,
-          "words": "a2"
         },
         {
           "note": 516,
           "pitch": -2
+        },
+        {
+          "note": 516,
+          "words": "a2"
         },
         {
           "note": 516.5,
@@ -957,11 +933,11 @@
         },
         {
           "note": 612,
-          "pitch": 10
+          "words": "(sim.)"
         },
         {
           "note": 612,
-          "words": "(sim.)"
+          "pitch": 10
         },
         {
           "note": 612.5,
@@ -1705,6 +1681,10 @@
         },
         {
           "note": 708,
+          "words": "(cue)"
+        },
+        {
+          "note": 708,
           "pitch": 7
         },
         {
@@ -1747,12 +1727,40 @@
       "measureCount": 119,
       "notes": [
         {
-          "note": 144,
+          "note": 84,
           "words": "(solo)"
+        },
+        {
+          "note": 85,
+          "pitch": 7
+        },
+        {
+          "note": 86,
+          "pitch": 9
+        },
+        {
+          "note": 87,
+          "pitch": 10
+        },
+        {
+          "note": 88,
+          "pitch": 7
+        },
+        {
+          "note": 89,
+          "pitch": 3
+        },
+        {
+          "note": 90,
+          "pitch": 2
         },
         {
           "note": 144,
           "pitch": 7
+        },
+        {
+          "note": 144,
+          "words": "(solo)"
         },
         {
           "note": 151,
@@ -2260,11 +2268,11 @@
         },
         {
           "note": 612,
-          "pitch": 10
+          "words": "(sim.)"
         },
         {
           "note": 612,
-          "words": "(sim.)"
+          "pitch": 10
         },
         {
           "note": 612.5,
@@ -4474,11 +4482,11 @@
         },
         {
           "note": 243,
-          "words": "a2"
+          "pitch": 11
         },
         {
           "note": 243,
-          "pitch": 11
+          "words": "a2"
         },
         {
           "note": 243.5,
@@ -4542,11 +4550,11 @@
         },
         {
           "note": 318,
-          "pitch": 0
+          "words": "a2"
         },
         {
           "note": 318,
-          "words": "a2"
+          "pitch": 0
         },
         {
           "note": 318.5,
@@ -4630,13 +4638,13 @@
         },
         {
           "note": 366,
-          "pitch": -3
-        },
-        {
-          "note": 366,
           "pitch": 2
         },
         {
+          "note": 366,
+          "pitch": -3
+        },
+        {
           "note": 369,
           "pitch": -5
         },
@@ -4654,19 +4662,19 @@
         },
         {
           "note": 375,
-          "pitch": -3
-        },
-        {
-          "note": 375,
           "pitch": -8
         },
         {
-          "note": 376.5,
-          "pitch": -5
+          "note": 375,
+          "pitch": -3
         },
         {
           "note": 376.5,
           "pitch": 0
+        },
+        {
+          "note": 376.5,
+          "pitch": -5
         },
         {
           "note": 378,
@@ -4694,19 +4702,19 @@
         },
         {
           "note": 387,
-          "pitch": -1
-        },
-        {
-          "note": 387,
           "pitch": -5
         },
         {
-          "note": 402,
-          "pitch": -8
+          "note": 387,
+          "pitch": -1
         },
         {
           "note": 402,
           "words": "(solo)"
+        },
+        {
+          "note": 402,
+          "pitch": -8
         },
         {
           "note": 403.5,
@@ -4738,11 +4746,11 @@
         },
         {
           "note": 414,
-          "pitch": 0
+          "pitch": -3
         },
         {
           "note": 414,
-          "pitch": -3
+          "pitch": 0
         },
         {
           "note": 420,
@@ -4754,11 +4762,11 @@
         },
         {
           "note": 426,
-          "pitch": -3
+          "pitch": 0
         },
         {
           "note": 426,
-          "pitch": 0
+          "pitch": -3
         },
         {
           "note": 444,
@@ -4767,6 +4775,10 @@
         {
           "note": 444,
           "pitch": -3
+        },
+        {
+          "note": 444,
+          "words": "(cue)"
         },
         {
           "note": 444.75,
@@ -8110,19 +8122,19 @@
         },
         {
           "note": 558,
-          "pitch": 0
+          "pitch": 5
         },
         {
           "note": 558,
+          "pitch": 0
+        },
+        {
+          "note": 564,
           "pitch": 5
         },
         {
           "note": 564,
           "pitch": 2
-        },
-        {
-          "note": 564,
-          "pitch": 5
         },
         {
           "note": 570,
@@ -8151,6 +8163,10 @@
         {
           "note": 594,
           "pitch": 5
+        },
+        {
+          "note": 594,
+          "words": "(cue)"
         },
         {
           "note": 595.5,
@@ -8366,11 +8382,11 @@
         },
         {
           "note": 687,
-          "pitch": 9
+          "pitch": 4
         },
         {
           "note": 687,
-          "pitch": 4
+          "pitch": 9
         },
         {
           "note": 690,
@@ -8423,6 +8439,10 @@
         {
           "note": 707,
           "pitch": -2
+        },
+        {
+          "note": 708,
+          "words": "(cue)"
         },
         {
           "note": 708,
@@ -9084,19 +9104,19 @@
         },
         {
           "note": 420,
-          "pitch": 9
+          "pitch": 12
         },
         {
           "note": 420,
-          "pitch": 12
-        },
-        {
-          "note": 426,
           "pitch": 9
         },
         {
           "note": 426,
           "pitch": 12
+        },
+        {
+          "note": 426,
+          "pitch": 9
         },
         {
           "note": 587,
@@ -9276,11 +9296,15 @@
         },
         {
           "note": 708,
-          "pitch": 9
+          "pitch": 12
         },
         {
           "note": 708,
-          "pitch": 12
+          "pitch": 9
+        },
+        {
+          "note": 711,
+          "words": "(cue)"
         },
         {
           "note": 711,
@@ -9634,6 +9658,10 @@
         },
         {
           "note": 342,
+          "words": "(cue)"
+        },
+        {
+          "note": 342,
           "pitch": -17
         },
         {
@@ -9658,11 +9686,11 @@
         },
         {
           "note": 351,
-          "pitch": -17
+          "pitch": -22
         },
         {
           "note": 351,
-          "pitch": -22
+          "pitch": -17
         },
         {
           "note": 352,
@@ -9674,19 +9702,19 @@
         },
         {
           "note": 354,
-          "pitch": -26
+          "pitch": -19
         },
         {
           "note": 354,
-          "pitch": -19
-        },
-        {
-          "note": 357,
           "pitch": -26
         },
         {
           "note": 357,
           "pitch": -19
+        },
+        {
+          "note": 357,
+          "pitch": -26
         },
         {
           "note": 358,
@@ -9698,11 +9726,11 @@
         },
         {
           "note": 360,
-          "pitch": -15
+          "pitch": -24
         },
         {
           "note": 360,
-          "pitch": -24
+          "pitch": -15
         },
         {
           "note": 366,
@@ -9743,22 +9771,22 @@
         {
           "note": 376.5,
           "pitch": -10
+        },
+        {
+          "note": 378,
+          "pitch": -17
         },
         {
           "note": 378,
           "pitch": -9
         },
         {
-          "note": 378,
-          "pitch": -17
+          "note": 381,
+          "pitch": -19
         },
         {
           "note": 381,
           "pitch": -10
-        },
-        {
-          "note": 381,
-          "pitch": -19
         },
         {
           "note": 384,
@@ -9818,11 +9846,11 @@
         },
         {
           "note": 402,
-          "pitch": -17
+          "words": "a2"
         },
         {
           "note": 402,
-          "words": "a2"
+          "pitch": -17
         },
         {
           "note": 405,
@@ -9830,11 +9858,11 @@
         },
         {
           "note": 408,
-          "pitch": -9
+          "pitch": -14
         },
         {
           "note": 408,
-          "pitch": -14
+          "pitch": -9
         },
         {
           "note": 409.5,
@@ -9866,11 +9894,11 @@
         },
         {
           "note": 426,
-          "pitch": -22
+          "pitch": -14
         },
         {
           "note": 426,
-          "pitch": -14
+          "pitch": -22
         },
         {
           "note": 576,
@@ -10266,6 +10294,14 @@
       "measureCount": 119,
       "notes": [
         {
+          "note": 116,
+          "pitch": -29
+        },
+        {
+          "note": 120,
+          "pitch": -29
+        },
+        {
           "note": 190,
           "pitch": -24
         },
@@ -10292,6 +10328,10 @@
         {
           "note": 240,
           "pitch": -22
+        },
+        {
+          "note": 340,
+          "words": "(cue)"
         },
         {
           "note": 340,
@@ -10518,11 +10558,19 @@
       "notes": [
         {
           "note": 54,
+          "words": "(cue)"
+        },
+        {
+          "note": 54,
           "pitch": null
         },
         {
           "note": 60,
           "pitch": null
+        },
+        {
+          "note": 189,
+          "words": "(cue)"
         },
         {
           "note": 189,
@@ -10542,6 +10590,10 @@
         },
         {
           "note": 234,
+          "words": "(cue)"
+        },
+        {
+          "note": 234,
           "pitch": null
         },
         {
@@ -10557,12 +10609,16 @@
           "pitch": null
         },
         {
-          "note": 417,
-          "words": "[SUS. CYM]"
+          "note": 414,
+          "words": "(cue)"
         },
         {
           "note": 417,
           "pitch": null
+        },
+        {
+          "note": 417,
+          "words": "[SUS. CYM]"
         },
         {
           "note": 420,
@@ -10594,11 +10650,19 @@
         },
         {
           "note": 615,
+          "words": "(cue)"
+        },
+        {
+          "note": 615,
           "pitch": null
         },
         {
           "note": 618,
           "pitch": null
+        },
+        {
+          "note": 639,
+          "words": "(cue)"
         },
         {
           "note": 639,
@@ -10610,11 +10674,19 @@
         },
         {
           "note": 663,
+          "words": "(cue)"
+        },
+        {
+          "note": 663,
           "pitch": null
         },
         {
           "note": 666,
           "pitch": null
+        },
+        {
+          "note": 687,
+          "words": "(cue)"
         },
         {
           "note": 687,
@@ -10694,6 +10766,10 @@
         {
           "note": 267,
           "pitch": null
+        },
+        {
+          "note": 270,
+          "words": "(cue)"
         },
         {
           "note": 270,
@@ -11444,11 +11520,11 @@
         },
         {
           "note": 102,
-          "pitch": -2
+          "words": "(sim.)"
         },
         {
           "note": 102,
-          "words": "(sim.)"
+          "pitch": -2
         },
         {
           "note": 102.5,
@@ -12275,6 +12351,10 @@
           "pitch": -2
         },
         {
+          "note": 247,
+          "words": "(cue)"
+        },
+        {
           "note": 247.5,
           "pitch": -3
         },
@@ -12496,11 +12576,11 @@
         },
         {
           "note": 271,
-          "pitch": 7
+          "pitch": -2
         },
         {
           "note": 271,
-          "pitch": -2
+          "pitch": 7
         },
         {
           "note": 271.5,
@@ -12508,11 +12588,11 @@
         },
         {
           "note": 272,
-          "pitch": 10
+          "pitch": -5
         },
         {
           "note": 272,
-          "pitch": -5
+          "pitch": 10
         },
         {
           "note": 272.5,
@@ -12552,11 +12632,11 @@
         },
         {
           "note": 277,
-          "pitch": -2
+          "pitch": 19
         },
         {
           "note": 277,
-          "pitch": 19
+          "pitch": -2
         },
         {
           "note": 277.5,
@@ -12564,11 +12644,11 @@
         },
         {
           "note": 278,
-          "pitch": -5
+          "pitch": 22
         },
         {
           "note": 278,
-          "pitch": 22
+          "pitch": -5
         },
         {
           "note": 278.5,
@@ -13840,11 +13920,11 @@
         },
         {
           "note": 522,
-          "words": "(sim.)"
+          "pitch": -2
         },
         {
           "note": 522,
-          "pitch": -2
+          "words": "(sim.)"
         },
         {
           "note": 522.5,
@@ -14596,11 +14676,11 @@
         },
         {
           "note": 618,
-          "words": "(sim.)"
+          "pitch": -5
         },
         {
           "note": 618,
-          "pitch": -5
+          "words": "(sim.)"
         },
         {
           "note": 618.5,
@@ -18529,6 +18609,10 @@
         },
         {
           "note": 114,
+          "words": "(cue)"
+        },
+        {
+          "note": 114,
           "pitch": -2
         },
         {
@@ -19461,6 +19545,10 @@
         },
         {
           "note": 417,
+          "words": "(cue)"
+        },
+        {
+          "note": 417,
           "pitch": -21
         },
         {
@@ -19926,6 +20014,10 @@
         {
           "note": 587.5,
           "pitch": -3
+        },
+        {
+          "note": 588,
+          "words": "(cue)"
         },
         {
           "note": 588,
@@ -21341,7 +21433,7 @@
           "pitch": 14
         },
         {
-          "note": 72,
+          "note": 73,
           "words": "(cue)"
         },
         {
@@ -21486,11 +21578,11 @@
         },
         {
           "note": 144,
-          "words": "(cue)"
+          "pitch": 10
         },
         {
           "note": 144,
-          "pitch": 10
+          "words": "(cue)"
         },
         {
           "note": 145.5,
@@ -21587,6 +21679,10 @@
         {
           "note": 186,
           "pitch": 12
+        },
+        {
+          "note": 457,
+          "words": "(cue)"
         },
         {
           "note": 457,
@@ -21714,6 +21810,10 @@
         },
         {
           "note": 486,
+          "words": "(cue)"
+        },
+        {
+          "note": 486,
           "pitch": -2
         },
         {
@@ -21801,11 +21901,15 @@
         },
         {
           "note": 12,
-          "pitch": 2
+          "words": "(cue)"
         },
         {
           "note": 12,
           "pitch": 7
+        },
+        {
+          "note": 12,
+          "pitch": 2
         },
         {
           "note": 18,
@@ -22208,11 +22312,15 @@
         },
         {
           "note": 18,
-          "pitch": -5
+          "words": "(cue)"
         },
         {
           "note": 18,
           "pitch": 0
+        },
+        {
+          "note": 18,
+          "pitch": -5
         },
         {
           "note": 24,
@@ -22719,6 +22827,10 @@
         },
         {
           "note": 486,
+          "words": "(cue)"
+        },
+        {
+          "note": 486,
           "pitch": -26
         },
         {
@@ -22824,10 +22936,6 @@
       "name": "Violin I",
       "measureCount": 119,
       "notes": [
-        {
-          "note": 12,
-          "words": "(cue)"
-        },
         {
           "note": 12,
           "pitch": 2
@@ -23358,11 +23466,11 @@
         },
         {
           "note": 129,
-          "pitch": 0
+          "pitch": -5
         },
         {
           "note": 129,
-          "pitch": -5
+          "pitch": 0
         },
         {
           "note": 132,
@@ -23383,13 +23491,17 @@
         {
           "note": 144,
           "pitch": -2
+        },
+        {
+          "note": 144,
+          "pitch": -5
         },
         {
           "note": 144,
           "words": "Div."
         },
         {
-          "note": 144,
+          "note": 147,
           "pitch": -5
         },
         {
@@ -23397,19 +23509,11 @@
           "pitch": 0
         },
         {
-          "note": 147,
-          "pitch": -5
-        },
-        {
-          "note": 150,
-          "pitch": -5
-        },
-        {
           "note": 150,
           "pitch": -2
         },
         {
-          "note": 156,
+          "note": 150,
           "pitch": -5
         },
         {
@@ -23417,7 +23521,7 @@
           "pitch": -2
         },
         {
-          "note": 159,
+          "note": 156,
           "pitch": -5
         },
         {
@@ -23425,11 +23529,19 @@
           "pitch": -2
         },
         {
+          "note": 159,
+          "pitch": -5
+        },
+        {
+          "note": 162,
+          "pitch": -7
+        },
+        {
           "note": 162,
           "pitch": -2
         },
         {
-          "note": 162,
+          "note": 165,
           "pitch": -7
         },
         {
@@ -23437,10 +23549,6 @@
           "pitch": -3
         },
         {
-          "note": 165,
-          "pitch": -7
-        },
-        {
           "note": 168,
           "pitch": 7
         },
@@ -23450,14 +23558,10 @@
         },
         {
           "note": 171,
-          "pitch": 2
-        },
-        {
-          "note": 171,
           "pitch": 7
         },
         {
-          "note": 174,
+          "note": 171,
           "pitch": 2
         },
         {
@@ -23465,12 +23569,16 @@
           "pitch": 5
         },
         {
-          "note": 177,
-          "pitch": 5
+          "note": 174,
+          "pitch": 2
         },
         {
           "note": 177,
           "pitch": 0
+        },
+        {
+          "note": 177,
+          "pitch": 5
         },
         {
           "note": 180,
@@ -23495,6 +23603,10 @@
         {
           "note": 186,
           "pitch": 0
+        },
+        {
+          "note": 192,
+          "words": "(cue)"
         },
         {
           "note": 192,
@@ -23658,11 +23770,11 @@
         },
         {
           "note": 330,
-          "words": "(off the string)"
+          "pitch": -5
         },
         {
           "note": 330,
-          "pitch": -5
+          "words": "(off the string)"
         },
         {
           "note": 330.5,
@@ -23822,19 +23934,19 @@
         },
         {
           "note": 347.5,
-          "pitch": -3
-        },
-        {
-          "note": 347.5,
           "pitch": -6
         },
         {
-          "note": 348,
-          "pitch": -5
+          "note": 347.5,
+          "pitch": -3
         },
         {
           "note": 348,
           "pitch": -2
+        },
+        {
+          "note": 348,
+          "pitch": -5
         },
         {
           "note": 348.5,
@@ -23846,11 +23958,11 @@
         },
         {
           "note": 349,
-          "pitch": -2
+          "pitch": -5
         },
         {
           "note": 349,
-          "pitch": -5
+          "pitch": -2
         },
         {
           "note": 349.5,
@@ -23886,19 +23998,19 @@
         },
         {
           "note": 351.5,
-          "pitch": -5
+          "pitch": -2
         },
         {
           "note": 351.5,
-          "pitch": -2
-        },
-        {
-          "note": 352,
-          "pitch": 0
+          "pitch": -5
         },
         {
           "note": 352,
           "pitch": -3
+        },
+        {
+          "note": 352,
+          "pitch": 0
         },
         {
           "note": 352.5,
@@ -23910,27 +24022,27 @@
         },
         {
           "note": 353,
-          "pitch": -3
+          "pitch": 0
         },
         {
           "note": 353,
-          "pitch": 0
-        },
-        {
-          "note": 353.5,
-          "pitch": 0
+          "pitch": -3
         },
         {
           "note": 353.5,
           "pitch": -3
         },
         {
-          "note": 354,
-          "pitch": -2
+          "note": 353.5,
+          "pitch": 0
         },
         {
           "note": 354,
           "pitch": 2
+        },
+        {
+          "note": 354,
+          "pitch": -2
         },
         {
           "note": 354.5,
@@ -23974,19 +24086,19 @@
         },
         {
           "note": 357,
-          "pitch": 2
+          "pitch": -2
         },
         {
           "note": 357,
-          "pitch": -2
-        },
-        {
-          "note": 357.5,
-          "pitch": -2
+          "pitch": 2
         },
         {
           "note": 357.5,
           "pitch": 2
+        },
+        {
+          "note": 357.5,
+          "pitch": -2
         },
         {
           "note": 358,
@@ -24078,19 +24190,19 @@
         },
         {
           "note": 363.5,
-          "pitch": 0
+          "pitch": -3
         },
         {
           "note": 363.5,
-          "pitch": -3
-        },
-        {
-          "note": 364,
-          "pitch": -3
+          "pitch": 0
         },
         {
           "note": 364,
           "pitch": 0
+        },
+        {
+          "note": 364,
+          "pitch": -3
         },
         {
           "note": 364.5,
@@ -24222,6 +24334,10 @@
         },
         {
           "note": 444,
+          "words": "(cue)"
+        },
+        {
+          "note": 444,
           "pitch": -2
         },
         {
@@ -24331,6 +24447,10 @@
         {
           "note": 567,
           "pitch": 3
+        },
+        {
+          "note": 570,
+          "words": "(cue)"
         },
         {
           "note": 570,
@@ -24526,6 +24646,10 @@
         },
         {
           "note": 594,
+          "words": "(cue)"
+        },
+        {
+          "note": 594,
           "pitch": 10
         },
         {
@@ -24543,6 +24667,10 @@
         {
           "note": 600,
           "pitch": 14
+        },
+        {
+          "note": 606,
+          "words": "(cue)"
         },
         {
           "note": 606,
@@ -26076,6 +26204,10 @@
         },
         {
           "note": 30,
+          "words": "(cue)"
+        },
+        {
+          "note": 30,
           "pitch": 10
         },
         {
@@ -26856,11 +26988,11 @@
         },
         {
           "note": 330,
-          "words": "(off the string)"
+          "pitch": -10
         },
         {
           "note": 330,
-          "pitch": -10
+          "words": "(off the string)"
         },
         {
           "note": 330.5,
@@ -27376,11 +27508,11 @@
         },
         {
           "note": 414,
-          "pitch": 10
+          "pitch": 7
         },
         {
           "note": 414,
-          "pitch": 7
+          "pitch": 10
         },
         {
           "note": 417,
@@ -27432,13 +27564,13 @@
         },
         {
           "note": 531,
-          "pitch": -5
-        },
-        {
-          "note": 531,
           "pitch": 0
         },
         {
+          "note": 531,
+          "pitch": -5
+        },
+        {
           "note": 535,
           "pitch": 12
         },
@@ -27448,11 +27580,15 @@
         },
         {
           "note": 537,
-          "pitch": 7
+          "pitch": 12
         },
         {
           "note": 537,
-          "pitch": 12
+          "pitch": 7
+        },
+        {
+          "note": 546,
+          "words": "(cue)"
         },
         {
           "note": 546,
@@ -27683,6 +27819,10 @@
           "pitch": -2
         },
         {
+          "note": 594,
+          "words": "(cue)"
+        },
+        {
           "note": 595.5,
           "pitch": 2
         },
@@ -27701,6 +27841,10 @@
         {
           "note": 606,
           "pitch": -2
+        },
+        {
+          "note": 606,
+          "words": "(cue)"
         },
         {
           "note": 607.5,
@@ -28009,6 +28153,10 @@
         {
           "note": 707.5,
           "pitch": -3
+        },
+        {
+          "note": 708,
+          "words": "(cue)"
         },
         {
           "note": 708,
