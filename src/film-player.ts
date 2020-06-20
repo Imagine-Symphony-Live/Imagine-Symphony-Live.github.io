@@ -8,9 +8,6 @@ export class FilmVideoPlayer extends VideoPlayer {
 
   async preload() {
     await super.preload();
-
-    // Temporary - get's through it quick
-    this.videoData.playbackRate = 14;
   }
 
 }
