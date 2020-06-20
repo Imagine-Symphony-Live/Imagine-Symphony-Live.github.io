@@ -34,12 +34,14 @@ export class VideoPlayer extends Container {
     if(this.videoData) {
       if(this.videoData.paused) {
         this.videoData.play();
+        this.emit("play");
         this.statusText.text = "Playing";
         if(this.animationFrameId === -1) {
           this.animationFrameId = window.requestAnimationFrame(this.updateGraphics.bind(this));
         }
       } else {
         this.videoData.pause();
+        this.emit("pause");
         this.statusText.text = "Paused";
         this.updateGraphics();
         if(this.animationFrameId !== -1) {
@@ -48,6 +50,10 @@ export class VideoPlayer extends Container {
         }
       }
     }
+  }
+
+  set currentTime(value: number) {
+    this.videoData.currentTime = value;
   }
 
   get currentTime(): number {

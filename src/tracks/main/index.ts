@@ -2,7 +2,7 @@ import { InteractiveInstrument } from "../../interactive-instrument";
 import { interactives } from "./track-interactives";
 //import { particles } from './track-particles';
 import { InteractiveTrack } from "../../types/interactive-track";
-import fullSong from '../../../assets/music/full-composition.ogg';
+import fullSong from '../../../assets/video/film.mp4';
 
 export default function (): InteractiveTrack {
   return {
@@ -17,6 +17,6 @@ export default function (): InteractiveTrack {
     particleCues: [],//particles,
     trackUrl: fullSong,
     tempo: 148,
-    offset: -0.2,
+    offset: 66.459 - 4.917, // start of violin, and 4.917 is "magic number"
   }
 }

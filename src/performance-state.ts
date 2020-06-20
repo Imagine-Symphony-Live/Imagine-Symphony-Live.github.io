@@ -9,11 +9,8 @@ import { CueEvent } from "click-track/dist/src/definitions/cue-event";
 import { Emitter } from "pixi-particles";
 import { ParticleCue } from "./types/particle-cue";
 import { Draggable } from "./draggable";
-
-
-
-// import { FilmVideoPlayer } from "./film-player";
-// import introFilmUrl from '../assets/video/film.mp4';
+import { PerformanceVideoPlayer } from "./performance-video-player";
+import introFilmUrl from '../assets/video/film.mp4';
 
 
 type InteractiveCue = [Interactive, number, any];
@@ -21,6 +18,7 @@ type InteractiveCue = [Interactive, number, any];
 export default class PerformanceState extends State {
 
   protected track: HTMLAudioElement;
+  protected bkgVideo: PerformanceVideoPlayer;
   protected interactives: Array<Interactive>;
   private app: Application;
   private clickTrack: ClickTrack<InteractiveCue>;
@@ -55,18 +53,18 @@ export default class PerformanceState extends State {
       stageCenter,
     } = mainTrack();
 
-    this.intendedStageSize = [stageSize[0] + 200, (stageSize[1] + 200)];
+    this.intendedStageSize = [stageSize[0] + 200, (stageSize[1] + 500)];
     this.centerStage = stageCenter;
 
-    const track: HTMLAudioElement = new Audio(trackUrl);
-    track.playbackRate = 1;
+    this.bkgVideo = new PerformanceVideoPlayer(introFilmUrl, 1024);
+    await this.bkgVideo.preload();
+    container.addChild(this.bkgVideo);
+    this.bkgVideo.position.set(0,0);
 
-    const start = () => {
-      track.play();
-      track.removeEventListener('canplaythrough', start);
-    };
-    // This triggers when music track is fully loaded
-    track.addEventListener('canplaythrough', start);
+    // Hack to set video
+    setTimeout(() => {
+      this.bkgVideo.currentTime = 60;
+    },1000);
 
     // Assemble interactive things
     this.interactivesContainer = new Container();
@@ -87,20 +85,9 @@ export default class PerformanceState extends State {
     // Create draggable
     this.dragSpawn = new DraggableSpawn();
     // Origin set is handled in resize
-    //this.dragSpawn.setOrigin(window.innerWidth / 2, window.innerHeight * 3 / 4);
     container.addChild(this.dragSpawn);
     this.dragSpawn.on("dragged", this.onCircleDrag.bind(this));
     interactives.push(this.dragSpawn);
-
-
-    // =========================
-    // const videoPlayer = new FilmVideoPlayer(introFilmUrl, 1024);
-
-    // await videoPlayer.preload();
-
-    // container.addChild(videoPlayer);
-    // videoPlayer.position.set(0,0);
-
 
 
     // Assemble cues
@@ -116,7 +103,7 @@ export default class PerformanceState extends State {
 
     // Click track for syncing up
     this.clickTrack = new ClickTrack<InteractiveCue>({
-      timerSource: () => track.currentTime,
+      timerSource: () => this.bkgVideo.currentTime,
       tempo,
       offset,
       cues: cues
@@ -237,9 +224,15 @@ export default class PerformanceState extends State {
       s1.multiplierResize(multiplier);
     });
     const bounds = this.interactivesContainer.getBounds();
+
+    this.bkgVideo.multiplierResize(multiplier);
+
+    const videoBounds = this.bkgVideo.getBounds();
+
+
     this.interactivesContainer.position.set(
-      (window.innerWidth - bounds.width) / 2,
-      (window.innerHeight - bounds.height) / 2);
+      (size.width - bounds.width) / 2,
+      videoBounds.bottom - bounds.height * 0.5);
 
     this.dragSpawn.multiplierResize(multiplier);
 
