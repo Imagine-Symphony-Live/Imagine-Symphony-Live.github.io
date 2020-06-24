@@ -10,7 +10,6 @@ import { Emitter } from "pixi-particles";
 import { ParticleCue } from "./types/particle-cue";
 import { Draggable } from "./draggable";
 import { PerformanceVideoPlayer } from "./performance-video-player";
-import introFilmUrl from '../assets/video/film.mp4';
 
 
 type InteractiveCue = [Interactive, number, any];
@@ -26,7 +25,6 @@ export default class PerformanceState extends State {
   private interactivesContainer: Container;
   private particleContainer: Container;
   private emitters: Array<Emitter> = [];
-  private lastBeat: number = 0;
   protected intendedStageSize: [number, number];
   protected centerStage: [number, number];
 
@@ -56,7 +54,7 @@ export default class PerformanceState extends State {
     this.intendedStageSize = [stageSize[0] + 200, (stageSize[1] + 500)];
     this.centerStage = stageCenter;
 
-    this.bkgVideo = new PerformanceVideoPlayer(introFilmUrl, 1024);
+    this.bkgVideo = new PerformanceVideoPlayer(trackUrl, 1024);
     await this.bkgVideo.preload();
     container.addChild(this.bkgVideo);
     this.bkgVideo.position.set(0,0);
