@@ -133,10 +133,9 @@ export class Draggable extends Interactive {
     this.graphics = icon;
     this.addChild(this.graphics);
 
-    const bb = this.graphics.getBounds();
     const scale = 1;
     this.graphics.scale.set(scale);
-    this.graphics.position.set(-bb.width/2 * scale, -bb.height/2 * scale);
+    this.graphics.position.set(-icon.width/2 * scale, -icon.height/2 * scale);
     this.bloomSprite.alpha = 0.1;
 
   }
