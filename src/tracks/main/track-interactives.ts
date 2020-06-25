@@ -92,7 +92,23 @@ const getSoloCues = (graphicDrawFn: () => void) => (notes: notes): Array<[number
   const res = notes
   .filter(({ words = ''}) => /solo|cue/.test(words))
   .map(({note}) => note)
-  .map((note) => countdown(note, 12, graphicDrawFn))
+  .map((note, i, arr) => {
+    // Round to start of a measure
+    let countIn = 12;
+    countIn = note - Math.floor((note - countIn)/6)*6;
+    // Make sure it's after last note though
+    if(i > 0 && note > arr[i-1]) {
+      // Would the cue-in occur before the last cue?
+      if(note - countIn < arr[i-1]) {
+        countIn = note - arr[i-1] - 3;
+      }
+    }
+    // Can't ever be smaller than 1 beat
+    if(countIn < 1) {
+      throw new Error(`countIn cannot be less than 1`);
+    }
+    return countdown(note, countIn, graphicDrawFn);
+  })
   .reduce((acc, arr) => [...acc, ...arr], []);
   res.sort(([a],[b]) => Math.sign(a - b));
   return res;
