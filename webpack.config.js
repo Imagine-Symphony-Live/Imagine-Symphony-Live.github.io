@@ -70,7 +70,7 @@ const frontBase = {
             loader: 'file-loader',
             options: {
               outputPath: 'assets/images',
-              name: '[path][name].png',
+              name: '[contenthash].png',
             },
           },
           {
