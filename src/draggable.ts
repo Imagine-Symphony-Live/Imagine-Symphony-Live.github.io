@@ -1,4 +1,4 @@
-import { Graphics, Point, Sprite, BLEND_MODES, Container } from "pixi.js";
+import { Graphics, Point, Sprite, BLEND_MODES, Container, DisplayObject } from "pixi.js";
 import { Interactive } from "./interactive";
 import { DRAGGABLE_RADIUS } from "./constants";
 import bloomImage from '../assets/images/bloom-128x128.png';
@@ -11,7 +11,7 @@ export enum DraggableState {
 }
 
 export class Draggable extends Interactive {
-  protected graphics: Graphics = new Graphics();
+  protected graphics: DisplayObject = new Graphics();
   protected dragging = false;
   public origin: Point = new Point();
   protected state: DraggableState;
@@ -24,7 +24,7 @@ export class Draggable extends Interactive {
 
   constructor() {
     super();
-    this.graphics
+    (this.graphics as Graphics)
       .clear()
       .beginFill(0xffffff, 1)
       .drawCircle(0, 0, DRAGGABLE_RADIUS)
@@ -128,22 +128,16 @@ export class Draggable extends Interactive {
     }
   }
 
-  setIcon(dranFn: () => void) {
-    this.graphics
-      .clear()
-      .beginFill(0x0044ff, 1)
-      .lineStyle(1, 0x77aaff, 1)
-
-    dranFn.apply(this.graphics);
-
-    this.graphics.endFill();
+  setIcon(icon: Sprite) {
+    this.graphics.destroy();
+    this.graphics = icon;
+    this.addChild(this.graphics);
 
     const bb = this.graphics.getBounds();
-    const scale = 2;
+    const scale = 1;
     this.graphics.scale.set(scale);
     this.graphics.position.set(-bb.width/2 * scale, -bb.height/2 * scale);
     this.bloomSprite.alpha = 0.1;
-    this.graphics.blendMode = BLEND_MODES.ADD;
 
   }
 

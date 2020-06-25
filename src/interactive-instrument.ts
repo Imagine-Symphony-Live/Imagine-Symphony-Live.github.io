@@ -1,4 +1,4 @@
-import { Graphics, Point, Filter } from "pixi.js";
+import { Graphics, Point, Filter, Sprite } from "pixi.js";
 import { Interactive } from "./interactive";
 import { Draggable } from "./draggable";
 import { powLerpPoint } from "./lerp";
@@ -22,7 +22,7 @@ export class InteractiveInstrument extends Interactive {
 
   public state: InstrumentState = InstrumentState.IDLE;
   public stateValue?: any = 0;
-  private nextCueGraphicsFn?: () => void;
+  private nextCueSprite?: Sprite;
 
   constructor(public color: number, private graphicsDraw: () => void) {
     super();
@@ -98,15 +98,15 @@ export class InteractiveInstrument extends Interactive {
     switch (newState) {
       case InstrumentState.CUED:
         this.stateFadeTime = 1.0;
-        if(this.nextCueGraphicsFn && this.draggables.length) {
-          this.draggables[0].setIcon(this.nextCueGraphicsFn);
+        if(this.nextCueSprite && this.draggables.length) {
+          this.draggables[0].setIcon(this.nextCueSprite);
         }
         break;
 
       case InstrumentState.CUE_READY:
         this.stateFadeTime = 1.0;
-        if(typeof value === 'function') {
-          this.nextCueGraphicsFn = value;
+        if(typeof value === 'string') {
+          this.nextCueSprite = Sprite.from(value);
         }
         break;
 
