@@ -50,12 +50,37 @@ const frontBase = {
         ],
       },
       {
-        test: /\.svg/,
+        test: /\.svg/i,
+        exclude: [
+          path.resolve('./assets/images/instrument-icons')
+        ],
         use: [
           {
             loader: path.resolve('./src/webpack-svg-pixi-loader.js'),
           },
         ],
+      },
+      {
+        test: /\.svg/i,
+        include: [
+          path.resolve('./assets/images/instrument-icons')
+        ],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/images',
+              name: '[path][name].png',
+            },
+          },
+          {
+            loader: path.resolve('./src/webpack-svg-to-png.js'),
+            options: {
+              width: 128,
+              height: 128,
+            },
+          },
+        ]
       },
       {
         test: /\.(ogg)$/,
@@ -69,7 +94,7 @@ const frontBase = {
         ],
       },
       {
-        test: /\.(mp4)$/,
+        test: /\.(mp4|webm)$/,
         use: [
           {
             loader: 'file-loader',

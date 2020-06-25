@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:parse-score": "nodejs -r esm ./src/score-parse ./src/tracks/main/score.xml ./src/tracks/main/score-export.json",
     "build": "npx webpack",
+    "build:clean": "rm -rf ./dist",
     "watch": "npx webpack --env.watch"
   },
   "appConfig": {
@@ -30,17 +31,22 @@
     "awesome-typescript-loader": "^5.2.1",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.2.2",
+    "canvas": "^2.6.1",
+    "canvg": "^3.0.6",
     "cheerio": "^1.0.0-rc.3",
     "crimson-progressbar": "^1.3.0",
     "css-loader": "^3.1.0",
     "esm": "^3.2.25",
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "loader-utils": "^2.0.0",
     "mini-css-extract-plugin": "^0.8.0",
+    "node-fetch": "^2.6.0",
     "svg-path-to-polygons": "^0.1.0",
     "typescript": "^3.7.4",
     "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.6",
+    "xmldom": "^0.3.0"
   },
   "dependencies": {
     "@tweenjs/tween.js": "^17.4.0",
