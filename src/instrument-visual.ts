@@ -41,7 +41,7 @@ export class InstrumentVisual extends Container {
     this.volume = 0;
 
     this.state = InstrumentState.hit;
-    this.sustainTimer = setTimeout(this.sustainTimeout.bind(this), 1000 * noteLength * (60 / this.tempo));
+    this.sustainTimer = <number><unknown>setTimeout(this.sustainTimeout.bind(this), 1000 * noteLength * (60 / this.tempo));
   }
 
   sustainTimeout() {
