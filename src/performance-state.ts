@@ -59,10 +59,6 @@ export default class PerformanceState extends State {
     container.addChild(this.bkgVideo);
     this.bkgVideo.position.set(0,0);
 
-    // Hack to set video
-    setTimeout(() => {
-      this.bkgVideo.currentTime = 60;
-    },1000);
 
     // Assemble interactive things
     this.interactivesContainer = new Container();
