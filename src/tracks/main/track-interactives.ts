@@ -74,11 +74,10 @@ function m2b(measure: number, beat: number): number {
   return (measure - 1) * 6 + (beat - 1)
 }
 
-function countdown(cueAt: number, countIn: number, spriteUrl: string): Array<[number, InstrumentState, any]> {
+function countdown(cueAt: number, countIn: number, spriteUrl: string, playNotes: number[]): Array<[number, InstrumentState, any]> {
   const cues: Array<[number, InstrumentState, any]> = [];
   cues.push([cueAt - countIn, InstrumentState.CUE_READY, spriteUrl]);
-  cues.push([cueAt, InstrumentState.HIT, cueAt]);
-  //cues.push([cueAt + 1, InstrumentState.IDLE, 0]);
+  cues.push([cueAt, InstrumentState.HIT, playNotes]);
   return cues;
 }
 
@@ -107,7 +106,22 @@ const getSoloCues = (spriteUrl: string) => (notes: notes): Array<[number, Instru
       if (countIn < 1) {
         throw new Error(`countIn cannot be less than 1`);
       }
-      return countdown(note, countIn, spriteUrl);
+
+      // get notes about to be played
+      // get the first one
+      // stop using notes if there is a 12 note gap
+      // @TODO also stop if the next note is a cue/solo
+      const playNotes: number[] = [];
+      for (let ii = i;
+        ii === i || (
+          ii < arr.length
+          && arr[ii] - arr[ii - 1] < 12
+        );
+      ii++) {
+        playNotes.push(arr[ii]);
+      }
+
+      return countdown(note, countIn, spriteUrl, playNotes);
     })
     .reduce((acc, arr) => [...acc, ...arr], []);
   res.sort(([a], [b]) => Math.sign(a - b));
