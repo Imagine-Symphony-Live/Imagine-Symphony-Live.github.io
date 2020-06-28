@@ -84,6 +84,11 @@ export class InteractiveInstrument extends Interactive {
       const originOffset = new Point(dragging.position.x - dragging.origin.x, dragging.position.y - dragging.origin.y)
       dragging.adopt(this);
       this.draggables.push(dragging);
+      dragging.on("destroy", () => {
+        const f = this.draggables.findIndex((d) => d === dragging);
+        this.draggables.splice(f, 1);
+        dragging.abandon();
+      });
       this.setState(InstrumentState.CUED);
       this.indicatorStartPoint.copyFrom(dragParentOffset);
       dragging.position.copyFrom(this.indicatorStartPoint);
@@ -116,6 +121,9 @@ export class InteractiveInstrument extends Interactive {
           newState = InstrumentState.HIT_SUCCESS;
           this.stateFadeTime = 0.1;
         }
+        if(value && typeof value === "object" && value.length && this.draggables.length) {
+          this.draggables[0].setVisualCues(value);
+        }
         break;
 
       default:
@@ -133,11 +141,6 @@ export class InteractiveInstrument extends Interactive {
 
     if((this.state === InstrumentState.HIT || this.state === InstrumentState.HIT_SUCCESS) && this.stateFade >= 1) {
       this.setState(InstrumentState.IDLE);
-      let d = this.draggables.pop()
-      if(d) {
-        this.removeChild(d);
-        d.destroy();
-      }
     }
     if(this.state === InstrumentState.CUED) {
       if(this.stateFade < 1) {
@@ -150,12 +153,9 @@ export class InteractiveInstrument extends Interactive {
       }
       //this.indicatorGraphics.position.set(this.mCenterPoint.x + this.indicatorPoint.x, this.mCenterPoint.y + this.indicatorPoint.y);
     } else if (this.state === InstrumentState.HIT_SUCCESS) {
-      // @TODO only fade if was cued
-      if(this.draggables[0]) {
-        this.draggables[0].alpha = 1.0 - this.stateFade;
-      }
+      //
     } else {
-      //this.indicatorGraphics.alpha = 0;
+      //
     }
 
     this.filter.uniforms.isCue = this.state === InstrumentState.CUED;
@@ -166,8 +166,6 @@ export class InteractiveInstrument extends Interactive {
 
 
   draw() {
-
-    // For some reason cacheing clips it incorrectly
 
     this.bkgGraphics.clear().beginFill(this.color, 1);
 

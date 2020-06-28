@@ -2,6 +2,13 @@ import { Graphics, Point, Sprite, BLEND_MODES, Container, DisplayObject } from "
 import { Interactive } from "./interactive";
 import { DRAGGABLE_RADIUS } from "./constants";
 import bloomImage from '../assets/images/bloom-128x128.png';
+import ClickTrack from "click-track";
+import OnDemandEmitter from "./on-demand-emitter";
+
+import note_1 from '../assets/images/instrument-icons/note_1.svg';
+import note_2 from '../assets/images/instrument-icons/note_2.svg';
+import note_3 from '../assets/images/instrument-icons/note_3.svg';
+import { PathParticle } from "pixi-particles";
 
 export enum DraggableState {
   HIDDEN,
@@ -20,6 +27,8 @@ export class Draggable extends Interactive {
   protected velocity: [number, number];
   protected velocityMeasurements: Array<[number, number]> = [];
   protected lastBeat: number = 0;
+  protected visualCuesClicktrack: ClickTrack;
+  protected visualCuesEmitter: OnDemandEmitter;
   private bloomSprite: Sprite;
 
   constructor() {
@@ -50,6 +59,14 @@ export class Draggable extends Interactive {
     this.parent.removeChild(this);
     newParent.addChild(this);
     this.emit('adopted', this, newParent);
+    this.setState(DraggableState.SHRINK_IN, 0);
+  }
+
+  abandon() {
+    if(this.parent) {
+      this.parent.removeChild(this);
+    }
+    this.destroy();
   }
 
   setOrigin(x: number, y: number) {
@@ -84,6 +101,12 @@ export class Draggable extends Interactive {
   onTick(beat: number, deltaBeat: number) {
     super.onTick(beat, deltaBeat);
 
+    if(this._destroyed) return;
+
+    if(this.visualCuesEmitter) {
+      this.visualCuesEmitter.update(deltaBeat);
+    }
+
     if(this.pointerPos && this.dragging) {
       this.lastPosition.copyFrom(this.position);
       this.position.copyFrom(this.pointerPos);
@@ -103,19 +126,18 @@ export class Draggable extends Interactive {
       this.velocity[1] = this.velocity[1] / this.velocityMeasurements.length;
     }
 
-    const ydiff = (this.position.y - this.origin.y);
-    const perspectivescale = Math.pow(2, ydiff / 200);
-    this.scale.set(perspectivescale, perspectivescale)
+    if(this.state !== DraggableState.SHRINK_OUT && this.state !== DraggableState.SHRINK_IN) {
+      const ydiff = (this.position.y - this.origin.y);
+      const perspectivescale = Math.pow(2, ydiff / 200);
+      this.scale.set(perspectivescale, perspectivescale)
+    }
 
     if(this.state === DraggableState.SHRINK_OUT) {
       this.position.set(this.position.x + this.velocity[0] * deltaBeat / 2, this.position.y + this.velocity[1] * deltaBeat / 2);
       this.graphics.scale.set(1 - this.stateFade);
       this.alpha = 1 - this.stateFade;
       if(this.stateFade >= 1) {
-        if(this.parent) {
-          this.parent.removeChild(this);
-        }
-        this.destroy();
+        this.emit("destroy");
       }
     }
 
@@ -131,13 +153,87 @@ export class Draggable extends Interactive {
   setIcon(icon: Sprite) {
     this.graphics.destroy();
     this.graphics = icon;
+    (<Sprite>this.graphics).anchor.set(0.5);
     this.addChild(this.graphics);
 
     const scale = 1;
     this.graphics.scale.set(scale);
-    this.graphics.position.set(-icon.width/2 * scale, -icon.height/2 * scale);
     this.bloomSprite.alpha = 0.1;
+  }
 
+  setVisualCues(cues: number[]) {
+    this.visualCuesClicktrack = new ClickTrack({
+      timerSource: () => this.currentBeat,
+      cues
+    });
+
+    // This config is temp, need to move to setter
+    this.visualCuesEmitter = new OnDemandEmitter(
+      this,
+      [note_1, note_2, note_3],
+      {
+        "alpha": {
+          "start": .8,
+          "end": 0
+        },
+        "scale": {
+          "start": 0.3,
+          "end": 0.3,
+          "minimumScaleMultiplier": 0.5
+        },
+        "color": {
+          "start": "#ffffff",
+          "end": "#000000"
+        },
+        "speed": {
+          "start": 50,
+          "end": 50,
+          "minimumSpeedMultiplier": 1
+        },
+        "acceleration": {
+          "x": 0,
+          "y": 0
+        },
+        "maxSpeed": 0,
+        "startRotation": {
+          "min": 0,
+          "max": 0
+        },
+        "noRotation": true,
+        "rotationSpeed": {
+          "min": 0,
+          "max": 0
+        },
+        "lifetime": {
+          "min": 6,
+          "max": 6
+        },
+        "blendMode": "normal",
+        "extraData": {
+          "path":"sin(x/30)* 20 - x/3" // dust devil
+        },
+        "frequency": 0.1,
+        "particlesPerWave": 2,
+        "emitterLifetime": -1,
+        "maxParticles": 15,
+        "pos": {
+          "x": 32,
+          "y": -32
+        },
+        "addAtBack": false,
+        "spawnType": "point"
+      });
+
+      this.visualCuesEmitter.particleConstructor = PathParticle;
+      let whichArtCounter = 0;
+
+      this.visualCuesClicktrack.on("cue", () => {
+        this.visualCuesEmitter.spawn(1, 0, (whichArtCounter++) % 3);
+      });
+
+      this.visualCuesClicktrack.on("lastCue", () => {
+        this.setState(DraggableState.SHRINK_OUT, 1);
+      });
   }
 
   multiplierResize(m: number) {}
@@ -146,6 +242,9 @@ export class Draggable extends Interactive {
     if(newState === DraggableState.SHRINK_OUT) {
       this.stateFadeTime = 0.5;
       this.stateFade = 1 - this.scale.x;
+      if(value === 1) {
+        this.velocity = [0,0];
+      }
     }
     if(newState === DraggableState.SHRINK_IN) {
       this.stateFadeTime = 0.5;

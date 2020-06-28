@@ -9,6 +9,8 @@ export abstract class Interactive extends Container {
   protected dragHover: boolean = false;
   abstract multiplierResize(multiplier: number): void;
   abstract setState(newState: number, value: number): void;
+  protected currentBeat: number;
+
   onCue(cue: number, state: number, value: number) {
     this.setState(state, value);
   }
@@ -22,6 +24,7 @@ export abstract class Interactive extends Container {
   }
 
   onTick(currentBeat: number, deltaBeat: number) {
+    this.currentBeat = currentBeat;
     if(this.stateFade < 1) {
       this.stateFade += this.stateFadeTime * deltaBeat;
       if(this.stateFade > 1) {
