@@ -9,6 +9,7 @@ import note_1 from '../assets/images/instrument-icons/note_1.svg';
 import note_2 from '../assets/images/instrument-icons/note_2.svg';
 import note_3 from '../assets/images/instrument-icons/note_3.svg';
 import { PathParticle } from "pixi-particles";
+import PerformanceState from "./performance-state";
 
 export enum DraggableState {
   HIDDEN,
@@ -60,6 +61,7 @@ export class Draggable extends Interactive {
     newParent.addChild(this);
     this.emit('adopted', this, newParent);
     this.setState(DraggableState.SHRINK_IN, 0);
+    this.velocity = [0,0];
   }
 
   abandon() {
@@ -126,11 +128,9 @@ export class Draggable extends Interactive {
       this.velocity[1] = this.velocity[1] / this.velocityMeasurements.length;
     }
 
-    if(this.state !== DraggableState.SHRINK_OUT && this.state !== DraggableState.SHRINK_IN) {
-      const ydiff = (this.position.y - this.origin.y);
-      const perspectivescale = Math.pow(2, ydiff / 200);
-      this.scale.set(perspectivescale, perspectivescale)
-    }
+    const ydiff = (this.position.y - this.origin.y);
+    const perspectivescale = Math.pow(2, ydiff / 200);
+    this.scale.set(perspectivescale, perspectivescale);
 
     if(this.state === DraggableState.SHRINK_OUT) {
       this.position.set(this.position.x + this.velocity[0] * deltaBeat / 2, this.position.y + this.velocity[1] * deltaBeat / 2);
@@ -152,25 +152,31 @@ export class Draggable extends Interactive {
 
   setIcon(icon: Sprite) {
     this.graphics.destroy();
+    icon.anchor.set(0.5);
     this.graphics = icon;
-    (<Sprite>this.graphics).anchor.set(0.5);
     this.addChild(this.graphics);
 
     const scale = 1;
     this.graphics.scale.set(scale);
-    this.bloomSprite.alpha = 0.1;
+    this.bloomSprite.alpha = 0.2;
   }
 
   setVisualCues(cues: number[]) {
     this.visualCuesClicktrack = new ClickTrack({
-      timerSource: () => this.currentBeat,
+      timerSource: PerformanceState.clickTrack.timer,
+      offset: PerformanceState.clickTrack.offset,
+      tempo: PerformanceState.clickTrack.tempo,
       cues
     });
 
     // This config is temp, need to move to setter
     this.visualCuesEmitter = new OnDemandEmitter(
       this,
-      [note_1, note_2, note_3],
+      [
+        note_1,
+        note_2,
+        note_3
+      ],
       {
         "alpha": {
           "start": .8,
@@ -212,8 +218,8 @@ export class Draggable extends Interactive {
         "extraData": {
           "path":"sin(x/30)* 20 - x/3" // dust devil
         },
-        "frequency": 0.1,
-        "particlesPerWave": 2,
+        "frequency": 0.01,
+        "particlesPerWave": 1,
         "emitterLifetime": -1,
         "maxParticles": 15,
         "pos": {
@@ -227,12 +233,14 @@ export class Draggable extends Interactive {
       this.visualCuesEmitter.particleConstructor = PathParticle;
       let whichArtCounter = 0;
 
-      this.visualCuesClicktrack.on("cue", () => {
-        this.visualCuesEmitter.spawn(1, 0, (whichArtCounter++) % 3);
+      this.visualCuesClicktrack.on("cue", (ct, e) => {
+        this.visualCuesEmitter.spawn(1, e.drag, (whichArtCounter++) % 3);
       });
 
       this.visualCuesClicktrack.on("lastCue", () => {
-        this.setState(DraggableState.SHRINK_OUT, 1);
+        this.setState(DraggableState.SHRINK_OUT, 0.1);
+        this.visualCuesClicktrack.deconstruct();
+        delete this.visualCuesClicktrack;
       });
   }
 
@@ -240,11 +248,8 @@ export class Draggable extends Interactive {
 
   setState(newState: DraggableState, value: number) {
     if(newState === DraggableState.SHRINK_OUT) {
-      this.stateFadeTime = 0.5;
+      this.stateFadeTime = value;
       this.stateFade = 1 - this.scale.x;
-      if(value === 1) {
-        this.velocity = [0,0];
-      }
     }
     if(newState === DraggableState.SHRINK_IN) {
       this.stateFadeTime = 0.5;
