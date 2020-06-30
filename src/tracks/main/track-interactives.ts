@@ -111,15 +111,20 @@ const getSoloCues = (spriteUrl: string) => (notes: notes): Array<[number, Instru
       // get the first one
       // stop using notes if there is a 12 note gap
       // @TODO also stop if the next note is a cue/solo
-      const playNotes: number[] = [];
-      for (let ii = i;
-        ii === i || (
-          ii < arr.length
-          && arr[ii] - arr[ii - 1] < 12
-        );
-      ii++) {
-        playNotes.push(arr[ii]);
-      }
+
+      const playNotes = notes.filter((n, ii, notes) => {
+        // Exclude notes in the past
+        if(notes[ii].note < note) return false;
+        // Exclude the cue/notes/words
+        if(notes[ii].words) return false;
+        // Exclude notes past the next cue
+        if(i < arr.length && notes[ii].note >= arr[i + 1]) return false;
+        //if(ii > i + 12) return false; // TEMP, no more than 12 notes
+        if(notes[ii].note - note > 12) return false; // MAX 2 measures after cue
+        //if(arr[ii] - arr[ii - 1] > 24) return false;
+        return true;
+      })
+      .map(({note}) => note)
 
       return countdown(note, countIn, spriteUrl, playNotes);
     })
