@@ -1,16 +1,17 @@
-import { Container, Loader, Texture, Sprite, Graphics, Text, Point } from "pixi.js";
+import { Container, Loader, Texture, Sprite, Graphics, Text, Point, loader } from "pixi.js";
 import { TEXT_STYLE_BIO_P } from "./styles";
 
 export class VideoPlayer extends Container {
-  isLoaded: boolean = false;
+  public isLoaded: boolean = false;
   protected videoSprite: Sprite;
   public nativeWidth: number;
   public nativeHeight: number;
   public nativeRatio: number;
   protected videoData: HTMLVideoElement;
   protected overlayGraphics: Graphics;
-  protected statusText: Text;
   private animationFrameId: number;
+  statusText: string = "Unloaded";
+  private loadProgress: number = 0;
 
   constructor(public videoUrl: string, public playerWidth: number = 256, public accentColor: number = 0xeeeeee) {
     super();
@@ -18,12 +19,6 @@ export class VideoPlayer extends Container {
     this.overlayGraphics = new Graphics();
     this.addChild(this.overlayGraphics);
     this.updateGraphics();
-
-    this.statusText = new Text('Unloaded', TEXT_STYLE_BIO_P);
-    this.statusText.visible = false;
-    this.addChild(this.statusText);
-    this.statusText.anchor.set(0,0);
-    this.statusText.position.set(0, 0);
 
     this.interactive = true;
     this.cursor = "pointer";
@@ -35,14 +30,14 @@ export class VideoPlayer extends Container {
       if(this.videoData.paused) {
         this.videoData.play();
         this.emit("play");
-        this.statusText.text = "Playing";
+        this.statusText = "Playing";
         if(this.animationFrameId === -1) {
           this.animationFrameId = window.requestAnimationFrame(this.updateGraphics.bind(this));
         }
       } else {
         this.videoData.pause();
         this.emit("pause");
-        this.statusText.text = "Paused";
+        this.statusText = "Paused";
         this.updateGraphics();
         if(this.animationFrameId !== -1) {
           window.cancelAnimationFrame(this.animationFrameId);
@@ -60,8 +55,16 @@ export class VideoPlayer extends Container {
     return this.videoData.currentTime
   }
 
+  get isPlaying(): boolean {
+    return !this.videoData.paused;
+  }
+
   get duration(): number {
     return this.videoData.duration;
+  }
+
+  get percentLoaded(): number {
+    return this.loadProgress;
   }
 
   playerEnded() {
@@ -69,15 +72,33 @@ export class VideoPlayer extends Container {
   }
 
   async preload() {
-    this.statusText.text = "Loading";
+    this.statusText = "Loading";
     if(!Loader.shared.resources[this.videoUrl]) {
+      const loaderTimer = setInterval(() => {
+        if(typeof Loader.shared.resources[this.videoUrl] === "undefined") {
+          return;
+        }
+        try {
+          const buffered = Loader.shared.resources[this.videoUrl].data.buffered;
+          const total = Loader.shared.resources[this.videoUrl].data.duration;
+
+          const end = buffered.end(0);
+
+          this.loadProgress = end/total;
+        } catch {}
+      },200);
+
       // If not already loaded
       await new Promise((resolve) => {
-        Loader.shared.add(this.videoUrl).load(resolve)
+        Loader.shared.add(this.videoUrl).load(resolve);
       });
+
+      clearInterval(loaderTimer);
     }
 
-    this.videoData = Loader.shared.resources[this.videoUrl].data
+    this.loadProgress = 1;
+
+    this.videoData = Loader.shared.resources[this.videoUrl].data;
     const videoBaseTexture: Texture = Texture.from(this.videoData);
 
     this.videoData.addEventListener("ended", this.playerEnded.bind(this));
@@ -99,10 +120,8 @@ export class VideoPlayer extends Container {
     // Bring overlay back to top
     this.removeChild(this.overlayGraphics);
     this.addChild(this.overlayGraphics);
-    this.removeChild(this.statusText);
-    this.addChild(this.statusText);
 
-    this.statusText.text = "Paused";
+    this.statusText = "Paused";
     this.resizeVideo(this.playerWidth);
   }
 

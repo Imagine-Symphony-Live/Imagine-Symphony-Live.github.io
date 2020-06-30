@@ -46,6 +46,13 @@ export const TEXT_STYLE_INTERACTIVE_NUM = new TextStyle({
   fontFamily: "Roboto",
 })
 
+export const TEXT_STYLE_LOADING = new TextStyle({
+  fill: "#ffffff",
+  fontFamily: "Mono",
+  wordWrap: true,
+  fontSize: 18,
+})
+
 export const TEXT_STYLE_BIO_P = new TextStyle({
   fill: "#ffffff",
   fontFamily: "Roboto",

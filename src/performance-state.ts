@@ -1,4 +1,4 @@
-import { Container, Application, Point } from "pixi.js";
+import { Container, Application, Point, Text } from "pixi.js";
 import ClickTrack from 'click-track';
 import State from "./state";
 import { InteractiveInstrument } from "./interactive-instrument";
@@ -10,6 +10,7 @@ import { Emitter } from "pixi-particles";
 import { ParticleCue } from "./types/particle-cue";
 import { Draggable } from "./draggable";
 import { PerformanceVideoPlayer } from "./performance-video-player";
+import ProgressBar from "./progress-bar";
 
 
 type InteractiveCue = [Interactive, number, any];
@@ -18,21 +19,22 @@ export default class PerformanceState extends State {
 
   protected track: HTMLAudioElement;
   protected bkgVideo: PerformanceVideoPlayer;
-  protected interactives: Array<Interactive>;
+  protected interactives: Array<Interactive> = [];
   private app: Application;
-  private clickTrack: ClickTrack<InteractiveCue>;
+  static clickTrack: ClickTrack<InteractiveCue>;
   private clickTrackParticles: ClickTrack<ParticleCue>;
-  private interactivesContainer: Container;
+  private interactivesContainer: Container = new Container();
   private particleContainer: Container;
   private emitters: Array<Emitter> = [];
   protected intendedStageSize: [number, number];
   protected centerStage: [number, number];
+  protected loadProgressbar:ProgressBar = new ProgressBar();
 
   // DIY interaction management
   private interactiveHovering?: Interactive;
   private mousePos: Point;
   private mouseChecked: boolean = true;
-  private dragSpawn: DraggableSpawn;
+  private dragSpawn: DraggableSpawn = new DraggableSpawn();
 
   async createContainer(app: Application): Promise<Container> {
     this.app = app;
@@ -51,17 +53,16 @@ export default class PerformanceState extends State {
       stageCenter,
     } = mainTrack();
 
+    app.renderer.backgroundColor = 0x000000;
+
     this.intendedStageSize = [stageSize[0] + 200, (stageSize[1] + 500)];
     this.centerStage = stageCenter;
 
     this.bkgVideo = new PerformanceVideoPlayer(trackUrl, 1024);
-    await this.bkgVideo.preload();
     container.addChild(this.bkgVideo);
     this.bkgVideo.position.set(0,0);
 
-
     // Assemble interactive things
-    this.interactivesContainer = new Container();
     container.addChild(this.interactivesContainer);
     this.interactivesContainer.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
 
@@ -76,13 +77,10 @@ export default class PerformanceState extends State {
       this.interactivesContainer.addChild(s1);
     });
 
-    // Create draggable
-    this.dragSpawn = new DraggableSpawn();
     // Origin set is handled in resize
     container.addChild(this.dragSpawn);
     this.dragSpawn.on("dragged", this.onCircleDrag.bind(this));
     interactives.push(this.dragSpawn);
-
 
     // Assemble cues
     const cues: Array<[number, InteractiveCue]> = [];
@@ -96,14 +94,20 @@ export default class PerformanceState extends State {
     cues.sort((a, b) => Math.sign(a[0] - b[0]));
 
     // Click track for syncing up
-    this.clickTrack = new ClickTrack<InteractiveCue>({
-      timerSource: () => this.bkgVideo.currentTime,
+    PerformanceState.clickTrack = new ClickTrack<InteractiveCue>({
+      timerSource: () => {
+        try {
+          return this.bkgVideo.currentTime
+        } catch {
+          return 0;
+        }
+      },
       tempo,
       offset,
       cues: cues
     });
 
-    this.clickTrack.on("cue", this.handleClickCue.bind(this));
+    PerformanceState.clickTrack.on("cue", this.handleClickCue.bind(this));
 
     // Sort all cues ascending
     particleCues.sort((a, b) => Math.sign(a[0] - b[0]));
@@ -124,7 +128,24 @@ export default class PerformanceState extends State {
     //this.particleContainer.position.set(window.innerWidth / 2 - 414, window.innerHeight * 3 / 4 -131.65);
     //container.addChild(this.particleContainer);
 
-    app.renderer.backgroundColor = 0;//0x55aacc;
+    container.addChild(this.loadProgressbar);
+    this.loadProgressbar.position.set(window.innerWidth/2, window.innerHeight/2);
+    const loadIntervalCheck = setInterval(() => {
+      this.loadProgressbar.progress = this.bkgVideo.percentLoaded;
+    }, 200);
+
+    const loadPromise = new Promise(async (resolve, reject) => {
+      await this.bkgVideo.preload();
+      this.onResize({width: window.innerWidth, height: window.innerHeight});
+      resolve();
+      this.loadProgressbar.progress = 1
+      clearInterval(loadIntervalCheck);
+      setTimeout(() => {
+        container.removeChild(this.loadProgressbar);
+        this.loadProgressbar.destroy();
+        delete this.loadProgressbar;
+      }, 500);
+    });
 
     return container;
   }
@@ -167,13 +188,17 @@ export default class PerformanceState extends State {
   }
 
   onTick(deltaMs: number) {
-    const currentBeat = this.clickTrack.beat;
-    const beatDelta = (deltaMs / 1000) * this.clickTrack.tempo;
+    if(this.loadProgressbar && this.loadProgressbar.progress < 1) {
+      this.loadProgressbar.onTick(deltaMs);
+      return;
+    };
+
+    const currentBeat = PerformanceState.clickTrack.beat;
+    const beatDelta = (deltaMs / 1000) * PerformanceState.clickTrack.tempo;
 
     for (let i = 0; i < this.interactives.length; i++) {
       this.interactives[i].onTick(currentBeat, beatDelta);
     }
-
 
     for (let i = this.emitters.length - 1; i >= 0; i--) {
       if(this.emitters[i].parent === null) {
@@ -212,6 +237,10 @@ export default class PerformanceState extends State {
   }
 
   onResize(size: { width: number, height: number }) {
+    if(this.loadProgressbar && this.loadProgressbar.progress < 1) {
+      this.loadProgressbar.position.set(size.width/2, size.height/2);
+    }
+
     const multiplier = Math.min(size.width / this.intendedStageSize[0], size.height / this.intendedStageSize[1]);
     //this.interactivesContainer.scale.set(multiplier, multiplier);
     this.interactives.forEach((s1) => {
@@ -222,7 +251,6 @@ export default class PerformanceState extends State {
     this.bkgVideo.multiplierResize(multiplier);
 
     const videoBounds = this.bkgVideo.getBounds();
-
 
     this.interactivesContainer.position.set(
       (size.width - bounds.width) / 2,
