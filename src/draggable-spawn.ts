@@ -56,7 +56,7 @@ export class DraggableSpawn extends Interactive {
       if(distanceFromCenter < 100 * 100 * this.multiplier) {
         this.draggingObject.position.set(0,0);
       } else {
-        this.draggingObject.setState(DraggableState.SHRINK_OUT, 1.0);
+        this.draggingObject.setState(DraggableState.SHRINK_OUT, 0.5);
         this.spawnDraggable();
       }
     }
