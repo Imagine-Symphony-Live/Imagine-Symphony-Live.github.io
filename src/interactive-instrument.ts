@@ -1,6 +1,6 @@
 import { Graphics, Point, Filter, Sprite } from "pixi.js";
 import { Interactive } from "./interactive";
-import { Draggable } from "./draggable";
+import { Draggable, DraggableState } from "./draggable";
 import { powLerpPoint } from "./lerp";
 import { DRAGGABLE_RADIUS } from "./constants";
 
@@ -121,8 +121,12 @@ export class InteractiveInstrument extends Interactive {
           newState = InstrumentState.HIT_SUCCESS;
           this.stateFadeTime = 0.1;
         }
-        if(value && typeof value === "object" && value.length && this.draggables.length) {
-          this.draggables[0].setVisualCues(value);
+        if(this.draggables.length) {
+          if(value && typeof value === "object" && value.length) {
+            this.draggables[0].setVisualCues(value);
+          } else {
+            this.draggables[0].setState(DraggableState.SHRINK_OUT, 0.5);
+          }
         }
         break;
 
