@@ -12,8 +12,8 @@ export class PerformanceVideoPlayer extends VideoPlayer {
 
   async preload() {
     await super.preload();
-    const w = this.width;
-    const h = this.height;
+    const w = this.videoSprite.width;
+    const h = this.videoSprite.height;
     this.addChild(this.maskGraphic);
     this.mask = this.maskGraphic;
     this.maskGraphic.position.set(0,0);
