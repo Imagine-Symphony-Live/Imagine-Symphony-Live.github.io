@@ -137,7 +137,7 @@ export class Draggable extends Interactive {
       this.graphics.scale.set(1 - this.stateFade);
       this.alpha = 1 - this.stateFade;
       if(this.stateFade >= 1) {
-        this.emit("destroy");
+        this.emit("destroy", this);
       }
     }
 
