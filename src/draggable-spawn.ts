@@ -31,9 +31,15 @@ export class DraggableSpawn extends Interactive {
     this.draggingObject.on('dragInactive', this.onInctiveDrag.bind(this));
     this.draggingObject.on('dragged', this.onDragged.bind(this));
     this.draggingObject.on('adopted', this.onAdopted.bind(this));
+    this.draggingObject.on('destroy', this.onDestroy.bind(this));
+  }
+
+  onDestroy(dragging: Draggable) {
+    dragging.abandon();
   }
 
   onAdopted(dragging: Draggable) {
+    dragging.off('destroy', this.onDestroy.bind(this));
     this.spawnDraggable();
   }
 
