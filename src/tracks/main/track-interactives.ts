@@ -119,16 +119,21 @@ const getSoloCues = (spriteUrl: string) => (notes: notes): Array<[number, Instru
         if(notes[ii].words) return false;
         // Exclude notes past the next cue
         if(i < arr.length && notes[ii].note >= arr[i + 1]) return false;
-        //if(ii > i + 12) return false; // TEMP, no more than 12 notes
-        if(notes[ii].note - note > 12) return false; // MAX 2 measures after cue
-        //if(arr[ii] - arr[ii - 1] > 24) return false;
+
+        // TEMP: MAX 2 measures after cue
+        if(notes[ii].note - note > 12) return false;
+
         return true;
       })
       .map(({note}) => note)
+      .filter((v, i, arr) => arr.indexOf(v) === i); // Unique
+
+      playNotes.sort();
 
       return countdown(note, countIn, spriteUrl, playNotes);
     })
     .reduce((acc, arr) => [...acc, ...arr], []);
+
   res.sort(([a], [b]) => Math.sign(a - b));
   return res;
 }
