@@ -162,11 +162,15 @@ export class Draggable extends Interactive {
   }
 
   setVisualCues(cues: number[]) {
+    if(this.visualCuesClicktrack) {
+      throw new Error("Can't set the visual cues again");
+    }
+
     this.visualCuesClicktrack = new ClickTrack({
       timerSource: PerformanceState.clickTrack.timer,
       offset: PerformanceState.clickTrack.offset,
       tempo: PerformanceState.clickTrack.tempo,
-      cues
+      cues: [...cues]
     });
 
     // This config is temp, need to move to setter
@@ -176,8 +180,7 @@ export class Draggable extends Interactive {
         note_1,
         note_2,
         note_3
-      ],
-      {
+      ], {
         "alpha": {
           "start": .8,
           "end": 0
@@ -228,20 +231,21 @@ export class Draggable extends Interactive {
         },
         "addAtBack": false,
         "spawnType": "point"
-      });
+      }
+    );
 
-      this.visualCuesEmitter.particleConstructor = PathParticle;
-      let whichArtCounter = 0;
+    this.visualCuesEmitter.particleConstructor = PathParticle;
+    let whichArtCounter = 1;
 
-      this.visualCuesClicktrack.on("cue", (ct, e) => {
-        this.visualCuesEmitter.spawn(1, e.drag, (whichArtCounter++) % 3);
-      });
+    this.visualCuesClicktrack.on("cue", (ct, e) => {
+      this.visualCuesEmitter.spawn(1, e.drag, 0);
+    });
 
-      this.visualCuesClicktrack.on("lastCue", () => {
-        this.setState(DraggableState.SHRINK_OUT, 0.1);
-        this.visualCuesClicktrack.deconstruct();
-        delete this.visualCuesClicktrack;
-      });
+    this.visualCuesClicktrack.once("lastCue", () => {
+      this.visualCuesClicktrack.deconstruct();
+      delete this.visualCuesClicktrack;
+      this.setState(DraggableState.SHRINK_OUT, 0.1);
+    });
   }
 
   multiplierResize(m: number) {}
