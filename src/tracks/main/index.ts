@@ -17,6 +17,6 @@ export default function (): InteractiveTrack {
     particleCues: [],//particles,
     trackUrl: fullSong,
     tempo: 148,
-    offset: 5.013 - 4.917, // start of violin, and 4.917 is "magic number"
+    offset: 5.013 - 4.917 - 0.202, // start of violin, and 4.917 is "magic number"
   }
 }
