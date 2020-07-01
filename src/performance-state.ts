@@ -59,10 +59,12 @@ export default class PerformanceState extends State {
     this.centerStage = stageCenter;
 
     this.bkgVideo = new PerformanceVideoPlayer(trackUrl, 1024);
+    this.bkgVideo.alpha = 0;
     container.addChild(this.bkgVideo);
     this.bkgVideo.position.set(0,0);
 
     // Assemble interactive things
+    this.interactivesContainer.alpha = 0;
     container.addChild(this.interactivesContainer);
     this.interactivesContainer.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
 
@@ -78,6 +80,7 @@ export default class PerformanceState extends State {
     });
 
     // Origin set is handled in resize
+    this.dragSpawn.alpha = 0;
     container.addChild(this.dragSpawn);
     this.dragSpawn.on("dragged", this.onCircleDrag.bind(this));
     interactives.push(this.dragSpawn);
@@ -135,9 +138,21 @@ export default class PerformanceState extends State {
     }, 200);
 
     const loadPromise = new Promise(async (resolve, reject) => {
-      await this.bkgVideo.preload();
+      await new Promise((resolve, reject) => {
+        const loadTimeout = setTimeout(() => {
+          // Timeout error?
+          console.log("This is taking a while to load...");
+        }, 5000);
+        this.bkgVideo.preload().then(() => {
+          clearTimeout(loadTimeout);
+          resolve();
+        });
+      });
       this.onResize({width: window.innerWidth, height: window.innerHeight});
       resolve();
+      this.bkgVideo.alpha = 1;
+      this.interactivesContainer.alpha = 1;
+      this.dragSpawn.alpha = 1;
       this.loadProgressbar.progress = 1
       clearInterval(loadIntervalCheck);
       setTimeout(() => {
