@@ -60,7 +60,7 @@ export class InteractiveInstrument extends Interactive {
     `, {
       isCueReady: false,
       isCue: false,
-      maxXCoord: window.innerHeight,
+      maxXCoord: window.innerWidth,
       isHover: false,
     });
     this.bkgGraphics.filters = [this.filter];

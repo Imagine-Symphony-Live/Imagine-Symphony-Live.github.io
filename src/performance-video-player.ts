@@ -1,11 +1,13 @@
 import { VideoPlayer } from "./video-player";
-import { Graphics } from "pixi.js";
+import { Graphics, Sprite, Loader } from "pixi.js";
+import videoMask from '../assets/images/video-mask.png';
+import videoBkg from '../assets/images/video-bkg.png';
 
 const STAGE_WIDTH = 787;
 const LETTERBOX_HEIGHT = 71;
 const QUAD_CURVE_OFFSET = 175;
 export class PerformanceVideoPlayer extends VideoPlayer {
-  maskGraphic: Graphics = new Graphics();
+
   constructor(public videoUrl: string, public width: number = STAGE_WIDTH, public accentColor: number = 0xffffff) {
     super(videoUrl, width, accentColor);
   }
@@ -14,18 +16,28 @@ export class PerformanceVideoPlayer extends VideoPlayer {
     await super.preload();
     const w = this.videoSprite.width;
     const h = this.videoSprite.height;
-    this.addChild(this.maskGraphic);
-    this.mask = this.maskGraphic;
-    this.maskGraphic.position.set(0,0);
-    this.maskGraphic.beginFill(0xffffff, 1);
-    this.maskGraphic.moveTo(0,LETTERBOX_HEIGHT);
-    this.maskGraphic.lineTo(w,LETTERBOX_HEIGHT);
-    this.maskGraphic.lineTo(w,h - LETTERBOX_HEIGHT);
-    // Rounded bottom
-    this.maskGraphic.bezierCurveTo(w*0.66, h - QUAD_CURVE_OFFSET, w*0.33, h - QUAD_CURVE_OFFSET, 0, h - LETTERBOX_HEIGHT)
-    this.maskGraphic.lineTo(0,LETTERBOX_HEIGHT);
-    this.maskGraphic.closePath();
-    this.maskGraphic.endFill();
+
+    await new Promise((resolve) => {
+      Loader.shared.add(videoMask).load(resolve);
+    });
+    await new Promise((resolve) => {
+      Loader.shared.add(videoBkg).load(resolve);
+    });
+
+    const bkgSprite = Sprite.from(videoBkg);
+    bkgSprite.scale.set(w / (bkgSprite.width));
+    bkgSprite.position.set(0, LETTERBOX_HEIGHT - 1);
+    this.addChild(bkgSprite);
+
+    const maskSprite = Sprite.from(videoMask);
+    maskSprite.scale.set(w / (maskSprite.width));
+    this.addChild(maskSprite);
+    maskSprite.position.set(0,LETTERBOX_HEIGHT);
+    this.videoSprite.mask = maskSprite;
+
+    this.addChild(this.videoSprite);
+    this.addChild(this.overlayGraphics);
+
   }
 
   multiplierResize(multiplier: number) {

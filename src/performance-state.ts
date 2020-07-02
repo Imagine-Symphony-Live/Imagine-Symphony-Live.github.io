@@ -11,6 +11,7 @@ import { ParticleCue } from "./types/particle-cue";
 import { Draggable } from "./draggable";
 import { PerformanceVideoPlayer } from "./performance-video-player";
 import ProgressBar from "./progress-bar";
+import GradientBackdrop from "./gradient-backdrop";
 
 
 type InteractiveCue = [Interactive, number, any];
@@ -35,12 +36,20 @@ export default class PerformanceState extends State {
   private mousePos: Point;
   private mouseChecked: boolean = true;
   private dragSpawn: DraggableSpawn = new DraggableSpawn();
+  protected bkg = new GradientBackdrop();
 
   async createContainer(app: Application): Promise<Container> {
     this.app = app;
 
     // The container to be returned
     const container = new Container();
+
+    container.addChild(this.bkg);
+    this.bkg.colorB = [12, 14, 14].map(d => d/255);
+    this.bkg.colorA = [50, 57, 59].map(d => d/255);
+
+    this.bkg.position.set(0,0);
+
 
     // Get music track information
     const {
@@ -55,10 +64,10 @@ export default class PerformanceState extends State {
 
     app.renderer.backgroundColor = 0x000000;
 
-    this.intendedStageSize = [stageSize[0] + 200, (stageSize[1] + 500)];
+    this.intendedStageSize = [stageSize[0] + 250, (stageSize[1] + 500)];
     this.centerStage = stageCenter;
 
-    this.bkgVideo = new PerformanceVideoPlayer(trackUrl, 1024);
+    this.bkgVideo = new PerformanceVideoPlayer(trackUrl, stageSize[0] + 250);
     this.bkgVideo.alpha = 0;
     container.addChild(this.bkgVideo);
     this.bkgVideo.position.set(0,0);
@@ -203,6 +212,9 @@ export default class PerformanceState extends State {
   }
 
   onTick(deltaMs: number) {
+
+    this.bkg.onTick(deltaMs);
+
     if(this.loadProgressbar && this.loadProgressbar.progress < 1) {
       this.loadProgressbar.onTick(deltaMs);
       return;
@@ -252,6 +264,7 @@ export default class PerformanceState extends State {
   }
 
   onResize(size: { width: number, height: number }) {
+
     if(this.loadProgressbar && this.loadProgressbar.progress < 1) {
       this.loadProgressbar.position.set(size.width/2, size.height/2);
     }
@@ -263,13 +276,15 @@ export default class PerformanceState extends State {
     });
     const bounds = this.interactivesContainer.getBounds();
 
+    this.bkg.multiplierResize(multiplier);
+
     this.bkgVideo.multiplierResize(multiplier);
 
     const videoBounds = this.bkgVideo.getBounds();
 
     this.interactivesContainer.position.set(
       (size.width - bounds.width) / 2,
-      videoBounds.bottom - bounds.height * 0.5);
+      videoBounds.bottom - bounds.height * 0.10);
 
     this.dragSpawn.multiplierResize(multiplier);
 
