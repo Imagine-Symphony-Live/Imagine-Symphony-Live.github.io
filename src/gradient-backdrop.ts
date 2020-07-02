@@ -25,7 +25,9 @@ export default class GradientBackdrop extends Graphics {
           } else {
             float fallOffLeft = max(0.0, min(1.0, (gl_FragCoord.x - startXCoord) / edgeFallOff));
             float fallOffRight = max(0.0, min(1.0, (maxXCoord - gl_FragCoord.x) / edgeFallOff));
-            float fallOff = min(fallOffLeft, fallOffRight);
+            float fallOffBottom = max(0.0, min(1.0, (maxYCoord - gl_FragCoord.y) / edgeFallOff));
+            float fallOffTop = max(0.0, min(1.0, (gl_FragCoord.y - startYCoord) / edgeFallOff));
+            float fallOff = min(min(min(fallOffLeft, fallOffRight), fallOffBottom), fallOffTop);
             float colorScale = ((gl_FragCoord.y - startYCoord)/(maxYCoord - startYCoord));
             gl_FragColor.rgb = mix(colorA, colorB, colorScale) * fallOff;
           }
@@ -33,7 +35,7 @@ export default class GradientBackdrop extends Graphics {
       `, {
         colorA: this._colorA,
         colorB: this._colorB,
-        edgeFallOff: 40.0,
+        edgeFallOff: 100.0,
         startYCoord: 0,
         maxYCoord: window.innerHeight;
         maxXCoord: window.innerWidth,
@@ -59,8 +61,8 @@ export default class GradientBackdrop extends Graphics {
   }
 
   multiplierResize(multiplier: number) {
-    const w = (787 + 250) * multiplier; // 250 is magic number form performance-state
-    this.scale.set(w / this.maxWidth, window.innerHeight);
+    const w = window.innerWidth; // 250 is magic number form performance-state
+    this.scale.set(w / this.maxWidth, window.innerHeight - 2);
     this.position.set((window.innerWidth - w)/2, 0);
 
     const bounds = this.getBounds();
@@ -68,9 +70,9 @@ export default class GradientBackdrop extends Graphics {
     this.filters[0].uniforms.startYCoord = 0;
     this.filters[0].uniforms.maxYCoord = bounds.height * window.devicePixelRatio;
 
-    this.filters[0].uniforms.startXCoord = bounds.x * window.devicePixelRatio;
-    this.filters[0].uniforms.maxXCoord = (bounds.x + bounds.width) * window.devicePixelRatio;
-    this.filters[0].uniforms.edgeFallOff = multiplier * 20 / window.devicePixelRatio;
+    this.filters[0].uniforms.startXCoord = 0;//bounds.x * window.devicePixelRatio;
+    this.filters[0].uniforms.maxXCoord = window.innerWidth * window.devicePixelRatio; //(bounds.x + bounds.width) * window.devicePixelRatio;
+    this.filters[0].uniforms.edgeFallOff = multiplier * 10 / window.devicePixelRatio;
   }
 
   draw() {
