@@ -158,7 +158,7 @@ export class Draggable extends Interactive {
 
     const scale = 1;
     this.graphics.scale.set(scale);
-    this.bloomSprite.alpha = 0.2;
+    this.bloomSprite.visible = false;
   }
 
   setVisualCues(cues: number[]) {
