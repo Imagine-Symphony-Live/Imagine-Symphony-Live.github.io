@@ -3,6 +3,7 @@ import { Application, Graphics } from 'pixi.js';
 import TWEEN from '@tweenjs/tween.js';
 import { loadFonts } from './styles';
 import { StateMachine } from './state-machine';
+import footerLinks from './footer-links.json';
 
 window.onload = async () => {
 
@@ -20,6 +21,17 @@ window.onload = async () => {
   });
 
   document.body.appendChild(app.view);
+
+  const footer = document.createElement('footer');
+  const links = Object.entries(footerLinks).map(([label, url]) => {
+    const a = document.createElement('a');
+    a.setAttribute('href', url);
+    a.setAttribute('title', url.replace(/^.*:\/\//,''));
+    a.innerText = label;
+    return a;
+  });
+  links.forEach((link) => footer.appendChild(link));
+  document.body.appendChild(footer);
 
   // @TODO - this is necessary to prevent black screens on video playback
   // const bigPlayButton = new Graphics();
