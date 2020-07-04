@@ -2,6 +2,7 @@ import { Graphics, Point } from "pixi.js";
 import { Interactive } from "./interactive";
 import { DRAGGABLE_RADIUS } from "./constants";
 import { Draggable, DraggableState } from './draggable';
+import ArrowGraphic from "./arrow-graphic";
 
 export class DraggableSpawn extends Interactive {
   protected graphics: Graphics = new Graphics();
@@ -10,10 +11,15 @@ export class DraggableSpawn extends Interactive {
   private multiplier: number = 1.0;
   public isDragging = false;
   private draggingObject?: Draggable;
+  protected firstArrow: ArrowGraphic;
 
   constructor() {
     super();
     this.spawnDraggable();
+
+    this.firstArrow = new ArrowGraphic([-52, -26],[-100,-50]);
+    this.addChild(this.firstArrow);
+
   }
 
   spawnDraggable() {
@@ -87,6 +93,11 @@ export class DraggableSpawn extends Interactive {
         }
       });
     }
+
+    if(this.firstArrow) {
+      this.firstArrow.tick(deltaBeat);
+    }
+
   }
 
   setState(newState: DraggableState, value: number) {
