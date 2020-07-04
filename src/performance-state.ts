@@ -45,8 +45,8 @@ export default class PerformanceState extends State {
     const container = new Container();
 
     container.addChild(this.bkg);
-    this.bkg.colorB = [12, 14, 14].map(d => d/255);
-    this.bkg.colorA = [50, 57, 59].map(d => d/255);
+    this.bkg.colorB = <[number,number,number]>[12, 14, 14].map(d => d/255);
+    this.bkg.colorA = <[number,number,number]>[50, 57, 59].map(d => d/255);
 
     this.bkg.position.set(0,0);
 
@@ -162,7 +162,7 @@ export default class PerformanceState extends State {
       this.bkgVideo.alpha = 1;
       this.interactivesContainer.alpha = 1;
       this.dragSpawn.alpha = 1;
-      this.loadProgressbar.progress = 1
+      this.loadProgressbar.progress = 1;
       clearInterval(loadIntervalCheck);
       setTimeout(() => {
         container.removeChild(this.loadProgressbar);

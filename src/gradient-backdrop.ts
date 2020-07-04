@@ -37,7 +37,7 @@ export default class GradientBackdrop extends Graphics {
         colorB: this._colorB,
         edgeFallOff: 100.0,
         startYCoord: 0,
-        maxYCoord: window.innerHeight;
+        maxYCoord: window.innerHeight,
         maxXCoord: window.innerWidth,
         startXCoord: 0,
       })
