@@ -45,6 +45,10 @@ export class DraggableSpawn extends Interactive {
   }
 
   onAdopted(dragging: Draggable) {
+    if(this.firstArrow) {
+      this.firstArrow.destroy();
+      delete this.firstArrow;
+    }
     dragging.off('destroy', this.onDestroy.bind(this));
     this.spawnDraggable();
   }
@@ -95,6 +99,12 @@ export class DraggableSpawn extends Interactive {
     }
 
     if(this.firstArrow) {
+      let alpha = 1;
+      if(this.draggingObject) {
+        const distanceFromDest = Math.pow( - 100 - this.draggingObject.position.x, 2) + Math.pow( - 50 - this.draggingObject.position.y, 2);
+        alpha = Math.max(0, Math.min(1, distanceFromDest / 10000 ) );
+      }
+      this.firstArrow.alpha = alpha;
       this.firstArrow.tick(deltaBeat);
     }
 
