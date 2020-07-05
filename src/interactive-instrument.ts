@@ -16,6 +16,7 @@ export class InteractiveInstrument extends Interactive {
   private bkgGraphics: Graphics = new Graphics();
   private indicatorPoint: Point = new Point();
   private indicatorStartPoint: Point = new Point();
+  private indicatorEndPoint: Point = new Point();
   private draggables: Array<Draggable> = [];
   private mCenterPoint: Point = new Point();
   private needDraw = true;
@@ -66,10 +67,9 @@ export class InteractiveInstrument extends Interactive {
 
   onDrop(dragging: Draggable, e: interaction.InteractionEvent) {
     if(this.state === InstrumentState.CUE_READY && !this.draggables.length) {
-      const draggingPos = dragging.getGlobalPosition();
       const thisGlobPosition = this.getGlobalPosition();
-      const dragParentOffset = new Point((draggingPos.x - thisGlobPosition.x) / this.scale.x, (draggingPos.y - thisGlobPosition.y) / this.scale.y);
-      const originOffset = new Point(dragging.position.x - dragging.origin.x, dragging.position.y - dragging.origin.y)
+      const dragParentGlobal = dragging.parent.getGlobalPosition();
+      const dragParentOffset = new Point((dragParentGlobal.x - thisGlobPosition.x) / this.scale.x, (dragParentGlobal.y - thisGlobPosition.y) / this.scale.y);
       dragging.adopt(this);
       this.draggables.push(dragging);
       dragging.on("destroy", () => {
@@ -78,10 +78,10 @@ export class InteractiveInstrument extends Interactive {
         dragging.abandon();
       });
       this.setState(InstrumentState.CUED);
-      this.indicatorStartPoint.copyFrom(dragParentOffset);
-      dragging.position.copyFrom(this.indicatorStartPoint);
-      dragging.origin.x = dragging.position.x - originOffset.x;
-      dragging.origin.y = dragging.position.y - originOffset.y;
+      this.indicatorStartPoint.copyFrom(dragging.position);
+
+      this.indicatorEndPoint.x = this.mCenterPoint.x - dragParentOffset.x;
+      this.indicatorEndPoint.y = this.mCenterPoint.y - dragParentOffset.y;
     }
   }
 
@@ -150,9 +150,9 @@ export class InteractiveInstrument extends Interactive {
     }
     if(this.state === InstrumentState.CUED) {
       if(this.stateFade < 1) {
-        this.indicatorPoint.copyFrom(powLerpPoint(this.indicatorStartPoint, this.mCenterPoint, this.stateFade, 0.1));
+        this.indicatorPoint.copyFrom(powLerpPoint(this.indicatorStartPoint, this.indicatorEndPoint, this.stateFade, 0.1));
       } else {
-        this.indicatorPoint.copyFrom(this.mCenterPoint);
+        this.indicatorPoint.copyFrom(this.indicatorEndPoint);
       }
       if(this.draggables[0]) {
         this.draggables[0].position.copyFrom(this.indicatorPoint);

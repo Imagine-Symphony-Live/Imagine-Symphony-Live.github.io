@@ -57,8 +57,6 @@ export class Draggable extends Interactive {
   }
 
   adopt(newParent: Container) {
-    this.parent.removeChild(this);
-    newParent.addChild(this);
     this.emit('adopted', this, newParent);
     this.setState(DraggableState.SHRINK_IN, 0);
     this.velocity = [0,0];
