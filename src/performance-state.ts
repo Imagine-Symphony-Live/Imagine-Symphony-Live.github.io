@@ -1,4 +1,4 @@
-import { Container, Application, Point, Text } from "pixi.js";
+import { Container, Application, Point, Sprite, interaction } from "pixi.js";
 import ClickTrack from 'click-track';
 import State from "./state";
 import { InteractiveInstrument } from "./interactive-instrument";
@@ -13,6 +13,7 @@ import { PerformanceVideoPlayer } from "./performance-video-player";
 import ProgressBar from "./progress-bar";
 import GradientBackdrop from "./gradient-backdrop";
 import { parts } from './tracks/main/score-export.json';
+import stageImage from '../assets/images/instrumentsection-2.svg';
 
 
 type InteractiveCue = [Interactive, number, any];
@@ -31,6 +32,7 @@ export default class PerformanceState extends State {
   protected intendedStageSize: [number, number];
   protected centerStage: [number, number];
   protected loadProgressbar:ProgressBar = new ProgressBar();
+  protected stageInteractiveBackground: Sprite = Sprite.from(stageImage);
 
   // DIY interaction management
   private interactiveHovering?: Interactive;
@@ -83,6 +85,8 @@ export default class PerformanceState extends State {
     this.interactivesContainer.on("mousemove", this.onMove.bind(this));
 
     this.interactives = interactives;
+
+    this.interactivesContainer.addChild(this.stageInteractiveBackground);
 
     this.interactives.forEach((s1) => {
       s1.interactive = true;
@@ -236,6 +240,9 @@ export default class PerformanceState extends State {
           console.log("This is taking a while to load...");
         }, 5000);
         this.bkgVideo.preload().then(() => {
+          setTimeout(() => {
+                     this.bkgVideo.currentTime = 68;
+          }, 1000);
           clearTimeout(loadTimeout);
           resolve();
         });
@@ -277,7 +284,7 @@ export default class PerformanceState extends State {
     }
   }
 
-  onCircleDrag(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
+  onCircleDrag(dragging: Draggable, e: interaction.InteractionEvent) {
     if (this.app) {
       const i = this.app.renderer.plugins.interaction.hitTest(e.data.global, this.interactivesContainer);
       if (i && i instanceof InteractiveInstrument) {
@@ -287,7 +294,7 @@ export default class PerformanceState extends State {
     }
   }
 
-  onMove(e: PIXI.interaction.InteractionEvent) {
+  onMove(e: interaction.InteractionEvent) {
     this.mousePos = e.data.global;
     this.mouseChecked = false;
   }
@@ -355,6 +362,8 @@ export default class PerformanceState extends State {
     this.interactives.forEach((s1) => {
       s1.multiplierResize(multiplier);
     });
+
+    this.stageInteractiveBackground.scale.set(multiplier);
     const bounds = this.interactivesContainer.getBounds();
 
     this.bkg.multiplierResize(multiplier);

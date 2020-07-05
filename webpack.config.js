@@ -52,7 +52,8 @@ const frontBase = {
       {
         test: /\.svg/i,
         exclude: [
-          path.resolve('./assets/images/instrument-icons')
+          path.resolve('./assets/images/instrument-icons'),
+          path.resolve('./assets/images/instrumentsection-2.svg')
         ],
         use: [
           {
@@ -63,7 +64,7 @@ const frontBase = {
       {
         test: /\.svg/i,
         include: [
-          path.resolve('./assets/images/instrument-icons')
+          path.resolve('./assets/images/instrument-icons'),
         ],
         use: [
           {
@@ -79,6 +80,24 @@ const frontBase = {
               width: 128,
               height: 128,
             },
+          },
+        ]
+      },
+      {
+        test: /\.svg/i,
+        include: [
+          path.resolve('./assets/images/instrumentsection-2.svg')
+        ],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/images',
+              name: '[contenthash].png',
+            },
+          },
+          {
+            loader: path.resolve('./src/webpack-svg-to-png.js'),
           },
         ]
       },
