@@ -12,6 +12,7 @@ import { Draggable } from "./draggable";
 import { PerformanceVideoPlayer } from "./performance-video-player";
 import ProgressBar from "./progress-bar";
 import GradientBackdrop from "./gradient-backdrop";
+import { parts } from './tracks/main/score-export.json';
 
 
 type InteractiveCue = [Interactive, number, any];
@@ -45,8 +46,8 @@ export default class PerformanceState extends State {
     const container = new Container();
 
     container.addChild(this.bkg);
-    this.bkg.colorB = <[number,number,number]>[12, 14, 14].map(d => d/255);
-    this.bkg.colorA = <[number,number,number]>[50, 57, 59].map(d => d/255);
+    this.bkg.colorA = [0,0,0];
+    this.bkg.colorB = [0,0,0];
 
     this.bkg.position.set(0,0);
 
@@ -121,6 +122,88 @@ export default class PerformanceState extends State {
 
     PerformanceState.clickTrack.on("cue", this.handleClickCue.bind(this));
 
+    const biomeClickTrack = new ClickTrack<string>({
+      timerSource: PerformanceState.clickTrack.timer,
+      tempo,
+      offset,
+      cues: parts.P37.notes
+        .filter(({ words = '' }) => /\(.+\)/.test(words))
+        .map(({ note, words = '' }) => {
+          const [,biome = ''] = words.match(/\(([^\)]+)\)/) || [,''];
+          return [note, biome.toLowerCase()];
+        })
+    });
+
+    const bkgVideoClicktrack = new ClickTrack<[[number,number,number],[number,number,number]]>({
+      timerSource: PerformanceState.clickTrack.timer,
+      cues: [
+        [0.1,
+         [[43,43,42],[83,81,76]]
+        ],
+        [5.0,
+         [[30,21,15],[3,4,6]]
+        ],
+        [6.0,
+         [[30,17,12],[19,11,9]]
+        ],
+        [12.0,
+         [[3,5,6],[15,10,8]]
+        ],
+        [15.0,
+         [[38,27,17],[6,9,9]]
+        ],
+        [17.0,
+         [[54,41,31],[2,6,4]]
+        ],
+        [25.0,
+         [[18,19,16],[4,8,8]]
+        ],
+        [32.5,
+         [[4,8,8], [95,98,95]]
+        ],
+        [40.8,
+         [[29,27,24],[7,5,3]]
+        ],
+        [49.0,
+         [[25,24,22],[2,7,7]]
+        ],
+        [56.0,
+         [[7,5,3],[29,27,24]]
+        ],
+        [66.0,
+         [[7,5,3],[7,5,3]]
+        ],
+        [67.0,
+         [[7,5,3],[7,5,3]]
+        ],
+       ]
+    });
+
+    biomeClickTrack.on("cue", (ct, e) => {
+      if(e.data !== null) {
+        this.bkg.biomeTheme = e.data;
+      }
+    });
+
+    bkgVideoClicktrack.on("cue", (ct, e) => {
+      if(e.data !== null) {
+        this.bkg.colorA = <[number,number,number]>e.data[0].map(d => d/100);
+        this.bkg.colorB = <[number,number,number]>e.data[1].map(d => d/100);
+      }
+    });
+
+    bkgVideoClicktrack.on("lastCue", () => {
+      this.interactivesContainer.alpha = 1;
+      this.dragSpawn.alpha = 1;
+      this.bkgVideo.theaterMode = true;
+      this.bkgVideo.canInteract = false;
+      this.bkgVideo.pause();
+      this.dragSpawn.on('firstDrag', () => {
+        this.bkgVideo.resume();
+        this.bkgVideo.canInteract = true; // TEMP
+      });
+    });
+
     // Sort all cues ascending
     particleCues.sort((a, b) => Math.sign(a[0] - b[0]));
 
@@ -160,8 +243,6 @@ export default class PerformanceState extends State {
       this.onResize({width: window.innerWidth, height: window.innerHeight});
       resolve();
       this.bkgVideo.alpha = 1;
-      this.interactivesContainer.alpha = 1;
-      this.dragSpawn.alpha = 1;
       this.loadProgressbar.progress = 1;
       clearInterval(loadIntervalCheck);
       setTimeout(() => {

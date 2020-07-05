@@ -2,9 +2,15 @@ import { Graphics, Filter } from "pixi.js";
 
 export default class GradientBackdrop extends Graphics {
   private needDraw: boolean = true;
+  private _fromColorA: [number,number,number] = [0,0,0];
+  private _fromColorB: [number,number,number] = [0,0,0];
   private _colorA: [number,number,number] = [0,0,0];
-  private _colorB: [number,number,number] = [0.5,0,0.2];
-  protected maxWidth: number = 256;
+  private _colorB: [number,number,number] = [0,0,0];
+  private _colorATimer: number = 0;
+  private _colorBTimer: number = 0;
+
+  protected maxHeight: number = 256;
+  public transitionSpeed = 50;
 
   constructor() {
     super();
@@ -20,17 +26,14 @@ export default class GradientBackdrop extends Graphics {
         uniform vec3 colorA;
         uniform vec3 colorB;
         void main() {
-          if(gl_FragCoord.x >= maxXCoord - 2.0 || gl_FragCoord.x <= startXCoord + 2.0 || gl_FragCoord.y <= startYCoord || gl_FragCoord.y >= maxYCoord) {
-            gl_FragColor.rgb = vec3(0);
-          } else {
-            float fallOffLeft = max(0.0, min(1.0, (gl_FragCoord.x - startXCoord) / edgeFallOff));
-            float fallOffRight = max(0.0, min(1.0, (maxXCoord - gl_FragCoord.x) / edgeFallOff));
-            float fallOffBottom = max(0.0, min(1.0, (maxYCoord - gl_FragCoord.y) / edgeFallOff));
-            float fallOffTop = max(0.0, min(1.0, (gl_FragCoord.y - startYCoord) / edgeFallOff));
-            float fallOff = min(min(min(fallOffLeft, fallOffRight), fallOffBottom), fallOffTop);
-            float colorScale = ((gl_FragCoord.y - startYCoord)/(maxYCoord - startYCoord));
-            gl_FragColor.rgb = mix(colorA, colorB, colorScale) * fallOff;
-          }
+          float fallOffLeft = max(0.0, min(1.0, (gl_FragCoord.x - startXCoord) / edgeFallOff));
+          float fallOffRight = max(0.0, min(1.0, (maxXCoord - gl_FragCoord.x) / edgeFallOff));
+          float fallOffBottom = 1.0; // No need
+          float fallOffTop = max(0.0, min(1.0, (gl_FragCoord.y - startYCoord) / edgeFallOff));
+          float fallOff = min(min(min(fallOffLeft, fallOffRight), fallOffBottom), fallOffTop);
+
+          float colorScale = ((gl_FragCoord.y - startYCoord)/(maxYCoord - startYCoord));
+          gl_FragColor.rgb = mix(colorA, colorB, min(1.0,max(0.0, colorScale))) * fallOff;
         }
       `, {
         colorA: this._colorA,
@@ -44,31 +47,99 @@ export default class GradientBackdrop extends Graphics {
     ];
   }
 
+  set biomeTheme(theme: string) {
+    switch (theme) {
+      case "bookstore":
+        this.colorA = <[number,number,number]>[63,54,42].map(d => d/100);
+        this.colorB = <[number,number,number]>[32,22,13].map(d => d/100);
+        break;
+
+      case "bus":
+        this.colorA = <[number,number,number]>[62,63,61].map(d => d/100);
+        this.colorB = <[number,number,number]>[21,22,19].map(d => d/100);
+        break;
+
+      case "desert":
+        this.colorA = <[number,number,number]>[60,50,42].map(d => d/100);
+        this.colorB = <[number,number,number]>[27,20,13].map(d => d/100);
+        break;
+
+      case "forest":
+        this.colorA = <[number,number,number]>[61,60,36].map(d => d/100);
+        this.colorB = <[number,number,number]>[17,20,13].map(d => d/100);
+        break;
+
+      case "lake":
+        this.colorA = <[number,number,number]>[49,55,59].map(d => d/100);
+        this.colorB = <[number,number,number]>[12,14,14].map(d => d/100);
+        break;
+
+      case "mountain":
+        this.colorA = <[number,number,number]>[66,62,64].map(d => d/100);
+        this.colorB = <[number,number,number]>[27,26,29].map(d => d/100);
+        break;
+
+      case "recap":
+        this.colorA = <[number,number,number]>[0,0,255].map(d => d/100);
+        this.colorB = <[number,number,number]>[0,255,0].map(d => d/100);
+        break;
+
+      case "hall":
+      default:
+        // this.colorA = <[number,number,number]>[0,0,0].map(d => d/100);
+        // this.colorB = <[number,number,number]>[0,0,0].map(d => d/100);
+        // // hall mood
+        // // this.colorA = <[number,number,number]>[0,0,0].map(d => d/100);
+        // // this.colorB = <[number,number,number]>[27,19,12].map(d => d/100);
+        // // hall-highlights
+        this.colorA = <[number,number,number]>[16,9,8].map(d => d/100);
+        this.colorB = <[number,number,number]>[96,92,81].map(d => d/100);
+        break;
+    }
+  }
+
   set colorA(color: [number, number, number]) {
     this._colorA = color;
-    this.filters[0].uniforms.colorA = color;
+    this._fromColorA = <[number, number, number]>[...this.filters[0].uniforms.colorA];
+    this._colorATimer = this.transitionSpeed;
   }
 
   set colorB(color: [number, number, number]) {
     this._colorB = color;
-    this.filters[0].uniforms.colorB = color;
+    this._fromColorB = <[number, number, number]>[...this.filters[0].uniforms.colorB];
+    this._colorBTimer = this.transitionSpeed;
   }
 
-  onTick(deltaMs) {
+  onTick(deltaMs: number) {
+    if(this._colorATimer > 0) {
+      this._colorATimer -= deltaMs;
+      if(this._colorATimer < 0) this._colorATimer = 0;
+      const l = 1 - Math.min(1, Math.max( 0, this._colorATimer / this.transitionSpeed ));
+      const lerpColor = this._fromColorA.map((c,i) => c + (this._colorA[i] - c) * l);
+      this.filters[0].uniforms.colorA = lerpColor;
+    }
+    if(this._colorBTimer > 0) {
+      this._colorBTimer -= deltaMs;
+      if(this._colorBTimer < 0) this._colorBTimer = 0;
+      const l = 1 - Math.min(1, Math.max( 0, this._colorBTimer / this.transitionSpeed ));
+      const lerpColor = this._fromColorB.map((c,i) => c + (this._colorB[i] - c) * l);
+      this.filters[0].uniforms.colorB = lerpColor;
+    }
     if(this.needDraw) {
       this.draw();
     }
   }
 
   multiplierResize(multiplier: number) {
-    const w = window.innerWidth; // 250 is magic number form performance-state
-    this.scale.set(w / this.maxWidth, window.innerHeight - 2);
-    this.position.set((window.innerWidth - w)/2, 0);
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    this.scale.set(window.innerWidth - 2, h / this.maxHeight);
+    this.position.set(0, 0);
 
     const bounds = this.getBounds();
 
     this.filters[0].uniforms.startYCoord = 0;
-    this.filters[0].uniforms.maxYCoord = bounds.height * window.devicePixelRatio;
+    this.filters[0].uniforms.maxYCoord = (bounds.height - 300 * multiplier) * window.devicePixelRatio;
 
     this.filters[0].uniforms.startXCoord = 0;//bounds.x * window.devicePixelRatio;
     this.filters[0].uniforms.maxXCoord = window.innerWidth * window.devicePixelRatio; //(bounds.x + bounds.width) * window.devicePixelRatio;
@@ -78,7 +149,7 @@ export default class GradientBackdrop extends Graphics {
   draw() {
     this.clear()
       .beginFill(0xffffff)
-      .drawRect(0, 0, 256, 1)
+      .drawRect(0, 0, 1, 256)
       .endFill();
 
     this.needDraw = false;
