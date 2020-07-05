@@ -26,7 +26,7 @@ window.onload = async () => {
   const links = Object.entries(footerLinks).map(([label, url]) => {
     const a = document.createElement('a');
     a.setAttribute('href', url);
-    a.setAttribute('title', url.replace(/^.*:\/\//,''));
+    a.setAttribute('title', url.replace(/^.*:\/\//,'').replace(/^mailto:/,''));
     a.innerText = label;
     return a;
   });
