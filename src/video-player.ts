@@ -10,6 +10,7 @@ export class VideoPlayer extends Container {
   protected videoData: HTMLVideoElement;
   protected overlayGraphics: Graphics;
   private animationFrameId: number;
+  public canInteract = true;
   statusText: string = "Unloaded";
   private loadProgress: number = 0;
 
@@ -26,7 +27,7 @@ export class VideoPlayer extends Container {
   }
 
   interact() {
-    if(this.videoData) {
+    if(this.videoData && this.canInteract) {
       if(this.videoData.paused) {
         this.videoData.play();
         this.emit("play");
@@ -43,6 +44,30 @@ export class VideoPlayer extends Container {
           window.cancelAnimationFrame(this.animationFrameId);
           this.animationFrameId = -1;
         }
+      }
+    }
+  }
+
+  pause() {
+    if(this.videoData && !this.videoData.paused) {
+      this.videoData.pause();
+      this.emit("pause");
+      this.statusText = "Paused";
+      this.updateGraphics();
+      if(this.animationFrameId !== -1) {
+        window.cancelAnimationFrame(this.animationFrameId);
+        this.animationFrameId = -1;
+      }
+    }
+  }
+
+  resume() {
+    if(this.videoData && this.videoData.paused) {
+      this.videoData.play();
+      this.emit("play");
+      this.statusText = "Playing";
+      if(this.animationFrameId === -1) {
+        this.animationFrameId = window.requestAnimationFrame(this.updateGraphics.bind(this));
       }
     }
   }
@@ -142,7 +167,7 @@ export class VideoPlayer extends Container {
     this.animationFrameId = window.requestAnimationFrame(this.updateGraphics.bind(this));
     this.overlayGraphics.clear();
     if(this.videoData) {
-      if(this.videoData.paused) {
+      if(this.videoData.paused && this.canInteract) {
         this.overlayGraphics.beginFill(this.accentColor);
         const r = this.playerWidth/10;
         const c = Math.cos(Math.PI * 2/3);
