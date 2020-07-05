@@ -1,4 +1,4 @@
-import { Container } from "pixi.js";
+import { Container, interaction } from "pixi.js";
 
 export abstract class Interactive extends Container {
   // beat, state, value
@@ -15,11 +15,11 @@ export abstract class Interactive extends Container {
     this.setState(state, value);
   }
 
-  onDragOver(e: PIXI.interaction.InteractionEvent) {
+  onDragOver(e: interaction.InteractionEvent) {
     this.dragHover = true;
   }
 
-  onDragOut(e: PIXI.interaction.InteractionEvent) {
+  onDragOut(e: interaction.InteractionEvent) {
     this.dragHover = false;
   }
 

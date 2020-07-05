@@ -1,5 +1,4 @@
-import { Container, Loader, Texture, Sprite, Graphics, Text, Point, loader } from "pixi.js";
-import { TEXT_STYLE_BIO_P } from "./styles";
+import { Container, Loader, Texture, Sprite, Graphics, Point } from "pixi.js";
 
 export class VideoPlayer extends Container {
   public isLoaded: boolean = false;

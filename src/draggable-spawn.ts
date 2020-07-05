@@ -1,4 +1,4 @@
-import { Graphics, Point } from "pixi.js";
+import { Graphics, Point, interaction } from "pixi.js";
 import { Interactive } from "./interactive";
 import { DRAGGABLE_RADIUS } from "./constants";
 import { Draggable, DraggableState } from './draggable';
@@ -54,15 +54,15 @@ export class DraggableSpawn extends Interactive {
     this.spawnDraggable();
   }
 
-  onActiveDrag(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
+  onActiveDrag(dragging: Draggable, e: interaction.InteractionEvent) {
     this.isDragging = true;
   }
 
-  onDragged(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
+  onDragged(dragging: Draggable, e: interaction.InteractionEvent) {
     this.emit('dragged', dragging, e);
   }
 
-  onInctiveDrag(dragging: Draggable, e: PIXI.interaction.InteractionEvent) {
+  onInctiveDrag(dragging: Draggable, e: interaction.InteractionEvent) {
     this.isDragging = false;
     setImmediate(this.checkKill.bind(this));
   }

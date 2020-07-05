@@ -1,4 +1,5 @@
 import { Draggable } from "./draggable";
+import { interaction } from "pixi.js";
 
 const beatsToOrigin = 6;
 
@@ -14,14 +15,14 @@ export class Fermata extends Draggable {
 
   }
 
-  onDragEnd(e: PIXI.interaction.InteractionEvent) {
+  onDragEnd(e: interaction.InteractionEvent) {
     this.dragging = false;
     this.graphics.off('pointermove', this.onDragMove.bind(this));
     this.emit("dragged", e);
     //this.position.set(this.origin.x, this.origin.y);
   }
 
-  onDragMove(e: PIXI.interaction.InteractionEvent) {
+  onDragMove(e: interaction.InteractionEvent) {
     if (this.dragging)
     {
       const newPosition = e.data.getLocalPosition(this.parent);
