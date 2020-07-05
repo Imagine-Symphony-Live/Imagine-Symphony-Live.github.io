@@ -1,6 +1,7 @@
 import { VideoPlayer } from "./video-player";
 import { Graphics, Sprite, Loader, Container } from "pixi.js";
 import videoMask from '../assets/images/video-mask.png';
+import videoMaskFlat from '../assets/images/video-mask-flat.png';
 import videoBkg from '../assets/images/video-bkg.png';
 
 const STAGE_WIDTH = 787;
@@ -9,6 +10,9 @@ const QUAD_CURVE_OFFSET = 175;
 export class PerformanceVideoPlayer extends VideoPlayer {
   protected bkgCurtainPad = new Graphics();
   protected container = new Container();
+  private flatMask: Sprite;
+  private theaterMask: Sprite;
+  private flatMaskBacker: Graphics;
   constructor(public videoUrl: string, public width: number = STAGE_WIDTH, public accentColor: number = 0xffffff) {
     super(videoUrl, width, accentColor);
   }
@@ -22,28 +26,56 @@ export class PerformanceVideoPlayer extends VideoPlayer {
       Loader.shared.add(videoMask).load(resolve);
     });
     await new Promise((resolve) => {
+      Loader.shared.add(videoMaskFlat).load(resolve);
+    });
+    await new Promise((resolve) => {
       Loader.shared.add(videoBkg).load(resolve);
     });
-
-    this.addChild(this.bkgCurtainPad);
-    this.addChild(this.container);
 
     const bkgSprite = Sprite.from(videoBkg);
     bkgSprite.scale.set(w / (bkgSprite.width));
     bkgSprite.position.set(0, LETTERBOX_HEIGHT - 1);
     this.container.addChild(bkgSprite);
 
-    const maskSprite = Sprite.from(videoMask);
-    maskSprite.scale.set(w / (maskSprite.width));
-    this.container.addChild(maskSprite);
-    maskSprite.position.set(0,LETTERBOX_HEIGHT);
-    this.videoSprite.mask = maskSprite;
+    this.flatMask = Sprite.from(videoMaskFlat);
+    this.flatMask.scale.set(w / (this.flatMask.width));
+    this.flatMask.position.set(0,LETTERBOX_HEIGHT);
+
+    this.theaterMask = Sprite.from(videoMask);
+    this.theaterMask.scale.set(w / (this.theaterMask.width));
+    this.theaterMask.position.set(0,LETTERBOX_HEIGHT);
+
+    this.flatMaskBacker = new Graphics();
+    this.flatMaskBacker.clear()
+      .beginFill(0x000000)
+      .drawRect(0,0,this.flatMask.width, this.flatMask.height);
+    this.container.addChild(this.flatMaskBacker);
+    this.flatMaskBacker.position.set(0,LETTERBOX_HEIGHT)
+
+    this.addChild(this.bkgCurtainPad);
+    this.addChild(this.container);
+
+    this.theaterMode = false;
 
     this.removeChild(this.videoSprite);
     this.removeChild(this.overlayGraphics);
     this.container.addChild(this.videoSprite);
     this.container.addChild(this.overlayGraphics);
 
+  }
+
+  set theaterMode(on: boolean) {
+    if(on) {
+      this.container.removeChild(this.flatMask);
+      this.container.addChild(this.theaterMask);
+      this.videoSprite.mask = this.theaterMask;
+      this.flatMaskBacker.visible = false;
+    } else {
+      this.container.removeChild(this.theaterMask);
+      this.container.addChild(this.flatMask);
+      this.videoSprite.mask = this.flatMask;
+      this.flatMaskBacker.visible = true;
+    }
   }
 
   multiplierResize(multiplier: number) {
