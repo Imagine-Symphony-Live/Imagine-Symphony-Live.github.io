@@ -54,7 +54,7 @@
     "howler": "^2.1.2",
     "pixi-particles": "^4.2.0",
     "pixi-viewport": "^4.2.0",
-    "pixi.js": "^5.1.0",
+    "pixi.js": "^5.1.6",
     "ste-events": "^1.6.4"
   }
 }
