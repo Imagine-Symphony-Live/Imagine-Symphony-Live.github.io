@@ -38,7 +38,7 @@ export default class GradientBackdrop extends Graphics {
       `, {
         colorA: this._colorA,
         colorB: this._colorB,
-        edgeFallOff: 100.0,
+        edgeFallOff: 5.0 * window.devicePixelRatio,
         startYCoord: 0,
         maxYCoord: window.innerHeight,
         maxXCoord: window.innerWidth,
@@ -143,7 +143,7 @@ export default class GradientBackdrop extends Graphics {
 
     this.filters[0].uniforms.startXCoord = 0;//bounds.x * window.devicePixelRatio;
     this.filters[0].uniforms.maxXCoord = window.innerWidth * window.devicePixelRatio; //(bounds.x + bounds.width) * window.devicePixelRatio;
-    this.filters[0].uniforms.edgeFallOff = multiplier * 10 / window.devicePixelRatio;
+    this.filters[0].uniforms.edgeFallOff = multiplier * 5 * window.devicePixelRatio;
   }
 
   draw() {

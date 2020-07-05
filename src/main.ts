@@ -15,7 +15,7 @@ window.onload = async () => {
     antialias: true,
     transparent: false,
     autoDensity: true,
-    resolution: 2, // TODO: auto
+    resolution: window.devicePixelRatio, // TODO: auto
     resizeTo: window,
     backgroundColor: 0x000000,
   });
