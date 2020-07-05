@@ -36,9 +36,9 @@ export default class ProgressBar extends Container {
 
   draw() {
     this.graphics.clear()
-      // .beginFill(0x000000)
-      // .drawRect(-window.innerWidth/2, -window.innerHeight/2, window.innerWidth, window.innerHeight)
-      // .endFill()
+      .beginFill(0x000000)
+      .drawRect(-window.innerWidth/2, -window.innerHeight/2, window.innerWidth, window.innerHeight)
+      .endFill()
       .lineStyle(2, 0xffffff)
       .drawRect(-PROGRESS_BAR_WIDTH/2, -PROGRESS_BAR_HEIGHT/2, PROGRESS_BAR_WIDTH, PROGRESS_BAR_HEIGHT)
       .beginFill(0xffffff)
