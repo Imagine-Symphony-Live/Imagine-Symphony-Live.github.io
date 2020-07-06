@@ -3691,7 +3691,7 @@ var VideoPlayer = /** @class */ (function (_super) {
                         _a.sent();
                         _a.label = 2;
                     case 2: return [4 /*yield*/, new Promise(function (resolve) {
-                            pixi_js_1.Loader.shared.on("complete", resolve);
+                            pixi_js_1.Loader.shared.onComplete.once(resolve);
                         })];
                     case 3:
                         _a.sent();
