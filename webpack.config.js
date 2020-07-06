@@ -15,7 +15,7 @@ const frontBase = {
   },
   output: {
     path: path.resolve(__dirname, distDirectory, 'public/'),
-    publicPath: '/',
+    publicPath: './',
     filename: 'assets/js/bundle.js'
   },
   resolve: {
@@ -129,7 +129,7 @@ const frontBase = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: '/assets/css/'
+              publicPath: './assets/css/'
             }
           },
           "css-loader"
