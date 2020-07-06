@@ -1,0 +1,78 @@
+body {
+  background: #000;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body.dragging {
+  cursor: grabbing;
+}
+
+body > canvas {
+  position: absolute;
+  display: block;
+  image-rendering: crisp-edges;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+footer {
+  background-color: #0000004f;
+  border-top: 0.1em dashed #8a8a8a6b;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100vw;
+  padding: 0.3rem 1rem;
+  overflow: hidden;
+  max-width: 100%;
+  flex-wrap: wrap;
+  font-size: 1.2vw;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    font-size: 3vw;
+  }
+}
+
+
+footer a {
+  margin: 0.1em 0.3em 0.8em 0.3em;
+  color: #eee;
+  text-decoration: none;
+  position: relative;
+  padding: 0 2em;
+}
+
+footer a::after {
+  content: attr(title);
+  font-family: monospace;
+  color: #8a8a8a;
+  font-size: 0.5em;
+  position: absolute;
+  left: 0;
+  bottom: -1em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+footer a:hover::after {
+  border: 0.1em dashed;
+  left: -0.08em;
+  bottom: -1.08em;
+  color: #fff;
+}
+
+/*# sourceMappingURL=app.css.map*/
