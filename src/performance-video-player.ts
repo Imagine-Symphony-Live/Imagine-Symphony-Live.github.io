@@ -95,13 +95,13 @@ export class PerformanceVideoPlayer extends VideoPlayer {
   multiplierResize(multiplier: number) {
     if(!this.videoSprite) return;
     this.container.scale.set(multiplier);
-    this.container.position.y = (-LETTERBOX_HEIGHT + 16) * multiplier;
+    this.container.position.y = (-LETTERBOX_HEIGHT) * multiplier;
     this.container.position.x = (window.innerWidth - this.container.width) / 2;
 
     this.bkgCurtainPad.position.set(0, 0)
     this.bkgCurtainPad.clear()
       .beginFill(0x000000)
-      .drawRect(-(window.innerWidth - this.container.width) / 2, 0, window.innerWidth, 18 * multiplier)
+      .drawRect(-(window.innerWidth - this.container.width) / 2, -this.position.y, window.innerWidth, this.position.y)
       .drawRect(0, this.container.position.y, this.container.position.x, this.container.height - 1 + LETTERBOX_HEIGHT * multiplier)
       .drawRect(this.container.width + this.container.position.x, this.container.position.y, (window.innerWidth - this.container.width) / 2, this.container.height - 1 + LETTERBOX_HEIGHT * multiplier)
       .endFill();

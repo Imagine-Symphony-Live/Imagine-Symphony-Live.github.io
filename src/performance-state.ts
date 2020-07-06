@@ -428,6 +428,15 @@ export default class PerformanceState extends State {
       this.loadProgressbar.position.set(size.width/2, size.height/2);
     }
 
+    let paddTop = 0;
+    if(!document.fullscreen) {
+      const nav = document.getElementsByTagName("nav");
+      if(nav && nav[0]) {
+        const {y,height} = nav[0].getBoundingClientRect();
+        paddTop = y + height;
+      }
+    }
+
     const multiplier = Math.min(size.width / this.intendedStageSize[0], size.height / this.intendedStageSize[1]);
     //this.interactivesContainer.scale.set(multiplier, multiplier);
     this.interactives.forEach((s1) => {
@@ -439,6 +448,7 @@ export default class PerformanceState extends State {
 
     this.bkg.multiplierResize(multiplier);
 
+    this.bkgVideo.position.set(0,paddTop);
     this.bkgVideo.multiplierResize(multiplier);
 
     const videoBounds = this.bkgVideo.getBounds();
