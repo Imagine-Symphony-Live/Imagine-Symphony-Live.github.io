@@ -137,7 +137,6 @@ export default class SoundVisualState extends State {
     });
 
     clickTrack.on("cue", (clicktrack, cue) => {
-      console.log(cue.drag);
       cue.data?.instrument.note(cue.data.duration);
     });
 
