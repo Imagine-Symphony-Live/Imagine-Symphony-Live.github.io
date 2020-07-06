@@ -23,13 +23,13 @@ body > canvas {
   bottom: 0;
 }
 
-footer {
-  background-color: #0000004f;
-  border-top: 0.1em dashed #8a8a8a6b;
+nav {
+  background-color: #000000;
+  border-bottom: 0.1em dashed #8a8a8a6b;
   display: flex;
   justify-content: space-around;
   position: fixed;
-  bottom: 0;
+  top: 0;
   text-align: center;
   width: 100vw;
   padding: 0.3rem 1rem;
@@ -40,13 +40,13 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-  footer {
+  nav {
     font-size: 3vw;
   }
 }
 
 
-footer a {
+nav a {
   margin: 0.1em 0.3em 0.8em 0.3em;
   color: #eee;
   text-decoration: none;
@@ -54,7 +54,7 @@ footer a {
   padding: 0 2em;
 }
 
-footer a::after {
+nav a::after {
   content: attr(title);
   font-family: monospace;
   color: #8a8a8a;
@@ -68,7 +68,7 @@ footer a::after {
   width: 100%;
 }
 
-footer a:hover::after {
+nav a:hover::after {
   border: 0.1em dashed;
   left: -0.08em;
   bottom: -1.08em;

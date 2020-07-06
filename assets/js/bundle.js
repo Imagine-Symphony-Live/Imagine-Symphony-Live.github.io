@@ -518,6 +518,17 @@ module.exports = __webpack_require__.p + "assets/images/6d3202b03f5d82f92ff29405
 
 /***/ }),
 
+/***/ "./assets/images/title-bkg.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/title-bkg.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/f25490ae7aa43495d79babe80ce53636.jpg";
+
+/***/ }),
+
 /***/ "./assets/images/video-bkg.png":
 /*!*************************************!*\
   !*** ./assets/images/video-bkg.png ***!
@@ -1210,17 +1221,6 @@ exports.Draggable = Draggable;
 
 /***/ }),
 
-/***/ "./src/footer-links.json":
-/*!*******************************!*\
-  !*** ./src/footer-links.json ***!
-  \*******************************/
-/*! exports provided: film, bios, github, dustin, evan, sid, bradley, chris, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"film\":\"https://www.youtube.com/watch?v=2HlVEZOzcVU\",\"bios\":\"https://github.com/DustinWoods\",\"github\":\"https://github.com/DustinWoods/imagine-symphony-live\",\"dustin\":\"https://github.com/DustinWoods\",\"evan\":\"mailto:evan@imaginesymphony.live\",\"sid\":\"https://github.com/DustinWoods\",\"bradley\":\"https://bradleylanphear.com/\",\"chris\":\"https://www.christhomasmusic.com/\"}");
-
-/***/ }),
-
 /***/ "./src/gradient-backdrop.ts":
 /*!**********************************!*\
   !*** ./src/gradient-backdrop.ts ***!
@@ -1453,7 +1453,7 @@ var InteractiveInstrument = /** @class */ (function (_super) {
         _this.cursor = "auto";
         _this.on("mousedragover", _this.onDragOver.bind(_this));
         _this.on("mousedragout", _this.onDragOut.bind(_this));
-        _this.on("mousedown", _this.maybeSpawn.bind(_this));
+        _this.on("pointertap", _this.maybeSpawn.bind(_this));
         _this.addChild(_this.bkgGraphics);
         return _this;
     }
@@ -1779,17 +1779,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __webpack_require__(/*! ./css/styles.css */ "./src/css/styles.css");
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
-var tween_js_1 = __importDefault(__webpack_require__(/*! @tweenjs/tween.js */ "./node_modules/@tweenjs/tween.js/src/Tween.js"));
 var styles_1 = __webpack_require__(/*! ./styles */ "./src/styles.ts");
 var state_machine_1 = __webpack_require__(/*! ./state-machine */ "./src/state-machine.ts");
-var footer_links_json_1 = __importDefault(__webpack_require__(/*! ./footer-links.json */ "./src/footer-links.json"));
+var nav_links_json_1 = __importDefault(__webpack_require__(/*! ./nav-links.json */ "./src/nav-links.json"));
 window.onload = function () { return __awaiter(void 0, void 0, void 0, function () {
-    //});
-    // @TODO - replace this with app.ticker.add?
-    function animate(time) {
-        requestAnimationFrame(animate);
-        tween_js_1.default.update(time);
-    }
     var app, footer, links, stateManager;
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -1807,8 +1800,8 @@ window.onload = function () { return __awaiter(void 0, void 0, void 0, function 
                     backgroundColor: 0x000000,
                 });
                 document.body.appendChild(app.view);
-                footer = document.createElement('footer');
-                links = Object.entries(footer_links_json_1.default).map(function (_a) {
+                footer = document.createElement('nav');
+                links = Object.entries(nav_links_json_1.default).map(function (_a) {
                     var label = _a[0], url = _a[1];
                     var a = document.createElement('a');
                     a.setAttribute('href', url);
@@ -1819,12 +1812,22 @@ window.onload = function () { return __awaiter(void 0, void 0, void 0, function 
                 links.forEach(function (link) { return footer.appendChild(link); });
                 document.body.appendChild(footer);
                 stateManager = new state_machine_1.StateMachine(app);
-                requestAnimationFrame(animate);
                 return [2 /*return*/];
         }
     });
 }); };
 
+
+/***/ }),
+
+/***/ "./src/nav-links.json":
+/*!****************************!*\
+  !*** ./src/nav-links.json ***!
+  \****************************/
+/*! exports provided: film, bios, github, dustin, evan, sid, bradley, chris, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"film\":\"https://www.youtube.com/watch?v=2HlVEZOzcVU\",\"bios\":\"https://github.com/DustinWoods\",\"github\":\"https://github.com/DustinWoods/imagine-symphony-live\",\"dustin\":\"https://github.com/DustinWoods\",\"evan\":\"mailto:evan@imaginesymphony.live\",\"sid\":\"https://github.com/DustinWoods\",\"bradley\":\"https://bradleylanphear.com/\",\"chris\":\"https://www.christhomasmusic.com/\"}");
 
 /***/ }),
 
@@ -2163,7 +2166,7 @@ var PerformanceState = /** @class */ (function (_super) {
                 this.bkg.position.set(0, 0);
                 _a = main_1.default(), interactives = _a.interactives, trackUrl = _a.trackUrl, tempo = _a.tempo, offset = _a.offset, particleCues = _a.particleCues, stageSize = _a.stageSize, stageCenter = _a.stageCenter;
                 app.renderer.backgroundColor = 0x000000;
-                this.intendedStageSize = [stageSize[0] + 250, (stageSize[1] + 500)];
+                this.intendedStageSize = [stageSize[0] + 250, (stageSize[1] + 416)];
                 this.centerStage = stageCenter;
                 this.bkgVideo = new performance_video_player_1.PerformanceVideoPlayer(trackUrl, stageSize[0] + 250);
                 this.bkgVideo.alpha = 0;
@@ -2337,7 +2340,7 @@ var PerformanceState = /** @class */ (function (_super) {
                     _this.bkgVideo.pause();
                     PerformanceState.dragSpawn.on('firstDrag', function () {
                         _this.bkgVideo.resume();
-                        //this.bkgVideo.canInteract = true; // TEMP
+                        _this.bkgVideo.canInteract = true; // TEMP
                     });
                 });
                 // Sort all cues ascending
@@ -2371,9 +2374,6 @@ var PerformanceState = /** @class */ (function (_super) {
                                         console.log("This is taking a while to load...");
                                     }, 5000);
                                     _this.bkgVideo.preload().then(function () {
-                                        // setTimeout(() => {
-                                        //   this.bkgVideo.currentTime = 5*60 + 45;
-                                        // }, 1000);
                                         clearTimeout(loadTimeout);
                                         resolve();
                                     });
@@ -2482,6 +2482,14 @@ var PerformanceState = /** @class */ (function (_super) {
         if (this.loadProgressbar && this.loadProgressbar.progress < 1) {
             this.loadProgressbar.position.set(size.width / 2, size.height / 2);
         }
+        var paddTop = 0;
+        if (!document.fullscreen) {
+            var nav = document.getElementsByTagName("nav");
+            if (nav && nav[0]) {
+                var _a = nav[0].getBoundingClientRect(), y = _a.y, height = _a.height;
+                paddTop = y + height;
+            }
+        }
         var multiplier = Math.min(size.width / this.intendedStageSize[0], size.height / this.intendedStageSize[1]);
         //this.interactivesContainer.scale.set(multiplier, multiplier);
         this.interactives.forEach(function (s1) {
@@ -2490,6 +2498,7 @@ var PerformanceState = /** @class */ (function (_super) {
         this.stageInteractiveBackground.scale.set(multiplier);
         var bounds = this.interactivesContainer.getBounds();
         this.bkg.multiplierResize(multiplier);
+        this.bkgVideo.position.set(0, paddTop);
         this.bkgVideo.multiplierResize(multiplier);
         var videoBounds = this.bkgVideo.getBounds();
         this.interactivesContainer.position.set((size.width - bounds.width) / 2, videoBounds.bottom - bounds.height * 0.10);
@@ -2686,13 +2695,14 @@ var PerformanceVideoPlayer = /** @class */ (function (_super) {
         if (!this.videoSprite)
             return;
         this.container.scale.set(multiplier);
-        this.container.position.y = -LETTERBOX_HEIGHT * multiplier;
+        this.container.position.y = (-LETTERBOX_HEIGHT) * multiplier;
         this.container.position.x = (window.innerWidth - this.container.width) / 2;
         this.bkgCurtainPad.position.set(0, 0);
         this.bkgCurtainPad.clear()
             .beginFill(0x000000)
-            .drawRect(0, 0, this.container.position.x, this.container.height - 1)
-            .drawRect(this.container.width + this.container.position.x, 0, (window.innerWidth - this.container.width) / 2, this.container.height - 1)
+            .drawRect(-(window.innerWidth - this.container.width) / 2, -this.position.y, window.innerWidth, this.position.y)
+            .drawRect(0, this.container.position.y, this.container.position.x, this.container.height - 1 + LETTERBOX_HEIGHT * multiplier)
+            .drawRect(this.container.width + this.container.position.x, this.container.position.y, (window.innerWidth - this.container.width) / 2, this.container.height - 1 + LETTERBOX_HEIGHT * multiplier)
             .endFill();
     };
     return PerformanceVideoPlayer;
@@ -3038,9 +3048,10 @@ function loadFonts() {
 }
 exports.loadFonts = loadFonts;
 exports.TEXT_STYLE_H1 = new pixi_js_1.TextStyle({
-    fill: "#cccccc",
+    fill: "#eeeeee",
     fontSize: 48,
     fontFamily: "Roboto",
+    fontWeight: '400',
 });
 exports.TEXT_STYLE_H1_HOVER = new pixi_js_1.TextStyle({
     fill: "#ffffff",
@@ -3051,16 +3062,19 @@ exports.TEXT_STYLE_H1_HOVER = new pixi_js_1.TextStyle({
     dropShadowAngle: 0,
     dropShadowDistance: 0,
     fontFamily: "Roboto",
+    fontWeight: '400',
 });
 exports.TEXT_STYLE_H2 = new pixi_js_1.TextStyle({
     fill: "#ffffff",
     fontSize: 24,
     fontFamily: "Roboto",
+    fontWeight: '400',
 });
 exports.TEXT_STYLE_INTERACTIVE_NUM = new pixi_js_1.TextStyle({
     fill: "#ffffffaa",
     fontSize: 48,
     fontFamily: "Roboto",
+    fontWeight: '400',
 });
 exports.TEXT_STYLE_CENSORED = new pixi_js_1.TextStyle({
     fill: "#ffffff",
@@ -3078,6 +3092,7 @@ exports.TEXT_STYLE_LOADING = new pixi_js_1.TextStyle({
 exports.TEXT_STYLE_BIO_P = new pixi_js_1.TextStyle({
     fill: "#ffffff",
     fontFamily: "Roboto",
+    fontWeight: '400',
     wordWrap: true,
     wordWrapWidth: 400,
     fontSize: 12,
@@ -3085,6 +3100,7 @@ exports.TEXT_STYLE_BIO_P = new pixi_js_1.TextStyle({
 exports.TET_STYLE_BIO_SUBTITLE = new pixi_js_1.TextStyle({
     fill: "#EF7700",
     fontFamily: "Roboto",
+    fontWeight: '400',
     fontSize: 12,
 });
 
@@ -3157,6 +3173,7 @@ var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/p
 var state_1 = __importDefault(__webpack_require__(/*! ./state */ "./src/state.ts"));
 var styles_1 = __webpack_require__(/*! ./styles */ "./src/styles.ts");
 var logo_png_1 = __importDefault(__webpack_require__(/*! ../assets/images/logo.png */ "./assets/images/logo.png"));
+var title_bkg_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/title-bkg.jpg */ "./assets/images/title-bkg.jpg"));
 var TitleState = /** @class */ (function (_super) {
     __extends(TitleState, _super);
     function TitleState() {
@@ -3168,10 +3185,14 @@ var TitleState = /** @class */ (function (_super) {
             var _this = this;
             return __generator(this, function (_a) {
                 container = new pixi_js_1.Container();
+                this.bkg = pixi_js_1.Sprite.from(title_bkg_jpg_1.default);
+                this.bkg.alpha = 0.5;
+                this.bkg.anchor.set(0.5, 0.5);
                 this.logo = pixi_js_1.Sprite.from(logo_png_1.default);
                 this.logo.anchor.set(0.5, 1);
+                container.addChild(this.bkg);
                 container.addChild(this.logo);
-                this.playButton = new pixi_js_1.Text("play", styles_1.TEXT_STYLE_H1);
+                this.playButton = new pixi_js_1.Text("PLAY", styles_1.TEXT_STYLE_H1);
                 this.playButton.anchor.set(0.5);
                 this.playButton.interactive = true;
                 this.playButton.cursor = "pointer";
@@ -3183,8 +3204,13 @@ var TitleState = /** @class */ (function (_super) {
                     app.renderer.backgroundColor = 0x000000;
                     _this.playButton.style = styles_1.TEXT_STYLE_H1;
                 });
-                this.playButton.on("mouseup", function () {
-                    _this.events.get("complete").dispatch(_this, 1);
+                this.playButton.on("pointertap", function () {
+                    try {
+                        app.view.requestFullscreen();
+                    }
+                    finally {
+                        _this.events.get("complete").dispatch(_this, 1);
+                    }
                 });
                 container.addChild(this.playButton);
                 app.renderer.backgroundColor = 0x000000;
@@ -3193,10 +3219,13 @@ var TitleState = /** @class */ (function (_super) {
         });
     };
     TitleState.prototype.onResize = function (size) {
-        var logoscale = Math.min(1, size.width / 1529);
-        this.logo.scale.set(logoscale);
-        this.logo.position.set(size.width / 2, size.height / 2 - 50);
-        this.playButton.position.set(size.width / 2, size.height / 2);
+        var scale = Math.min(1, size.width / 1529);
+        this.logo.scale.set(scale);
+        this.logo.position.set(size.width / 2, size.height / 2 - 10 * scale);
+        this.bkg.scale.set(scale);
+        this.bkg.position.set(size.width / 2, size.height / 2);
+        this.playButton.scale.set(scale);
+        this.playButton.position.set(size.width / 2, size.height / 2 + 50 * scale);
     };
     TitleState.prototype.cleanUp = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -3566,7 +3595,7 @@ var VideoPlayer = /** @class */ (function (_super) {
         _this.updateGraphics();
         _this.interactive = true;
         _this.cursor = "pointer";
-        _this.on('pointerdown', _this.interact.bind(_this));
+        _this.on('pointertap', _this.interact.bind(_this));
         return _this;
     }
     VideoPlayer.prototype.interact = function () {
