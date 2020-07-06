@@ -279,9 +279,6 @@ export default class PerformanceState extends State {
           console.log("This is taking a while to load...");
         }, 5000);
         this.bkgVideo.preload().then(() => {
-          setTimeout(() => {
-                     this.bkgVideo.currentTime = 68;
-          }, 1000);
           clearTimeout(loadTimeout);
           resolve();
         });
