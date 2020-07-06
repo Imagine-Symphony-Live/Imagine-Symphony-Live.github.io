@@ -137,7 +137,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "./";
 /******/
 /******/ 	var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
 /******/ 	var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
@@ -558,7 +558,7 @@ module.exports = __webpack_require__.p + "assets/images/8f284b106b34ef2f63279f12
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "assets/video/5859965b7cdbb0a0e3ff239068020e44.mp4";
+module.exports = __webpack_require__.p + "assets/video/130a17ee4e83a606cbb842b1dbb4c4fb.mp4";
 
 /***/ }),
 
@@ -616,7 +616,7 @@ var ArrowGraphic = /** @class */ (function (_super) {
             this.arrowP3 = Math.sin(this._angle + ARROW_ANGLE);
             this.arrowP4 = Math.cos(this._angle + ARROW_ANGLE);
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     ArrowGraphic.prototype.tick = function (delta) {
@@ -662,6 +662,7 @@ exports.default = ArrowGraphic;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.rgbToDecimal = exports.hslToRgb = exports.hue2rgb = void 0;
 function hue2rgb(p, q, t) {
     if (t < 0)
         t += 1;
@@ -711,6 +712,7 @@ exports.rgbToDecimal = rgbToDecimal;
 
 var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.COLOR_HALL_B = exports.COLOR_HALL_A = exports.COLOR_HALL_HIGHLIGHT = exports.COLOR_RECAP_B = exports.COLOR_RECAP_A = exports.COLOR_RECAP_HIGHLIGHT = exports.COLOR_MOUNTAIN_B = exports.COLOR_MOUNTAIN_A = exports.COLOR_MOUNTAIN_HIGHLIGHT = exports.COLOR_LAKE_B = exports.COLOR_LAKE_A = exports.COLOR_LAKE_HIGHLIGHT = exports.COLOR_FOREST_B = exports.COLOR_FOREST_A = exports.COLOR_FOREST_HIGHLIGHT = exports.COLOR_DESERT_B = exports.COLOR_DESERT_A = exports.COLOR_DESERT_HIGHLIGHT = exports.COLOR_BUS_B = exports.COLOR_BUS_A = exports.COLOR_BUS_HIGHLIGHT = exports.COLOR_BOOKSTORE_B = exports.COLOR_BOOKSTORE_A = exports.COLOR_BOOKSTORE_HIGHLIGHT = exports.DEFAULT_INSTRUMENT_COLOR = exports.INSTRUMENT_COLORS = void 0;
 var color_utils_1 = __webpack_require__(/*! ./color-utils */ "./src/color-utils.ts");
 exports.INSTRUMENT_COLORS = (_a = {},
     _a["Violin"] = 0xaa4444,
@@ -784,6 +786,7 @@ exports.COLOR_HALL_B = [96, 92, 81].map(function (d) { return d / 100; });
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DRAGGABLE_RADIUS = exports.WORLD_HEIGHT = exports.WORLD_WIDTH = void 0;
 exports.WORLD_WIDTH = 2000;
 exports.WORLD_HEIGHT = 2000;
 exports.DRAGGABLE_RADIUS = 32;
@@ -828,6 +831,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DraggableSpawn = void 0;
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
 var interactive_1 = __webpack_require__(/*! ./interactive */ "./src/interactive.ts");
 var draggable_1 = __webpack_require__(/*! ./draggable */ "./src/draggable.ts");
@@ -968,6 +972,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Draggable = exports.DraggableState = void 0;
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
 var interactive_1 = __webpack_require__(/*! ./interactive */ "./src/interactive.ts");
 var constants_1 = __webpack_require__(/*! ./constants */ "./src/constants.ts");
@@ -977,6 +982,7 @@ var on_demand_emitter_1 = __importDefault(__webpack_require__(/*! ./on-demand-em
 var note_1_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/note_1.svg */ "./assets/images/instrument-icons/note_1.svg"));
 var note_2_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/note_2.svg */ "./assets/images/instrument-icons/note_2.svg"));
 var note_3_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/note_3.svg */ "./assets/images/instrument-icons/note_3.svg"));
+var pixi_particles_1 = __webpack_require__(/*! pixi-particles */ "./node_modules/pixi-particles/lib/pixi-particles.es.js");
 var performance_state_1 = __importDefault(__webpack_require__(/*! ./performance-state */ "./src/performance-state.ts"));
 var DraggableState;
 (function (DraggableState) {
@@ -1133,17 +1139,8 @@ var Draggable = /** @class */ (function (_super) {
                 "minimumScaleMultiplier": 0.5
             },
             "color": {
-                list: [
-                    {
-                        value: "fb1010",
-                        time: 0
-                    },
-                    {
-                        value: "f5b830",
-                        time: 1
-                    }
-                ],
-                isStepped: false
+                "start": "#ffffff",
+                "end": "#000000"
             },
             "speed": {
                 "start": 50,
@@ -1157,7 +1154,7 @@ var Draggable = /** @class */ (function (_super) {
             "maxSpeed": 0,
             "startRotation": {
                 "min": 0,
-                "max": -180
+                "max": 0
             },
             "noRotation": true,
             "rotationSpeed": {
@@ -1168,23 +1165,25 @@ var Draggable = /** @class */ (function (_super) {
                 "min": 6,
                 "max": 6
             },
-            "blendMode": "add",
+            "blendMode": "normal",
+            "extraData": {
+                "path": "sin(x/30)* 20 - x/3" // dust devil
+            },
             "frequency": 0.01,
             "particlesPerWave": 1,
             "emitterLifetime": -1,
             "maxParticles": 15,
             "pos": {
-                "x": 0,
-                "y": 0
+                "x": 32,
+                "y": -32
             },
             "addAtBack": false,
             "spawnType": "point"
         });
+        this.visualCuesEmitter.particleConstructor = pixi_particles_1.PathParticle;
         var whichArtCounter = 1;
         this.visualCuesClicktrack.on("cue", function (ct, e) {
-            whichArtCounter++;
-            whichArtCounter = whichArtCounter % 3;
-            _this.visualCuesEmitter.spawn(1, e.drag, whichArtCounter);
+            _this.visualCuesEmitter.spawn(1, e.drag, 0);
         });
         this.visualCuesClicktrack.once("lastCue", function () {
             _this.visualCuesClicktrack.deconstruct();
@@ -1319,7 +1318,7 @@ var GradientBackdrop = /** @class */ (function (_super) {
                     break;
             }
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(GradientBackdrop.prototype, "colorA", {
@@ -1328,7 +1327,7 @@ var GradientBackdrop = /** @class */ (function (_super) {
             this._fromColorA = __spreadArrays(this.filters[0].uniforms.colorA);
             this._colorATimer = this.transitionSpeed;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(GradientBackdrop.prototype, "colorB", {
@@ -1337,7 +1336,7 @@ var GradientBackdrop = /** @class */ (function (_super) {
             this._fromColorB = __spreadArrays(this.filters[0].uniforms.colorB);
             this._colorBTimer = this.transitionSpeed;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     GradientBackdrop.prototype.onTick = function (deltaMs) {
@@ -1414,6 +1413,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.InteractiveInstrument = exports.InstrumentState = void 0;
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
 var interactive_1 = __webpack_require__(/*! ./interactive */ "./src/interactive.ts");
 var draggable_1 = __webpack_require__(/*! ./draggable */ "./src/draggable.ts");
@@ -1465,7 +1465,7 @@ var InteractiveInstrument = /** @class */ (function (_super) {
                 this.needDraw = true;
             }
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(InteractiveInstrument.prototype, "color", {
@@ -1475,7 +1475,7 @@ var InteractiveInstrument = /** @class */ (function (_super) {
                 this.needDraw = true;
             }
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(InteractiveInstrument.prototype, "outlineThickness", {
@@ -1485,7 +1485,7 @@ var InteractiveInstrument = /** @class */ (function (_super) {
                 this.needDraw = true;
             }
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     InteractiveInstrument.prototype.multiplierResize = function (multiplier) {
@@ -1655,6 +1655,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Interactive = void 0;
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
 var Interactive = /** @class */ (function (_super) {
     __extends(Interactive, _super);
@@ -1703,6 +1704,7 @@ exports.Interactive = Interactive;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.powLerpPoint = exports.powLerp = exports.linearLerpPoint = exports.linearLerp = void 0;
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
 function linearLerp(from, to, t) {
     return from + (to - from) * t;
@@ -1777,10 +1779,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __webpack_require__(/*! ./css/styles.css */ "./src/css/styles.css");
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
+var tween_js_1 = __importDefault(__webpack_require__(/*! @tweenjs/tween.js */ "./node_modules/@tweenjs/tween.js/src/Tween.js"));
 var styles_1 = __webpack_require__(/*! ./styles */ "./src/styles.ts");
 var state_machine_1 = __webpack_require__(/*! ./state-machine */ "./src/state-machine.ts");
 var footer_links_json_1 = __importDefault(__webpack_require__(/*! ./footer-links.json */ "./src/footer-links.json"));
 window.onload = function () { return __awaiter(void 0, void 0, void 0, function () {
+    //});
+    // @TODO - replace this with app.ticker.add?
+    function animate(time) {
+        requestAnimationFrame(animate);
+        tween_js_1.default.update(time);
+    }
     var app, footer, links, stateManager;
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -1810,6 +1819,7 @@ window.onload = function () { return __awaiter(void 0, void 0, void 0, function 
                 links.forEach(function (link) { return footer.appendChild(link); });
                 document.body.appendChild(footer);
                 stateManager = new state_machine_1.StateMachine(app);
+                requestAnimationFrame(animate);
                 return [2 /*return*/];
         }
     });
@@ -2299,8 +2309,7 @@ var PerformanceState = /** @class */ (function (_super) {
                 closingClicktrack = new click_track_1.default({
                     timerSource: PerformanceState.clickTrack.timer,
                     cues: [
-                        [356,
-                            function () {
+                        [356, function () {
                                 _this.interactivesContainer.alpha = 0;
                                 PerformanceState.dragSpawn.alpha = 0;
                                 _this.bkgVideo.theaterMode = false;
@@ -2564,6 +2573,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.PerformanceVideoPlayer = void 0;
 var video_player_1 = __webpack_require__(/*! ./video-player */ "./src/video-player.ts");
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
 var video_mask_png_1 = __importDefault(__webpack_require__(/*! ../assets/images/video-mask.png */ "./assets/images/video-mask.png"));
@@ -2669,7 +2679,7 @@ var PerformanceVideoPlayer = /** @class */ (function (_super) {
                 this.flatMaskBacker.visible = true;
             }
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     PerformanceVideoPlayer.prototype.multiplierResize = function (multiplier) {
@@ -2742,7 +2752,7 @@ var ProgressBar = /** @class */ (function (_super) {
             this._progress = Math.max(0, Math.min(p, 1));
             this.needDraw = true;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     ProgressBar.prototype.onTick = function (deltaMs) {
@@ -2817,6 +2827,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.StateMachine = void 0;
 var performance_state_1 = __importDefault(__webpack_require__(/*! ./performance-state */ "./src/performance-state.ts"));
 var title_state_1 = __importDefault(__webpack_require__(/*! ./title-state */ "./src/title-state.ts"));
 var StateMachine = /** @class */ (function () {
@@ -2989,6 +3000,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TET_STYLE_BIO_SUBTITLE = exports.TEXT_STYLE_BIO_P = exports.TEXT_STYLE_LOADING = exports.TEXT_STYLE_CENSORED = exports.TEXT_STYLE_INTERACTIVE_NUM = exports.TEXT_STYLE_H2 = exports.TEXT_STYLE_H1_HOVER = exports.TEXT_STYLE_H1 = exports.loadFonts = void 0;
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
 function loadFonts() {
     return __awaiter(this, void 0, void 0, function () {
@@ -3268,6 +3280,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.interactives = void 0;
 var interactive_instrument_1 = __webpack_require__(/*! ../../interactive-instrument */ "./src/interactive-instrument.ts");
 var instrumentsection_svg_path_path_bass_svg_path_as_graphics_1 = __importDefault(__webpack_require__(/*! ../../../assets/images/instrumentsection.svg?path=path#bass&svg-path-as-graphics */ "./assets/images/instrumentsection.svg?path=path#bass&svg-path-as-graphics"));
 var instrumentsection_svg_path_path_brass_svg_path_as_graphics_1 = __importDefault(__webpack_require__(/*! ../../../assets/images/instrumentsection.svg?path=path#brass&svg-path-as-graphics */ "./assets/images/instrumentsection.svg?path=path#brass&svg-path-as-graphics"));
@@ -3531,6 +3544,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.VideoPlayer = void 0;
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
 var VideoPlayer = /** @class */ (function (_super) {
     __extends(VideoPlayer, _super);
@@ -3606,28 +3620,28 @@ var VideoPlayer = /** @class */ (function (_super) {
         set: function (value) {
             this.videoData.currentTime = value;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(VideoPlayer.prototype, "isPlaying", {
         get: function () {
             return !this.videoData.paused;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(VideoPlayer.prototype, "duration", {
         get: function () {
             return this.videoData.duration;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(VideoPlayer.prototype, "percentLoaded", {
         get: function () {
             return this.loadProgress;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     VideoPlayer.prototype.playerEnded = function () {
@@ -3763,7 +3777,7 @@ exports.VideoPlayer = VideoPlayer;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/dustin/Workspaces/isl/proto-2/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/dustin/Workspaces/isl/proto-2-working/src/main.ts */"./src/main.ts");
 
 
 /***/ })
