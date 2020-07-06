@@ -68,7 +68,7 @@ export default class PerformanceState extends State {
 
     app.renderer.backgroundColor = 0x000000;
 
-    this.intendedStageSize = [stageSize[0] + 250, (stageSize[1] + 500)];
+    this.intendedStageSize = [stageSize[0] + 250, (stageSize[1] + 416)];
     this.centerStage = stageCenter;
 
     this.bkgVideo = new PerformanceVideoPlayer(trackUrl, stageSize[0] + 250);
@@ -261,7 +261,7 @@ export default class PerformanceState extends State {
       this.bkgVideo.pause();
       PerformanceState.dragSpawn.on('firstDrag', () => {
         this.bkgVideo.resume();
-        //this.bkgVideo.canInteract = true; // TEMP
+        this.bkgVideo.canInteract = true; // TEMP
       });
     });
 
