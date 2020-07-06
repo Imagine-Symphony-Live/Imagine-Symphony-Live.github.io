@@ -2,6 +2,10 @@ import { Emitter } from "pixi-particles"
 import { settings } from "pixi.js";
 
 export default class OnDemandEmitter extends Emitter {
+  constructor(...args: any) {
+    super(...args);
+  }
+
   update(delta: number) {
     if (this._autoUpdate) {
       delta = delta / settings.TARGET_FPMS / 1000;
