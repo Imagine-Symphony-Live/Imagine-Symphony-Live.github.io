@@ -1,8 +1,9 @@
 import { VideoPlayer } from "./video-player";
-import { Graphics, Sprite, Loader, Container } from "pixi.js";
+import { Graphics, Sprite, Loader, Container, Text, SCALE_MODES } from "pixi.js";
 import videoMask from '../assets/images/video-mask.png';
 import videoMaskFlat from '../assets/images/video-mask-flat.png';
 import videoBkg from '../assets/images/video-bkg.png';
+import { TEXT_STYLE_CENSORED } from "./styles";
 
 const STAGE_WIDTH = 787;
 const LETTERBOX_HEIGHT = 71;
@@ -67,6 +68,13 @@ export class PerformanceVideoPlayer extends VideoPlayer {
     this.removeChild(this.overlayGraphics);
     this.container.addChild(this.videoSprite);
     this.container.addChild(this.overlayGraphics);
+
+    const censoredText = new Text("[CENSORED]", TEXT_STYLE_CENSORED);
+    censoredText.scale.set(16);
+    censoredText.texture.baseTexture.scaleMode = SCALE_MODES.NEAREST;
+    censoredText.anchor.set(0.5);
+    this.container.addChild(censoredText);
+    censoredText.position.set(w/2, h/2);
 
   }
 

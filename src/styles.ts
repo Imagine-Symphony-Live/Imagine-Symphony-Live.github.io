@@ -63,6 +63,14 @@ export const TEXT_STYLE_INTERACTIVE_NUM = new TextStyle({
   fontFamily: "Roboto",
 })
 
+export const TEXT_STYLE_CENSORED = new TextStyle({
+  fill: "#ffffff",
+  fontFamily: "Mono",
+  wordWrap: true,
+  fontSize: 8,
+  fontWeight: 'bold'
+})
+
 export const TEXT_STYLE_LOADING = new TextStyle({
   fill: "#ffffff",
   fontFamily: "Mono",
