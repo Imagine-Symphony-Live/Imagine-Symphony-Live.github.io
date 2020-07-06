@@ -26,3 +26,7 @@ export function hslToRgb(h: number, s: number, l: number) {
 
   return r * 255 * Math.pow(256, 2) + g * 255 * 256 + b * 255;
 }
+
+export function rgbToDecimal([r, g, b]: [number, number, number]) {
+  return Math.round(b * 255) + (Math.round(g * 255) << 8) + (Math.round(r * 255) << 16);
+}

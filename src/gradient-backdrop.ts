@@ -1,4 +1,5 @@
 import { Graphics, Filter } from "pixi.js";
+import { COLOR_BOOKSTORE_A, COLOR_BOOKSTORE_B, COLOR_BUS_A, COLOR_BUS_B, COLOR_DESERT_A, COLOR_DESERT_B, COLOR_FOREST_A, COLOR_FOREST_B, COLOR_LAKE_A, COLOR_LAKE_B, COLOR_MOUNTAIN_A, COLOR_MOUNTAIN_B, COLOR_RECAP_A, COLOR_RECAP_B, COLOR_HALL_A, COLOR_HALL_B } from "./colors";
 
 export default class GradientBackdrop extends Graphics {
   private needDraw: boolean = true;
@@ -50,50 +51,44 @@ export default class GradientBackdrop extends Graphics {
   set biomeTheme(theme: string) {
     switch (theme) {
       case "bookstore":
-        this.colorA = <[number,number,number]>[63,54,42].map(d => d/100);
-        this.colorB = <[number,number,number]>[32,22,13].map(d => d/100);
+        this.colorA = COLOR_BOOKSTORE_A;
+        this.colorB = COLOR_BOOKSTORE_B;
         break;
 
       case "bus":
-        this.colorA = <[number,number,number]>[62,63,61].map(d => d/100);
-        this.colorB = <[number,number,number]>[21,22,19].map(d => d/100);
+        this.colorA = COLOR_BUS_A;
+        this.colorB = COLOR_BUS_B;
         break;
 
       case "desert":
-        this.colorA = <[number,number,number]>[60,50,42].map(d => d/100);
-        this.colorB = <[number,number,number]>[27,20,13].map(d => d/100);
+        this.colorA = COLOR_DESERT_A;
+        this.colorB = COLOR_DESERT_B;
         break;
 
       case "forest":
-        this.colorA = <[number,number,number]>[61,60,36].map(d => d/100);
-        this.colorB = <[number,number,number]>[17,20,13].map(d => d/100);
+        this.colorA = COLOR_FOREST_A;
+        this.colorB = COLOR_FOREST_B;
         break;
 
       case "lake":
-        this.colorA = <[number,number,number]>[49,55,59].map(d => d/100);
-        this.colorB = <[number,number,number]>[12,14,14].map(d => d/100);
+        this.colorA = COLOR_LAKE_A;
+        this.colorB = COLOR_LAKE_B;
         break;
 
       case "mountain":
-        this.colorA = <[number,number,number]>[66,62,64].map(d => d/100);
-        this.colorB = <[number,number,number]>[27,26,29].map(d => d/100);
+        this.colorA = COLOR_MOUNTAIN_A;
+        this.colorB = COLOR_MOUNTAIN_B;
         break;
 
       case "recap":
-        this.colorA = <[number,number,number]>[0,0,255].map(d => d/100);
-        this.colorB = <[number,number,number]>[0,255,0].map(d => d/100);
+        this.colorA = COLOR_RECAP_A;
+        this.colorB = COLOR_RECAP_B;
         break;
 
       case "hall":
       default:
-        // this.colorA = <[number,number,number]>[0,0,0].map(d => d/100);
-        // this.colorB = <[number,number,number]>[0,0,0].map(d => d/100);
-        // // hall mood
-        // // this.colorA = <[number,number,number]>[0,0,0].map(d => d/100);
-        // // this.colorB = <[number,number,number]>[27,19,12].map(d => d/100);
-        // // hall-highlights
-        this.colorA = <[number,number,number]>[16,9,8].map(d => d/100);
-        this.colorB = <[number,number,number]>[96,92,81].map(d => d/100);
+        this.colorA = COLOR_HALL_A;
+        this.colorB = COLOR_HALL_B;
         break;
     }
   }
