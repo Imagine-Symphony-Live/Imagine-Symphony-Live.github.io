@@ -140,7 +140,7 @@ export class VideoPlayer extends Container {
     }
 
     await new Promise((resolve) => {
-      Loader.shared.on("complete", resolve);
+      Loader.shared.onComplete.once(resolve);
     });
 
     this.loadProgress = 1;
