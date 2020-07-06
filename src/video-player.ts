@@ -24,7 +24,7 @@ export class VideoPlayer extends Container {
 
     this.interactive = true;
     this.cursor = "pointer";
-    this.on('pointerdown', this.interact.bind(this));
+    this.on('pointertap', this.interact.bind(this));
   }
 
   interact() {

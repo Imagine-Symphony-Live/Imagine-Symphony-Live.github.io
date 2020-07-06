@@ -42,7 +42,7 @@ export class InteractiveInstrument extends Interactive {
     this.cursor = "auto";
     this.on("mousedragover", this.onDragOver.bind(this));
     this.on("mousedragout", this.onDragOut.bind(this));
-    this.on("mousedown", this.maybeSpawn.bind(this));
+    this.on("pointertap", this.maybeSpawn.bind(this));
 
     this.addChild(this.bkgGraphics);
   }
