@@ -10,6 +10,7 @@ export class VideoPlayer extends Container {
   protected overlayGraphics: Graphics;
   private animationFrameId: number;
   public canInteract = true;
+  protected playButtonSizeRatio = 0.1;
   statusText: string = "Unloaded";
   private loadProgress: number = 0;
 
