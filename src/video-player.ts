@@ -13,6 +13,7 @@ export class VideoPlayer extends Container {
   protected playButtonSizeRatio = 0.1;
   statusText: string = "Unloaded";
   private loadProgress: number = 0;
+  protected autoplay: boolean = false;
 
   constructor(public videoUrl: string, public playerWidth: number = 256, public accentColor: number = 0xeeeeee) {
     super();
@@ -98,28 +99,49 @@ export class VideoPlayer extends Container {
 
   async preload() {
     this.statusText = "Loading";
+    let playEventSet = false;
     if(!Loader.shared.resources[this.videoUrl]) {
-      const loaderTimer = setInterval(() => {
-        if(typeof Loader.shared.resources[this.videoUrl] === "undefined") {
-          return;
-        }
-        try {
-          const buffered = Loader.shared.resources[this.videoUrl].data.buffered;
-          const total = Loader.shared.resources[this.videoUrl].data.duration;
-
-          const end = buffered.end(0);
-
-          this.loadProgress = end/total;
-        } catch {}
-      },200);
 
       // If not already loaded
       await new Promise((resolve) => {
-        Loader.shared.add(this.videoUrl).load(resolve);
-      });
+        const loaderTimer = setInterval(() => {
+          if(typeof Loader.shared.resources[this.videoUrl] === "undefined") {
+            return;
+          }
+          try {
+            const buffered = Loader.shared.resources[this.videoUrl].data.buffered;
+            const total = Loader.shared.resources[this.videoUrl].data.duration;
 
-      clearInterval(loaderTimer);
+            const end = buffered.end(0);
+
+            this.loadProgress = end/total;
+          } catch {}
+
+          if(!playEventSet) {
+            Loader.shared.resources[this.videoUrl].data.addEventListener("playing", doneLoading);
+            Loader.shared.resources[this.videoUrl].data.addEventListener("play", doneLoading);
+            Loader.shared.resources[this.videoUrl].data.addEventListener("canplaythrough", doneLoading);
+            playEventSet = true;
+          }
+
+        },200);
+
+        const doneLoading = () => {
+          clearInterval(loaderTimer);
+          Loader.shared.resources[this.videoUrl].data.removeEventListener("playing", doneLoading);
+          Loader.shared.resources[this.videoUrl].data.removeEventListener("play", doneLoading);
+          Loader.shared.resources[this.videoUrl].data.removeEventListener("canplaythrough", doneLoading);
+          resolve();
+        }
+
+        Loader.shared.add(this.videoUrl).load(doneLoading);
+
+      });
     }
+
+    await new Promise((resolve) => {
+      Loader.shared.on("complete", resolve);
+    });
 
     this.loadProgress = 1;
 
@@ -128,10 +150,14 @@ export class VideoPlayer extends Container {
 
     this.videoData.addEventListener("ended", this.playerEnded.bind(this));
 
-    setTimeout(() => {
-      this.videoData.currentTime = 0;
-      this.videoData.pause();
-    }, 0);
+    this.videoData.loop = false;
+    this.videoData.autoplay = this.autoplay;
+
+    if(!this.autoplay) {
+      setTimeout(() => {
+        this.videoData.currentTime = 0;
+      }, 0);
+    }
 
     this.videoSprite = new Sprite(videoBaseTexture);
     this.nativeWidth = this.videoSprite.width;

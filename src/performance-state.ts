@@ -23,16 +23,16 @@ export default class PerformanceState extends State {
 
   protected track: HTMLAudioElement;
   protected bkgVideo: PerformanceVideoPlayer;
-  protected interactives: Array<Interactive> = [];
+  protected interactives: Array<Interactive>;
   private app: Application;
   static clickTrack: ClickTrack<InteractiveCue>;
   private clickTrackParticles: ClickTrack<ParticleCue>;
-  private interactivesContainer: Container = new Container();
+  private interactivesContainer: Container;
   private particleContainer: Container;
   private emitters: Array<Emitter> = [];
   protected intendedStageSize: [number, number];
   protected centerStage: [number, number];
-  protected loadProgressbar:ProgressBar = new ProgressBar();
+  protected loadProgressbar: ProgressBar;
   protected stageInteractiveBackground: Sprite = Sprite.from(stageImage);
 
   // DIY interaction management
@@ -77,6 +77,7 @@ export default class PerformanceState extends State {
     this.bkgVideo.position.set(0,0);
 
     // Assemble interactive things
+    this.interactivesContainer = new Container();
     this.interactivesContainer.alpha = 0;
     container.addChild(this.interactivesContainer);
     this.interactivesContainer.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
@@ -228,6 +229,23 @@ export default class PerformanceState extends State {
       }
     });
 
+    const closingClicktrack = new ClickTrack<() => void>({
+      timerSource: PerformanceState.clickTrack.timer,
+      cues: [
+        [356,
+         () => {
+          this.interactivesContainer.alpha = 0;
+          PerformanceState.dragSpawn.alpha = 0;
+          this.bkgVideo.theaterMode = false;
+          this.bkg.colorA = [0,0,0];
+          this.bkg.colorB = [0,0,0];
+         }
+        ],
+       ]
+    });
+
+    closingClicktrack.on("cue", (e, {data}) => data && data());
+
     bkgVideoClicktrack.on("cue", (ct, e) => {
       if(e.data !== null) {
         this.bkg.colorA = <[number,number,number]>e.data[0].map(d => d/100);
@@ -243,7 +261,7 @@ export default class PerformanceState extends State {
       this.bkgVideo.pause();
       PerformanceState.dragSpawn.on('firstDrag', () => {
         this.bkgVideo.resume();
-        this.bkgVideo.canInteract = true; // TEMP
+        //this.bkgVideo.canInteract = true; // TEMP
       });
     });
 
@@ -266,6 +284,7 @@ export default class PerformanceState extends State {
     //this.particleContainer.position.set(window.innerWidth / 2 - 414, window.innerHeight * 3 / 4 -131.65);
     //container.addChild(this.particleContainer);
 
+    this.loadProgressbar = new ProgressBar();
     container.addChild(this.loadProgressbar);
     this.loadProgressbar.position.set(window.innerWidth/2, window.innerHeight/2);
     const loadIntervalCheck = setInterval(() => {
@@ -279,6 +298,11 @@ export default class PerformanceState extends State {
           console.log("This is taking a while to load...");
         }, 5000);
         this.bkgVideo.preload().then(() => {
+
+          // setTimeout(() => {
+          //   this.bkgVideo.currentTime = 5*60 + 45;
+          // }, 1000);
+
           clearTimeout(loadTimeout);
           resolve();
         });
@@ -293,6 +317,17 @@ export default class PerformanceState extends State {
         this.loadProgressbar.destroy();
         delete this.loadProgressbar;
       }, 500);
+    });
+
+
+    this.bkgVideo.on("ended", () => {
+      // shut it down!
+      closingClicktrack.deconstruct();
+      closingClicktrack.deconstruct();
+      bkgVideoClicktrack.deconstruct();
+      PerformanceState.clickTrack.deconstruct();
+      //this.clickTrackParticles.deconstruct();
+      this.events.get("complete").dispatch(this, 1);
     });
 
     return container;

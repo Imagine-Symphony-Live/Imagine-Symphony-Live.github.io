@@ -14,6 +14,8 @@ export class PerformanceVideoPlayer extends VideoPlayer {
   private theaterMask: Sprite;
   private flatMaskBacker: Graphics;
   protected playButtonSizeRatio: number = 0.05;
+  protected autoplay = false;
+  public canInteract = false;
   constructor(public videoUrl: string, public width: number = STAGE_WIDTH, public accentColor: number = 0xffffff) {
     super(videoUrl, width, accentColor);
   }
@@ -24,12 +26,15 @@ export class PerformanceVideoPlayer extends VideoPlayer {
     const h = this.videoSprite.height;
 
     await new Promise((resolve) => {
+      if(Loader.shared.resources[videoMask]) return resolve();
       Loader.shared.add(videoMask).load(resolve);
     });
     await new Promise((resolve) => {
+      if(Loader.shared.resources[videoMaskFlat]) return resolve();
       Loader.shared.add(videoMaskFlat).load(resolve);
     });
     await new Promise((resolve) => {
+      if(Loader.shared.resources[videoBkg]) return resolve();
       Loader.shared.add(videoBkg).load(resolve);
     });
 

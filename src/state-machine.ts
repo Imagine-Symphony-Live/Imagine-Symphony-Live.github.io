@@ -1,8 +1,8 @@
 import { Application, Container } from "pixi.js";
 import State from "./state";
-import IntroFilmState from "./intro-film-state";
 import { StateEvents } from "./types/state-events";
 import PerformanceState from './performance-state';
+import TitleState from "./title-state";
 
 type StateNames = "intro" | "performance";
 
@@ -26,10 +26,12 @@ export class StateMachine {
 
     app.ticker.add(this.tick, this);
 
-    this.addState("intro", new IntroFilmState());
+    this.addState("intro", new TitleState());
     this.addState("performance", new PerformanceState());
+    this.addStateCondition("intro", "complete", "performance");
+    this.addStateCondition("performance", "complete", "intro");
 
-    this.setState("performance");
+    this.setState("intro");
   }
 
   tick(deltams:number) {
@@ -72,7 +74,6 @@ export class StateMachine {
       await this.currentState.cleanUp();
     }
     if(this.currentStateContainer) {
-      console.log("removing...");
       this.app.stage.removeChild(this.currentStateContainer);
       this.currentStateContainer.destroy();
     }

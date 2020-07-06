@@ -34,6 +34,23 @@ export async function loadFonts() {
   });
 }
 
+export const TEXT_STYLE_H1 = new TextStyle({
+  fill: "#cccccc",
+  fontSize: 48,
+  fontFamily: "Roboto",
+})
+
+export const TEXT_STYLE_H1_HOVER = new TextStyle({
+  fill: "#ffffff",
+  fontSize: 48,
+  dropShadow: true,
+  dropShadowColor: '#ffffff',
+  dropShadowBlur: 5,
+  dropShadowAngle: 0,
+  dropShadowDistance: 0,
+  fontFamily: "Roboto",
+})
+
 export const TEXT_STYLE_H2 = new TextStyle({
   fill: "#ffffff",
   fontSize: 24,
