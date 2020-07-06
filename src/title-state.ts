@@ -28,8 +28,11 @@ export default class TitleState extends State {
       this.playButton.style = TEXT_STYLE_H1 ;
     });
     this.playButton.on("pointertap", () => {
-      app.view.requestFullscreen();
-      this.events.get("complete").dispatch(this, 1);
+      try {
+        app.view.requestFullscreen();
+      } finally {
+        this.events.get("complete").dispatch(this, 1);
+      }
     });
     container.addChild(this.playButton);
 
