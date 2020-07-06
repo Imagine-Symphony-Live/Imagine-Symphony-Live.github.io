@@ -3,6 +3,7 @@ import { settings } from "pixi.js";
 
 export default class OnDemandEmitter extends Emitter {
   constructor(...args: any) {
+    // @ts-ignore
     super(...args);
   }
 
