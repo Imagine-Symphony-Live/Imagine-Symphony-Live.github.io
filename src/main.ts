@@ -3,7 +3,7 @@ import { Application, Graphics } from 'pixi.js';
 import TWEEN from '@tweenjs/tween.js';
 import { loadFonts } from './styles';
 import { StateMachine } from './state-machine';
-import footerLinks from './footer-links.json';
+import navLinks from './nav-links.json';
 
 window.onload = async () => {
 
@@ -22,8 +22,8 @@ window.onload = async () => {
 
   document.body.appendChild(app.view);
 
-  const footer = document.createElement('footer');
-  const links = Object.entries(footerLinks).map(([label, url]) => {
+  const footer = document.createElement('nav');
+  const links = Object.entries(navLinks).map(([label, url]) => {
     const a = document.createElement('a');
     a.setAttribute('href', url);
     a.setAttribute('title', url.replace(/^.*:\/\//,'').replace(/^mailto:/,''));
@@ -42,7 +42,7 @@ window.onload = async () => {
   // bigPlayButton.interactive = true;
   // app.stage.addChild(bigPlayButton);
 
-  // bigPlayButton.on("pointerdown", async () => {
+  // bigPlayButton.on("pointertap", async () => {
   //   app.stage.removeChild(bigPlayButton);
     const stateManager = new StateMachine(app);
   //});
