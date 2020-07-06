@@ -24,6 +24,7 @@ const frontBase = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: './index.html',
+      template: './src/index.ejs',
       title: htmlTitle,
     }),
     new MiniCssExtractPlugin({
