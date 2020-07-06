@@ -27,7 +27,8 @@ export default class TitleState extends State {
       app.renderer.backgroundColor = 0x000000;
       this.playButton.style = TEXT_STYLE_H1 ;
     });
-    this.playButton.on("mouseup", () => {
+    this.playButton.on("pointertap", () => {
+      app.view.requestFullscreen();
       this.events.get("complete").dispatch(this, 1);
     });
     container.addChild(this.playButton);
