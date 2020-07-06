@@ -3,6 +3,7 @@ import { Interactive } from "./interactive";
 import { Draggable, DraggableState } from "./draggable";
 import { powLerpPoint } from "./lerp";
 import { DRAGGABLE_RADIUS } from "./constants";
+import PerformanceState from "./performance-state";
 
 export enum InstrumentState {
   IDLE,
@@ -38,8 +39,10 @@ export class InteractiveInstrument extends Interactive {
     this.on("drop", this.onDrop.bind(this));
 
     this.interactive = true;
+    this.cursor = "auto";
     this.on("mousedragover", this.onDragOver.bind(this));
     this.on("mousedragout", this.onDragOut.bind(this));
+    this.on("mousedown", this.maybeSpawn.bind(this));
 
     this.addChild(this.bkgGraphics);
   }
@@ -65,7 +68,13 @@ export class InteractiveInstrument extends Interactive {
     this.mCenterPoint.set(bkgBounds.x + bkgBounds.width / 2, bkgBounds.y + bkgBounds.height / 2  - DRAGGABLE_RADIUS);
   }
 
-  onDrop(dragging: Draggable, e: interaction.InteractionEvent) {
+  maybeSpawn(e: interaction.InteractionEvent) {
+    if(this.state === InstrumentState.CUE_READY && PerformanceState.dragSpawn.draggingObject) {
+      this.onDrop(PerformanceState.dragSpawn.draggingObject);
+    }
+  }
+
+  onDrop(dragging: Draggable, e?: interaction.InteractionEvent) {
     if(this.state === InstrumentState.CUE_READY && !this.draggables.length) {
       const thisGlobPosition = this.getGlobalPosition();
       const dragParentGlobal = dragging.parent.getGlobalPosition();
@@ -91,6 +100,7 @@ export class InteractiveInstrument extends Interactive {
     switch (newState) {
       case InstrumentState.CUED:
         this.stateFadeTime = 1.0;
+        this.cursor = "auto";
         this.color = this.idleColor;
         this.outlineThickness = 4;
         if(this.nextCueSprite && this.draggables.length) {
@@ -100,6 +110,7 @@ export class InteractiveInstrument extends Interactive {
 
       case InstrumentState.CUE_READY:
         this.stateFadeTime = 1.0;
+        this.cursor = "pointer";
         this.color = this.highlightColor;
         this.outlineThickness = 0;
         if(typeof value === 'string') {
@@ -109,6 +120,7 @@ export class InteractiveInstrument extends Interactive {
 
       case InstrumentState.HIT:
         this.stateFadeTime = 0.5;
+        this.cursor = "auto";
         this.color = this.idleColor;
         this.outlineThickness = 0;
         if(this.state === InstrumentState.CUED){
@@ -126,6 +138,7 @@ export class InteractiveInstrument extends Interactive {
 
       default:
         this.color = this.idleColor;
+        this.cursor = "auto";
         this.outlineThickness = 0;
         this.stateFadeTime = 1;
     }
