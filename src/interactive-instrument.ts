@@ -22,7 +22,7 @@ export class InteractiveInstrument extends Interactive {
   private mCenterPoint: Point = new Point();
   private needDraw = true;
   private currentColor: number = 0x000000;
-  public highlightColor: number = 0x99be63;
+  private _highlightColor: number = 0x99be63;
   private _outlineThickness: number = 0;
 
   public state: InstrumentState = InstrumentState.IDLE;
@@ -45,6 +45,14 @@ export class InteractiveInstrument extends Interactive {
     this.on("mousedown", this.maybeSpawn.bind(this));
 
     this.addChild(this.bkgGraphics);
+  }
+
+  set highlightColor(c: number) {
+    this._highlightColor = c;
+    if(this.state == InstrumentState.CUE_READY) {
+      this.color = this._highlightColor;
+      this.needDraw = true;
+    }
   }
 
   set color(c: number) {
@@ -101,7 +109,7 @@ export class InteractiveInstrument extends Interactive {
       case InstrumentState.CUED:
         this.stateFadeTime = 1.0;
         this.cursor = "auto";
-        this.color = this.idleColor;
+        //this.color = this.idleColor;
         this.outlineThickness = 4;
         if(this.nextCueSprite && this.draggables.length) {
           this.draggables[0].setIcon(this.nextCueSprite);
@@ -111,7 +119,7 @@ export class InteractiveInstrument extends Interactive {
       case InstrumentState.CUE_READY:
         this.stateFadeTime = 1.0;
         this.cursor = "pointer";
-        this.color = this.highlightColor;
+        this.color = this._highlightColor;
         this.outlineThickness = 0;
         if(typeof value === 'string') {
           this.nextCueSprite = Sprite.from(value);
@@ -121,7 +129,7 @@ export class InteractiveInstrument extends Interactive {
       case InstrumentState.HIT:
         this.stateFadeTime = 0.5;
         this.cursor = "auto";
-        this.color = this.idleColor;
+        //this.color = this.idleColor;
         this.outlineThickness = 0;
         if(this.state === InstrumentState.CUED){
           newState = InstrumentState.HIT_SUCCESS;
@@ -137,7 +145,7 @@ export class InteractiveInstrument extends Interactive {
         break;
 
       default:
-        this.color = this.idleColor;
+        //this.color = this.idleColor;
         this.cursor = "auto";
         this.outlineThickness = 0;
         this.stateFadeTime = 1;
@@ -152,15 +160,29 @@ export class InteractiveInstrument extends Interactive {
 
     this.draggables.forEach((d) => d.onTick(currentBeat, deltaBeat));
 
+    if(this.state === InstrumentState.CUE_READY) {
+      if(this.stateFade >= 1) {
+        this.alpha = 1;
+      } else {
+        this.alpha = this.stateFade;
+      }
+    }
+
     if(this.state === InstrumentState.CUE_READY && this.dragHover) {
-     this.outlineThickness = 2;
+      this.outlineThickness = 2;
     } else if(this.state === InstrumentState.CUE_READY) {
       this.outlineThickness = 0;
     }
 
-    if((this.state === InstrumentState.HIT || this.state === InstrumentState.HIT_SUCCESS) && this.stateFade >= 1) {
-      this.setState(InstrumentState.IDLE);
+    if(this.state === InstrumentState.HIT || this.state === InstrumentState.HIT_SUCCESS) {
+      if(this.stateFade >= 1) {
+        this.alpha = 0;
+        this.setState(InstrumentState.IDLE);
+      } else {
+        this.alpha = 1 - this.stateFade;
+      }
     }
+
     if(this.state === InstrumentState.CUED) {
       if(this.stateFade < 1) {
         this.indicatorPoint.copyFrom(powLerpPoint(this.indicatorStartPoint, this.indicatorEndPoint, this.stateFade, 0.1));
