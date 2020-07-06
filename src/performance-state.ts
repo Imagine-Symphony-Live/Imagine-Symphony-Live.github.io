@@ -186,6 +186,44 @@ export default class PerformanceState extends State {
 
     biomeClickTrack.on("cue", (ct, e) => {
       if(e.data !== null) {
+        this.interactives.forEach((i) => {
+          if(i instanceof InteractiveInstrument) {
+            switch (e.data) {
+              case "bookstore":
+                i.highlightColor = COLOR_BOOKSTORE_HIGHLIGHT;
+                break;
+
+              case "bus":
+                i.highlightColor = COLOR_BUS_HIGHLIGHT;
+                break;
+
+              case "desert":
+                i.highlightColor = COLOR_DESERT_HIGHLIGHT;
+                break;
+
+              case "forest":
+                i.highlightColor = COLOR_FOREST_HIGHLIGHT;
+                break;
+
+              case "lake":
+                i.highlightColor = COLOR_LAKE_HIGHLIGHT;
+                break;
+
+              case "mountain":
+                i.highlightColor = COLOR_MOUNTAIN_HIGHLIGHT;
+                break;
+
+              case "recap":
+                i.highlightColor = COLOR_RECAP_HIGHLIGHT;
+                break;
+
+              case "hall":
+              default:
+                i.highlightColor = COLOR_HALL_HIGHLIGHT;
+                break;
+            }
+          };
+        });
         this.bkg.biomeTheme = e.data;
         this.interactives.forEach((i) => {
           if(i instanceof InteractiveInstrument) {
