@@ -13,6 +13,7 @@ export class PerformanceVideoPlayer extends VideoPlayer {
   private flatMask: Sprite;
   private theaterMask: Sprite;
   private flatMaskBacker: Graphics;
+  protected playButtonSizeRatio: number = 0.05;
   constructor(public videoUrl: string, public width: number = STAGE_WIDTH, public accentColor: number = 0xffffff) {
     super(videoUrl, width, accentColor);
   }

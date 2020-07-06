@@ -168,7 +168,7 @@ export class VideoPlayer extends Container {
     if(this.videoData) {
       if(this.videoData.paused && this.canInteract) {
         this.overlayGraphics.beginFill(this.accentColor);
-        const r = this.playerWidth/10;
+        const r = this.playerWidth*this.playButtonSizeRatio;
         const c = Math.cos(Math.PI * 2/3);
         const s = Math.sin(Math.PI * 2/3);
         this.overlayGraphics.drawPolygon([
