@@ -10,7 +10,7 @@ export class DraggableSpawn extends Interactive {
   public origin: Point = new Point();
   private multiplier: number = 1.0;
   public isDragging = false;
-  private draggingObject?: Draggable;
+  public draggingObject?: Draggable;
   protected firstArrow: ArrowGraphic;
 
   constructor() {

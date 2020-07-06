@@ -50,6 +50,7 @@ export class Draggable extends Interactive {
     this.addChild(this.bloomSprite);
 
     this.graphics.interactive = true;
+    this.graphics.cursor = "grab";
     this.graphics
       .on('pointerdown', this.onDragStart.bind(this))
       .on('pointerup', this.onDragEnd.bind(this))
@@ -77,6 +78,7 @@ export class Draggable extends Interactive {
 
   onDragStart(e: interaction.InteractionEvent) {
     this.dragging = true;
+    this.graphics.cursor = "grabbing";
     this.emit("dragActive", this, e);
     this.graphics.on('pointermove', this.onDragMove.bind(this));
     document.body.classList.add("dragging");
@@ -84,6 +86,7 @@ export class Draggable extends Interactive {
 
   onDragEnd(e: interaction.InteractionEvent) {
     this.dragging = false;
+    this.graphics.cursor = "auto";
     this.emit("dragInactive", this, e);
     this.graphics.off('pointermove', this.onDragMove.bind(this));
     this.emit("dragged", this, e);

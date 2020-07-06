@@ -9,7 +9,7 @@ body {
 }
 
 body.dragging {
-  cursor: none;
+  cursor: grabbing;
 }
 
 body > canvas {

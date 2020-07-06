@@ -38,7 +38,7 @@ export default class PerformanceState extends State {
   private interactiveHovering?: Interactive;
   private mousePos: Point;
   private mouseChecked: boolean = true;
-  private dragSpawn: DraggableSpawn = new DraggableSpawn();
+  static dragSpawn: DraggableSpawn = new DraggableSpawn();
   protected bkg = new GradientBackdrop();
 
   async createContainer(app: Application): Promise<Container> {
@@ -94,10 +94,10 @@ export default class PerformanceState extends State {
     });
 
     // Origin set is handled in resize
-    this.dragSpawn.alpha = 0;
-    container.addChild(this.dragSpawn);
-    this.dragSpawn.on("dragged", this.onCircleDrag.bind(this));
-    interactives.push(this.dragSpawn);
+    PerformanceState.dragSpawn.alpha = 0;
+    container.addChild(PerformanceState.dragSpawn);
+    PerformanceState.dragSpawn.on("dragged", this.onCircleDrag.bind(this));
+    interactives.push(PerformanceState.dragSpawn);
 
     // Assemble cues
     const cues: Array<[number, InteractiveCue]> = [];
@@ -198,11 +198,11 @@ export default class PerformanceState extends State {
 
     bkgVideoClicktrack.on("lastCue", () => {
       this.interactivesContainer.alpha = 1;
-      this.dragSpawn.alpha = 1;
+      PerformanceState.dragSpawn.alpha = 1;
       this.bkgVideo.theaterMode = true;
       this.bkgVideo.canInteract = false;
       this.bkgVideo.pause();
-      this.dragSpawn.on('firstDrag', () => {
+      PerformanceState.dragSpawn.on('firstDrag', () => {
         this.bkgVideo.resume();
         this.bkgVideo.canInteract = true; // TEMP
       });
@@ -329,7 +329,7 @@ export default class PerformanceState extends State {
 
     // DIY mouse enter/mouse out interaction handling
     // This is here because while draggin draggables, mouseenter and mouseout events aren't triggered
-    if(this.dragSpawn.isDragging && this.app && !this.mouseChecked) {
+    if(PerformanceState.dragSpawn.isDragging && this.app && !this.mouseChecked) {
       this.mouseChecked = true;
       const object = this.app.renderer.plugins.interaction.hitTest(this.mousePos, this.interactivesContainer);
       if (object && object instanceof Interactive) {
@@ -376,9 +376,9 @@ export default class PerformanceState extends State {
       (size.width - bounds.width) / 2,
       videoBounds.bottom - bounds.height * 0.10);
 
-    this.dragSpawn.multiplierResize(multiplier);
+    PerformanceState.dragSpawn.multiplierResize(multiplier);
 
-    this.dragSpawn.setOrigin(
+    PerformanceState.dragSpawn.setOrigin(
       this.interactivesContainer.position.x + multiplier * this.centerStage[0],
       this.interactivesContainer.position.y + multiplier * this.centerStage[1],
     );
