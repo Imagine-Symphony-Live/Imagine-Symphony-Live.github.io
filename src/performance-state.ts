@@ -1,4 +1,4 @@
-import { Container, Application, Point, Sprite, interaction } from "pixi.js";
+import { Container, Application, Point, Sprite, InteractionEvent } from "pixi.js";
 import ClickTrack from 'click-track';
 import State from "./state";
 import { InteractiveInstrument } from "./interactive-instrument";
@@ -355,7 +355,7 @@ export default class PerformanceState extends State {
     }
   }
 
-  onCircleDrag(dragging: Draggable, e: interaction.InteractionEvent) {
+  onCircleDrag(dragging: Draggable, e: InteractionEvent) {
     if (this.app) {
       const i = this.app.renderer.plugins.interaction.hitTest(e.data.global, this.interactivesContainer);
       if (i && i instanceof InteractiveInstrument) {
@@ -365,7 +365,7 @@ export default class PerformanceState extends State {
     }
   }
 
-  onMove(e: interaction.InteractionEvent) {
+  onMove(e: InteractionEvent) {
     this.mousePos = e.data.global;
     this.mouseChecked = false;
   }

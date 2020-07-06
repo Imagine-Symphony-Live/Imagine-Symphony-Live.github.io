@@ -1,4 +1,4 @@
-import { Graphics, Point, Sprite, BLEND_MODES, Container, DisplayObject, interaction } from "pixi.js";
+import { Graphics, Point, Sprite, BLEND_MODES, Container, DisplayObject, InteractionEvent } from "pixi.js";
 import { Interactive } from "./interactive";
 import { DRAGGABLE_RADIUS } from "./constants";
 import bloomImage from '../assets/images/bloom-128x128.png';
@@ -76,7 +76,7 @@ export class Draggable extends Interactive {
     this.position.set(x, y);
   }
 
-  onDragStart(e: interaction.InteractionEvent) {
+  onDragStart(e: InteractionEvent) {
     this.dragging = true;
     this.graphics.cursor = "grabbing";
     this.emit("dragActive", this, e);
@@ -84,7 +84,7 @@ export class Draggable extends Interactive {
     document.body.classList.add("dragging");
   }
 
-  onDragEnd(e: interaction.InteractionEvent) {
+  onDragEnd(e: InteractionEvent) {
     this.dragging = false;
     this.graphics.cursor = "auto";
     this.emit("dragInactive", this, e);
@@ -93,7 +93,7 @@ export class Draggable extends Interactive {
     document.body.classList.remove("dragging");
   }
 
-  onDragMove(e: interaction.InteractionEvent) {
+  onDragMove(e: InteractionEvent) {
     if (this.dragging) {
       const newPosition = e.data.getLocalPosition(this.parent);
       this.pointerPos = new Point();

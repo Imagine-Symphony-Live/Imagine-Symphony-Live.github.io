@@ -1,4 +1,4 @@
-import { Graphics, Point, Sprite, interaction } from "pixi.js";
+import { Graphics, Point, Sprite, InteractionEvent } from "pixi.js";
 import { Interactive } from "./interactive";
 import { Draggable, DraggableState } from "./draggable";
 import { powLerpPoint } from "./lerp";
@@ -76,13 +76,13 @@ export class InteractiveInstrument extends Interactive {
     this.mCenterPoint.set(bkgBounds.x + bkgBounds.width / 2, bkgBounds.y + bkgBounds.height / 2  - DRAGGABLE_RADIUS);
   }
 
-  maybeSpawn(e: interaction.InteractionEvent) {
+  maybeSpawn(e: InteractionEvent) {
     if(this.state === InstrumentState.CUE_READY && PerformanceState.dragSpawn.draggingObject) {
       this.onDrop(PerformanceState.dragSpawn.draggingObject);
     }
   }
 
-  onDrop(dragging: Draggable, e?: interaction.InteractionEvent) {
+  onDrop(dragging: Draggable, e?: InteractionEvent) {
     if(this.state === InstrumentState.CUE_READY && !this.draggables.length) {
       const thisGlobPosition = this.getGlobalPosition();
       const dragParentGlobal = dragging.parent.getGlobalPosition();
