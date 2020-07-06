@@ -90,16 +90,20 @@ type notes = ({
 const getSoloCues = (spriteUrl: string) => (notes: notes): Array<[number, InstrumentState, any]> => {
   const res = notes
     .filter(({ words = '' }) => /solo|cue/.test(words))
-    .map(({ note }) => note)
-    .map((note, i, arr) => {
+    .map(({ note, words = ''}, i, arr) => {
+
+      const matches = words.match(/(solo|cue)-(\d+)(-cresc)?/i);
+      const beats = matches && matches[2] ? parseFloat(matches[2]) : 1;
+      const cresc = matches && !!(matches[3]);
+
       // Round to start of a measure
-      let countIn = 12;
+      let countIn = 6;
       countIn = note - Math.floor((note - countIn) / 6) * 6;
       // Make sure it's after last note though
-      if (i > 0 && note > arr[i - 1]) {
+      if (i > 0 && note > arr[i - 1].note) {
         // Would the cue-in occur before the last cue?
-        if (note - countIn < arr[i - 1]) {
-          countIn = note - arr[i - 1] - 3;
+        if (note - countIn < arr[i - 1].note) {
+          countIn = note - arr[i - 1].note - 3;
         }
       }
       // Can't ever be smaller than 1 beat
@@ -109,26 +113,24 @@ const getSoloCues = (spriteUrl: string) => (notes: notes): Array<[number, Instru
 
       // get notes about to be played
       // get the first one
-      // stop using notes if there is a 12 note gap
-      // @TODO also stop if the next note is a cue/solo
 
       const playNotes = notes.filter((n, ii, notes) => {
         // Exclude notes in the past
-        if(notes[ii].note < note) return false;
+        if(n.note < note) return false;
         // Exclude the cue/notes/words
-        if(notes[ii].words) return false;
+        if(n.words) return false;
         // Exclude notes past the next cue
-        if(i < arr.length && notes[ii].note >= arr[i + 1]) return false;
+        if(i + 1 < arr.length && n.note >= arr[i + 1].note) return false;
 
-        // TEMP: MAX 2 measures after cue
-        if(notes[ii].note - note > 12) return false;
+        // No farther than "beats"
+        if(n.note - note > beats) return false;
 
         return true;
       })
       .map(({note}) => note)
       .filter((v, i, arr) => arr.indexOf(v) === i); // Unique
 
-      playNotes.sort();
+      playNotes.sort((a,b) => Math.sign(a - b));
 
       return countdown(note, countIn, spriteUrl, playNotes);
     })
