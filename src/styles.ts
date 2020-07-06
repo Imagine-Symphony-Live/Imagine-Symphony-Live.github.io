@@ -35,9 +35,10 @@ export async function loadFonts() {
 }
 
 export const TEXT_STYLE_H1 = new TextStyle({
-  fill: "#cccccc",
+  fill: "#eeeeee",
   fontSize: 48,
   fontFamily: "Roboto",
+  fontWeight: '400',
 })
 
 export const TEXT_STYLE_H1_HOVER = new TextStyle({
@@ -49,18 +50,21 @@ export const TEXT_STYLE_H1_HOVER = new TextStyle({
   dropShadowAngle: 0,
   dropShadowDistance: 0,
   fontFamily: "Roboto",
+  fontWeight: '400',
 })
 
 export const TEXT_STYLE_H2 = new TextStyle({
   fill: "#ffffff",
   fontSize: 24,
   fontFamily: "Roboto",
+  fontWeight: '400',
 })
 
 export const TEXT_STYLE_INTERACTIVE_NUM = new TextStyle({
   fill: "#ffffffaa",
   fontSize: 48,
   fontFamily: "Roboto",
+  fontWeight: '400',
 })
 
 export const TEXT_STYLE_CENSORED = new TextStyle({
@@ -81,6 +85,7 @@ export const TEXT_STYLE_LOADING = new TextStyle({
 export const TEXT_STYLE_BIO_P = new TextStyle({
   fill: "#ffffff",
   fontFamily: "Roboto",
+  fontWeight: '400',
   wordWrap: true,
   wordWrapWidth: 400,
   fontSize: 12,
@@ -89,5 +94,6 @@ export const TEXT_STYLE_BIO_P = new TextStyle({
 export const TET_STYLE_BIO_SUBTITLE = new TextStyle({
   fill: "#EF7700",
   fontFamily: "Roboto",
+  fontWeight: '400',
   fontSize: 12,
 });
