@@ -2172,6 +2172,11 @@ var PerformanceState = /** @class */ (function (_super) {
                 this.bkgVideo.alpha = 0;
                 container.addChild(this.bkgVideo);
                 this.bkgVideo.position.set(0, 0);
+                this.bkgVideo.on("play", function () {
+                    if (!document.fullscreen) {
+                        app.view.requestFullscreen();
+                    }
+                });
                 // Assemble interactive things
                 this.interactivesContainer = new pixi_js_1.Container();
                 this.interactivesContainer.alpha = 0;
@@ -2327,11 +2332,9 @@ var PerformanceState = /** @class */ (function (_super) {
                     _this.interactivesContainer.alpha = 1;
                     PerformanceState.dragSpawn.alpha = 1;
                     _this.bkgVideo.theaterMode = true;
-                    _this.bkgVideo.canInteract = false;
                     _this.bkgVideo.pause();
                     PerformanceState.dragSpawn.on('firstDrag', function () {
                         _this.bkgVideo.resume();
-                        _this.bkgVideo.canInteract = true; // TEMP
                     });
                 });
                 // Sort all cues ascending
@@ -2374,6 +2377,7 @@ var PerformanceState = /** @class */ (function (_super) {
                                 this.onResize({ width: window.innerWidth, height: window.innerHeight });
                                 resolve();
                                 this.bkgVideo.alpha = 1;
+                                this.bkgVideo.canInteract = true;
                                 this.loadProgressbar.progress = 1;
                                 clearInterval(loadIntervalCheck);
                                 this.loadProgressbar.fadeOut();
@@ -2662,6 +2666,14 @@ var PerformanceVideoPlayer = /** @class */ (function (_super) {
             });
         });
     };
+    PerformanceVideoPlayer.prototype.interact = function () {
+        if (!document.fullscreen) {
+            this.playpause();
+        }
+        else {
+            document.exitFullscreen();
+        }
+    };
     Object.defineProperty(PerformanceVideoPlayer.prototype, "theaterMode", {
         set: function (on) {
             if (on) {
@@ -2733,6 +2745,7 @@ var ProgressBar = /** @class */ (function (_super) {
     function ProgressBar() {
         var _this = _super.call(this) || this;
         _this._progress = 0;
+        _this._animprogress = 0;
         _this.graphics = new pixi_js_1.Graphics();
         _this.needDraw = false;
         _this.loadingText = new pixi_js_1.Text("Loading", styles_1.TEXT_STYLE_LOADING);
@@ -2774,6 +2787,18 @@ var ProgressBar = /** @class */ (function (_super) {
                 this.destroy();
             }
         }
+        if (this._animprogress != this._progress) {
+            var diff = Math.abs(this._progress - this._animprogress);
+            var dir = Math.sign(this._progress - this._animprogress);
+            if (PROGRESS_BAR_WIDTH * diff < 1 && diff > 0) {
+                this.needDraw = true;
+                this._animprogress = this._progress;
+            }
+            else if (diff > 0) {
+                this.needDraw = true;
+                this._animprogress += Math.min(diff, dir * deltaMs / 100);
+            }
+        }
         if (this.needDraw) {
             this.draw();
         }
@@ -2788,7 +2813,7 @@ var ProgressBar = /** @class */ (function (_super) {
                 .lineStyle(2, 0xffffff)
                 .drawRect(-PROGRESS_BAR_WIDTH / 2, -PROGRESS_BAR_HEIGHT / 2, PROGRESS_BAR_WIDTH, PROGRESS_BAR_HEIGHT)
                 .beginFill(0xffffff)
-                .drawRect(-PROGRESS_BAR_WIDTH / 2, -PROGRESS_BAR_HEIGHT / 2, PROGRESS_BAR_WIDTH * this.progress, PROGRESS_BAR_HEIGHT);
+                .drawRect(-PROGRESS_BAR_WIDTH / 2, -PROGRESS_BAR_HEIGHT / 2, PROGRESS_BAR_WIDTH * this._animprogress, PROGRESS_BAR_HEIGHT);
         }
         this.needDraw = false;
     };
@@ -3634,11 +3659,18 @@ var VideoPlayer = /** @class */ (function (_super) {
         _this.updateGraphics();
         _this.interactive = true;
         _this.cursor = "pointer";
-        _this.on('pointertap', _this.interact.bind(_this));
+        _this.on('pointertap', function () {
+            if (_this.canInteract) {
+                _this.interact();
+            }
+        });
         return _this;
     }
     VideoPlayer.prototype.interact = function () {
-        if (this.videoData && this.canInteract) {
+        this.playpause();
+    };
+    VideoPlayer.prototype.playpause = function () {
+        if (this.videoData) {
             if (this.videoData.paused) {
                 this.videoData.play();
                 this.emit("play");
