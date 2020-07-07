@@ -15,6 +15,7 @@ import GradientBackdrop from "./gradient-backdrop";
 import { parts } from './tracks/main/score-export.json';
 import stageImage from '../assets/images/instrumentsection-2.svg';
 import { COLOR_BOOKSTORE_HIGHLIGHT, COLOR_BUS_HIGHLIGHT, COLOR_DESERT_HIGHLIGHT, COLOR_FOREST_HIGHLIGHT, COLOR_LAKE_HIGHLIGHT, COLOR_MOUNTAIN_HIGHLIGHT, COLOR_RECAP_HIGHLIGHT, COLOR_HALL_HIGHLIGHT } from "./colors";
+import { Button } from "./button";
 
 
 type InteractiveCue = [Interactive, number, any];
@@ -34,13 +35,14 @@ export default class PerformanceState extends State {
   protected centerStage: [number, number];
   protected loadProgressbar: ProgressBar;
   protected stageInteractiveBackground: Sprite = Sprite.from(stageImage);
+  protected bkg = new GradientBackdrop();
+  private skipButton: Button;
 
   // DIY interaction management
   private interactiveHovering?: Interactive;
   private mousePos: Point;
   private mouseChecked: boolean = true;
   static dragSpawn: DraggableSpawn = new DraggableSpawn();
-  protected bkg = new GradientBackdrop();
 
   async createContainer(app: Application): Promise<Container> {
     this.app = app;
@@ -295,22 +297,28 @@ export default class PerformanceState extends State {
           console.log("This is taking a while to load...");
         }, 5000);
         this.bkgVideo.preload().then(() => {
-
-          // setTimeout(() => {
-          //   this.bkgVideo.currentTime = 5*60 + 45;
-          // }, 1000);
-
           clearTimeout(loadTimeout);
           resolve();
         });
       });
-      this.onResize({width: window.innerWidth, height: window.innerHeight});
-      resolve();
       this.bkgVideo.alpha = 1;
       this.bkgVideo.canInteract = true;
       this.loadProgressbar.progress = 1;
+
+      this.skipButton = new Button("SKIP INTRO");
+      container.addChild(this.skipButton);
+      this.skipButton.on("pointertap", () => {
+        this.bkgVideo.currentTime = 66;
+        container.removeChild(this.skipButton);
+        delete this.skipButton;
+      });
+
       clearInterval(loadIntervalCheck);
       this.loadProgressbar.fadeOut();
+
+      this.onResize({width: window.innerWidth, height: window.innerHeight});
+      resolve();
+
     });
 
 
@@ -454,6 +462,11 @@ export default class PerformanceState extends State {
     this.bkgVideo.multiplierResize(multiplier);
 
     const videoBounds = this.bkgVideo.getBounds();
+
+    if(this.skipButton) {
+      this.skipButton.multiplierResize(multiplier);
+      this.skipButton.position.set(size.width - this.skipButton.width / 2 - 10 * multiplier, size.height - this.skipButton.height / 2 - 10 * multiplier);
+    }
 
     this.interactivesContainer.position.set(
       (size.width - bounds.width) / 2,
