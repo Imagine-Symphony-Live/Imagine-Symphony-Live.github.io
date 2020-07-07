@@ -106,6 +106,10 @@ export class PerformanceVideoPlayer extends VideoPlayer {
     this.multiplierResize(this.container.scale.x);
   }
 
+  get theaterMode(): boolean {
+    return this._theaterMode;
+  }
+
   multiplierResize(multiplier: number) {
     if(!this.videoSprite) return;
     this.container.scale.set(multiplier);
