@@ -1,4 +1,4 @@
-import { Container, Application, Point, Sprite, InteractionEvent } from "pixi.js";
+import { Container, Application, Point, Sprite, InteractionEvent, InteractionData } from "pixi.js";
 import ClickTrack from 'click-track';
 import State from "./state";
 import { InteractiveInstrument } from "./interactive-instrument";
@@ -397,19 +397,25 @@ export default class PerformanceState extends State {
       this.mouseChecked = true;
       const object = this.app.renderer.plugins.interaction.hitTest(this.mousePos, this.interactivesContainer);
       if (object && object instanceof Interactive) {
+        const e = new InteractionEvent();
+        e.data = new InteractionData();
+        e.data.global = this.mousePos.clone();
         if(!this.interactiveHovering) {
           // Mouse enter
           this.interactiveHovering = object;
-          this.interactiveHovering.emit("mousedragover", this.mousePos);
+          this.interactiveHovering.emit("mousedragover", e, PerformanceState.dragSpawn.draggingObject);
         } else if(this.interactiveHovering !== object) {
           // Mouse enter and out (new object)
-          object.emit("mousedragover", this.mousePos);
-          this.interactiveHovering.emit("mousedragout", this.mousePos);
+          object.emit("mousedragover", e);
+          this.interactiveHovering.emit("mousedragout", e, PerformanceState.dragSpawn.draggingObject);
           this.interactiveHovering = object;
         }
       } else if(this.interactiveHovering) {
+        const e = new InteractionEvent();
+        e.data = new InteractionData();
+        e.data.global = this.mousePos.clone();
         // mouse out
-        this.interactiveHovering.emit("mousedragout", this.mousePos);
+        this.interactiveHovering.emit("mousedragout", e);
         this.interactiveHovering = undefined;
       }
     }

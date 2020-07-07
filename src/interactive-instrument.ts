@@ -36,12 +36,10 @@ export class InteractiveInstrument extends Interactive {
 
     this.draw();
 
-    this.on("drop", this.onDrop.bind(this));
-
     this.interactive = true;
     this.cursor = "auto";
+    this.on("drop", this.onDrop.bind(this));
     this.on("mousedragover", this.onDragOver.bind(this));
-    this.on("mousedragout", this.onDragOut.bind(this));
     this.on("pointertap", this.maybeSpawn.bind(this));
 
     this.addChild(this.bkgGraphics);
@@ -79,6 +77,15 @@ export class InteractiveInstrument extends Interactive {
   maybeSpawn(e: InteractionEvent) {
     if(this.state === InstrumentState.CUE_READY && PerformanceState.dragSpawn.draggingObject) {
       this.onDrop(PerformanceState.dragSpawn.draggingObject);
+    }
+  }
+
+  onDragOver(e: InteractionEvent) {
+    const dragging = <Draggable>arguments[1];
+    if(dragging && this.state === InstrumentState.CUE_READY) {
+      dragging.onDragEnd.call(dragging, e);
+    } else {
+      super.onDragOver(e);
     }
   }
 
