@@ -32,17 +32,17 @@ export default class TitleState extends State {
 
     this.playButton = new Text("PLAY", TEXT_STYLE_H1);
     this.playButton.anchor.set(0.5, 0);
-    this.playButton.interactive = true;
-    this.playButton.cursor = "pointer";
-    this.playButton.on("mouseover", () => {
+    container.interactive = true;
+    container.cursor = "pointer";
+    container.on("mouseover", () => {
       //app.renderer.backgroundColor = 0x111111;
       this.playButton.style = TEXT_STYLE_H1_HOVER;
     });
-    this.playButton.on("mouseout", () => {
+    container.on("mouseout", () => {
       app.renderer.backgroundColor = 0x000000;
       this.playButton.style = TEXT_STYLE_H1 ;
     });
-    this.playButton.on("pointertap", () => {
+    container.on("pointertap", () => {
       try {
         app.view.requestFullscreen();
         screen.orientation.lock("landscape-primary");
