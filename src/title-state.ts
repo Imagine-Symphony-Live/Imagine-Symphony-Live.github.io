@@ -1,6 +1,6 @@
 import { Container, Application, Text, Sprite, BLEND_MODES, Loader } from "pixi.js";
 import State from "./state";
-import { TEXT_STYLE_H1, TEXT_STYLE_H1_HOVER } from "./styles";
+import { TEXT_STYLE_BUTTON, TEXT_STYLE_BUTTON_HOVER } from "./styles";
 import logoUrl from '../assets/images/logo.png';
 import titleBkgUrl from '../assets/images/title-bkg.jpg';
 
@@ -30,17 +30,17 @@ export default class TitleState extends State {
     container.addChild(this.bkg);
     container.addChild(this.logo);
 
-    this.playButton = new Text("PLAY", TEXT_STYLE_H1);
+    this.playButton = new Text("PLAY", TEXT_STYLE_BUTTON);
     this.playButton.anchor.set(0.5, 0);
     container.interactive = true;
     container.cursor = "pointer";
     container.on("mouseover", () => {
       //app.renderer.backgroundColor = 0x111111;
-      this.playButton.style = TEXT_STYLE_H1_HOVER;
+      this.playButton.style = TEXT_STYLE_BUTTON_HOVER;
     });
     container.on("mouseout", () => {
       app.renderer.backgroundColor = 0x000000;
-      this.playButton.style = TEXT_STYLE_H1 ;
+      this.playButton.style = TEXT_STYLE_BUTTON ;
     });
     container.on("pointertap", () => {
       try {

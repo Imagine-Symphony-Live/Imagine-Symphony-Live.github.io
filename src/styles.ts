@@ -34,14 +34,14 @@ export async function loadFonts() {
   });
 }
 
-export const TEXT_STYLE_H1 = new TextStyle({
+export const TEXT_STYLE_BUTTON = new TextStyle({
   fill: "#eeeeee",
   fontSize: 48,
   fontFamily: "Roboto",
   fontWeight: '400',
 })
 
-export const TEXT_STYLE_H1_HOVER = new TextStyle({
+export const TEXT_STYLE_BUTTON_HOVER = new TextStyle({
   fill: "#ffffff",
   fontSize: 48,
   dropShadow: true,
