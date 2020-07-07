@@ -2231,17 +2231,8 @@ var PerformanceState = /** @class */ (function (_super) {
                 bkgVideoClicktrack = new click_track_1.default({
                     timerSource: PerformanceState.clickTrack.timer,
                     cues: [
-                        [0.1,
-                            [[43, 43, 42], [83, 81, 76]]
-                        ],
-                        [5.0,
-                            [[30, 21, 15], [3, 4, 6]]
-                        ],
-                        [6.0,
-                            [[30, 17, 12], [19, 11, 9]]
-                        ],
-                        [12.0,
-                            [[3, 5, 6], [15, 10, 8]]
+                        [0,
+                            [[0, 0, 0], [0, 0, 0]]
                         ],
                         [15.0,
                             [[38, 27, 17], [6, 9, 9]]
@@ -2385,11 +2376,7 @@ var PerformanceState = /** @class */ (function (_super) {
                                 this.bkgVideo.alpha = 1;
                                 this.loadProgressbar.progress = 1;
                                 clearInterval(loadIntervalCheck);
-                                setTimeout(function () {
-                                    container.removeChild(_this.loadProgressbar);
-                                    _this.loadProgressbar.destroy();
-                                    delete _this.loadProgressbar;
-                                }, 500);
+                                this.loadProgressbar.fadeOut();
                                 return [2 /*return*/];
                         }
                     });
@@ -2434,11 +2421,13 @@ var PerformanceState = /** @class */ (function (_super) {
     };
     PerformanceState.prototype.onTick = function (deltaMs) {
         this.bkg.onTick(deltaMs);
-        if (this.loadProgressbar && this.loadProgressbar.progress < 1) {
+        if (this.loadProgressbar && !this.loadProgressbar.destroyed) {
             this.loadProgressbar.onTick(deltaMs);
             return;
         }
-        ;
+        else if (this.loadProgressbar) {
+            delete this.loadProgressbar;
+        }
         var currentBeat = PerformanceState.clickTrack.beat;
         var beatDelta = (deltaMs / 1000) * PerformanceState.clickTrack.tempo;
         for (var i = 0; i < this.interactives.length; i++) {
@@ -2747,6 +2736,7 @@ var ProgressBar = /** @class */ (function (_super) {
         _this.graphics = new pixi_js_1.Graphics();
         _this.needDraw = false;
         _this.loadingText = new pixi_js_1.Text("Loading", styles_1.TEXT_STYLE_LOADING);
+        _this.fading = false;
         _this.addChild(_this.graphics);
         _this.addChild(_this.loadingText);
         _this.loadingText.anchor.set(0.5);
@@ -2754,6 +2744,11 @@ var ProgressBar = /** @class */ (function (_super) {
         _this.needDraw = true;
         return _this;
     }
+    ProgressBar.prototype.fadeOut = function () {
+        this.removeChild(this.loadingText);
+        this.fading = true;
+        this.needDraw = true;
+    };
     Object.defineProperty(ProgressBar.prototype, "progress", {
         get: function () {
             return this._progress;
@@ -2765,7 +2760,20 @@ var ProgressBar = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
+    Object.defineProperty(ProgressBar.prototype, "destroyed", {
+        get: function () {
+            return this._destroyed;
+        },
+        enumerable: false,
+        configurable: true
+    });
     ProgressBar.prototype.onTick = function (deltaMs) {
+        if (this.fading) {
+            this.graphics.alpha = Math.max(0, this.graphics.alpha - deltaMs / 100);
+            if (this.graphics.alpha <= 0) {
+                this.destroy();
+            }
+        }
         if (this.needDraw) {
             this.draw();
         }
@@ -2774,11 +2782,14 @@ var ProgressBar = /** @class */ (function (_super) {
         this.graphics.clear()
             .beginFill(0x000000)
             .drawRect(-window.innerWidth / 2, -window.innerHeight / 2, window.innerWidth, window.innerHeight)
-            .endFill()
-            .lineStyle(2, 0xffffff)
-            .drawRect(-PROGRESS_BAR_WIDTH / 2, -PROGRESS_BAR_HEIGHT / 2, PROGRESS_BAR_WIDTH, PROGRESS_BAR_HEIGHT)
-            .beginFill(0xffffff)
-            .drawRect(-PROGRESS_BAR_WIDTH / 2, -PROGRESS_BAR_HEIGHT / 2, PROGRESS_BAR_WIDTH * this.progress, PROGRESS_BAR_HEIGHT);
+            .endFill();
+        if (!this.fading) {
+            this.graphics
+                .lineStyle(2, 0xffffff)
+                .drawRect(-PROGRESS_BAR_WIDTH / 2, -PROGRESS_BAR_HEIGHT / 2, PROGRESS_BAR_WIDTH, PROGRESS_BAR_HEIGHT)
+                .beginFill(0xffffff)
+                .drawRect(-PROGRESS_BAR_WIDTH / 2, -PROGRESS_BAR_HEIGHT / 2, PROGRESS_BAR_WIDTH * this.progress, PROGRESS_BAR_HEIGHT);
+        }
         this.needDraw = false;
     };
     return ProgressBar;
