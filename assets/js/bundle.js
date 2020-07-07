@@ -663,6 +663,72 @@ exports.default = ArrowGraphic;
 
 /***/ }),
 
+/***/ "./src/button.ts":
+/*!***********************!*\
+  !*** ./src/button.ts ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Button = void 0;
+var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
+var styles_1 = __webpack_require__(/*! ./styles */ "./src/styles.ts");
+var Button = /** @class */ (function (_super) {
+    __extends(Button, _super);
+    function Button(s) {
+        var _this = _super.call(this) || this;
+        _this._text = new pixi_js_1.Text("", styles_1.TEXT_STYLE_BUTTON);
+        _this.text = s;
+        _this.addChild(_this._text);
+        _this._text.anchor.set(0.5);
+        _this._text.position.set(0, 0);
+        _this.interactive = true;
+        _this.cursor = "pointer";
+        _this.on("mouseover", function () {
+            //app.renderer.backgroundColor = 0x111111;
+            _this._text.style = styles_1.TEXT_STYLE_BUTTON_HOVER;
+        });
+        _this.on("mouseout", function () {
+            _this._text.style = styles_1.TEXT_STYLE_BUTTON;
+        });
+        return _this;
+    }
+    Button.prototype.setAnchor = function (x, y) {
+        this._text.anchor.set(x, y);
+    };
+    Object.defineProperty(Button.prototype, "text", {
+        set: function (s) {
+            this._text.text = s;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Button.prototype.multiplierResize = function (multiplier) {
+        this._text.scale.set(multiplier);
+    };
+    return Button;
+}(pixi_js_1.Container));
+exports.Button = Button;
+
+
+/***/ }),
+
 /***/ "./src/color-utils.ts":
 /*!****************************!*\
   !*** ./src/color-utils.ts ***!
@@ -2151,14 +2217,15 @@ var gradient_backdrop_1 = __importDefault(__webpack_require__(/*! ./gradient-bac
 var score_export_json_1 = __webpack_require__(/*! ./tracks/main/score-export.json */ "./src/tracks/main/score-export.json");
 var instrumentsection_2_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrumentsection-2.svg */ "./assets/images/instrumentsection-2.svg"));
 var colors_1 = __webpack_require__(/*! ./colors */ "./src/colors.ts");
+var button_1 = __webpack_require__(/*! ./button */ "./src/button.ts");
 var PerformanceState = /** @class */ (function (_super) {
     __extends(PerformanceState, _super);
     function PerformanceState() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.emitters = [];
         _this.stageInteractiveBackground = pixi_js_1.Sprite.from(instrumentsection_2_svg_1.default);
-        _this.mouseChecked = true;
         _this.bkg = new gradient_backdrop_1.default();
+        _this.mouseChecked = true;
         return _this;
     }
     PerformanceState.prototype.createContainer = function (app) {
@@ -2182,12 +2249,16 @@ var PerformanceState = /** @class */ (function (_super) {
                 this.bkgVideo.position.set(0, 0);
                 this.bkgVideo.on("play", function () {
                     if (!document.fullscreen) {
-                        app.view.requestFullscreen();
+                        try {
+                            app.view.requestFullscreen();
+                            screen.orientation.lock("landscape-primary");
+                        }
+                        catch (_a) { }
                     }
                 });
                 // Assemble interactive things
                 this.interactivesContainer = new pixi_js_1.Container();
-                this.interactivesContainer.alpha = 0;
+                this.interactivesContainer.visible = false;
                 container.addChild(this.interactivesContainer);
                 this.interactivesContainer.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
                 // DIY interaction management
@@ -2200,7 +2271,7 @@ var PerformanceState = /** @class */ (function (_super) {
                     _this.interactivesContainer.addChild(s1);
                 });
                 // Origin set is handled in resize
-                PerformanceState.dragSpawn.alpha = 0;
+                PerformanceState.dragSpawn.visible = false;
                 container.addChild(PerformanceState.dragSpawn);
                 PerformanceState.dragSpawn.on("dragged", this.onCircleDrag.bind(this));
                 interactives.push(PerformanceState.dragSpawn);
@@ -2317,9 +2388,7 @@ var PerformanceState = /** @class */ (function (_super) {
                     timerSource: PerformanceState.clickTrack.timer,
                     cues: [
                         [356, function () {
-                                _this.interactivesContainer.alpha = 0;
-                                PerformanceState.dragSpawn.alpha = 0;
-                                _this.bkgVideo.theaterMode = false;
+                                _this.theaterMode();
                                 _this.bkg.colorA = [0, 0, 0];
                                 _this.bkg.colorB = [0, 0, 0];
                             }
@@ -2337,13 +2406,19 @@ var PerformanceState = /** @class */ (function (_super) {
                     }
                 });
                 bkgVideoClicktrack.on("lastCue", function () {
-                    _this.interactivesContainer.alpha = 1;
-                    PerformanceState.dragSpawn.alpha = 1;
-                    _this.bkgVideo.theaterMode = true;
-                    _this.bkgVideo.pause();
-                    PerformanceState.dragSpawn.on('firstDrag', function () {
+                    _this.afterIntro(container);
+                    var beginAfterIntro = function () {
                         _this.bkgVideo.resume();
-                    });
+                        _this.bkgVideo.canInteract = true;
+                        if (_this.conductToggleButton) {
+                            _this.conductToggleButton.off("pointertap", beginAfterIntro);
+                        }
+                    };
+                    _this.bkgVideo.canInteract = false;
+                    _this.bkgVideo.pause();
+                    _this.playMode();
+                    _this.conductToggleButton.once("pointertap", beginAfterIntro);
+                    PerformanceState.dragSpawn.on('firstDrag', beginAfterIntro);
                 });
                 // Sort all cues ascending
                 particleCues.sort(function (a, b) { return Math.sign(a[0] - b[0]); });
@@ -2376,22 +2451,26 @@ var PerformanceState = /** @class */ (function (_super) {
                                         console.log("This is taking a while to load...");
                                     }, 5000);
                                     _this.bkgVideo.preload().then(function () {
-                                        setTimeout(function () {
-                                            _this.bkgVideo.currentTime = 60;
-                                        }, 1000);
                                         clearTimeout(loadTimeout);
                                         resolve();
                                     });
                                 })];
                             case 1:
                                 _a.sent();
-                                this.onResize({ width: window.innerWidth, height: window.innerHeight });
-                                resolve();
                                 this.bkgVideo.alpha = 1;
                                 this.bkgVideo.canInteract = true;
                                 this.loadProgressbar.progress = 1;
+                                this.skipButton = new button_1.Button("SKIP INTRO");
+                                this.skipButton.setAnchor(1, 1);
+                                container.addChild(this.skipButton);
+                                this.skipButton.on("pointertap", function () {
+                                    _this.bkgVideo.currentTime = 66;
+                                    _this.afterIntro(container);
+                                });
                                 clearInterval(loadIntervalCheck);
                                 this.loadProgressbar.fadeOut();
+                                this.onResize({ width: window.innerWidth, height: window.innerHeight });
+                                resolve();
                                 return [2 /*return*/];
                         }
                     });
@@ -2408,6 +2487,41 @@ var PerformanceState = /** @class */ (function (_super) {
                 return [2 /*return*/, container];
             });
         });
+    };
+    PerformanceState.prototype.afterIntro = function (container) {
+        var _this = this;
+        if (this.skipButton) {
+            container.removeChild(this.skipButton);
+            delete this.skipButton;
+        }
+        if (!this.conductToggleButton) {
+            this.conductToggleButton = new button_1.Button("X");
+            this.conductToggleButton.setAnchor(1, 1);
+            container.addChild(this.conductToggleButton);
+            this.conductToggleButton.on("pointertap", function () {
+                if (_this.bkgVideo.theaterMode) {
+                    _this.playMode();
+                    _this.conductToggleButton.text = "X";
+                }
+                else {
+                    _this.theaterMode();
+                    _this.conductToggleButton.text = "CONDUCT";
+                }
+            });
+        }
+        this.onResize({ width: window.innerWidth, height: window.innerHeight });
+    };
+    PerformanceState.prototype.theaterMode = function () {
+        this.interactivesContainer.visible = false;
+        PerformanceState.dragSpawn.visible = false;
+        this.bkgVideo.theaterMode = true;
+        this.onResize({ width: window.innerWidth, height: window.innerHeight });
+    };
+    PerformanceState.prototype.playMode = function () {
+        this.interactivesContainer.visible = true;
+        PerformanceState.dragSpawn.visible = true;
+        this.bkgVideo.theaterMode = false;
+        this.onResize({ width: window.innerWidth, height: window.innerHeight });
     };
     PerformanceState.prototype.handleClickCue = function (clicktrack, cue) {
         if (cue.data && cue.data[0]) {
@@ -2492,14 +2606,6 @@ var PerformanceState = /** @class */ (function (_super) {
         if (this.loadProgressbar && this.loadProgressbar.progress < 1) {
             this.loadProgressbar.position.set(size.width / 2, size.height / 2);
         }
-        var paddTop = 0;
-        if (!document.fullscreen) {
-            var nav = document.getElementsByTagName("nav");
-            if (nav && nav[0]) {
-                var _a = nav[0].getBoundingClientRect(), y = _a.y, height = _a.height;
-                paddTop = y + height;
-            }
-        }
         var multiplier = Math.min(size.width / this.intendedStageSize[0], size.height / this.intendedStageSize[1]);
         //this.interactivesContainer.scale.set(multiplier, multiplier);
         this.interactives.forEach(function (s1) {
@@ -2508,9 +2614,16 @@ var PerformanceState = /** @class */ (function (_super) {
         this.stageInteractiveBackground.scale.set(multiplier);
         var bounds = this.interactivesContainer.getBounds();
         this.bkg.multiplierResize(multiplier);
-        this.bkgVideo.position.set(0, paddTop);
         this.bkgVideo.multiplierResize(multiplier);
         var videoBounds = this.bkgVideo.getBounds();
+        if (this.skipButton) {
+            this.skipButton.multiplierResize(multiplier);
+            this.skipButton.position.set(size.width - 10 * multiplier, size.height - 10 * multiplier);
+        }
+        if (this.conductToggleButton) {
+            this.conductToggleButton.multiplierResize(multiplier);
+            this.conductToggleButton.position.set(size.width - 10 * multiplier, size.height - 10 * multiplier);
+        }
         this.interactivesContainer.position.set((size.width - bounds.width) / 2, videoBounds.bottom - bounds.height * 0.10);
         PerformanceState.dragSpawn.multiplierResize(multiplier);
         PerformanceState.dragSpawn.setOrigin(this.interactivesContainer.position.x + multiplier * this.centerStage[0], this.interactivesContainer.position.y + multiplier * this.centerStage[1]);
@@ -2616,6 +2729,7 @@ var PerformanceVideoPlayer = /** @class */ (function (_super) {
         _this.playButtonSizeRatio = 0.05;
         _this.autoplay = false;
         _this.canInteract = false;
+        _this._theaterMode = true;
         return _this;
     }
     PerformanceVideoPlayer.prototype.preload = function () {
@@ -2651,7 +2765,7 @@ var PerformanceVideoPlayer = /** @class */ (function (_super) {
                         _a.sent();
                         bkgSprite = pixi_js_1.Sprite.from(video_bkg_png_1.default);
                         bkgSprite.scale.set(w / (bkgSprite.width));
-                        bkgSprite.position.set(0, LETTERBOX_HEIGHT - 1);
+                        bkgSprite.position.set(0, LETTERBOX_HEIGHT);
                         this.container.addChild(bkgSprite);
                         this.flatMask = pixi_js_1.Sprite.from(video_mask_flat_png_1.default);
                         this.flatMask.scale.set(w / (this.flatMask.width));
@@ -2667,7 +2781,7 @@ var PerformanceVideoPlayer = /** @class */ (function (_super) {
                         this.flatMaskBacker.position.set(0, LETTERBOX_HEIGHT);
                         this.addChild(this.bkgCurtainPad);
                         this.addChild(this.container);
-                        this.theaterMode = false;
+                        this.theaterMode = true;
                         this.removeChild(this.videoSprite);
                         this.removeChild(this.overlayGraphics);
                         this.container.addChild(this.videoSprite);
@@ -2692,19 +2806,26 @@ var PerformanceVideoPlayer = /** @class */ (function (_super) {
         }
     };
     Object.defineProperty(PerformanceVideoPlayer.prototype, "theaterMode", {
+        get: function () {
+            return this._theaterMode;
+        },
         set: function (on) {
-            if (on) {
+            this._theaterMode = on;
+            if (!on) {
                 this.container.removeChild(this.flatMask);
                 this.container.addChild(this.theaterMask);
                 this.videoSprite.mask = this.theaterMask;
+                //this.bkgCurtainPad.visible = true;
                 this.flatMaskBacker.visible = false;
             }
             else {
                 this.container.removeChild(this.theaterMask);
                 this.container.addChild(this.flatMask);
                 this.videoSprite.mask = this.flatMask;
+                //this.bkgCurtainPad.visible = false;
                 this.flatMaskBacker.visible = true;
             }
+            this.multiplierResize(this.container.scale.x);
         },
         enumerable: false,
         configurable: true
@@ -2713,14 +2834,26 @@ var PerformanceVideoPlayer = /** @class */ (function (_super) {
         if (!this.videoSprite)
             return;
         this.container.scale.set(multiplier);
-        this.container.position.y = (-LETTERBOX_HEIGHT) * multiplier;
+        var paddTop = 0;
+        if (!document.fullscreen) {
+            var nav = document.getElementsByTagName("nav");
+            if (nav && nav[0]) {
+                var _a = nav[0].getBoundingClientRect(), y = _a.y, height = _a.height;
+                paddTop = y + height;
+            }
+        }
+        if (this._theaterMode) {
+            this.container.position.y = (window.innerHeight - paddTop - this.container.height) / 2 - LETTERBOX_HEIGHT * multiplier + paddTop;
+        }
+        else {
+            this.container.position.y = (-LETTERBOX_HEIGHT) * multiplier + paddTop;
+        }
         this.container.position.x = (window.innerWidth - this.container.width) / 2;
         this.bkgCurtainPad.position.set(0, 0);
         this.bkgCurtainPad.clear()
             .beginFill(0x000000)
-            .drawRect(-(window.innerWidth - this.container.width) / 2, -this.position.y, window.innerWidth, this.position.y)
-            .drawRect(0, this.container.position.y, this.container.position.x, this.container.height - 1 + LETTERBOX_HEIGHT * multiplier)
-            .drawRect(this.container.width + this.container.position.x, this.container.position.y, (window.innerWidth - this.container.width) / 2, this.container.height - 1 + LETTERBOX_HEIGHT * multiplier)
+            .drawRect(0, this.container.position.y + LETTERBOX_HEIGHT * multiplier, this.container.position.x, this.container.height)
+            .drawRect(this.container.width + this.container.position.x, this.container.position.y + LETTERBOX_HEIGHT * multiplier, this.container.position.x, this.container.height)
             .endFill();
     };
     return PerformanceVideoPlayer;
@@ -3063,7 +3196,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TET_STYLE_BIO_SUBTITLE = exports.TEXT_STYLE_BIO_P = exports.TEXT_STYLE_LOADING = exports.TEXT_STYLE_CENSORED = exports.TEXT_STYLE_INTERACTIVE_NUM = exports.TEXT_STYLE_H2 = exports.TEXT_STYLE_H1_HOVER = exports.TEXT_STYLE_H1 = exports.loadFonts = void 0;
+exports.TET_STYLE_BIO_SUBTITLE = exports.TEXT_STYLE_BIO_P = exports.TEXT_STYLE_LOADING = exports.TEXT_STYLE_CENSORED = exports.TEXT_STYLE_INTERACTIVE_NUM = exports.TEXT_STYLE_H2 = exports.TEXT_STYLE_BUTTON_HOVER = exports.TEXT_STYLE_BUTTON = exports.loadFonts = void 0;
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
 function loadFonts() {
     return __awaiter(this, void 0, void 0, function () {
@@ -3100,13 +3233,13 @@ function loadFonts() {
     });
 }
 exports.loadFonts = loadFonts;
-exports.TEXT_STYLE_H1 = new pixi_js_1.TextStyle({
-    fill: "#eeeeee",
+exports.TEXT_STYLE_BUTTON = new pixi_js_1.TextStyle({
+    fill: "#ffffff88",
     fontSize: 48,
     fontFamily: "Roboto",
     fontWeight: '400',
 });
-exports.TEXT_STYLE_H1_HOVER = new pixi_js_1.TextStyle({
+exports.TEXT_STYLE_BUTTON_HOVER = new pixi_js_1.TextStyle({
     fill: "#ffffff",
     fontSize: 48,
     dropShadow: true,
@@ -3261,21 +3394,22 @@ var TitleState = /** @class */ (function (_super) {
                         this.logo.anchor.set(0.5, 0);
                         container.addChild(this.bkg);
                         container.addChild(this.logo);
-                        this.playButton = new pixi_js_1.Text("PLAY", styles_1.TEXT_STYLE_H1);
+                        this.playButton = new pixi_js_1.Text("PLAY", styles_1.TEXT_STYLE_BUTTON);
                         this.playButton.anchor.set(0.5, 0);
-                        this.playButton.interactive = true;
-                        this.playButton.cursor = "pointer";
-                        this.playButton.on("mouseover", function () {
+                        container.interactive = true;
+                        container.cursor = "pointer";
+                        container.on("mouseover", function () {
                             //app.renderer.backgroundColor = 0x111111;
-                            _this.playButton.style = styles_1.TEXT_STYLE_H1_HOVER;
+                            _this.playButton.style = styles_1.TEXT_STYLE_BUTTON_HOVER;
                         });
-                        this.playButton.on("mouseout", function () {
+                        container.on("mouseout", function () {
                             app.renderer.backgroundColor = 0x000000;
-                            _this.playButton.style = styles_1.TEXT_STYLE_H1;
+                            _this.playButton.style = styles_1.TEXT_STYLE_BUTTON;
                         });
-                        this.playButton.on("pointertap", function () {
+                        container.on("pointertap", function () {
                             try {
                                 app.view.requestFullscreen();
+                                screen.orientation.lock("landscape-primary");
                             }
                             finally {
                                 _this.events.get("complete").dispatch(_this, 1);
