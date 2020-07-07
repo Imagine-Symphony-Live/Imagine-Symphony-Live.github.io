@@ -102,6 +102,24 @@ const frontBase = {
         ]
       },
       {
+        test: /\.svg/i,
+        include: [
+          path.resolve('./assets/images/environments')
+        ],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/images',
+              name: '[contenthash].png',
+            },
+          },
+          {
+            loader: path.resolve('./src/webpack-svg-to-png.js'),
+          },
+        ]
+      },
+      {
         test: /\.(ogg)$/,
         use: [
           {
