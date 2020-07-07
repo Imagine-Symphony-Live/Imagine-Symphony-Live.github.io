@@ -1448,11 +1448,10 @@ var InteractiveInstrument = /** @class */ (function (_super) {
         _this.stateValue = 0;
         _this.color = idleColor;
         _this.draw();
-        _this.on("drop", _this.onDrop.bind(_this));
         _this.interactive = true;
         _this.cursor = "auto";
+        _this.on("drop", _this.onDrop.bind(_this));
         _this.on("mousedragover", _this.onDragOver.bind(_this));
-        _this.on("mousedragout", _this.onDragOut.bind(_this));
         _this.on("pointertap", _this.maybeSpawn.bind(_this));
         _this.addChild(_this.bkgGraphics);
         return _this;
@@ -1496,6 +1495,15 @@ var InteractiveInstrument = /** @class */ (function (_super) {
     InteractiveInstrument.prototype.maybeSpawn = function (e) {
         if (this.state === InstrumentState.CUE_READY && performance_state_1.default.dragSpawn.draggingObject) {
             this.onDrop(performance_state_1.default.dragSpawn.draggingObject);
+        }
+    };
+    InteractiveInstrument.prototype.onDragOver = function (e) {
+        var dragging = arguments[1];
+        if (dragging && this.state === InstrumentState.CUE_READY) {
+            dragging.onDragEnd.call(dragging, e);
+        }
+        else {
+            _super.prototype.onDragOver.call(this, e);
         }
     };
     InteractiveInstrument.prototype.onDrop = function (dragging, e) {
@@ -2368,6 +2376,9 @@ var PerformanceState = /** @class */ (function (_super) {
                                         console.log("This is taking a while to load...");
                                     }, 5000);
                                     _this.bkgVideo.preload().then(function () {
+                                        setTimeout(function () {
+                                            _this.bkgVideo.currentTime = 60;
+                                        }, 1000);
                                         clearTimeout(loadTimeout);
                                         resolve();
                                     });
@@ -2452,21 +2463,27 @@ var PerformanceState = /** @class */ (function (_super) {
             this.mouseChecked = true;
             var object = this.app.renderer.plugins.interaction.hitTest(this.mousePos, this.interactivesContainer);
             if (object && object instanceof interactive_1.Interactive) {
+                var e = new pixi_js_1.InteractionEvent();
+                e.data = new pixi_js_1.InteractionData();
+                e.data.global = this.mousePos.clone();
                 if (!this.interactiveHovering) {
                     // Mouse enter
                     this.interactiveHovering = object;
-                    this.interactiveHovering.emit("mousedragover", this.mousePos);
+                    this.interactiveHovering.emit("mousedragover", e, PerformanceState.dragSpawn.draggingObject);
                 }
                 else if (this.interactiveHovering !== object) {
                     // Mouse enter and out (new object)
-                    object.emit("mousedragover", this.mousePos);
-                    this.interactiveHovering.emit("mousedragout", this.mousePos);
+                    object.emit("mousedragover", e);
+                    this.interactiveHovering.emit("mousedragout", e, PerformanceState.dragSpawn.draggingObject);
                     this.interactiveHovering = object;
                 }
             }
             else if (this.interactiveHovering) {
+                var e = new pixi_js_1.InteractionEvent();
+                e.data = new pixi_js_1.InteractionData();
+                e.data.global = this.mousePos.clone();
                 // mouse out
-                this.interactiveHovering.emit("mousedragout", this.mousePos);
+                this.interactiveHovering.emit("mousedragout", e);
                 this.interactiveHovering = undefined;
             }
         }
