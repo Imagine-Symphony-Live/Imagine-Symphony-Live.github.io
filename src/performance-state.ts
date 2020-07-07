@@ -75,6 +75,11 @@ export default class PerformanceState extends State {
     this.bkgVideo.alpha = 0;
     container.addChild(this.bkgVideo);
     this.bkgVideo.position.set(0,0);
+    this.bkgVideo.on("play", () => {
+      if(!document.fullscreen) {
+        app.view.requestFullscreen();
+      }
+    });
 
     // Assemble interactive things
     this.interactivesContainer = new Container();
@@ -248,11 +253,9 @@ export default class PerformanceState extends State {
       this.interactivesContainer.alpha = 1;
       PerformanceState.dragSpawn.alpha = 1;
       this.bkgVideo.theaterMode = true;
-      this.bkgVideo.canInteract = false;
       this.bkgVideo.pause();
       PerformanceState.dragSpawn.on('firstDrag', () => {
         this.bkgVideo.resume();
-        this.bkgVideo.canInteract = true; // TEMP
       });
     });
 
@@ -301,6 +304,7 @@ export default class PerformanceState extends State {
       this.onResize({width: window.innerWidth, height: window.innerHeight});
       resolve();
       this.bkgVideo.alpha = 1;
+      this.bkgVideo.canInteract = true;
       this.loadProgressbar.progress = 1;
       clearInterval(loadIntervalCheck);
       this.loadProgressbar.fadeOut();

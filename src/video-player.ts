@@ -24,11 +24,19 @@ export class VideoPlayer extends Container {
 
     this.interactive = true;
     this.cursor = "pointer";
-    this.on('pointertap', this.interact.bind(this));
+    this.on('pointertap', () => {
+      if(this.canInteract) {
+        this.interact();
+      }
+    });
   }
 
   interact() {
-    if(this.videoData && this.canInteract) {
+    this.playpause();
+  }
+
+  playpause() {
+    if(this.videoData) {
       if(this.videoData.paused) {
         this.videoData.play();
         this.emit("play");

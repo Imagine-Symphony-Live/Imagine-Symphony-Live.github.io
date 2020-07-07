@@ -78,6 +78,14 @@ export class PerformanceVideoPlayer extends VideoPlayer {
 
   }
 
+  interact() {
+    if(!document.fullscreen) {
+      this.playpause();
+    } else {
+      document.exitFullscreen();
+    }
+  }
+
   set theaterMode(on: boolean) {
     if(on) {
       this.container.removeChild(this.flatMask);
