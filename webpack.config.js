@@ -52,9 +52,8 @@ const frontBase = {
       },
       {
         test: /\.svg/i,
-        exclude: [
-          path.resolve('./assets/images/instrument-icons'),
-          path.resolve('./assets/images/instrumentsection-2.svg')
+        include: [
+          path.resolve('./assets/images/instrumentsection.svg')
         ],
         use: [
           {
