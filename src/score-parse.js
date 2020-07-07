@@ -73,6 +73,7 @@ export const parseScorePart = ($, $root) => (p) => {
       const isRest = !!$('> rest', note).length;
       const isChord = !!$('> chord', note).length;
       const isDirection = note.tagName === 'direction';
+      const isTremelo = !!$('notations > ornaments > tremolo', note).length;
       const isWords = !!$('> direction-type > words', note).length;
       const duration = $('> duration', note).text();
       const isNote = note.tagName === "note";
@@ -84,11 +85,13 @@ export const parseScorePart = ($, $root) => (p) => {
         const pitchOctave = parseInt($('> pitch > octave', note).text());
         const pitchAlter = parseInt($('> pitch > alter', note).text() || '0');
         const pitch = calcPitch(pitchStep, pitchOctave, pitchAlter);
-
-        partNotes.push({
+        const n = {
           note: Math.round((isChord ? lastNoteCounter : noteCounter) * 10000) / 10000,
+          duration: Math.round((2 * currentDuration / currentDivision) * 10000) / 10000,
           pitch,
-        });
+        };
+        if(isTremelo) n.isTremelo = true;
+        partNotes.push(n);
       }
 
       if(isWords) {
