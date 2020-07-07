@@ -1,4 +1,4 @@
-import { Container, Application, Text, Sprite, BLEND_MODES } from "pixi.js";
+import { Container, Application, Text, Sprite, BLEND_MODES, Loader } from "pixi.js";
 import State from "./state";
 import { TEXT_STYLE_H1, TEXT_STYLE_H1_HOVER } from "./styles";
 import logoUrl from '../assets/images/logo.png';
@@ -12,17 +12,26 @@ export default class TitleState extends State {
 
     const container = new Container();
 
+    await new Promise((resolve) => {
+      if(Loader.shared.resources[titleBkgUrl]) return resolve();
+      Loader.shared.add(titleBkgUrl).load(resolve);
+    });
+    await new Promise((resolve) => {
+      if(Loader.shared.resources[logoUrl]) return resolve();
+      Loader.shared.add(logoUrl).load(resolve);
+    });
+
     this.bkg = Sprite.from(titleBkgUrl);
     this.bkg.alpha = 0.5
     this.bkg.anchor.set(0.5, 0.5);
     this.logo = Sprite.from(logoUrl);
-    this.logo.anchor.set(0.5, 1);
+    this.logo.anchor.set(0.5, 0);
 
     container.addChild(this.bkg);
     container.addChild(this.logo);
 
     this.playButton = new Text("PLAY", TEXT_STYLE_H1);
-    this.playButton.anchor.set(0.5);
+    this.playButton.anchor.set(0.5, 0);
     this.playButton.interactive = true;
     this.playButton.cursor = "pointer";
     this.playButton.on("mouseover", () => {
@@ -48,13 +57,28 @@ export default class TitleState extends State {
   }
 
   onResize(size: {width: number, height: number}) {
+
+    let paddTop = 0;
+    if(!document.fullscreen) {
+      const nav = document.getElementsByTagName("nav");
+      if(nav && nav[0]) {
+        const {y,height} = nav[0].getBoundingClientRect();
+        paddTop = y + height;
+      }
+    }
+
     const scale = Math.min(1, size.width / 1529);
     this.logo.scale.set(scale);
-    this.logo.position.set(size.width/2, size.height/2 - 10 * scale);
+    this.logo.position.set(size.width/2, paddTop + 10 * scale);
+    const logoBounds = this.logo.getBounds();
+
+    const bottomMost = logoBounds.bottom;
+    const centerBottom = Math.max(bottomMost, paddTop + (size.height - paddTop)/2);
+
     this.bkg.scale.set(scale);
-    this.bkg.position.set(size.width/2, size.height/2);
+    this.bkg.position.set(size.width/2, centerBottom);
     this.playButton.scale.set(scale);
-    this.playButton.position.set(size.width/2, size.height/2 + 50 * scale);
+    this.playButton.position.set(size.width/2, centerBottom);
   }
 
   async cleanUp() {
