@@ -1,6 +1,5 @@
 import { InteractiveInstrument } from "../../interactive-instrument";
 import { interactives } from "./track-interactives";
-//import { particles } from './track-particles';
 import { InteractiveTrack } from "../../types/interactive-track";
 import fullSong from '../../../assets/video/film-censored.mp4';
 
