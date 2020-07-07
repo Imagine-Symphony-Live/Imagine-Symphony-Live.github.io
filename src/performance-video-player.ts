@@ -42,7 +42,7 @@ export class PerformanceVideoPlayer extends VideoPlayer {
 
     const bkgSprite = Sprite.from(videoBkg);
     bkgSprite.scale.set(w / (bkgSprite.width));
-    bkgSprite.position.set(0, LETTERBOX_HEIGHT - 1);
+    bkgSprite.position.set(0, LETTERBOX_HEIGHT);
     this.container.addChild(bkgSprite);
 
     this.flatMask = Sprite.from(videoMaskFlat);
@@ -133,8 +133,8 @@ export class PerformanceVideoPlayer extends VideoPlayer {
     this.bkgCurtainPad.position.set(0, 0);
     this.bkgCurtainPad.clear()
       .beginFill(0x000000)
-      .drawRect(0, this.container.position.y + LETTERBOX_HEIGHT * multiplier - 1.5, this.container.position.x, this.container.height)
-      .drawRect(this.container.width + this.container.position.x, this.container.position.y + LETTERBOX_HEIGHT * multiplier - 1.5, this.container.position.x, this.container.height)
+      .drawRect(0, this.container.position.y + LETTERBOX_HEIGHT * multiplier, this.container.position.x, this.container.height)
+      .drawRect(this.container.width + this.container.position.x, this.container.position.y + LETTERBOX_HEIGHT * multiplier, this.container.position.x, this.container.height)
       .endFill();
 
   }
