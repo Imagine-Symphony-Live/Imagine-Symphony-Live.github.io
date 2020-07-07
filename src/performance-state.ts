@@ -77,7 +77,10 @@ export default class PerformanceState extends State {
     this.bkgVideo.position.set(0,0);
     this.bkgVideo.on("play", () => {
       if(!document.fullscreen) {
-        app.view.requestFullscreen();
+        try {
+          app.view.requestFullscreen();
+          screen.orientation.lock("landscape-primary");
+        } catch {}
       }
     });
 

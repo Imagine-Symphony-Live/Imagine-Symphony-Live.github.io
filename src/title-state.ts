@@ -45,6 +45,7 @@ export default class TitleState extends State {
     this.playButton.on("pointertap", () => {
       try {
         app.view.requestFullscreen();
+        screen.orientation.lock("landscape-primary");
       } finally {
         this.events.get("complete").dispatch(this, 1);
       }
