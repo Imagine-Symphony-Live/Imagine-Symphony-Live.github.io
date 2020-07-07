@@ -3184,48 +3184,76 @@ var TitleState = /** @class */ (function (_super) {
             var container;
             var _this = this;
             return __generator(this, function (_a) {
-                container = new pixi_js_1.Container();
-                this.bkg = pixi_js_1.Sprite.from(title_bkg_jpg_1.default);
-                this.bkg.alpha = 0.5;
-                this.bkg.anchor.set(0.5, 0.5);
-                this.logo = pixi_js_1.Sprite.from(logo_png_1.default);
-                this.logo.anchor.set(0.5, 1);
-                container.addChild(this.bkg);
-                container.addChild(this.logo);
-                this.playButton = new pixi_js_1.Text("PLAY", styles_1.TEXT_STYLE_H1);
-                this.playButton.anchor.set(0.5);
-                this.playButton.interactive = true;
-                this.playButton.cursor = "pointer";
-                this.playButton.on("mouseover", function () {
-                    //app.renderer.backgroundColor = 0x111111;
-                    _this.playButton.style = styles_1.TEXT_STYLE_H1_HOVER;
-                });
-                this.playButton.on("mouseout", function () {
-                    app.renderer.backgroundColor = 0x000000;
-                    _this.playButton.style = styles_1.TEXT_STYLE_H1;
-                });
-                this.playButton.on("pointertap", function () {
-                    try {
-                        app.view.requestFullscreen();
-                    }
-                    finally {
-                        _this.events.get("complete").dispatch(_this, 1);
-                    }
-                });
-                container.addChild(this.playButton);
-                app.renderer.backgroundColor = 0x000000;
-                return [2 /*return*/, container];
+                switch (_a.label) {
+                    case 0:
+                        container = new pixi_js_1.Container();
+                        return [4 /*yield*/, new Promise(function (resolve) {
+                                if (pixi_js_1.Loader.shared.resources[title_bkg_jpg_1.default])
+                                    return resolve();
+                                pixi_js_1.Loader.shared.add(title_bkg_jpg_1.default).load(resolve);
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, new Promise(function (resolve) {
+                                if (pixi_js_1.Loader.shared.resources[logo_png_1.default])
+                                    return resolve();
+                                pixi_js_1.Loader.shared.add(logo_png_1.default).load(resolve);
+                            })];
+                    case 2:
+                        _a.sent();
+                        this.bkg = pixi_js_1.Sprite.from(title_bkg_jpg_1.default);
+                        this.bkg.alpha = 0.5;
+                        this.bkg.anchor.set(0.5, 0.5);
+                        this.logo = pixi_js_1.Sprite.from(logo_png_1.default);
+                        this.logo.anchor.set(0.5, 0);
+                        container.addChild(this.bkg);
+                        container.addChild(this.logo);
+                        this.playButton = new pixi_js_1.Text("PLAY", styles_1.TEXT_STYLE_H1);
+                        this.playButton.anchor.set(0.5, 0);
+                        this.playButton.interactive = true;
+                        this.playButton.cursor = "pointer";
+                        this.playButton.on("mouseover", function () {
+                            //app.renderer.backgroundColor = 0x111111;
+                            _this.playButton.style = styles_1.TEXT_STYLE_H1_HOVER;
+                        });
+                        this.playButton.on("mouseout", function () {
+                            app.renderer.backgroundColor = 0x000000;
+                            _this.playButton.style = styles_1.TEXT_STYLE_H1;
+                        });
+                        this.playButton.on("pointertap", function () {
+                            try {
+                                app.view.requestFullscreen();
+                            }
+                            finally {
+                                _this.events.get("complete").dispatch(_this, 1);
+                            }
+                        });
+                        container.addChild(this.playButton);
+                        app.renderer.backgroundColor = 0x000000;
+                        return [2 /*return*/, container];
+                }
             });
         });
     };
     TitleState.prototype.onResize = function (size) {
+        var paddTop = 0;
+        if (!document.fullscreen) {
+            var nav = document.getElementsByTagName("nav");
+            if (nav && nav[0]) {
+                var _a = nav[0].getBoundingClientRect(), y = _a.y, height = _a.height;
+                paddTop = y + height;
+            }
+        }
         var scale = Math.min(1, size.width / 1529);
         this.logo.scale.set(scale);
-        this.logo.position.set(size.width / 2, size.height / 2 - 10 * scale);
+        this.logo.position.set(size.width / 2, paddTop + 10 * scale);
+        var logoBounds = this.logo.getBounds();
+        var bottomMost = logoBounds.bottom;
+        var centerBottom = Math.max(bottomMost, paddTop + (size.height - paddTop) / 2);
         this.bkg.scale.set(scale);
-        this.bkg.position.set(size.width / 2, size.height / 2);
+        this.bkg.position.set(size.width / 2, centerBottom);
         this.playButton.scale.set(scale);
-        this.playButton.position.set(size.width / 2, size.height / 2 + 50 * scale);
+        this.playButton.position.set(size.width / 2, centerBottom);
     };
     TitleState.prototype.cleanUp = function () {
         return __awaiter(this, void 0, void 0, function () {
