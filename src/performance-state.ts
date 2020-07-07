@@ -88,7 +88,7 @@ export default class PerformanceState extends State {
 
     // Assemble interactive things
     this.interactivesContainer = new Container();
-    this.interactivesContainer.alpha = 0;
+    this.interactivesContainer.visible = false;
     container.addChild(this.interactivesContainer);
     this.interactivesContainer.position.set(window.innerWidth / 2, window.innerHeight * 3 / 4);
 
@@ -106,7 +106,7 @@ export default class PerformanceState extends State {
     });
 
     // Origin set is handled in resize
-    PerformanceState.dragSpawn.alpha = 0;
+    PerformanceState.dragSpawn.visible = false;
     container.addChild(PerformanceState.dragSpawn);
     PerformanceState.dragSpawn.on("dragged", this.onCircleDrag.bind(this));
     interactives.push(PerformanceState.dragSpawn);
@@ -235,9 +235,7 @@ export default class PerformanceState extends State {
       cues: [
         [356,
          () => {
-          this.interactivesContainer.alpha = 0;
-          PerformanceState.dragSpawn.alpha = 0;
-          this.bkgVideo.theaterMode = false;
+          this.theaterMode();
           this.bkg.colorA = [0,0,0];
           this.bkg.colorB = [0,0,0];
          }
@@ -255,12 +253,18 @@ export default class PerformanceState extends State {
     });
 
     bkgVideoClicktrack.on("lastCue", () => {
-      this.interactivesContainer.alpha = 1;
-      PerformanceState.dragSpawn.alpha = 1;
-      this.bkgVideo.theaterMode = true;
+
+      if(this.skipButton) {
+        container.removeChild(this.skipButton);
+        delete this.skipButton;
+      }
+      this.bkgVideo.canInteract = false;
       this.bkgVideo.pause();
+      this.playMode();
+
       PerformanceState.dragSpawn.on('firstDrag', () => {
         this.bkgVideo.resume();
+        this.bkgVideo.canInteract = true;
       });
     });
 
@@ -333,6 +337,20 @@ export default class PerformanceState extends State {
     });
 
     return container;
+  }
+
+  theaterMode() {
+    this.interactivesContainer.visible = false;
+    PerformanceState.dragSpawn.visible = false;
+    this.bkgVideo.theaterMode = true;
+    this.onResize({width: window.innerWidth, height: window.innerHeight});
+  }
+
+  playMode() {
+    this.interactivesContainer.visible = true;
+    PerformanceState.dragSpawn.visible = true;
+    this.bkgVideo.theaterMode = false;
+    this.onResize({width: window.innerWidth, height: window.innerHeight});
   }
 
   handleClickCue(clicktrack: ClickTrack, cue: CueEvent<InteractiveCue>) {
@@ -438,15 +456,6 @@ export default class PerformanceState extends State {
       this.loadProgressbar.position.set(size.width/2, size.height/2);
     }
 
-    let paddTop = 0;
-    if(!document.fullscreen) {
-      const nav = document.getElementsByTagName("nav");
-      if(nav && nav[0]) {
-        const {y,height} = nav[0].getBoundingClientRect();
-        paddTop = y + height;
-      }
-    }
-
     const multiplier = Math.min(size.width / this.intendedStageSize[0], size.height / this.intendedStageSize[1]);
     //this.interactivesContainer.scale.set(multiplier, multiplier);
     this.interactives.forEach((s1) => {
@@ -458,7 +467,6 @@ export default class PerformanceState extends State {
 
     this.bkg.multiplierResize(multiplier);
 
-    this.bkgVideo.position.set(0,paddTop);
     this.bkgVideo.multiplierResize(multiplier);
 
     const videoBounds = this.bkgVideo.getBounds();

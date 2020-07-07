@@ -17,6 +17,7 @@ export class PerformanceVideoPlayer extends VideoPlayer {
   protected playButtonSizeRatio: number = 0.05;
   protected autoplay = false;
   public canInteract = false;
+  private _theaterMode = true;
   constructor(public videoUrl: string, public width: number = STAGE_WIDTH, public accentColor: number = 0xffffff) {
     super(videoUrl, width, accentColor);
   }
@@ -62,7 +63,7 @@ export class PerformanceVideoPlayer extends VideoPlayer {
     this.addChild(this.bkgCurtainPad);
     this.addChild(this.container);
 
-    this.theaterMode = false;
+    this.theaterMode = true;
 
     this.removeChild(this.videoSprite);
     this.removeChild(this.overlayGraphics);
@@ -87,31 +88,49 @@ export class PerformanceVideoPlayer extends VideoPlayer {
   }
 
   set theaterMode(on: boolean) {
-    if(on) {
+    this._theaterMode = on;
+    if(!on) {
       this.container.removeChild(this.flatMask);
       this.container.addChild(this.theaterMask);
       this.videoSprite.mask = this.theaterMask;
+      //this.bkgCurtainPad.visible = true;
       this.flatMaskBacker.visible = false;
     } else {
       this.container.removeChild(this.theaterMask);
       this.container.addChild(this.flatMask);
       this.videoSprite.mask = this.flatMask;
+      //this.bkgCurtainPad.visible = false;
       this.flatMaskBacker.visible = true;
     }
+
+    this.multiplierResize(this.container.scale.x);
   }
 
   multiplierResize(multiplier: number) {
     if(!this.videoSprite) return;
     this.container.scale.set(multiplier);
-    this.container.position.y = (-LETTERBOX_HEIGHT) * multiplier;
+
+    let paddTop = 0;
+    if(!document.fullscreen) {
+      const nav = document.getElementsByTagName("nav");
+      if(nav && nav[0]) {
+        const {y,height} = nav[0].getBoundingClientRect();
+        paddTop = y + height;
+      }
+    }
+
+    if(this._theaterMode) {
+      this.container.position.y = (window.innerHeight - paddTop - this.container.height) / 2 - LETTERBOX_HEIGHT * multiplier + paddTop;
+    } else {
+      this.container.position.y = (-LETTERBOX_HEIGHT) * multiplier + paddTop;
+    }
     this.container.position.x = (window.innerWidth - this.container.width) / 2;
 
-    this.bkgCurtainPad.position.set(0, 0)
+    this.bkgCurtainPad.position.set(0, 0);
     this.bkgCurtainPad.clear()
       .beginFill(0x000000)
-      .drawRect(-(window.innerWidth - this.container.width) / 2, -this.position.y, window.innerWidth, this.position.y)
-      .drawRect(0, this.container.position.y, this.container.position.x, this.container.height - 1 + LETTERBOX_HEIGHT * multiplier)
-      .drawRect(this.container.width + this.container.position.x, this.container.position.y, (window.innerWidth - this.container.width) / 2, this.container.height - 1 + LETTERBOX_HEIGHT * multiplier)
+      .drawRect(0, this.container.position.y + LETTERBOX_HEIGHT * multiplier - 1.5, this.container.position.x, this.container.height)
+      .drawRect(this.container.width + this.container.position.x, this.container.position.y + LETTERBOX_HEIGHT * multiplier - 1.5, this.container.position.x, this.container.height)
       .endFill();
 
   }
