@@ -143,17 +143,8 @@ export default class PerformanceState extends State {
     const bkgVideoClicktrack = new ClickTrack<[[number,number,number],[number,number,number]]>({
       timerSource: PerformanceState.clickTrack.timer,
       cues: [
-        [0.1,
-         [[43,43,42],[83,81,76]]
-        ],
-        [5.0,
-         [[30,21,15],[3,4,6]]
-        ],
-        [6.0,
-         [[30,17,12],[19,11,9]]
-        ],
-        [12.0,
-         [[3,5,6],[15,10,8]]
+        [0,
+         [[0,0,0],[0,0,0]]
         ],
         [15.0,
          [[38,27,17],[6,9,9]]
@@ -312,11 +303,7 @@ export default class PerformanceState extends State {
       this.bkgVideo.alpha = 1;
       this.loadProgressbar.progress = 1;
       clearInterval(loadIntervalCheck);
-      setTimeout(() => {
-        container.removeChild(this.loadProgressbar);
-        this.loadProgressbar.destroy();
-        delete this.loadProgressbar;
-      }, 500);
+      this.loadProgressbar.fadeOut();
     });
 
 
@@ -374,10 +361,12 @@ export default class PerformanceState extends State {
 
     this.bkg.onTick(deltaMs);
 
-    if(this.loadProgressbar && this.loadProgressbar.progress < 1) {
+    if(this.loadProgressbar && !this.loadProgressbar.destroyed) {
       this.loadProgressbar.onTick(deltaMs);
       return;
-    };
+    } else if(this.loadProgressbar) {
+      delete this.loadProgressbar;
+    }
 
     const currentBeat = PerformanceState.clickTrack.beat;
     const beatDelta = (deltaMs / 1000) * PerformanceState.clickTrack.tempo;

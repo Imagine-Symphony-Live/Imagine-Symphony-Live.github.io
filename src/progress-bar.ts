@@ -9,6 +9,7 @@ export default class ProgressBar extends Container {
   private graphics: Graphics = new Graphics();
   private needDraw = false;
   private loadingText = new Text("Loading", TEXT_STYLE_LOADING);
+  private fading = false;
 
   constructor() {
     super();
@@ -16,6 +17,12 @@ export default class ProgressBar extends Container {
     this.addChild(this.loadingText);
     this.loadingText.anchor.set(0.5);
     this.loadingText.position.set(0,0);
+    this.needDraw = true;
+  }
+
+  fadeOut() {
+    this.removeChild(this.loadingText);
+    this.fading = true;
     this.needDraw = true;
   }
 
@@ -28,7 +35,17 @@ export default class ProgressBar extends Container {
     return this._progress;
   }
 
+  get destroyed() {
+    return this._destroyed;
+  }
+
   onTick(deltaMs) {
+    if(this.fading) {
+      this.graphics.alpha = Math.max(0, this.graphics.alpha - deltaMs / 100);
+      if(this.graphics.alpha <= 0) {
+        this.destroy();
+      }
+    }
     if(this.needDraw) {
       this.draw();
     }
@@ -39,10 +56,13 @@ export default class ProgressBar extends Container {
       .beginFill(0x000000)
       .drawRect(-window.innerWidth/2, -window.innerHeight/2, window.innerWidth, window.innerHeight)
       .endFill()
-      .lineStyle(2, 0xffffff)
-      .drawRect(-PROGRESS_BAR_WIDTH/2, -PROGRESS_BAR_HEIGHT/2, PROGRESS_BAR_WIDTH, PROGRESS_BAR_HEIGHT)
-      .beginFill(0xffffff)
-      .drawRect(-PROGRESS_BAR_WIDTH/2, -PROGRESS_BAR_HEIGHT/2, PROGRESS_BAR_WIDTH * this.progress, PROGRESS_BAR_HEIGHT)
+      if(!this.fading) {
+        this.graphics
+          .lineStyle(2, 0xffffff)
+          .drawRect(-PROGRESS_BAR_WIDTH/2, -PROGRESS_BAR_HEIGHT/2, PROGRESS_BAR_WIDTH, PROGRESS_BAR_HEIGHT)
+          .beginFill(0xffffff)
+          .drawRect(-PROGRESS_BAR_WIDTH/2, -PROGRESS_BAR_HEIGHT/2, PROGRESS_BAR_WIDTH * this.progress, PROGRESS_BAR_HEIGHT)
+      }
 
     this.needDraw = false;
   }
