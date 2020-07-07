@@ -37,6 +37,7 @@ export default class PerformanceState extends State {
   protected stageInteractiveBackground: Sprite = Sprite.from(stageImage);
   protected bkg = new GradientBackdrop();
   private skipButton: Button;
+  private conductToggleButton: Button;
 
   // DIY interaction management
   private interactiveHovering?: Interactive;
@@ -254,18 +255,22 @@ export default class PerformanceState extends State {
 
     bkgVideoClicktrack.on("lastCue", () => {
 
-      if(this.skipButton) {
-        container.removeChild(this.skipButton);
-        delete this.skipButton;
-      }
+      this.afterIntro(container);
+
+      const beginAfterIntro = () => {
+        this.bkgVideo.resume();
+        this.bkgVideo.canInteract = true;
+        if(this.conductToggleButton) {
+          this.conductToggleButton.off("pointertap", beginAfterIntro);
+        }
+      };
+
       this.bkgVideo.canInteract = false;
       this.bkgVideo.pause();
       this.playMode();
 
-      PerformanceState.dragSpawn.on('firstDrag', () => {
-        this.bkgVideo.resume();
-        this.bkgVideo.canInteract = true;
-      });
+      this.conductToggleButton.once("pointertap", beginAfterIntro);
+      PerformanceState.dragSpawn.on('firstDrag',beginAfterIntro);
     });
 
     // Sort all cues ascending
@@ -310,11 +315,11 @@ export default class PerformanceState extends State {
       this.loadProgressbar.progress = 1;
 
       this.skipButton = new Button("SKIP INTRO");
+      this.skipButton.setAnchor(1, 1);
       container.addChild(this.skipButton);
       this.skipButton.on("pointertap", () => {
         this.bkgVideo.currentTime = 66;
-        container.removeChild(this.skipButton);
-        delete this.skipButton;
+        this.afterIntro(container);
       });
 
       clearInterval(loadIntervalCheck);
@@ -337,6 +342,28 @@ export default class PerformanceState extends State {
     });
 
     return container;
+  }
+
+  afterIntro(container: Container) {
+    if(this.skipButton) {
+      container.removeChild(this.skipButton);
+      delete this.skipButton;
+    }
+    if(!this.conductToggleButton) {
+      this.conductToggleButton = new Button("X");
+      this.conductToggleButton.setAnchor(1, 1);
+      container.addChild(this.conductToggleButton);
+      this.conductToggleButton.on("pointertap", () => {
+        if(this.bkgVideo.theaterMode) {
+          this.playMode();
+          this.conductToggleButton.text = "X";
+        } else {
+          this.theaterMode();
+          this.conductToggleButton.text = "CONDUCT";
+        }
+      });
+    }
+    this.onResize({width: window.innerWidth, height: window.innerHeight});
   }
 
   theaterMode() {
@@ -473,7 +500,12 @@ export default class PerformanceState extends State {
 
     if(this.skipButton) {
       this.skipButton.multiplierResize(multiplier);
-      this.skipButton.position.set(size.width - this.skipButton.width / 2 - 10 * multiplier, size.height - this.skipButton.height / 2 - 10 * multiplier);
+      this.skipButton.position.set(size.width - 10 * multiplier, size.height - 10 * multiplier);
+    }
+
+    if(this.conductToggleButton) {
+      this.conductToggleButton.multiplierResize(multiplier);
+      this.conductToggleButton.position.set(size.width - 10 * multiplier, size.height - 10 * multiplier);
     }
 
     this.interactivesContainer.position.set(

@@ -35,7 +35,7 @@ export async function loadFonts() {
 }
 
 export const TEXT_STYLE_BUTTON = new TextStyle({
-  fill: "#eeeeee",
+  fill: "#ffffff88",
   fontSize: 48,
   fontFamily: "Roboto",
   fontWeight: '400',

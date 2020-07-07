@@ -22,6 +22,10 @@ export class Button extends Container {
     });
   }
 
+  setAnchor(x: number, y: number) {
+    this._text.anchor.set(x, y);
+  }
+
   set text(s: string) {
     this._text.text = s;
   }
