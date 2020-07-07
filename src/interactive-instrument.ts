@@ -26,7 +26,7 @@ export class InteractiveInstrument extends Interactive {
 
   public state: InstrumentState = InstrumentState.IDLE;
   public stateValue?: any = 0;
-  private nextCueSprite?: Sprite;
+  private nextCueSprite?: string;
 
   constructor(private idleColor: number, private graphicsDraw: () => void) {
     super();
@@ -128,7 +128,7 @@ export class InteractiveInstrument extends Interactive {
         this.color = this._highlightColor;
         this.outlineThickness = 0;
         if(typeof value === 'string') {
-          this.nextCueSprite = Sprite.from(value);
+          this.nextCueSprite = value;
         }
         break;
 

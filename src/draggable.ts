@@ -151,10 +151,10 @@ export class Draggable extends Interactive {
     }
   }
 
-  setIcon(icon: Sprite) {
+  setIcon(icon: string) {
     this.graphics.destroy();
-    icon.anchor.set(0.5);
-    this.graphics = icon;
+    this.graphics = Sprite.from(icon);
+    (<Sprite>this.graphics).anchor.set(0.5);
     this.addChild(this.graphics);
 
     const scale = 1;
