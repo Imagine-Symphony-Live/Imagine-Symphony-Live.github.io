@@ -3,7 +3,6 @@ import { Interactive } from "./interactive";
 import { Draggable, DraggableState } from "./draggable";
 import { powLerpPoint } from "./lerp";
 import { DRAGGABLE_RADIUS } from "./constants";
-import PerformanceState from "./performance-state";
 
 export enum InstrumentState {
   IDLE,
@@ -75,8 +74,8 @@ export class InteractiveInstrument extends Interactive {
   }
 
   maybeSpawn(e: InteractionEvent) {
-    if(this.state === InstrumentState.CUE_READY && PerformanceState.dragSpawn.draggingObject) {
-      this.onDrop(PerformanceState.dragSpawn.draggingObject);
+    if(this.state === InstrumentState.CUE_READY) {
+      this.emit("maybeSpawn", this, e);
     }
   }
 

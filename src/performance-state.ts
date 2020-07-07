@@ -104,6 +104,7 @@ export default class PerformanceState extends State {
     this.interactives.forEach((s1) => {
       s1.interactive = true;
       this.interactivesContainer.addChild(s1);
+      s1.on("maybeSpawn", this.interactiveTapSpawn.bind(this));
     });
 
     // Origin set is handled in resize
@@ -342,6 +343,12 @@ export default class PerformanceState extends State {
     });
 
     return container;
+  }
+
+  interactiveTapSpawn(interactive: InteractiveInstrument, e: InteractionEvent) {
+    if(PerformanceState.dragSpawn && PerformanceState.dragSpawn.draggingObject) {
+      interactive.onDrop(PerformanceState.dragSpawn.draggingObject);
+    }
   }
 
   afterIntro(container: Container) {
