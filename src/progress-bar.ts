@@ -6,6 +6,7 @@ const PROGRESS_BAR_HEIGHT = 30;
 
 export default class ProgressBar extends Container {
   private _progress: number = 0;
+  private _animprogress: number = 0;
   private graphics: Graphics = new Graphics();
   private needDraw = false;
   private loadingText = new Text("Loading", TEXT_STYLE_LOADING);
@@ -46,6 +47,17 @@ export default class ProgressBar extends Container {
         this.destroy();
       }
     }
+    if(this._animprogress != this._progress) {
+      const diff = Math.abs(this._progress - this._animprogress);
+      const dir = Math.sign(this._progress - this._animprogress);
+      if(PROGRESS_BAR_WIDTH * diff < 1 && diff > 0) {
+        this.needDraw = true;
+        this._animprogress = this._progress;
+      } else if(diff > 0) {
+        this.needDraw = true;
+        this._animprogress += Math.min(diff, dir * deltaMs / 100);
+      }
+    }
     if(this.needDraw) {
       this.draw();
     }
@@ -61,7 +73,7 @@ export default class ProgressBar extends Container {
           .lineStyle(2, 0xffffff)
           .drawRect(-PROGRESS_BAR_WIDTH/2, -PROGRESS_BAR_HEIGHT/2, PROGRESS_BAR_WIDTH, PROGRESS_BAR_HEIGHT)
           .beginFill(0xffffff)
-          .drawRect(-PROGRESS_BAR_WIDTH/2, -PROGRESS_BAR_HEIGHT/2, PROGRESS_BAR_WIDTH * this.progress, PROGRESS_BAR_HEIGHT)
+          .drawRect(-PROGRESS_BAR_WIDTH/2, -PROGRESS_BAR_HEIGHT/2, PROGRESS_BAR_WIDTH * this._animprogress, PROGRESS_BAR_HEIGHT)
       }
 
     this.needDraw = false;
