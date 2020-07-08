@@ -75,6 +75,7 @@ export const parseScorePart = ($, $root) => (p) => {
       const isDirection = note.tagName === 'direction';
       const isTremelo = !!$('notations > ornaments > tremolo', note).length;
       const isWords = !!$('> direction-type > words', note).length;
+      const stem = $('> stem', note).text();
       const duration = $('> duration', note).text();
       const isNote = note.tagName === "note";
       if(duration) currentDuration = parseInt(duration);
@@ -90,6 +91,8 @@ export const parseScorePart = ($, $root) => (p) => {
           duration: Math.round((2 * currentDuration / currentDivision) * 10000) / 10000,
           pitch,
         };
+        if(stem && stem === "up") n.stem = 1;
+        if(stem && stem === "down") n.stem = -1;
         if(isTremelo) n.isTremelo = true;
         partNotes.push(n);
       }
