@@ -504,11 +504,11 @@ export class Draggable extends Interactive {
   setState(newState: DraggableState, value: number) {
     if(newState === DraggableState.SHRINK_OUT) {
       this.stateFadeTime = value;
-      this.stateFade = 1 - this.scale.x;
+      this.stateFade = 1 - this.graphics.scale.x;
     }
     if(newState === DraggableState.SHRINK_IN) {
       this.stateFadeTime = 0.5;
-      this.stateFade = 1 - this.scale.x;
+      this.stateFade = 1 - this.graphics.scale.x;
     }
     this.state = newState;
   }
