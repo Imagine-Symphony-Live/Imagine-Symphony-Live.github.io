@@ -1,6 +1,7 @@
-import { Emitter } from "pixi-particles"
-import { settings } from "pixi.js";
+import { Emitter, Particle, ParticleUtils } from "pixi-particles"
+import { settings, Point } from "pixi.js";
 
+const helperPoint = new Point();
 export default class OnDemandEmitter extends Emitter {
   constructor(...args: any) {
     // @ts-ignore
@@ -191,5 +192,46 @@ export default class OnDemandEmitter extends Emitter {
         ++this.particleCount;
       }
     }
+  }
+
+  protected _spawnRing(p: Particle, emitPosX: number, emitPosY: number): void {
+      const spawnCircle = this.spawnCircle;
+      // set the initial rotation/direction of the particle based on starting
+      // particle angle and rotation of emitter
+
+      if (this.minStartRotation === this.maxStartRotation)
+      {
+          p.rotation = this.minStartRotation + this.rotation;
+      }
+      else
+      {
+          p.rotation = (Math.random() * (this.maxStartRotation - this.minStartRotation)) + this.minStartRotation + this.rotation;
+      }
+      // place the particle at a random radius in the ring
+      if (spawnCircle.minRadius !== spawnCircle.radius)
+      {
+          helperPoint.x = (Math.random() * (spawnCircle.radius - spawnCircle.minRadius)) + spawnCircle.minRadius;
+      }
+      else
+      {
+          helperPoint.x = spawnCircle.radius;
+      }
+      helperPoint.y = 0;
+      // rotate the point to a random angle in the circle
+      const angle = (Math.random() * (this.maxStartRotation - this.minStartRotation)) + this.minStartRotation + this.rotation;
+
+      //p.rotation += angle;
+      ParticleUtils.rotatePoint(p.rotation, helperPoint);
+      // offset by the circle's center
+      helperPoint.x += this.spawnCircle.x;
+      helperPoint.y += this.spawnCircle.y;
+      // rotate the point by the emitter's rotation
+      if (this.rotation !== 0)
+      {
+          ParticleUtils.rotatePoint(this.rotation, helperPoint);
+      }
+      // set the position, offset by the emitter's position
+      p.position.x = emitPosX + helperPoint.x;
+      p.position.y = emitPosY + helperPoint.y;
   }
 }
