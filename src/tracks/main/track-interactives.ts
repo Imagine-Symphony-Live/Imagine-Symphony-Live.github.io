@@ -74,20 +74,26 @@ function m2b(measure: number, beat: number): number {
   return (measure - 1) * 6 + (beat - 1)
 }
 
-function countdown(cueAt: number, countIn: number, spriteUrl: string, playNotes: number[]): Array<[number, InstrumentState, any]> {
+function countdown(cueAt: number, countIn: number, spriteUrl: string, playNotes: [number, NoteAttributes][]): Array<[number, InstrumentState, any]> {
   const cues: Array<[number, InstrumentState, any]> = [];
   cues.push([cueAt - countIn, InstrumentState.CUE_READY, spriteUrl]);
   cues.push([cueAt, InstrumentState.HIT, playNotes]);
   return cues;
 }
 
-type notes = ({
+type Notes = ({
   note: number;
+} & NoteAttributes)[];
+
+type NoteAttributes = {
   pitch?: number | null;
   words?: string;
-})[];
+  duration?: number;
+  isTremelo?: boolean;
+  isCrescendo?: boolean;
+};
 
-const getSoloCues = (spriteUrl: string) => (notes: notes): Array<[number, InstrumentState, any]> => {
+const getSoloCues = (spriteUrl: string) => (notes: Notes): Array<[number, InstrumentState, any]> => {
   const res = notes
     .filter(({ words = '' }) => /solo|cue/.test(words))
     .map(({ note, words = ''}, i, arr) => {
@@ -127,10 +133,23 @@ const getSoloCues = (spriteUrl: string) => (notes: notes): Array<[number, Instru
 
         return true;
       })
-      .map(({note}) => note)
-      .filter((v, i, arr) => arr.indexOf(v) === i); // Unique
+      .map<[number, NoteAttributes]>((note) => {
+        const n: NoteAttributes = {
+          duration: note.duration,
+          pitch: note.pitch,
+        };
 
-      playNotes.sort((a,b) => Math.sign(a - b));
+        if(note.isTremelo)
+          n.isTremelo = note.isTremelo;
+
+        if(note.isCrescendo)
+          n.isCrescendo = note.isCrescendo;
+
+        return [ note.note, n ];
+      })
+      .filter((v, i, arr) => arr.findIndex(([note]) => note === v[0]) === i); // Unique
+
+      playNotes.sort(([a],[b]) => Math.sign(a - b));
 
       return countdown(note, countIn, spriteUrl, playNotes);
     })
