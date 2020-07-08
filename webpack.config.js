@@ -86,6 +86,28 @@ const frontBase = {
       {
         test: /\.svg/i,
         include: [
+          path.resolve('./assets/images/note-notations'),
+        ],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'assets/images',
+              name: '[contenthash].png',
+            },
+          },
+          {
+            loader: path.resolve('./src/webpack-svg-to-png.js'),
+            options: {
+              width: 32,
+              height: 32,
+            },
+          },
+        ]
+      },
+      {
+        test: /\.svg/i,
+        include: [
           path.resolve('./assets/images/instrumentsection-2.svg')
         ],
         use: [
