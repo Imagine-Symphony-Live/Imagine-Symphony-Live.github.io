@@ -3,6 +3,7 @@ import { Interactive } from "./interactive";
 import { Draggable, DraggableState } from "./draggable";
 import { powLerpPoint } from "./lerp";
 import { DRAGGABLE_RADIUS } from "./constants";
+import { MotionFn } from "./tracks/main/instrument-motion-fn";
 
 export enum InstrumentState {
   IDLE,
@@ -26,7 +27,10 @@ export class InteractiveInstrument extends Interactive {
 
   public state: InstrumentState = InstrumentState.IDLE;
   public stateValue?: any = 0;
-  private nextCueSprite?: string;
+  private nextCueData?: {
+    spriteUrl: string,
+    motionFn: MotionFn
+  };
 
   constructor(private idleColor: number, private graphicsDraw: () => void) {
     super();
@@ -117,8 +121,9 @@ export class InteractiveInstrument extends Interactive {
         this.cursor = "auto";
         //this.color = this.idleColor;
         this.outlineThickness = 4;
-        if(this.nextCueSprite && this.draggables.length) {
-          this.draggables[0].setIcon(this.nextCueSprite);
+        if(this.nextCueData && this.draggables.length) {
+          this.draggables[0].icon = this.nextCueData.spriteUrl;
+          this.draggables[0].motionFn = this.nextCueData.motionFn;
         }
         break;
 
@@ -127,8 +132,8 @@ export class InteractiveInstrument extends Interactive {
         this.cursor = "pointer";
         this.color = this._highlightColor;
         this.outlineThickness = 0;
-        if(typeof value === 'string') {
-          this.nextCueSprite = value;
+        if(typeof value === 'object') {
+          this.nextCueData = value;
         }
         break;
 

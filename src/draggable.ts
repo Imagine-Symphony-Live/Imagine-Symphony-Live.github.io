@@ -5,11 +5,68 @@ import bloomImage from '../assets/images/bloom-128x128.png';
 import ClickTrack from "click-track";
 import OnDemandEmitter from "./on-demand-emitter";
 
-import note_1 from '../assets/images/instrument-icons/note_1.svg';
-import note_2 from '../assets/images/instrument-icons/note_2.svg';
-import note_3 from '../assets/images/instrument-icons/note_3.svg';
+import note_16DotDown from '../assets/images/note-notations/16-dot-down.svg';
+import note_16DotUp from '../assets/images/note-notations/16-dot-up.svg';
+import note_16Down from '../assets/images/note-notations/16-down.svg';
+import note_16Up from '../assets/images/note-notations/16-up.svg';
+import note_2DotDown from '../assets/images/note-notations/2-dot-down.svg';
+import note_2DotTremDown from '../assets/images/note-notations/2-dot-trem-down.svg';
+import note_2DotTremUp from '../assets/images/note-notations/2-dot-trem-up.svg';
+import note_2DotUp from '../assets/images/note-notations/2-dot-up.svg';
+import note_2Down from '../assets/images/note-notations/2-down.svg';
+import note_2TremDown from '../assets/images/note-notations/2-trem-down.svg';
+import note_2TremUp from '../assets/images/note-notations/2-trem-up.svg';
+import note_2Up from '../assets/images/note-notations/2-up.svg';
+import note_32Down from '../assets/images/note-notations/32-down.svg';
+import note_32Up from '../assets/images/note-notations/32-up.svg';
+import note_4DotDown from '../assets/images/note-notations/4-dot-down.svg';
+import note_4DotTremDown from '../assets/images/note-notations/4-dot-trem-down.svg';
+import note_4DotTremUp from '../assets/images/note-notations/4-dot-trem-up.svg';
+import note_4DotUp from '../assets/images/note-notations/4-dot-up.svg';
+import note_4Down from '../assets/images/note-notations/4-down.svg';
+import note_4TremUp from '../assets/images/note-notations/4-trem-up.svg';
+import note_4Up from '../assets/images/note-notations/4-up.svg';
+import note_8DotDown from '../assets/images/note-notations/8-dot-down.svg';
+import note_8DotUp from '../assets/images/note-notations/8-dot-up.svg';
+import note_8Down from '../assets/images/note-notations/8-down.svg';
+import note_8TremDown from '../assets/images/note-notations/8-trem-down.svg';
+import note_8TremUp from '../assets/images/note-notations/8-trem-up.svg';
+import note_8Up from '../assets/images/note-notations/8-up.svg';
+
+const noteImages = [
+  note_16DotDown,
+  note_16DotUp,
+  note_16Down,
+  note_16Up,
+  note_2DotDown,
+  note_2DotTremDown,
+  note_2DotTremUp,
+  note_2DotUp,
+  note_2Down,
+  note_2TremDown,
+  note_2TremUp,
+  note_2Up,
+  note_32Down,
+  note_32Up,
+  note_4DotDown,
+  note_4DotTremDown,
+  note_4DotTremUp,
+  note_4DotUp,
+  note_4Down,
+  note_4TremUp,
+  note_4Up,
+  note_8DotDown,
+  note_8DotUp,
+  note_8Down,
+  note_8TremDown,
+  note_8TremUp,
+  note_8Up,
+];
+
 import { PathParticle } from "pixi-particles";
 import PerformanceState from "./performance-state";
+import { rgbToDecimal } from "./color-utils";
+import { MotionFn } from "./tracks/main/instrument-motion-fn";
 
 export enum DraggableState {
   HIDDEN,
@@ -17,6 +74,15 @@ export enum DraggableState {
   SHRINK_OUT,
   SHRINK_IN
 }
+
+type NoteAttributes = {
+  pitch?: number | null;
+  words?: string;
+  duration?: number;
+  isTremelo?: boolean;
+  isCrescendo?: boolean;
+  stem?: number;
+};
 
 export class Draggable extends Interactive {
   protected graphics: DisplayObject = new Graphics();
@@ -28,9 +94,15 @@ export class Draggable extends Interactive {
   protected velocity: [number, number];
   protected velocityMeasurements: Array<[number, number]> = [];
   protected lastBeat: number = 0;
-  protected visualCuesClicktrack: ClickTrack;
+  protected visualCuesClicktrack: ClickTrack<NoteAttributes>;
   protected visualCuesEmitter: OnDemandEmitter;
   private bloomSprite: Sprite;
+  public motionFn: MotionFn
+  private currentNoteAttributes: NoteAttributes;
+  private currentCuedNote: number;
+  private currentCuedPhraseStartBeat: number;
+  private currentCuedPhraseDuration: number;
+  private currentCuedPhraseEndBeat: number;
 
   constructor() {
     super();
@@ -149,9 +221,36 @@ export class Draggable extends Interactive {
         this.setState(DraggableState.IDLE, 1.0);
       }
     }
+
+    if(this.visualCuesClicktrack && this.currentNoteAttributes && this.motionFn) {
+      const currentNoteOptions = {
+        beat: this.visualCuesClicktrack.beat,
+        noteProgress: Math.max(0, beat - this.currentCuedNote),
+        noteDuration: this.currentNoteAttributes.duration ? this.currentNoteAttributes.duration : 0,
+        phraseProgress: this.visualCuesClicktrack.beat - this.currentCuedPhraseStartBeat,
+        phraseDuration: this.currentCuedPhraseDuration,
+        pitch: this.currentNoteAttributes.pitch,
+        isTremelo: this.currentNoteAttributes.isTremelo,
+        isCrescendo: this.currentNoteAttributes.isCrescendo
+      };
+      if(this.motionFn.x)
+        this.graphics.position.x = this.motionFn.x(currentNoteOptions);
+      if(this.motionFn.y)
+        this.graphics.position.y = this.motionFn.y(currentNoteOptions);
+      if(this.motionFn.t)
+        this.graphics.rotation = this.motionFn.t(currentNoteOptions);
+    }
+
+    if(this.visualCuesClicktrack) {
+      if(beat > this.currentCuedPhraseEndBeat) {
+        this.visualCuesClicktrack.deconstruct();
+        delete this.visualCuesClicktrack;
+        this.setState(DraggableState.SHRINK_OUT, 0.1);
+      }
+    }
   }
 
-  setIcon(icon: string) {
+  set icon(icon: string) {
     this.graphics.destroy();
     this.graphics = Sprite.from(icon);
     (<Sprite>this.graphics).anchor.set(0.5);
@@ -162,42 +261,97 @@ export class Draggable extends Interactive {
     this.bloomSprite.visible = false;
   }
 
-  setVisualCues(cues: number[]) {
+  setVisualCues(cues: [number, NoteAttributes][], parentClick?: ClickTrack) {
+
     if(this.visualCuesClicktrack) {
       throw new Error("Can't set the visual cues again");
     }
 
-    this.visualCuesClicktrack = new ClickTrack({
-      timerSource: PerformanceState.clickTrack.timer,
-      offset: PerformanceState.clickTrack.offset,
-      tempo: PerformanceState.clickTrack.tempo,
-      cues: [...cues]
-    });
+    // Dirty way for testing until better decoupled
+    if(parentClick) {
+      this.visualCuesClicktrack = new ClickTrack<NoteAttributes>({
+        timerSource: parentClick.timer,
+        offset: parentClick.offset,
+        tempo: parentClick.tempo,
+        cues: [...cues]
+      });
+    } else {
+      this.visualCuesClicktrack = new ClickTrack<NoteAttributes>({
+        timerSource: PerformanceState.clickTrack.timer,
+        offset: PerformanceState.clickTrack.offset,
+        tempo: PerformanceState.clickTrack.tempo,
+        cues: [...cues]
+      });
+    }
 
+    this.currentCuedPhraseStartBeat = cues[0][0];
+    this.currentCuedPhraseEndBeat = cues[cues.length - 1][0] + (cues[cues.length - 1][1].duration || 0);
+    this.currentCuedPhraseDuration = this.currentCuedPhraseEndBeat - this.currentCuedPhraseStartBeat;
+
+    const spawnSpread = 5;
+    const color = "#" + rgbToDecimal([Math.random(),Math.random(),Math.random()]).toString(16).padStart(6,"0");
     // This config is temp, need to move to setter
     this.visualCuesEmitter = new OnDemandEmitter(
       this,
-      [
-        note_1,
-        note_2,
-        note_3
-      ], {
+      noteImages, {
         "alpha": {
-          "start": .8,
-          "end": 0
+          list: [
+            {
+              time: 0,
+              value: 0
+            },
+            {
+              time: 0.2,
+              value: 0.9
+            },
+            {
+              time: 0.8,
+              value: 0.8
+            },
+            {
+              time: 1,
+              value: 0
+            }
+          ],
+          isStepped: false
         },
         "scale": {
-          "start": 0.3,
-          "end": 0.3,
+          "start": 0.4,
+          "end": 0.4,
           "minimumScaleMultiplier": 0.5
         },
         "color": {
-          "start": "#ffffff",
-          "end": "#000000"
+          list: [
+            {
+              time: 0,
+              value: "#d5ba91",
+            },
+            {
+              time: 0.2,
+              value: "#f7cb88 ",
+            },
+            {
+              time: 0.4,
+              value: "#d5ba91",
+            },
+            {
+              time: 0.6,
+              value: "#f7cb88 ",
+            },
+            {
+              time: 0.8,
+              value: "#d5ba91",
+            },
+            {
+              time: 1.0,
+              value: "#f7cb88 ",
+            },
+          ],
+          isStepped: false
         },
         "speed": {
-          "start": 50,
-          "end": 50,
+          "start": 12,
+          "end": 5,
           "minimumSpeedMultiplier": 1
         },
         "acceleration": {
@@ -206,8 +360,8 @@ export class Draggable extends Interactive {
         },
         "maxSpeed": 0,
         "startRotation": {
-          "min": 0,
-          "max": 0
+          "min": -90-spawnSpread,
+          "max": -90+spawnSpread
         },
         "noRotation": true,
         "rotationSpeed": {
@@ -215,38 +369,46 @@ export class Draggable extends Interactive {
           "max": 0
         },
         "lifetime": {
-          "min": 6,
-          "max": 6
+          "min": 24,
+          "max": 24
         },
-        "blendMode": "normal",
+        "blendMode": "screen",
         "extraData": {
-          "path":"sin(x/30)* 20 - x/3" // dust devil
+          "path":"sin(x/30 + " + Math.floor(Math.random()*8)/4 + "*PI) * 10"
         },
         "frequency": 0.01,
         "particlesPerWave": 1,
         "emitterLifetime": -1,
         "maxParticles": 15,
         "pos": {
-          "x": 32,
-          "y": -32
+          "x": 0,
+          "y": 0
         },
         "addAtBack": false,
-        "spawnType": "point"
+        "spawnType": "ring",
+        "spawnCircle": {
+          "x": 0,
+          "y": 0,
+          "r": 96,
+          "minR": 96
+        }
       }
     );
 
     this.visualCuesEmitter.particleConstructor = PathParticle;
-    let whichArtCounter = 1;
 
     this.visualCuesClicktrack.on("cue", (ct, e) => {
-      this.visualCuesEmitter.spawn(1, e.drag, 0);
+      if(e.data) {
+        this.currentCuedNote = e.beat;
+        this.currentNoteAttributes = {...e.data};
+        if(e.data.duration) {
+          // Decide which note graphic to use based on note duration
+          let whichArt = noteImages.indexOf(note_8Up);// Math.floor(Math.random() * noteImages.length);//e.data.duration >= 2 ? 0 : 1;
+          this.visualCuesEmitter.spawn(1, e.drag, whichArt);
+        }
+      }
     });
 
-    this.visualCuesClicktrack.once("lastCue", () => {
-      this.visualCuesClicktrack.deconstruct();
-      delete this.visualCuesClicktrack;
-      this.setState(DraggableState.SHRINK_OUT, 0.1);
-    });
   }
 
   multiplierResize(m: number) {}
