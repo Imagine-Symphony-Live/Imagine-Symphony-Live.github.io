@@ -3,8 +3,9 @@ import State from "./state";
 import { StateEvents } from "./types/state-events";
 import PerformanceState from './performance-state';
 import TitleState from "./title-state";
+import OverworldState from './overworld-state';
 
-type StateNames = "intro" | "performance";
+type StateNames = "intro" | "performance" | "test" | "overworld";
 
 export class StateMachine {
   protected states: Array<{name: string, state: State}> = new Array();
@@ -28,10 +29,11 @@ export class StateMachine {
 
     this.addState("intro", new TitleState());
     this.addState("performance", new PerformanceState());
+    this.addState("overworld", new OverworldState());
     this.addStateCondition("intro", "complete", "performance");
     this.addStateCondition("performance", "complete", "intro");
 
-    this.setState("intro");
+    this.setState("overworld");
   }
 
   tick(deltams:number) {

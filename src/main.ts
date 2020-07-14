@@ -49,9 +49,9 @@ window.onload = async () => {
 
 
   // @TODO - replace this with app.ticker.add?
-  // function animate(time: number) {
-  //   requestAnimationFrame(animate);
-  //   TWEEN.update(time);
-  // }
-  // requestAnimationFrame(animate);
+  function animate(time: number) {
+    requestAnimationFrame(animate);
+    TWEEN.update(time);
+  }
+  requestAnimationFrame(animate);
 };
