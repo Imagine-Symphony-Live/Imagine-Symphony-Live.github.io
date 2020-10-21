@@ -1105,6 +1105,17 @@ module.exports = __webpack_require__.p + "assets/images/8f284b106b34ef2f63279f12
 
 /***/ }),
 
+/***/ "./assets/video/imagine-symphony-live-1080p.mp4":
+/*!******************************************************!*\
+  !*** ./assets/video/imagine-symphony-live-1080p.mp4 ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/3d813497be16250f5fdfd57412d4bb3b.mp4";
+
+/***/ }),
+
 /***/ "./assets/video/imagine-symphony-live-360p.mp4":
 /*!*****************************************************!*\
   !*** ./assets/video/imagine-symphony-live-360p.mp4 ***!
@@ -3192,10 +3203,10 @@ window.onload = function () { return __awaiter(void 0, void 0, void 0, function 
 /*!****************************!*\
   !*** ./src/nav-links.json ***!
   \****************************/
-/*! exports provided: film, musicians, github, dustin, evan, sid, bradley, chris, default */
+/*! exports provided: film, about, github, dustin, evan, sid, bradley, chris, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"film\":\"https://imaginesymphony.live/\",\"musicians\":\"https://imaginesymphony.live/\",\"github\":\"https://github.com/DustinWoods/imagine-symphony-live\",\"dustin\":\"https://github.com/DustinWoods\",\"evan\":\"mailto:evan@imaginesymphony.live\",\"sid\":\"http://www.hiresidchen.com/\",\"bradley\":\"https://bradleylanphear.com/\",\"chris\":\"https://www.christhomasmusic.com/\"}");
+module.exports = JSON.parse("{\"film\":\"https://www.youtube.com/watch?v=-MdDe6tdA8E\",\"about\":\"https://about.imaginesymphony.live/\",\"github\":\"https://github.com/DustinWoods/imagine-symphony-live\",\"dustin\":\"https://github.com/DustinWoods\",\"evan\":\"mailto:evan@imaginesymphony.live\",\"sid\":\"http://www.hiresidchen.com/\",\"bradley\":\"https://bradleylanphear.com/\",\"chris\":\"https://www.christhomasmusic.com/\"}");
 
 /***/ }),
 
@@ -3644,7 +3655,7 @@ var mountain_background_left_svg_1 = __importDefault(__webpack_require__(/*! ../
 var mountain_background_right_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/environments/mountain/mountain_background_right.svg */ "./assets/images/environments/mountain/mountain_background_right.svg"));
 var mountain_foreground_left_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/environments/mountain/mountain_foreground_left.svg */ "./assets/images/environments/mountain/mountain_foreground_left.svg"));
 var mountain_foreground_right_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/environments/mountain/mountain_foreground_right.svg */ "./assets/images/environments/mountain/mountain_foreground_right.svg"));
-// import video1080 from '../assets/video/imagine-symphony-live-1080p.mp4';
+var imagine_symphony_live_1080p_mp4_1 = __importDefault(__webpack_require__(/*! ../assets/video/imagine-symphony-live-1080p.mp4 */ "./assets/video/imagine-symphony-live-1080p.mp4"));
 var imagine_symphony_live_720p_mp4_1 = __importDefault(__webpack_require__(/*! ../assets/video/imagine-symphony-live-720p.mp4 */ "./assets/video/imagine-symphony-live-720p.mp4"));
 var imagine_symphony_live_360p_mp4_1 = __importDefault(__webpack_require__(/*! ../assets/video/imagine-symphony-live-360p.mp4 */ "./assets/video/imagine-symphony-live-360p.mp4"));
 var environment_layer_1 = __importDefault(__webpack_require__(/*! ./environment-layer */ "./src/environment-layer.ts"));
@@ -3671,9 +3682,9 @@ var PerformanceState = /** @class */ (function (_super) {
                 trackUrl = '';
                 // Quality option
                 switch (args[1]) {
-                    // case "1080":
-                    //   trackUrl = video1080;
-                    //   break;
+                    case "1080":
+                        trackUrl = imagine_symphony_live_1080p_mp4_1.default;
+                        break;
                     case "720":
                         trackUrl = imagine_symphony_live_720p_mp4_1.default;
                         break;
@@ -5140,7 +5151,7 @@ var TitleState = /** @class */ (function (_super) {
                         container.addChild(this.bkg);
                         container.addChild(this.logo);
                         this.optionButtons = [
-                            //[new Text("1080p HD (170 MB)", TEXT_STYLE_BUTTON), "1080"],
+                            [new pixi_js_1.Text("1080p HD (170 MB)", styles_1.TEXT_STYLE_BUTTON), "1080"],
                             [new pixi_js_1.Text("720p (97 MB)", styles_1.TEXT_STYLE_BUTTON), "720"],
                             [new pixi_js_1.Text("360p (30 MB)", styles_1.TEXT_STYLE_BUTTON), "360"],
                         ];
@@ -5158,18 +5169,18 @@ var TitleState = /** @class */ (function (_super) {
                                 _this.events.get("complete").dispatch(_this, optionArg);
                             });
                         });
-                        this.playButton = new pixi_js_1.Text("PLAY", styles_1.TEXT_STYLE_BUTTON);
+                        this.playButton = new pixi_js_1.Text("PREMIERE OCT 21 5:45 PM PST", styles_1.TEXT_STYLE_BUTTON);
                         this.playButton.anchor.set(0.5, 0);
-                        container.interactive = true;
-                        container.cursor = "pointer";
-                        container.on("mouseover", function () {
-                            //app.renderer.backgroundColor = 0x111111;
-                            _this.playButton.style = styles_1.TEXT_STYLE_BUTTON_HOVER;
-                        });
-                        container.on("mouseout", function () {
-                            app.renderer.backgroundColor = 0x000000;
-                            _this.playButton.style = styles_1.TEXT_STYLE_BUTTON;
-                        });
+                        // container.interactive = true;
+                        // container.cursor = "pointer";
+                        // container.on("mouseover", () => {
+                        //   //app.renderer.backgroundColor = 0x111111;
+                        //   this.playButton.style = TEXT_STYLE_BUTTON_HOVER;
+                        // });
+                        // container.on("mouseout", () => {
+                        //   app.renderer.backgroundColor = 0x000000;
+                        //   this.playButton.style = TEXT_STYLE_BUTTON ;
+                        // });
                         container.on("pointertap", function () {
                             container.removeChild(_this.playButton);
                             container.interactive = false;
