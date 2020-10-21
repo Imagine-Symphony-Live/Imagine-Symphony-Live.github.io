@@ -5169,18 +5169,18 @@ var TitleState = /** @class */ (function (_super) {
                                 _this.events.get("complete").dispatch(_this, optionArg);
                             });
                         });
-                        this.playButton = new pixi_js_1.Text("PREMIERE OCT 21 5:45 PM PST", styles_1.TEXT_STYLE_BUTTON);
+                        this.playButton = new pixi_js_1.Text("PLAY", styles_1.TEXT_STYLE_BUTTON);
                         this.playButton.anchor.set(0.5, 0);
-                        // container.interactive = true;
-                        // container.cursor = "pointer";
-                        // container.on("mouseover", () => {
-                        //   //app.renderer.backgroundColor = 0x111111;
-                        //   this.playButton.style = TEXT_STYLE_BUTTON_HOVER;
-                        // });
-                        // container.on("mouseout", () => {
-                        //   app.renderer.backgroundColor = 0x000000;
-                        //   this.playButton.style = TEXT_STYLE_BUTTON ;
-                        // });
+                        container.interactive = true;
+                        container.cursor = "pointer";
+                        container.on("mouseover", function () {
+                            //app.renderer.backgroundColor = 0x111111;
+                            _this.playButton.style = styles_1.TEXT_STYLE_BUTTON_HOVER;
+                        });
+                        container.on("mouseout", function () {
+                            app.renderer.backgroundColor = 0x000000;
+                            _this.playButton.style = styles_1.TEXT_STYLE_BUTTON;
+                        });
                         container.on("pointertap", function () {
                             container.removeChild(_this.playButton);
                             container.interactive = false;
