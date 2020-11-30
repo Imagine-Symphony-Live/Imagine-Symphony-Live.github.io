@@ -9612,10 +9612,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __webpack_require__(/*! ./css/styles.css */ "./src/css/styles.css");
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
+var styles_1 = __webpack_require__(/*! ./styles */ "./src/styles.ts");
 var state_machine_1 = __webpack_require__(/*! ./state-machine */ "./src/state-machine.ts");
 var nav_links_json_1 = __importDefault(__webpack_require__(/*! ./nav-links.json */ "./src/nav-links.json"));
 var tween_js_1 = __importDefault(__webpack_require__(/*! @tweenjs/tween.js */ "./node_modules/@tweenjs/tween.js/src/Tween.js"));
-pixi_js_1.settings.FAIL_IF_MAJOR_PERFORMANCE_CAVEAT = false;
 window.onload = function () { return __awaiter(void 0, void 0, void 0, function () {
     // @TODO - replace this with app.ticker.add?
     function animate(time) {
@@ -9624,88 +9624,92 @@ window.onload = function () { return __awaiter(void 0, void 0, void 0, function 
     }
     var app_1, resizeCanvas, stateManager_1, stateHash, errorDiv, errorDivMessage, footer, links, updateLink;
     return __generator(this, function (_a) {
-        // await Promise.all([
-        //   loadFonts(),
-        // ]);
-        try {
-            app_1 = new pixi_js_1.Application({
-                antialias: true,
-                transparent: false,
-                autoDensity: true,
-                resolution: window.devicePixelRatio || 1,
-                resizeTo: window,
-                backgroundColor: 0x000000,
-            });
-            resizeCanvas = function () {
-                app_1.renderer.resolution = window.devicePixelRatio;
-                app_1.resize();
-            };
-            // Change resolution if changes
-            window.matchMedia("(resolution: " + window.devicePixelRatio + "dppx)")
-                .addEventListener("change", resizeCanvas);
-            window.addEventListener("orientationchange", resizeCanvas);
-            document.body.appendChild(app_1.view);
-            stateManager_1 = new state_machine_1.StateMachine(app_1);
-            stateHash = window.location.hash.replace(/^#/, '');
-            if (stateHash && state_machine_1.isState(stateHash)) {
-                stateManager_1.setState(stateHash);
-            }
-            else {
-                stateManager_1.setState("intro");
-            }
-            window.addEventListener('hashchange', function () {
-                var stateHash = window.location.hash.replace(/^#/, '');
-                if (state_machine_1.isState(stateHash)) {
-                    stateManager_1.setState(stateHash);
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, Promise.all([
+                    styles_1.loadFonts(),
+                ])];
+            case 1:
+                _a.sent();
+                try {
+                    app_1 = new pixi_js_1.Application({
+                        antialias: true,
+                        transparent: false,
+                        autoDensity: true,
+                        resolution: window.devicePixelRatio || 1,
+                        resizeTo: window,
+                        backgroundColor: 0x000000,
+                    });
+                    resizeCanvas = function () {
+                        app_1.renderer.resolution = window.devicePixelRatio;
+                        app_1.resize();
+                    };
+                    // Change resolution if changes
+                    window.matchMedia("(resolution: " + window.devicePixelRatio + "dppx)")
+                        .addEventListener("change", resizeCanvas);
+                    window.addEventListener("orientationchange", resizeCanvas);
+                    document.body.appendChild(app_1.view);
+                    stateManager_1 = new state_machine_1.StateMachine(app_1);
+                    stateHash = window.location.hash.replace(/^#/, '');
+                    if (stateHash && isState(stateHash)) {
+                        stateManager_1.setState(stateHash);
+                    }
+                    else {
+                        stateManager_1.setState("intro");
+                    }
+                    window.addEventListener('hashchange', function () {
+                        var stateHash = window.location.hash.replace(/^#/, '');
+                        if (isState(stateHash)) {
+                            stateManager_1.setState(stateHash);
+                        }
+                        else if (!stateHash) {
+                            stateManager_1.setState("intro");
+                        }
+                    });
                 }
-                else if (!stateHash) {
-                    stateManager_1.setState("intro");
+                catch (e) {
+                    errorDiv = document.createElement('div');
+                    errorDivMessage = document.createElement('pre');
+                    document.body.classList.add('load-error');
+                    errorDiv.classList.add('error-message');
+                    errorDivMessage.innerText = "Uh oh! Your browser had trouble setting things up. Your browser might not be supported.\n\nerror message:\n" + e.message;
+                    errorDiv.appendChild(errorDivMessage);
+                    document.body.appendChild(errorDiv);
                 }
-            });
+                footer = document.createElement('nav');
+                links = Object.entries(nav_links_json_1.default).map(function (_a) {
+                    var label = _a[0], url = _a[1];
+                    var a = document.createElement('a');
+                    a.setAttribute('href', url);
+                    a.setAttribute('title', url.replace(/^.*:\/\//, '').replace(/^mailto:/, ''));
+                    a.innerText = label;
+                    return a;
+                });
+                links.forEach(function (link) { return footer.appendChild(link); });
+                document.body.appendChild(footer);
+                updateLink = function () {
+                    if (window.location.hash === "#musicians") {
+                        var link = links.find(function (e) { return e.getAttribute('href') === "#musicians"; });
+                        if (link) {
+                            link.setAttribute("href", "#");
+                            link.innerText = "interactive";
+                            link.setAttribute('title', '/');
+                        }
+                    }
+                    else {
+                        var link = links.find(function (e) { return e.getAttribute('href') === "#"; });
+                        if (link) {
+                            link.setAttribute("href", "#musicians");
+                            link.innerText = "musicians";
+                            link.setAttribute('title', '#musicians');
+                        }
+                    }
+                };
+                updateLink();
+                // Toggle the muscians nav link
+                window.addEventListener('hashchange', updateLink);
+                requestAnimationFrame(animate);
+                return [2 /*return*/];
         }
-        catch (e) {
-            errorDiv = document.createElement('div');
-            errorDivMessage = document.createElement('pre');
-            document.body.classList.add('load-error');
-            errorDiv.classList.add('error-message');
-            errorDivMessage.innerText = "Uh oh! Your browser had trouble setting things up. Your browser might not be supported.\n\nerror message:\n" + e.message;
-            errorDiv.appendChild(errorDivMessage);
-            document.body.appendChild(errorDiv);
-        }
-        footer = document.createElement('nav');
-        links = Object.entries(nav_links_json_1.default).map(function (_a) {
-            var label = _a[0], url = _a[1];
-            var a = document.createElement('a');
-            a.setAttribute('href', url);
-            a.setAttribute('title', url.replace(/^.*:\/\//, '').replace(/^mailto:/, ''));
-            a.innerText = label;
-            return a;
-        });
-        links.forEach(function (link) { return footer.appendChild(link); });
-        document.body.appendChild(footer);
-        updateLink = function () {
-            if (window.location.hash === "#musicians") {
-                var link = links.find(function (e) { return e.getAttribute('href') === "#musicians"; });
-                if (link) {
-                    link.setAttribute("href", "#");
-                    link.innerText = "interactive";
-                    link.setAttribute('title', '/');
-                }
-            }
-            else {
-                var link = links.find(function (e) { return e.getAttribute('href') === "#"; });
-                if (link) {
-                    link.setAttribute("href", "#musicians");
-                    link.innerText = "musicians";
-                    link.setAttribute('title', '#musicians');
-                }
-            }
-        };
-        updateLink();
-        // Toggle the muscians nav link
-        window.addEventListener('hashchange', updateLink);
-        requestAnimationFrame(animate);
-        return [2 /*return*/];
     });
 }); };
 
@@ -11802,7 +11806,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TEXT_STYLE_HAPPY_TEXT = exports.TET_STYLE_BIO_SUBTITLE = exports.TEXT_STYLE_BIO_P = exports.TEXT_STYLE_LOADING = exports.TEXT_STYLE_CENSORED = exports.TEXT_STYLE_INTERACTIVE_NUM = exports.TEXT_STYLE_H2 = exports.TEXT_STYLE_BUTTON_HOVER = exports.TEXT_STYLE_BUTTON = exports.loadFonts = void 0;
+exports.TET_STYLE_BIO_SUBTITLE = exports.TEXT_STYLE_BIO_P = exports.TEXT_STYLE_LOADING = exports.TEXT_STYLE_CENSORED = exports.TEXT_STYLE_INTERACTIVE_NUM = exports.TEXT_STYLE_H2 = exports.TEXT_STYLE_BUTTON_HOVER = exports.TEXT_STYLE_BUTTON = exports.loadFonts = void 0;
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
 function loadFonts() {
     return __awaiter(this, void 0, void 0, function () {
@@ -11812,7 +11816,7 @@ function loadFonts() {
                         // // Load them google fonts before starting...!
                         window.WebFontConfig = {
                             google: {
-                                families: ['Roboto:400', 'Homemade Apple'],
+                                families: ['Roboto:400'],
                             },
                             active: function () {
                                 resolve();
@@ -11894,19 +11898,6 @@ exports.TET_STYLE_BIO_SUBTITLE = new pixi_js_1.TextStyle({
     fontFamily: "Roboto",
     fontWeight: '400',
     fontSize: 12,
-});
-exports.TEXT_STYLE_HAPPY_TEXT = new pixi_js_1.TextStyle({
-    fill: "#666666",
-    fontFamily: "Homemade Apple",
-    wordWrap: false,
-    fontSize: 18,
-    // stroke: '#000000',
-    // strokeThickness: 2,
-    dropShadow: true,
-    dropShadowColor: '#000000',
-    dropShadowBlur: 6,
-    dropShadowAngle: Math.PI / 4,
-    dropShadowDistance: 6,
 });
 
 
