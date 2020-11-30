@@ -155,6 +155,2041 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/audio/bass.ogg":
+/*!*******************************!*\
+  !*** ./assets/audio/bass.ogg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/c2704adf3729004ab5a5f7f4c6e8a883.ogg";
+
+/***/ }),
+
+/***/ "./assets/audio/bassclarinet_bassoon.ogg":
+/*!***********************************************!*\
+  !*** ./assets/audio/bassclarinet_bassoon.ogg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/b4fbc3220c24fe9fa58dab8e04a6f47a.ogg";
+
+/***/ }),
+
+/***/ "./assets/audio/cello.ogg":
+/*!********************************!*\
+  !*** ./assets/audio/cello.ogg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/8dddc5e02b226e62a0e2ccf66e367973.ogg";
+
+/***/ }),
+
+/***/ "./assets/audio/clarinet.ogg":
+/*!***********************************!*\
+  !*** ./assets/audio/clarinet.ogg ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/a79c5cb37c1b5526f979380172ef1020.ogg";
+
+/***/ }),
+
+/***/ "./assets/audio/flute.ogg":
+/*!********************************!*\
+  !*** ./assets/audio/flute.ogg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/6cfb74bb6911601a135041fa1193fb6a.ogg";
+
+/***/ }),
+
+/***/ "./assets/audio/french_horn_1.ogg":
+/*!****************************************!*\
+  !*** ./assets/audio/french_horn_1.ogg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/5dec9d442093e6bb8cd94b2ade4cc7dc.ogg";
+
+/***/ }),
+
+/***/ "./assets/audio/harp.ogg":
+/*!*******************************!*\
+  !*** ./assets/audio/harp.ogg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/d14a3e0e71fc79218be55ed61f3ad1c5.ogg";
+
+/***/ }),
+
+/***/ "./assets/audio/oboe.ogg":
+/*!*******************************!*\
+  !*** ./assets/audio/oboe.ogg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/fb33fe4867d30c46c17a5d6843617382.ogg";
+
+/***/ }),
+
+/***/ "./assets/audio/percussion_cym_gong_timp_bass_drum.ogg":
+/*!*************************************************************!*\
+  !*** ./assets/audio/percussion_cym_gong_timp_bass_drum.ogg ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/6e5581ef4402b5e5a977c12ecee404dc.ogg";
+
+/***/ }),
+
+/***/ "./assets/audio/trombone_cimbasso.ogg":
+/*!********************************************!*\
+  !*** ./assets/audio/trombone_cimbasso.ogg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/f933cc34bf270ee8e9b990e0a9954356.ogg";
+
+/***/ }),
+
+/***/ "./assets/audio/trumpet.ogg":
+/*!**********************************!*\
+  !*** ./assets/audio/trumpet.ogg ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/e2fe5de595346cd23472bcffda593e72.ogg";
+
+/***/ }),
+
+/***/ "./assets/audio/viola.ogg":
+/*!********************************!*\
+  !*** ./assets/audio/viola.ogg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/043397c2f9915d0671bd4b49adbabf36.ogg";
+
+/***/ }),
+
+/***/ "./assets/audio/violin.ogg":
+/*!*********************************!*\
+  !*** ./assets/audio/violin.ogg ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/music/692468089ab347f84c8ce07e77b934a7.ogg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/ali-0.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/ali-0.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/fbdfb2c9a8a723574ec860f368ebfbe6.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/ali-1.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/ali-1.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/d86e39ba2bafc73b220aec2e70a4c325.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/ali-2.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/ali-2.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/f8f580eaccc6f63b9b071c1742fb8935.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/ali.jpg":
+/*!************************************!*\
+  !*** ./assets/images/bios/ali.jpg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/6e367846356fbb96013f7aa89f7f6490.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/amelia-0.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/amelia-0.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/6904dfe561cffe801e87f7abdfdfb730.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/amelia-1.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/amelia-1.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/dfcb7af6255bd90baefb770c6633df30.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/amelia-2.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/amelia-2.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/63047fc8e3aeeeb781742fba63cd5e34.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/amelia.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/amelia.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/3c1c19a3fd151cb751b0e2b2ec5bc819.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/amy-anderson-0.jpg":
+/*!***********************************************!*\
+  !*** ./assets/images/bios/amy-anderson-0.jpg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/26d88948560cfbe8dcf2a3297b88c82a.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/amy-anderson-1.jpg":
+/*!***********************************************!*\
+  !*** ./assets/images/bios/amy-anderson-1.jpg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/5fff2be1e504e7a8495d2ccfd287e119.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/amy-anderson-2.jpg":
+/*!***********************************************!*\
+  !*** ./assets/images/bios/amy-anderson-2.jpg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b0a3e53ac9a5d5b324fe03f5717085f0.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/amy-anderson.jpg":
+/*!*********************************************!*\
+  !*** ./assets/images/bios/amy-anderson.jpg ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/6abe90915b7f6c68ea5949e08c1bad74.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/amy-mitchell-0.jpg":
+/*!***********************************************!*\
+  !*** ./assets/images/bios/amy-mitchell-0.jpg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/6cb6f6493c47b848bc72ef6f95d1def2.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/amy-mitchell-1.jpg":
+/*!***********************************************!*\
+  !*** ./assets/images/bios/amy-mitchell-1.jpg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ca3253a7e87fabfdf2c7b2f5992124d2.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/amy-mitchell-2.jpg":
+/*!***********************************************!*\
+  !*** ./assets/images/bios/amy-mitchell-2.jpg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/8e94d2c6036acb08be3c5dbaaeca1f27.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/amy-mitchell.jpg":
+/*!*********************************************!*\
+  !*** ./assets/images/bios/amy-mitchell.jpg ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b07dd62e777c19549a1ce9fb71a27231.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/andreas-0.jpg":
+/*!******************************************!*\
+  !*** ./assets/images/bios/andreas-0.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/7232a2835e84ee0b9a683ca442ca6b26.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/andreas-1.jpg":
+/*!******************************************!*\
+  !*** ./assets/images/bios/andreas-1.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/3dd639a3a255d4e32b2e0ebc95d5d34a.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/andreas-2.jpg":
+/*!******************************************!*\
+  !*** ./assets/images/bios/andreas-2.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/708a2561818fe18c3af3456545c92548.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/andreas.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/andreas.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/16f1096aa97496d9afd0aa900dd331ba.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/annika-0.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/annika-0.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/5a54b0deef2d5a9580c38647c6c4aa06.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/annika-1.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/annika-1.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/bac40e4be84acc8bdced9d096e13b49a.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/annika-2.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/annika-2.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/3544f8dc074c75c376ddf087b373ad88.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/annika.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/annika.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/9e834d2c1f1db8a7367f38197fde9ebd.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/austin-0.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/austin-0.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/71b364a94c3a441767609fa15eccbfbf.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/austin-1.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/austin-1.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/e91671f571c16a124238ac19e8e9bfe3.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/austin-2.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/austin-2.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/cd9d6f19fea397d8eeffea70a5cb0813.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/austin.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/austin.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ed935d03129389884d3fb691753a033f.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/barry-0.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/barry-0.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/6eee2e316995539fba9ae6bdf87a2f69.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/barry-1.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/barry-1.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/79d4a2b19f2500ce0becf95d67b80d67.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/barry-2.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/barry-2.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/e2db95aa2c17aa0117ad0f73f7d39497.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/barry.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/barry.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/190868b6cea41745901db5dbf6b3b4a6.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/bill-0.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/bill-0.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/36135a646f7a6b46e3363ebad9afc4a3.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/bill-1.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/bill-1.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ca7cc2f803d3e224f80db237e5911c41.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/bill-2.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/bill-2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/65eb1293a126618deec5794eb683a523.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/bill.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/bios/bill.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/4c76dc78939b09c6f71a57c2694b89ea.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/carolyn-0.jpg":
+/*!******************************************!*\
+  !*** ./assets/images/bios/carolyn-0.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/c128eb182d7eaa66484e89ad87f6612b.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/carolyn-1.jpg":
+/*!******************************************!*\
+  !*** ./assets/images/bios/carolyn-1.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/fa0edba0bcfbb8236157f916a50ca064.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/carolyn-2.jpg":
+/*!******************************************!*\
+  !*** ./assets/images/bios/carolyn-2.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/6b45c4787703802ea7115afe24779f37.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/carolyn.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/carolyn.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/88ecf1c518af16d551d026f42b1b936f.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/carson-0.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/carson-0.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/bcaa32a02458605d22ecac4e862acfe8.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/carson-1.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/carson-1.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/a8647a8e9002687555742a01ab5cbe21.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/carson-2.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/carson-2.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/e7c054f585de00ec79461d8475e67204.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/carson.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/carson.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/aecf6bcba568154cd7468e214b3f095f.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/chris-0.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/chris-0.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b381a4dc6cc7a729f4a36ed18ba3370c.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/chris-1.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/chris-1.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/10873f2fd259b56ecfb6fed613aba2d7.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/chris-2.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/chris-2.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/e4123159f10bd0065c656081476c0d10.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/chris.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/chris.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/32618a2ff369546bbcad23f175c75c98.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/dan-0.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/dan-0.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/74ed826c9ca10c82218ea7d336e69c98.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/dan-1.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/dan-1.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/6e0f4a997fd573ed957caab33d12a75e.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/dan-2.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/dan-2.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/8b2ec30451df6903bef25bb75a1a9b58.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/dan.jpg":
+/*!************************************!*\
+  !*** ./assets/images/bios/dan.jpg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/16a6a9a53a195ad786eba501c59107b2.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/dara-0.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/dara-0.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/2f93057d864b51228aba66a0389683d5.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/dara-1.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/dara-1.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/a419e31de0406592cd73ddd645a3b158.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/dara-2.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/dara-2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/35156c17569bbd8854839e77c818b36a.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/dara.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/bios/dara.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/fc903f50e5d19a04a3edb209b300efb5.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/david-0.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/david-0.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/148a3c332ee25bc1444e1a26603c1d9b.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/david-1.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/david-1.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/9cf6fec74a3dd5a8b64582184c529b6c.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/david-2.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/david-2.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/a2e18f9b68973fced7262e8d338eb7c0.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/david.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/david.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/d878a18616de55e1a078995d1b683401.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/dylan-0.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/dylan-0.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/7c9ef9a7b3b85b7a775f6d0178424795.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/dylan-1.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/dylan-1.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b8b9a209a9b2e54c959c3ae41b234f58.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/dylan-2.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/dylan-2.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/c49b1ef2269a1d4813c617ef5dc74143.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/dylan.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/dylan.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/4b1c30b37163723d29f89f9bfa90c1dd.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/eliza-0.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/eliza-0.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/a068121352e7234c15293c3512fa07e8.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/eliza-1.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/eliza-1.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/e902182a9f3a3a0b4fa6771cc5359bc6.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/eliza-2.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/eliza-2.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/2b112da165a294338e7745e5a826a586.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/eliza.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/eliza.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/c3651457b96f5f2577f7117a2e974c1a.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/elly-0.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/elly-0.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/08a712fc2bcab63a3bbef46c5537c440.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/elly-1.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/elly-1.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/9c87bd4f606219c8005f33ea787e0f36.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/elly-2.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/elly-2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/d3a0cb37b95e593b196b0778e77f224c.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/elly.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/bios/elly.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b608843bd15acd1c45a3f3009a53e68a.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/emma-0.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/emma-0.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/34958f33cf2f0850087106a34a72f394.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/emma-1.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/emma-1.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/64e1d4b9d649f0dc22276b48ab13d35d.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/emma-2.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/emma-2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/a71d44222586f17415dcecf7fd1c2e49.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/emma.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/bios/emma.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/317993f8112a5ebcbde07a422d766ba2.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/erik-0.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/erik-0.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/754291a19e96eb1475acde33477c4d1e.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/erik-1.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/erik-1.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/c11a8817da3a8e35e985045d3c8f47ea.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/erik-2.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/erik-2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/4bac3e9e15504fb1042bdf9f90bd01c0.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/erik.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/bios/erik.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/94d683e664649e3c27ebb437c4c7686e.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/gayle-0.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/gayle-0.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/f0fab292f7ec2b5b9b2d4ef5ad91514b.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/gayle-1.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/gayle-1.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/c2c4241d85823f146fd9be5a5292a834.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/gayle-2.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/gayle-2.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/a58e38ccfdc8f7f2bd82f259b705eb5b.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/gayle.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/gayle.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/c46337de2097f9ed11dc744e6259b2f1.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/jake-0.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/jake-0.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/39c7f1971fe5673212928ecf211bdcc1.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/jake-1.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/jake-1.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/2bc40866bbbc471a505d003adb08ffc3.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/jake-2.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/jake-2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b31a77edee48b8af2c0e81e7e8bb667f.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/jake.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/bios/jake.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/f6bba7a58fa1060bf31b7f1f1fee8622.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/janet-0.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/janet-0.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/7644c6478bb0c29947a8802ca5c5f289.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/janet-1.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/janet-1.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b1af608a0e5d54ea3f370b1981741392.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/janet-2.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/janet-2.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b499be6dd9fbc3ae611a14c6113cd789.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/janet.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/janet.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/cb5cc77b6586e3366d76ec3b3865856d.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/jeff-0.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/jeff-0.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/75d2d41ea3e43ae6a22e20398adb5ede.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/jeff-1.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/jeff-1.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/c403949a3f870ae1113184f929f0b8f4.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/jeff-2.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/jeff-2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/26d064687aa95bdb79c27d2519f24a2d.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/jeff.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/bios/jeff.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b7523665a561bd1e78adb786b5b42078.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/joanne-0.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/joanne-0.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/9e006f3ca5bccf77282e7c4d0f24b0c2.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/joanne-1.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/joanne-1.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/e29ae856dd99b1b50b4e106187b3fcf0.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/joanne-2.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/joanne-2.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/95be73ec88f366ec869465ca783c0f2c.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/joanne.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/joanne.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/4afc12103f5299c24e0d272dead357d7.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/josh-0.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/josh-0.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/d9571b82d1f41eb53c7a1b34b525c09a.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/josh-1.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/josh-1.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/3c275c5db91a50bf7a69d90432405c09.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/josh-2.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/josh-2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/00bc7d805481199a1ab6819488bda482.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/josh.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/bios/josh.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/4d7c3ba12678e3c8ace2a1aa7d2d52b3.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/ken-0.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/ken-0.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/24769fc6a20a07b33b6b4b18d5324884.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/ken-1.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/ken-1.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/002e14b6c531aadd252041beebc63314.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/ken-2.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/ken-2.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/31d21aae4f6267def3e55093a5040173.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/ken.jpg":
+/*!************************************!*\
+  !*** ./assets/images/bios/ken.jpg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/5939dd8da7f6518d55423baf2938a934.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/kenny-0.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/kenny-0.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/4575abee315902c9681ef35327d4ead9.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/kenny-1.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/kenny-1.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/00e77b6c09b607f135345cae3ae51072.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/kenny-2.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/kenny-2.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ba31973e29a705c0dd57f632c41ff0ff.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/kenny.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/kenny.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/36f71c582dff35035d4c617504d930b1.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/laura-0.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/laura-0.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ca0a38c42a246c2e6418dfa6d10ce734.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/laura-1.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/laura-1.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/c64c7f4d364203c88bd9d1a32841ae43.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/laura-2.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/laura-2.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ddee576b0aa9e4c0180bf219c9e4d32f.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/laura.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/laura.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/49792a4469ccfa462cd0c72f3f7e4138.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/lenore-0.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/lenore-0.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/03d967877dfedd4d4837b62467224b0a.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/lenore-1.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/lenore-1.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ddf169570c775e1e5cb35df048bd4209.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/lenore-2.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/lenore-2.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/232998bb5da7b3bfe5226600f8060b11.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/lenore.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/lenore.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/9650d7db9cbab020ed588798e5622ad2.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/leslie-0.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/leslie-0.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/1aa0961578e55eb341e8cfe30b44a3ca.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/leslie-1.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/leslie-1.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/a0382fe7ebc8df4d4bf8468013d0750b.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/leslie-2.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/leslie-2.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/26ca9fe1eebe1713b38c4a40bf2cdae5.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/leslie.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/leslie.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ca21da6136bb8177dd9f7bcd83072af6.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/lisa-0.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/lisa-0.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/88ecd5f11f7a197f7e10e715a4e0d7cb.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/lisa-1.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/lisa-1.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/43e93cda87767a0b596aa49197cf7085.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/lisa-2.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/lisa-2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/cba4f98efeaf0e1a49cd0f22d66f18fc.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/lisa.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/bios/lisa.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/a3f63b158dc4f58cb6c4bbd0035148c2.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/reid-0.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/reid-0.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/8347c1268c02c0c513b20ae44619e4e9.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/reid-1.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/reid-1.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ef92e1e0bbf9d245d7b534323523c4a2.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/reid-2.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/reid-2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/d6b76d5cad7600b707094bae596ff99f.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/reid.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/bios/reid.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/686c0413c4d2cf5daf5d1c843f8c1e10.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/sam-0.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/sam-0.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/e9cbac27ee6bdd648db2b9382ff0e319.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/sam-1.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/sam-1.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/0084611737f0080478e9ee934f03ce3b.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/sam-2.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/sam-2.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/1ce5425fb80ca0a7bb0ae34be2c6c560.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/sam.jpg":
+/*!************************************!*\
+  !*** ./assets/images/bios/sam.jpg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/daaa9dfbd4ac3b129908843b4e6d5633.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/scott-0.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/scott-0.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/253adcd0f866661a22d666064bcf5f47.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/scott-1.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/scott-1.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/9a88a12d46eca58a49a9e283327bc928.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/scott-2.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/scott-2.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b8266d1e703acf3faf12088c201cdc6e.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/scott.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/scott.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b49da683613efa8e24a21289f3336706.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/sophia-0.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/sophia-0.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/323ae7174580b5ceca3f10f439955187.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/sophia-1.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/sophia-1.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/108f7a8f0f8a831fdd819e77a5066707.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/sophia-2.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/sophia-2.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/281a3b44b6c8d63fc065cf1924211c27.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/sophia.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/sophia.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/4e7f190374fb9aa62d697397918bc7a7.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/stephanie-0.jpg":
+/*!********************************************!*\
+  !*** ./assets/images/bios/stephanie-0.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/e8a9d7b125aff50f528a1ebd4f6b6ddb.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/stephanie-1.jpg":
+/*!********************************************!*\
+  !*** ./assets/images/bios/stephanie-1.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/7b88bd5ece36c11ee21a7ccaba765d8d.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/stephanie-2.jpg":
+/*!********************************************!*\
+  !*** ./assets/images/bios/stephanie-2.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/63d3652db2f4c565213aab916bc0e576.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/stephanie.jpg":
+/*!******************************************!*\
+  !*** ./assets/images/bios/stephanie.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/30896adce3f161a06308103450aef87f.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/sue-0.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/sue-0.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/cec9c254e763d9923d565a3afa0a7693.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/sue-1.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/sue-1.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/f7a5e4d1f3155b823e53d92fe0c463ce.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/sue-2.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/sue-2.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/bcabb5318ab6b48f27167c7e7a1af2a4.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/sue.jpg":
+/*!************************************!*\
+  !*** ./assets/images/bios/sue.jpg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/45160f011bcae971a0d882e1762371a8.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/suzanne-0.jpg":
+/*!******************************************!*\
+  !*** ./assets/images/bios/suzanne-0.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/4241f62e5b14edee0194536c03e99bd3.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/suzanne-1.jpg":
+/*!******************************************!*\
+  !*** ./assets/images/bios/suzanne-1.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/6bc65fa7cf5e6e3eef2d7f35b763df89.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/suzanne-2.jpg":
+/*!******************************************!*\
+  !*** ./assets/images/bios/suzanne-2.jpg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/51c11e4e7ba001468a04f5b84f0c8d67.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/suzanne.jpg":
+/*!****************************************!*\
+  !*** ./assets/images/bios/suzanne.jpg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/712b471a70eafa7c280e9e1d930e650e.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/tim-0.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/tim-0.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/c6c95c1c0b6fc4b79a1505769f09deda.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/tim-1.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/tim-1.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/d8817f6a96a36ec76f75358736929afd.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/tim-2.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/tim-2.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/d08a96a8775fba5bf8ba4ed61e96262e.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/tim.jpg":
+/*!************************************!*\
+  !*** ./assets/images/bios/tim.jpg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/fd0693d6d930aa983c7b55d2150a04bb.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/tina-0.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/tina-0.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/a6e4d1672be3f0688b3e6592b05ebe18.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/tina-1.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/tina-1.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/11a6d0361c506bab4f9014dc7805eb97.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/tina-2.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/tina-2.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/1deccd0ea62b1e41b229527e1995c954.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/tina.jpg":
+/*!*************************************!*\
+  !*** ./assets/images/bios/tina.jpg ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/e206d00fd9e18b166f059327a8af3a40.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/tom-0.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/tom-0.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/9dfcc39be4ee79e9c09fe3795d2242f2.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/tom-1.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/tom-1.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/db87433ebdd4aed379fb7b236ce33422.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/tom-2.jpg":
+/*!**************************************!*\
+  !*** ./assets/images/bios/tom-2.jpg ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/7d4ed108cc8f3c1c8c1c77a185560eef.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/tom.jpg":
+/*!************************************!*\
+  !*** ./assets/images/bios/tom.jpg ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/3f423ed6cf0baf970302fe84f168aa01.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/travis-0.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/travis-0.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/b9e1af3f4ab0c952735832e227754151.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/travis-1.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/travis-1.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/521db9a206119e832a85b59fdb27f9c4.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/travis-2.jpg":
+/*!*****************************************!*\
+  !*** ./assets/images/bios/travis-2.jpg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/ac78ab7d2ff09cb132d755993dceb607.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/bios/travis.jpg":
+/*!***************************************!*\
+  !*** ./assets/images/bios/travis.jpg ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/78a65a87ca301bca60414c59c2e3db96.jpg";
+
+/***/ }),
+
 /***/ "./assets/images/bloom-128x128.png":
 /*!*****************************************!*\
   !*** ./assets/images/bloom-128x128.png ***!
@@ -537,6 +2572,17 @@ module.exports = __webpack_require__.p + "assets/images/0cd6dc32444107d70333c50c
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "assets/images/3bc2991c22e935a54efe5a40aa926247.png";
+
+/***/ }),
+
+/***/ "./assets/images/instrument-icons/insicon_synth.svg":
+/*!**********************************************************!*\
+  !*** ./assets/images/instrument-icons/insicon_synth.svg ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/images/42313f7620e60c4c7bb0f25fa0c37779.png";
 
 /***/ }),
 
@@ -1138,6 +3184,2457 @@ module.exports = __webpack_require__.p + "assets/video/b42474300677737e87d68bd4b
 
 /***/ }),
 
+/***/ "./assets/video/interviews/ali_firsttime_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/ali_firsttime_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/e93782ee5a224749578ef72bf662acda.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/ali_outtakes.webm":
+/*!***************************************************!*\
+  !*** ./assets/video/interviews/ali_outtakes.webm ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/8c2fefd44681d59d00c178688bbfffb9.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/amelia_firsttime_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/amelia_firsttime_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/6738caee0065d1eb022313837a3f7bfe.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/amelia_instrument_01.webm":
+/*!***********************************************************!*\
+  !*** ./assets/video/interviews/amelia_instrument_01.webm ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/df970badbe453cae1aaf502aca39ab30.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/amelia_whytoday_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/amelia_whytoday_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/859796547da2e84c02354875eefe0db6.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/amy-anderson_firsttime_01.webm":
+/*!****************************************************************!*\
+  !*** ./assets/video/interviews/amy-anderson_firsttime_01.webm ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/708e1302b30c487050b3ab34fd45c091.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/amy-anderson_instrument_01.webm":
+/*!*****************************************************************!*\
+  !*** ./assets/video/interviews/amy-anderson_instrument_01.webm ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/63774a4155ed64792a9aa2c8325348e7.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/amy-anderson_outtakes.webm":
+/*!************************************************************!*\
+  !*** ./assets/video/interviews/amy-anderson_outtakes.webm ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/6ff4f4942c5207170db35ef351da7d04.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/amy-anderson_whytoday_01.webm":
+/*!***************************************************************!*\
+  !*** ./assets/video/interviews/amy-anderson_whytoday_01.webm ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/1c7ff1040ca2b435ae42f0b182cad631.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/amy-mitchell_firsttime_01.webm":
+/*!****************************************************************!*\
+  !*** ./assets/video/interviews/amy-mitchell_firsttime_01.webm ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/46dd7d69d09e3d9127a9e86e89f3203f.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/amy-mitchell_instrument_01.webm":
+/*!*****************************************************************!*\
+  !*** ./assets/video/interviews/amy-mitchell_instrument_01.webm ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/cdc8346e07bc6596733577dd3f592a1f.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/amy-mitchell_whytoday_01.webm":
+/*!***************************************************************!*\
+  !*** ./assets/video/interviews/amy-mitchell_whytoday_01.webm ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/1a8f835f74826153d6d41cbe7e75bfdf.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/andreas_firsttime_01.webm":
+/*!***********************************************************!*\
+  !*** ./assets/video/interviews/andreas_firsttime_01.webm ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/3eb3d44ea1b9d3e0cfd7d4b514d85565.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/andreas_instrument_01.webm":
+/*!************************************************************!*\
+  !*** ./assets/video/interviews/andreas_instrument_01.webm ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/848c2cb32a6ec0063367a144943fd2bd.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/andreas_outtakes.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/andreas_outtakes.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/25f4f73c3943511c92be161aad7daccf.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/andreas_whytoday_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/andreas_whytoday_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/17c837c39c22e9e329bf3179d1bdb93a.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/annika_careerinterest_01.webm":
+/*!***************************************************************!*\
+  !*** ./assets/video/interviews/annika_careerinterest_01.webm ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/4fce40a2b17ad7c11b60c280e27c5d26.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/annika_meetingchris_01.webm":
+/*!*************************************************************!*\
+  !*** ./assets/video/interviews/annika_meetingchris_01.webm ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/f425ae673458b3692155f697e2ef377b.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/annika_outtakes.webm":
+/*!******************************************************!*\
+  !*** ./assets/video/interviews/annika_outtakes.webm ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/1616569c74e45c46e30fd64e4be16c4d.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/annika_work_01.webm":
+/*!*****************************************************!*\
+  !*** ./assets/video/interviews/annika_work_01.webm ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/830dc4b4482d444abe3399c03bff7eae.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/austin_firsttime_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/austin_firsttime_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/9dee8a7d88b0c6ee292276edca7899eb.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/austin_firsttime_02.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/austin_firsttime_02.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/6a1e204fa0033cbcc977b1163325bf6e.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/austin_instrument_01.webm":
+/*!***********************************************************!*\
+  !*** ./assets/video/interviews/austin_instrument_01.webm ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/823bf1394cce5abead46a7064867cf9c.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/austin_whytoday_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/austin_whytoday_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/7cc3099ec362d2bc37753cd04d44c6d2.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/austin_whytoday_02.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/austin_whytoday_02.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/09123e3dff88915608c01282e2384479.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/barry_firsttime_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/barry_firsttime_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/81d8181502740869a45a69aafea5020c.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/barry_instrument_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/barry_instrument_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/2cd39906d295f65f636b5c6fa07e39f4.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/barry_instrument_02.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/barry_instrument_02.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/403573297e22d82c630b2763263f3738.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/barry_whytoday_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/barry_whytoday_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/4ed5cef5626d3c4782658910812eecfe.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/bill_firsttime_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/bill_firsttime_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/86d8e9061522cee2f309cb06fd28417a.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/bill_instrument_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/bill_instrument_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/5509976ddde8af4e77de05994f0fd3dc.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/bill_whytoday_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/bill_whytoday_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/18fe918a4cf345e530c836d559a388f2.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/carolyn_firsttime_01.webm":
+/*!***********************************************************!*\
+  !*** ./assets/video/interviews/carolyn_firsttime_01.webm ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/c508ed068c656ff032d45577c85a4680.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/carolyn_instrument_01.webm":
+/*!************************************************************!*\
+  !*** ./assets/video/interviews/carolyn_instrument_01.webm ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/f5a0a55b1573ccc1d5453c9616e4583d.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/carolyn_whytoday_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/carolyn_whytoday_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/c358b347866aa65ad77e58049713f485.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/carson_firsttime_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/carson_firsttime_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/2b46502ed3586f306136ff3360b59dd3.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/carson_instrument_01.webm":
+/*!***********************************************************!*\
+  !*** ./assets/video/interviews/carson_instrument_01.webm ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/6a0cd7485e0240b3a3861241a87cb859.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/carson_whytoday_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/carson_whytoday_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/e86eb25a5baac11b4d5cbcfab0c9309d.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/chris_firsttime_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/chris_firsttime_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/b2143706c4fcf0e61266729618ff485a.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/chris_instrument_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/chris_instrument_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/94879495b7e9ab7abd179a7f3094a4d9.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/chris_whytoday_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/chris_whytoday_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/e4a41a7aa94d7354d3637466aeacf168.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/dan_firsttake_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/dan_firsttake_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/9073c647f6127151f22eb3df5fd03abc.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/dan_instrument_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/dan_instrument_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/a210a975e0cb4c232cee4a0068ae500d.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/dan_whytoday_01.webm":
+/*!******************************************************!*\
+  !*** ./assets/video/interviews/dan_whytoday_01.webm ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/4499d415dce7649db78e9843265ee46b.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/dara_firsttime_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/dara_firsttime_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/21acc145bd4a22a56daf97515d12b875.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/dara_instrument_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/dara_instrument_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/d575ac81f5b4956ac73580ff607f7cdd.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/dara_outtakes.webm":
+/*!****************************************************!*\
+  !*** ./assets/video/interviews/dara_outtakes.webm ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/7c494914d31ebc60d196ebac03b67ca4.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/dara_whytoday_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/dara_whytoday_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/b9325091e17c550aa902aabf7a865691.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/david_firsttime_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/david_firsttime_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/fbf52effea650921c441de70b736a0fc.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/david_instrument_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/david_instrument_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/18f8ec7a3ce34a269d1784952a8a27a8.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/david_whytoday_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/david_whytoday_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/0cfe8ff946fb4789576341cc2f068055.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/dylan_whytoday_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/dylan_whytoday_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/ad7c6f55953824f02537b1094981edc1.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/eliza_instrument_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/eliza_instrument_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/ba6dc7baf406b2d0867921085873891e.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/eliza_outtakes.webm":
+/*!*****************************************************!*\
+  !*** ./assets/video/interviews/eliza_outtakes.webm ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/61e0675902cda6c4d8efe68987915335.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/elly_firsttime_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/elly_firsttime_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/34d7612f543e68c24216e3b9aa058c48.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/elly_instrument_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/elly_instrument_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/32e05bf18b703768b3bb6354a4b0af88.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/elly_instrument_02.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/elly_instrument_02.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/b98eed07e65f35dcb5c00dc6ce90720c.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/elly_whytoday_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/elly_whytoday_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/f4ce33345bdc63b1f735ea4f2950f4a8.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/emma_firsttime_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/emma_firsttime_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/8194958c343cd6b8f1260ced483ad404.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/emma_instrument_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/emma_instrument_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/add60fc7650e60ff91864bf863cb2b86.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/emma_outtakes.webm":
+/*!****************************************************!*\
+  !*** ./assets/video/interviews/emma_outtakes.webm ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/ed206ce116b9a2cc657b5e14102691d7.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/emma_whytoday_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/emma_whytoday_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/247f0d4d6b0ce38d6ca623bc153f145f.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/erik_firsttime_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/erik_firsttime_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/8b3f4e175eb1b55651a918f883af24f1.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/erik_firsttime_02.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/erik_firsttime_02.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/b216e0f6a134f0e38cf99d4259ede21b.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/erik_instrument_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/erik_instrument_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/71df22e56de011a5f02f5bd1d5fdf4dd.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/erik_whytoday_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/erik_whytoday_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/3342e3954110b60a99395c78a88f0aa1.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/gayle_firsttime_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/gayle_firsttime_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/919bfd648cb3e07523cecb79c0ab9cba.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/gayle_instrument_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/gayle_instrument_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/05653da38518a3035a3633477b5da5dd.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/gayle_outtakes.webm":
+/*!*****************************************************!*\
+  !*** ./assets/video/interviews/gayle_outtakes.webm ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/e89b3c6a8b6d192e9357a8127f36f146.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/gayle_whytoday_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/gayle_whytoday_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/923b1cb7c7093e977e44d3dc00e9362a.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/jake_firsttime_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/jake_firsttime_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/7fed5b9345331fd18c07d0a8c4112c22.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/jake_instrument_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/jake_instrument_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/5fcbabd435a707d65082a703c1290e31.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/jake_outtakes.webm":
+/*!****************************************************!*\
+  !*** ./assets/video/interviews/jake_outtakes.webm ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/583ede8dc5f5e7534820229998d92728.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/janet_firsttime_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/janet_firsttime_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/487fa8e3606a2a5dc22ccbfda64d8e3a.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/janet_instrument_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/janet_instrument_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/59cb20cf670222f4fad02893bbdcbc19.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/janet_instrument_02.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/janet_instrument_02.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/c9fa32f398d25dd5c7bb765a21aaa1cf.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/janet_outtakes.webm":
+/*!*****************************************************!*\
+  !*** ./assets/video/interviews/janet_outtakes.webm ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/655fd8c5aa3c9ec2567ced394a7949eb.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/janet_whytoday_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/janet_whytoday_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/51b403d327b79812e74fdd2dc1ba0d01.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/jeff_firsttime_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/jeff_firsttime_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/91e025274eb9954c1e9d10ea4e5a5e27.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/jeff_firsttime_02.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/jeff_firsttime_02.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/14259a8e3cc996f574fc052c9c9b1833.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/jeff_instrument_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/jeff_instrument_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/b2cda42d0a2bb765af1b93b9f7e4e28b.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/jeff_outtakes.webm":
+/*!****************************************************!*\
+  !*** ./assets/video/interviews/jeff_outtakes.webm ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/63409230fb47f4235348d46fc5ad2482.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/jeff_whytoday_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/jeff_whytoday_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/6a0e744cb347cad3c8ed0ed38a59dfc4.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/joanne_firsttime_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/joanne_firsttime_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/e921ccb1569d4424d6cb49534bd34d5a.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/joanne_instrument_01.webm":
+/*!***********************************************************!*\
+  !*** ./assets/video/interviews/joanne_instrument_01.webm ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/aaea65b830b6e906968b8fa58f917e38.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/joanne_outtakes.webm":
+/*!******************************************************!*\
+  !*** ./assets/video/interviews/joanne_outtakes.webm ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/b02fa7214cf454f26c5454598c851ce0.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/joanne_whytoday_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/joanne_whytoday_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/371f8ac54732de71c2bbc9b8e1761e98.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/joanne_whytoday_02.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/joanne_whytoday_02.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/82354d13ee44c4c4fcf41b0787e6a5d4.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/josh_instrument_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/josh_instrument_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/15bf135ce6843fdc83ccdca5d5483995.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/josh_instrument_02.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/josh_instrument_02.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/957e675ac28507bf417742258a8e2c4b.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/josh_outtakes-nsfw-.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/josh_outtakes-nsfw-.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/c5207c4c2385b151a6091f1c5c63077a.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/josh_whytoday_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/josh_whytoday_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/afbc789765e4fd776e969e1e60fec8ac.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/josh_whytoday_02.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/josh_whytoday_02.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/9494f3393159ba95aae201f26c967a12.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/kathy_firsttime_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/kathy_firsttime_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/358d104cc0dcad9e9e38677ac11de312.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/kathy_instrument_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/kathy_instrument_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/8bf04b28ccd4f1643a9feb56308373ec.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/kathy_outtakes.webm":
+/*!*****************************************************!*\
+  !*** ./assets/video/interviews/kathy_outtakes.webm ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/33255c63d1cdcbc6acc339a51e113111.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/kathy_whytoday_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/kathy_whytoday_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/4b86d6ca9d4e336b3b2b983d1db23e33.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/ken_firsttime_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/ken_firsttime_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/4b6535a238b460a120869c1a32a50269.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/ken_firsttime_02.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/ken_firsttime_02.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/fa471bc9cd234c5a5c30b0c4ebd51bd5.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/ken_instrument_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/ken_instrument_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/18d26e1cfd4c9a7fa09f84a228fe3390.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/ken_instrument_02.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/ken_instrument_02.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/fac2ca0c0fb352b18ddcb624377f6bc2.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/ken_whytoday_01.webm":
+/*!******************************************************!*\
+  !*** ./assets/video/interviews/ken_whytoday_01.webm ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/5ef87792759eb61f7225ca7cabed2742.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/ken_whytoday_02.webm":
+/*!******************************************************!*\
+  !*** ./assets/video/interviews/ken_whytoday_02.webm ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/1e372e4e6d0db01c79965da0298783df.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/kenny_firsttime_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/kenny_firsttime_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/2d147830e39987079b74cb15caef327b.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/kenny_instrument_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/kenny_instrument_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/902e721debdbcda65f32c04ac9e59907.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/kenny_whytoday_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/kenny_whytoday_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/fc5d41bd6124dce2cd33c070e6097651.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/laura_firsttime_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/laura_firsttime_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/aba66f5cbddf42f7191c912b215775bb.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/laura_firsttime_02.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/laura_firsttime_02.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/c1580c023b134342232050f366a557de.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/laura_instrument_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/laura_instrument_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/2c81bff81eafd7506eb244df748ba869.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/laura_whytoday_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/laura_whytoday_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/830bfd764280e0327a3be038c7e1cb11.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/lenore_firsttime_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/lenore_firsttime_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/c731e914b165582a57f43e98b1163033.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/lenore_firsttime_02.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/lenore_firsttime_02.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/d6dbd87b5a3c8e671f46a678c9b648db.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/lenore_instrument_01.webm":
+/*!***********************************************************!*\
+  !*** ./assets/video/interviews/lenore_instrument_01.webm ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/82c03e16b05c6313570781b8b7fde5fb.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/lenore_instrument_02.webm":
+/*!***********************************************************!*\
+  !*** ./assets/video/interviews/lenore_instrument_02.webm ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/048a7ae2568e47083b5779193316479d.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/lenore_whytoday_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/lenore_whytoday_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/66c099af41081ae89967623babc707cc.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/leslie_firsttime_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/leslie_firsttime_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/fe04404d7403d1245cfaf4f284b276ae.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/leslie_firsttime_02.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/leslie_firsttime_02.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/bf427ebf8c4ad4349fcc480d2a387d04.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/leslie_instrument_01.webm":
+/*!***********************************************************!*\
+  !*** ./assets/video/interviews/leslie_instrument_01.webm ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/6af9b35a65387c829ea53ba8cb96d8ca.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/leslie_whytoday_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/leslie_whytoday_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/2fac2edf8ba210e47cbc25375853d054.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/lisa_firsttime_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/lisa_firsttime_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/940de63d87dd2d9981e8da06e838b614.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/lisa_instrument_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/lisa_instrument_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/4ad6b2f5aea0c31dd45cbd2591ac8a9f.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/lisa_whytoday_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/lisa_whytoday_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/3698e4ffd4ade417fc9d1e93ae2078f5.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/reid_firsttime_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/reid_firsttime_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/efe1afc690c08b69d57cbeb716569397.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/reid_instrument_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/reid_instrument_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/6fd842d1e10df27f680ce8cb22aa112a.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/reid_whytoday_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/reid_whytoday_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/9b768a2601ca99b960db0489a53eda41.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/sam_firsttime_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/sam_firsttime_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/ec8abe73c625b7c2bbbb55df0db72b9f.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/sam_instrument_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/sam_instrument_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/aac23271cb8d222e0d246af47725d89d.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/sam_whytoday_01.webm":
+/*!******************************************************!*\
+  !*** ./assets/video/interviews/sam_whytoday_01.webm ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/c30b0a024485a37400be651c97d8877d.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/scott_firsttime_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/scott_firsttime_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/e11b8693a460691e0e0fcebebfe92735.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/scott_instrument_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/scott_instrument_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/506be7d3644110011e177e6ac38a2b0e.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/scott_instrument_02.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/scott_instrument_02.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/8964a907c17753ea13a686d9605b9ded.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/scott_whytoday_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/scott_whytoday_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/13eba75b765f6167ff615897eba75283.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/sophia_firsttime_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/sophia_firsttime_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/9d0a6e5118a87815614eeffacfbb9354.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/sophia_instrument_01.webm":
+/*!***********************************************************!*\
+  !*** ./assets/video/interviews/sophia_instrument_01.webm ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/3abd276875352ed395809abb01183cc8.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/sophia_whytoday_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/sophia_whytoday_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/88cb27b2929713fcf043b1d040e3ed0a.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/stephanie_firsttime_01.webm":
+/*!*************************************************************!*\
+  !*** ./assets/video/interviews/stephanie_firsttime_01.webm ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/79a83f9a99bd86eadae91fec8c5e9a49.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/stephanie_instrument_01.webm":
+/*!**************************************************************!*\
+  !*** ./assets/video/interviews/stephanie_instrument_01.webm ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/f4cce73a7f8880c63afd456c6c69b297.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/stephanie_outtakes.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/stephanie_outtakes.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/63a477d317b105798a2d8017f62b8d2b.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/stephanie_whytoday_01.webm":
+/*!************************************************************!*\
+  !*** ./assets/video/interviews/stephanie_whytoday_01.webm ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/f54e96c2a6e8eaccf440bda6583df426.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/stephanie_whytoday_02.webm":
+/*!************************************************************!*\
+  !*** ./assets/video/interviews/stephanie_whytoday_02.webm ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/67fca9c9e00907ae90662344ce69275a.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/sue_firsttake_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/sue_firsttake_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/1feb74b4f4afe79fa2b9de932f92ea35.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/sue_instrument_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/sue_instrument_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/c1e38ccc8f55df86387215f862493d80.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/sue_outtakes.webm":
+/*!***************************************************!*\
+  !*** ./assets/video/interviews/sue_outtakes.webm ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/2a40270305929e2d08251057c0b52856.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/sue_whytoday_01.webm":
+/*!******************************************************!*\
+  !*** ./assets/video/interviews/sue_whytoday_01.webm ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/d2c2e5e386ae700c5ae1a1c222176130.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/sue_whytoday_02.webm":
+/*!******************************************************!*\
+  !*** ./assets/video/interviews/sue_whytoday_02.webm ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/c52c5fa125d1bc6d71e5584f17ea0c1e.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/suzanne_firsttime_01.webm":
+/*!***********************************************************!*\
+  !*** ./assets/video/interviews/suzanne_firsttime_01.webm ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/b42ffd36a19a1af720f096d52bd343ba.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/suzanne_instrument_01.webm":
+/*!************************************************************!*\
+  !*** ./assets/video/interviews/suzanne_instrument_01.webm ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/1d4c8715053ef66d8dac3938af07764b.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/suzanne_whytoday_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/suzanne_whytoday_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/2929dcc051e3c3e608cf5eed22f5ed93.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/tim_firsttime_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/tim_firsttime_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/5518f9b86b9f573e92ee4472dc1c160d.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/tim_firsttime_02.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/tim_firsttime_02.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/7b21d67a9fbe90adb38900706977915f.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/tim_instrument_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/tim_instrument_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/6bacf917f36e898ba12ac9bf0afeb902.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/tim_whytoday_01.webm":
+/*!******************************************************!*\
+  !*** ./assets/video/interviews/tim_whytoday_01.webm ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/e6e20bc4169395b540b75a014c6b9805.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/tina_firsttime_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/tina_firsttime_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/7a980611d57d92061017660bf70bde68.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/tina_instrument_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/tina_instrument_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/b75320b80d5d81d5b97ce8864127a4df.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/tina_whytoday_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/tina_whytoday_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/21f1a3b2c318a0bb7a2900c5b3b8efd9.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/tom_firsttime_01.webm":
+/*!*******************************************************!*\
+  !*** ./assets/video/interviews/tom_firsttime_01.webm ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/6fb92b055d9c3cc0c5a530fa108b20a4.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/tom_instrument_01.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/tom_instrument_01.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/5a0f98d60d77a75fe802bc8b42c867af.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/tom_instrument_02.webm":
+/*!********************************************************!*\
+  !*** ./assets/video/interviews/tom_instrument_02.webm ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/c710ef5819a103a7839b77b9adc6a469.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/tom_whytoday_01.webm":
+/*!******************************************************!*\
+  !*** ./assets/video/interviews/tom_whytoday_01.webm ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/86b62bc8a2743b96533e3a8c75fe9a9d.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/travis_firsttime_01.webm":
+/*!**********************************************************!*\
+  !*** ./assets/video/interviews/travis_firsttime_01.webm ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/80ca43a5d9b41483b2fa08e432019dc0.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/travis_instrument_01.webm":
+/*!***********************************************************!*\
+  !*** ./assets/video/interviews/travis_instrument_01.webm ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/acf5aa524423e1739a198c4e3331d979.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/travis_outtakes.webm":
+/*!******************************************************!*\
+  !*** ./assets/video/interviews/travis_outtakes.webm ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/64de9c150984c789171d79b02563d3fb.webm";
+
+/***/ }),
+
+/***/ "./assets/video/interviews/travis_whytoday_01.webm":
+/*!*********************************************************!*\
+  !*** ./assets/video/interviews/travis_whytoday_01.webm ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/video/2ab41c425988b6dca17e4636577b1aaf.webm";
+
+/***/ }),
+
+/***/ "./assets/video/video-transcripts.js":
+/*!*******************************************!*\
+  !*** ./assets/video/video-transcripts.js ***!
+  \*******************************************/
+/*! exports provided: data */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "data", function() { return data; });
+/* harmony import */ var _interviews_ali_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./interviews/ali_firsttime_01.webm */ "./assets/video/interviews/ali_firsttime_01.webm");
+/* harmony import */ var _interviews_ali_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_interviews_ali_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _interviews_ali_outtakes_webm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./interviews/ali_outtakes.webm */ "./assets/video/interviews/ali_outtakes.webm");
+/* harmony import */ var _interviews_ali_outtakes_webm__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_interviews_ali_outtakes_webm__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _interviews_amelia_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./interviews/amelia_firsttime_01.webm */ "./assets/video/interviews/amelia_firsttime_01.webm");
+/* harmony import */ var _interviews_amelia_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_interviews_amelia_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _interviews_amelia_instrument_01_webm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./interviews/amelia_instrument_01.webm */ "./assets/video/interviews/amelia_instrument_01.webm");
+/* harmony import */ var _interviews_amelia_instrument_01_webm__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_interviews_amelia_instrument_01_webm__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _interviews_amelia_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./interviews/amelia_whytoday_01.webm */ "./assets/video/interviews/amelia_whytoday_01.webm");
+/* harmony import */ var _interviews_amelia_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_interviews_amelia_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _interviews_amy_mitchell_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./interviews/amy-mitchell_firsttime_01.webm */ "./assets/video/interviews/amy-mitchell_firsttime_01.webm");
+/* harmony import */ var _interviews_amy_mitchell_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_interviews_amy_mitchell_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _interviews_amy_mitchell_instrument_01_webm__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./interviews/amy-mitchell_instrument_01.webm */ "./assets/video/interviews/amy-mitchell_instrument_01.webm");
+/* harmony import */ var _interviews_amy_mitchell_instrument_01_webm__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_interviews_amy_mitchell_instrument_01_webm__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _interviews_amy_mitchell_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./interviews/amy-mitchell_whytoday_01.webm */ "./assets/video/interviews/amy-mitchell_whytoday_01.webm");
+/* harmony import */ var _interviews_amy_mitchell_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_interviews_amy_mitchell_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _interviews_amy_anderson_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./interviews/amy-anderson_firsttime_01.webm */ "./assets/video/interviews/amy-anderson_firsttime_01.webm");
+/* harmony import */ var _interviews_amy_anderson_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_interviews_amy_anderson_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _interviews_amy_anderson_instrument_01_webm__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./interviews/amy-anderson_instrument_01.webm */ "./assets/video/interviews/amy-anderson_instrument_01.webm");
+/* harmony import */ var _interviews_amy_anderson_instrument_01_webm__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_interviews_amy_anderson_instrument_01_webm__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _interviews_amy_anderson_outtakes_webm__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./interviews/amy-anderson_outtakes.webm */ "./assets/video/interviews/amy-anderson_outtakes.webm");
+/* harmony import */ var _interviews_amy_anderson_outtakes_webm__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_interviews_amy_anderson_outtakes_webm__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _interviews_amy_anderson_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./interviews/amy-anderson_whytoday_01.webm */ "./assets/video/interviews/amy-anderson_whytoday_01.webm");
+/* harmony import */ var _interviews_amy_anderson_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_interviews_amy_anderson_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _interviews_andreas_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./interviews/andreas_firsttime_01.webm */ "./assets/video/interviews/andreas_firsttime_01.webm");
+/* harmony import */ var _interviews_andreas_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_interviews_andreas_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _interviews_andreas_instrument_01_webm__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./interviews/andreas_instrument_01.webm */ "./assets/video/interviews/andreas_instrument_01.webm");
+/* harmony import */ var _interviews_andreas_instrument_01_webm__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_interviews_andreas_instrument_01_webm__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _interviews_andreas_outtakes_webm__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./interviews/andreas_outtakes.webm */ "./assets/video/interviews/andreas_outtakes.webm");
+/* harmony import */ var _interviews_andreas_outtakes_webm__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_interviews_andreas_outtakes_webm__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _interviews_andreas_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./interviews/andreas_whytoday_01.webm */ "./assets/video/interviews/andreas_whytoday_01.webm");
+/* harmony import */ var _interviews_andreas_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_interviews_andreas_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _interviews_annika_careerinterest_01_webm__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./interviews/annika_careerinterest_01.webm */ "./assets/video/interviews/annika_careerinterest_01.webm");
+/* harmony import */ var _interviews_annika_careerinterest_01_webm__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_interviews_annika_careerinterest_01_webm__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _interviews_annika_meetingchris_01_webm__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./interviews/annika_meetingchris_01.webm */ "./assets/video/interviews/annika_meetingchris_01.webm");
+/* harmony import */ var _interviews_annika_meetingchris_01_webm__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_interviews_annika_meetingchris_01_webm__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _interviews_annika_outtakes_webm__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./interviews/annika_outtakes.webm */ "./assets/video/interviews/annika_outtakes.webm");
+/* harmony import */ var _interviews_annika_outtakes_webm__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_interviews_annika_outtakes_webm__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _interviews_annika_work_01_webm__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./interviews/annika_work_01.webm */ "./assets/video/interviews/annika_work_01.webm");
+/* harmony import */ var _interviews_annika_work_01_webm__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_interviews_annika_work_01_webm__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _interviews_austin_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./interviews/austin_firsttime_01.webm */ "./assets/video/interviews/austin_firsttime_01.webm");
+/* harmony import */ var _interviews_austin_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_interviews_austin_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var _interviews_austin_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./interviews/austin_firsttime_02.webm */ "./assets/video/interviews/austin_firsttime_02.webm");
+/* harmony import */ var _interviews_austin_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_interviews_austin_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _interviews_austin_instrument_01_webm__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./interviews/austin_instrument_01.webm */ "./assets/video/interviews/austin_instrument_01.webm");
+/* harmony import */ var _interviews_austin_instrument_01_webm__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_interviews_austin_instrument_01_webm__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _interviews_austin_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./interviews/austin_whytoday_01.webm */ "./assets/video/interviews/austin_whytoday_01.webm");
+/* harmony import */ var _interviews_austin_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_interviews_austin_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _interviews_austin_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./interviews/austin_whytoday_02.webm */ "./assets/video/interviews/austin_whytoday_02.webm");
+/* harmony import */ var _interviews_austin_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_interviews_austin_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _interviews_barry_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./interviews/barry_firsttime_01.webm */ "./assets/video/interviews/barry_firsttime_01.webm");
+/* harmony import */ var _interviews_barry_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_interviews_barry_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var _interviews_barry_instrument_01_webm__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./interviews/barry_instrument_01.webm */ "./assets/video/interviews/barry_instrument_01.webm");
+/* harmony import */ var _interviews_barry_instrument_01_webm__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_interviews_barry_instrument_01_webm__WEBPACK_IMPORTED_MODULE_26__);
+/* harmony import */ var _interviews_barry_instrument_02_webm__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./interviews/barry_instrument_02.webm */ "./assets/video/interviews/barry_instrument_02.webm");
+/* harmony import */ var _interviews_barry_instrument_02_webm__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_interviews_barry_instrument_02_webm__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var _interviews_barry_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./interviews/barry_whytoday_01.webm */ "./assets/video/interviews/barry_whytoday_01.webm");
+/* harmony import */ var _interviews_barry_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_interviews_barry_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var _interviews_bill_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./interviews/bill_firsttime_01.webm */ "./assets/video/interviews/bill_firsttime_01.webm");
+/* harmony import */ var _interviews_bill_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_interviews_bill_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_29__);
+/* harmony import */ var _interviews_bill_instrument_01_webm__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./interviews/bill_instrument_01.webm */ "./assets/video/interviews/bill_instrument_01.webm");
+/* harmony import */ var _interviews_bill_instrument_01_webm__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_interviews_bill_instrument_01_webm__WEBPACK_IMPORTED_MODULE_30__);
+/* harmony import */ var _interviews_bill_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./interviews/bill_whytoday_01.webm */ "./assets/video/interviews/bill_whytoday_01.webm");
+/* harmony import */ var _interviews_bill_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(_interviews_bill_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_31__);
+/* harmony import */ var _interviews_carolyn_instrument_01_webm__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./interviews/carolyn_instrument_01.webm */ "./assets/video/interviews/carolyn_instrument_01.webm");
+/* harmony import */ var _interviews_carolyn_instrument_01_webm__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(_interviews_carolyn_instrument_01_webm__WEBPACK_IMPORTED_MODULE_32__);
+/* harmony import */ var _interviews_carolyn_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./interviews/carolyn_whytoday_01.webm */ "./assets/video/interviews/carolyn_whytoday_01.webm");
+/* harmony import */ var _interviews_carolyn_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(_interviews_carolyn_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_33__);
+/* harmony import */ var _interviews_carson_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./interviews/carson_firsttime_01.webm */ "./assets/video/interviews/carson_firsttime_01.webm");
+/* harmony import */ var _interviews_carson_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(_interviews_carson_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_34__);
+/* harmony import */ var _interviews_carson_instrument_01_webm__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./interviews/carson_instrument_01.webm */ "./assets/video/interviews/carson_instrument_01.webm");
+/* harmony import */ var _interviews_carson_instrument_01_webm__WEBPACK_IMPORTED_MODULE_35___default = /*#__PURE__*/__webpack_require__.n(_interviews_carson_instrument_01_webm__WEBPACK_IMPORTED_MODULE_35__);
+/* harmony import */ var _interviews_carson_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./interviews/carson_whytoday_01.webm */ "./assets/video/interviews/carson_whytoday_01.webm");
+/* harmony import */ var _interviews_carson_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_36___default = /*#__PURE__*/__webpack_require__.n(_interviews_carson_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_36__);
+/* harmony import */ var _interviews_chris_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./interviews/chris_firsttime_01.webm */ "./assets/video/interviews/chris_firsttime_01.webm");
+/* harmony import */ var _interviews_chris_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_37___default = /*#__PURE__*/__webpack_require__.n(_interviews_chris_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_37__);
+/* harmony import */ var _interviews_chris_instrument_01_webm__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./interviews/chris_instrument_01.webm */ "./assets/video/interviews/chris_instrument_01.webm");
+/* harmony import */ var _interviews_chris_instrument_01_webm__WEBPACK_IMPORTED_MODULE_38___default = /*#__PURE__*/__webpack_require__.n(_interviews_chris_instrument_01_webm__WEBPACK_IMPORTED_MODULE_38__);
+/* harmony import */ var _interviews_chris_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./interviews/chris_whytoday_01.webm */ "./assets/video/interviews/chris_whytoday_01.webm");
+/* harmony import */ var _interviews_chris_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_39___default = /*#__PURE__*/__webpack_require__.n(_interviews_chris_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_39__);
+/* harmony import */ var _interviews_dan_firsttake_01_webm__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./interviews/dan_firsttake_01.webm */ "./assets/video/interviews/dan_firsttake_01.webm");
+/* harmony import */ var _interviews_dan_firsttake_01_webm__WEBPACK_IMPORTED_MODULE_40___default = /*#__PURE__*/__webpack_require__.n(_interviews_dan_firsttake_01_webm__WEBPACK_IMPORTED_MODULE_40__);
+/* harmony import */ var _interviews_dan_instrument_01_webm__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./interviews/dan_instrument_01.webm */ "./assets/video/interviews/dan_instrument_01.webm");
+/* harmony import */ var _interviews_dan_instrument_01_webm__WEBPACK_IMPORTED_MODULE_41___default = /*#__PURE__*/__webpack_require__.n(_interviews_dan_instrument_01_webm__WEBPACK_IMPORTED_MODULE_41__);
+/* harmony import */ var _interviews_dan_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./interviews/dan_whytoday_01.webm */ "./assets/video/interviews/dan_whytoday_01.webm");
+/* harmony import */ var _interviews_dan_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_42___default = /*#__PURE__*/__webpack_require__.n(_interviews_dan_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_42__);
+/* harmony import */ var _interviews_dara_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./interviews/dara_firsttime_01.webm */ "./assets/video/interviews/dara_firsttime_01.webm");
+/* harmony import */ var _interviews_dara_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_43___default = /*#__PURE__*/__webpack_require__.n(_interviews_dara_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_43__);
+/* harmony import */ var _interviews_dara_instrument_01_webm__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./interviews/dara_instrument_01.webm */ "./assets/video/interviews/dara_instrument_01.webm");
+/* harmony import */ var _interviews_dara_instrument_01_webm__WEBPACK_IMPORTED_MODULE_44___default = /*#__PURE__*/__webpack_require__.n(_interviews_dara_instrument_01_webm__WEBPACK_IMPORTED_MODULE_44__);
+/* harmony import */ var _interviews_dara_outtakes_webm__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./interviews/dara_outtakes.webm */ "./assets/video/interviews/dara_outtakes.webm");
+/* harmony import */ var _interviews_dara_outtakes_webm__WEBPACK_IMPORTED_MODULE_45___default = /*#__PURE__*/__webpack_require__.n(_interviews_dara_outtakes_webm__WEBPACK_IMPORTED_MODULE_45__);
+/* harmony import */ var _interviews_dara_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./interviews/dara_whytoday_01.webm */ "./assets/video/interviews/dara_whytoday_01.webm");
+/* harmony import */ var _interviews_dara_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_46___default = /*#__PURE__*/__webpack_require__.n(_interviews_dara_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_46__);
+/* harmony import */ var _interviews_david_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./interviews/david_firsttime_01.webm */ "./assets/video/interviews/david_firsttime_01.webm");
+/* harmony import */ var _interviews_david_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_47___default = /*#__PURE__*/__webpack_require__.n(_interviews_david_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_47__);
+/* harmony import */ var _interviews_david_instrument_01_webm__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./interviews/david_instrument_01.webm */ "./assets/video/interviews/david_instrument_01.webm");
+/* harmony import */ var _interviews_david_instrument_01_webm__WEBPACK_IMPORTED_MODULE_48___default = /*#__PURE__*/__webpack_require__.n(_interviews_david_instrument_01_webm__WEBPACK_IMPORTED_MODULE_48__);
+/* harmony import */ var _interviews_david_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./interviews/david_whytoday_01.webm */ "./assets/video/interviews/david_whytoday_01.webm");
+/* harmony import */ var _interviews_david_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_49___default = /*#__PURE__*/__webpack_require__.n(_interviews_david_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_49__);
+/* harmony import */ var _interviews_dylan_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./interviews/dylan_whytoday_01.webm */ "./assets/video/interviews/dylan_whytoday_01.webm");
+/* harmony import */ var _interviews_dylan_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_50___default = /*#__PURE__*/__webpack_require__.n(_interviews_dylan_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_50__);
+/* harmony import */ var _interviews_eliza_instrument_01_webm__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./interviews/eliza_instrument_01.webm */ "./assets/video/interviews/eliza_instrument_01.webm");
+/* harmony import */ var _interviews_eliza_instrument_01_webm__WEBPACK_IMPORTED_MODULE_51___default = /*#__PURE__*/__webpack_require__.n(_interviews_eliza_instrument_01_webm__WEBPACK_IMPORTED_MODULE_51__);
+/* harmony import */ var _interviews_elly_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./interviews/elly_firsttime_01.webm */ "./assets/video/interviews/elly_firsttime_01.webm");
+/* harmony import */ var _interviews_elly_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_52___default = /*#__PURE__*/__webpack_require__.n(_interviews_elly_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_52__);
+/* harmony import */ var _interviews_elly_instrument_01_webm__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./interviews/elly_instrument_01.webm */ "./assets/video/interviews/elly_instrument_01.webm");
+/* harmony import */ var _interviews_elly_instrument_01_webm__WEBPACK_IMPORTED_MODULE_53___default = /*#__PURE__*/__webpack_require__.n(_interviews_elly_instrument_01_webm__WEBPACK_IMPORTED_MODULE_53__);
+/* harmony import */ var _interviews_elly_instrument_02_webm__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./interviews/elly_instrument_02.webm */ "./assets/video/interviews/elly_instrument_02.webm");
+/* harmony import */ var _interviews_elly_instrument_02_webm__WEBPACK_IMPORTED_MODULE_54___default = /*#__PURE__*/__webpack_require__.n(_interviews_elly_instrument_02_webm__WEBPACK_IMPORTED_MODULE_54__);
+/* harmony import */ var _interviews_elly_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./interviews/elly_whytoday_01.webm */ "./assets/video/interviews/elly_whytoday_01.webm");
+/* harmony import */ var _interviews_elly_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_55___default = /*#__PURE__*/__webpack_require__.n(_interviews_elly_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_55__);
+/* harmony import */ var _interviews_emma_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! ./interviews/emma_firsttime_01.webm */ "./assets/video/interviews/emma_firsttime_01.webm");
+/* harmony import */ var _interviews_emma_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_56___default = /*#__PURE__*/__webpack_require__.n(_interviews_emma_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_56__);
+/* harmony import */ var _interviews_emma_instrument_01_webm__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(/*! ./interviews/emma_instrument_01.webm */ "./assets/video/interviews/emma_instrument_01.webm");
+/* harmony import */ var _interviews_emma_instrument_01_webm__WEBPACK_IMPORTED_MODULE_57___default = /*#__PURE__*/__webpack_require__.n(_interviews_emma_instrument_01_webm__WEBPACK_IMPORTED_MODULE_57__);
+/* harmony import */ var _interviews_emma_outtakes_webm__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./interviews/emma_outtakes.webm */ "./assets/video/interviews/emma_outtakes.webm");
+/* harmony import */ var _interviews_emma_outtakes_webm__WEBPACK_IMPORTED_MODULE_58___default = /*#__PURE__*/__webpack_require__.n(_interviews_emma_outtakes_webm__WEBPACK_IMPORTED_MODULE_58__);
+/* harmony import */ var _interviews_emma_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./interviews/emma_whytoday_01.webm */ "./assets/video/interviews/emma_whytoday_01.webm");
+/* harmony import */ var _interviews_emma_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_59___default = /*#__PURE__*/__webpack_require__.n(_interviews_emma_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_59__);
+/* harmony import */ var _interviews_erik_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./interviews/erik_firsttime_01.webm */ "./assets/video/interviews/erik_firsttime_01.webm");
+/* harmony import */ var _interviews_erik_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_60___default = /*#__PURE__*/__webpack_require__.n(_interviews_erik_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_60__);
+/* harmony import */ var _interviews_erik_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./interviews/erik_firsttime_02.webm */ "./assets/video/interviews/erik_firsttime_02.webm");
+/* harmony import */ var _interviews_erik_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_61___default = /*#__PURE__*/__webpack_require__.n(_interviews_erik_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_61__);
+/* harmony import */ var _interviews_erik_instrument_01_webm__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./interviews/erik_instrument_01.webm */ "./assets/video/interviews/erik_instrument_01.webm");
+/* harmony import */ var _interviews_erik_instrument_01_webm__WEBPACK_IMPORTED_MODULE_62___default = /*#__PURE__*/__webpack_require__.n(_interviews_erik_instrument_01_webm__WEBPACK_IMPORTED_MODULE_62__);
+/* harmony import */ var _interviews_erik_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! ./interviews/erik_whytoday_01.webm */ "./assets/video/interviews/erik_whytoday_01.webm");
+/* harmony import */ var _interviews_erik_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_63___default = /*#__PURE__*/__webpack_require__.n(_interviews_erik_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_63__);
+/* harmony import */ var _interviews_gayle_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./interviews/gayle_firsttime_01.webm */ "./assets/video/interviews/gayle_firsttime_01.webm");
+/* harmony import */ var _interviews_gayle_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_64___default = /*#__PURE__*/__webpack_require__.n(_interviews_gayle_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_64__);
+/* harmony import */ var _interviews_gayle_instrument_01_webm__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./interviews/gayle_instrument_01.webm */ "./assets/video/interviews/gayle_instrument_01.webm");
+/* harmony import */ var _interviews_gayle_instrument_01_webm__WEBPACK_IMPORTED_MODULE_65___default = /*#__PURE__*/__webpack_require__.n(_interviews_gayle_instrument_01_webm__WEBPACK_IMPORTED_MODULE_65__);
+/* harmony import */ var _interviews_gayle_outtakes_webm__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! ./interviews/gayle_outtakes.webm */ "./assets/video/interviews/gayle_outtakes.webm");
+/* harmony import */ var _interviews_gayle_outtakes_webm__WEBPACK_IMPORTED_MODULE_66___default = /*#__PURE__*/__webpack_require__.n(_interviews_gayle_outtakes_webm__WEBPACK_IMPORTED_MODULE_66__);
+/* harmony import */ var _interviews_gayle_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./interviews/gayle_whytoday_01.webm */ "./assets/video/interviews/gayle_whytoday_01.webm");
+/* harmony import */ var _interviews_gayle_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_67___default = /*#__PURE__*/__webpack_require__.n(_interviews_gayle_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_67__);
+/* harmony import */ var _interviews_jake_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ./interviews/jake_firsttime_01.webm */ "./assets/video/interviews/jake_firsttime_01.webm");
+/* harmony import */ var _interviews_jake_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_68___default = /*#__PURE__*/__webpack_require__.n(_interviews_jake_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_68__);
+/* harmony import */ var _interviews_jake_instrument_01_webm__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./interviews/jake_instrument_01.webm */ "./assets/video/interviews/jake_instrument_01.webm");
+/* harmony import */ var _interviews_jake_instrument_01_webm__WEBPACK_IMPORTED_MODULE_69___default = /*#__PURE__*/__webpack_require__.n(_interviews_jake_instrument_01_webm__WEBPACK_IMPORTED_MODULE_69__);
+/* harmony import */ var _interviews_jake_outtakes_webm__WEBPACK_IMPORTED_MODULE_70__ = __webpack_require__(/*! ./interviews/jake_outtakes.webm */ "./assets/video/interviews/jake_outtakes.webm");
+/* harmony import */ var _interviews_jake_outtakes_webm__WEBPACK_IMPORTED_MODULE_70___default = /*#__PURE__*/__webpack_require__.n(_interviews_jake_outtakes_webm__WEBPACK_IMPORTED_MODULE_70__);
+/* harmony import */ var _interviews_janet_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_71__ = __webpack_require__(/*! ./interviews/janet_firsttime_01.webm */ "./assets/video/interviews/janet_firsttime_01.webm");
+/* harmony import */ var _interviews_janet_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_71___default = /*#__PURE__*/__webpack_require__.n(_interviews_janet_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_71__);
+/* harmony import */ var _interviews_janet_instrument_01_webm__WEBPACK_IMPORTED_MODULE_72__ = __webpack_require__(/*! ./interviews/janet_instrument_01.webm */ "./assets/video/interviews/janet_instrument_01.webm");
+/* harmony import */ var _interviews_janet_instrument_01_webm__WEBPACK_IMPORTED_MODULE_72___default = /*#__PURE__*/__webpack_require__.n(_interviews_janet_instrument_01_webm__WEBPACK_IMPORTED_MODULE_72__);
+/* harmony import */ var _interviews_janet_instrument_02_webm__WEBPACK_IMPORTED_MODULE_73__ = __webpack_require__(/*! ./interviews/janet_instrument_02.webm */ "./assets/video/interviews/janet_instrument_02.webm");
+/* harmony import */ var _interviews_janet_instrument_02_webm__WEBPACK_IMPORTED_MODULE_73___default = /*#__PURE__*/__webpack_require__.n(_interviews_janet_instrument_02_webm__WEBPACK_IMPORTED_MODULE_73__);
+/* harmony import */ var _interviews_janet_outtakes_webm__WEBPACK_IMPORTED_MODULE_74__ = __webpack_require__(/*! ./interviews/janet_outtakes.webm */ "./assets/video/interviews/janet_outtakes.webm");
+/* harmony import */ var _interviews_janet_outtakes_webm__WEBPACK_IMPORTED_MODULE_74___default = /*#__PURE__*/__webpack_require__.n(_interviews_janet_outtakes_webm__WEBPACK_IMPORTED_MODULE_74__);
+/* harmony import */ var _interviews_janet_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_75__ = __webpack_require__(/*! ./interviews/janet_whytoday_01.webm */ "./assets/video/interviews/janet_whytoday_01.webm");
+/* harmony import */ var _interviews_janet_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_75___default = /*#__PURE__*/__webpack_require__.n(_interviews_janet_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_75__);
+/* harmony import */ var _interviews_jeff_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_76__ = __webpack_require__(/*! ./interviews/jeff_firsttime_01.webm */ "./assets/video/interviews/jeff_firsttime_01.webm");
+/* harmony import */ var _interviews_jeff_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_76___default = /*#__PURE__*/__webpack_require__.n(_interviews_jeff_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_76__);
+/* harmony import */ var _interviews_jeff_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_77__ = __webpack_require__(/*! ./interviews/jeff_firsttime_02.webm */ "./assets/video/interviews/jeff_firsttime_02.webm");
+/* harmony import */ var _interviews_jeff_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_77___default = /*#__PURE__*/__webpack_require__.n(_interviews_jeff_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_77__);
+/* harmony import */ var _interviews_jeff_instrument_01_webm__WEBPACK_IMPORTED_MODULE_78__ = __webpack_require__(/*! ./interviews/jeff_instrument_01.webm */ "./assets/video/interviews/jeff_instrument_01.webm");
+/* harmony import */ var _interviews_jeff_instrument_01_webm__WEBPACK_IMPORTED_MODULE_78___default = /*#__PURE__*/__webpack_require__.n(_interviews_jeff_instrument_01_webm__WEBPACK_IMPORTED_MODULE_78__);
+/* harmony import */ var _interviews_jeff_outtakes_webm__WEBPACK_IMPORTED_MODULE_79__ = __webpack_require__(/*! ./interviews/jeff_outtakes.webm */ "./assets/video/interviews/jeff_outtakes.webm");
+/* harmony import */ var _interviews_jeff_outtakes_webm__WEBPACK_IMPORTED_MODULE_79___default = /*#__PURE__*/__webpack_require__.n(_interviews_jeff_outtakes_webm__WEBPACK_IMPORTED_MODULE_79__);
+/* harmony import */ var _interviews_jeff_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_80__ = __webpack_require__(/*! ./interviews/jeff_whytoday_01.webm */ "./assets/video/interviews/jeff_whytoday_01.webm");
+/* harmony import */ var _interviews_jeff_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_80___default = /*#__PURE__*/__webpack_require__.n(_interviews_jeff_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_80__);
+/* harmony import */ var _interviews_joanne_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_81__ = __webpack_require__(/*! ./interviews/joanne_firsttime_01.webm */ "./assets/video/interviews/joanne_firsttime_01.webm");
+/* harmony import */ var _interviews_joanne_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_81___default = /*#__PURE__*/__webpack_require__.n(_interviews_joanne_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_81__);
+/* harmony import */ var _interviews_joanne_instrument_01_webm__WEBPACK_IMPORTED_MODULE_82__ = __webpack_require__(/*! ./interviews/joanne_instrument_01.webm */ "./assets/video/interviews/joanne_instrument_01.webm");
+/* harmony import */ var _interviews_joanne_instrument_01_webm__WEBPACK_IMPORTED_MODULE_82___default = /*#__PURE__*/__webpack_require__.n(_interviews_joanne_instrument_01_webm__WEBPACK_IMPORTED_MODULE_82__);
+/* harmony import */ var _interviews_joanne_outtakes_webm__WEBPACK_IMPORTED_MODULE_83__ = __webpack_require__(/*! ./interviews/joanne_outtakes.webm */ "./assets/video/interviews/joanne_outtakes.webm");
+/* harmony import */ var _interviews_joanne_outtakes_webm__WEBPACK_IMPORTED_MODULE_83___default = /*#__PURE__*/__webpack_require__.n(_interviews_joanne_outtakes_webm__WEBPACK_IMPORTED_MODULE_83__);
+/* harmony import */ var _interviews_joanne_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_84__ = __webpack_require__(/*! ./interviews/joanne_whytoday_01.webm */ "./assets/video/interviews/joanne_whytoday_01.webm");
+/* harmony import */ var _interviews_joanne_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_84___default = /*#__PURE__*/__webpack_require__.n(_interviews_joanne_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_84__);
+/* harmony import */ var _interviews_joanne_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_85__ = __webpack_require__(/*! ./interviews/joanne_whytoday_02.webm */ "./assets/video/interviews/joanne_whytoday_02.webm");
+/* harmony import */ var _interviews_joanne_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_85___default = /*#__PURE__*/__webpack_require__.n(_interviews_joanne_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_85__);
+/* harmony import */ var _interviews_josh_instrument_01_webm__WEBPACK_IMPORTED_MODULE_86__ = __webpack_require__(/*! ./interviews/josh_instrument_01.webm */ "./assets/video/interviews/josh_instrument_01.webm");
+/* harmony import */ var _interviews_josh_instrument_01_webm__WEBPACK_IMPORTED_MODULE_86___default = /*#__PURE__*/__webpack_require__.n(_interviews_josh_instrument_01_webm__WEBPACK_IMPORTED_MODULE_86__);
+/* harmony import */ var _interviews_josh_instrument_02_webm__WEBPACK_IMPORTED_MODULE_87__ = __webpack_require__(/*! ./interviews/josh_instrument_02.webm */ "./assets/video/interviews/josh_instrument_02.webm");
+/* harmony import */ var _interviews_josh_instrument_02_webm__WEBPACK_IMPORTED_MODULE_87___default = /*#__PURE__*/__webpack_require__.n(_interviews_josh_instrument_02_webm__WEBPACK_IMPORTED_MODULE_87__);
+/* harmony import */ var _interviews_josh_outtakes_nsfw_webm__WEBPACK_IMPORTED_MODULE_88__ = __webpack_require__(/*! ./interviews/josh_outtakes-nsfw-.webm */ "./assets/video/interviews/josh_outtakes-nsfw-.webm");
+/* harmony import */ var _interviews_josh_outtakes_nsfw_webm__WEBPACK_IMPORTED_MODULE_88___default = /*#__PURE__*/__webpack_require__.n(_interviews_josh_outtakes_nsfw_webm__WEBPACK_IMPORTED_MODULE_88__);
+/* harmony import */ var _interviews_josh_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_89__ = __webpack_require__(/*! ./interviews/josh_whytoday_01.webm */ "./assets/video/interviews/josh_whytoday_01.webm");
+/* harmony import */ var _interviews_josh_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_89___default = /*#__PURE__*/__webpack_require__.n(_interviews_josh_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_89__);
+/* harmony import */ var _interviews_josh_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_90__ = __webpack_require__(/*! ./interviews/josh_whytoday_02.webm */ "./assets/video/interviews/josh_whytoday_02.webm");
+/* harmony import */ var _interviews_josh_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_90___default = /*#__PURE__*/__webpack_require__.n(_interviews_josh_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_90__);
+/* harmony import */ var _interviews_kathy_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_91__ = __webpack_require__(/*! ./interviews/kathy_firsttime_01.webm */ "./assets/video/interviews/kathy_firsttime_01.webm");
+/* harmony import */ var _interviews_kathy_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_91___default = /*#__PURE__*/__webpack_require__.n(_interviews_kathy_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_91__);
+/* harmony import */ var _interviews_kathy_instrument_01_webm__WEBPACK_IMPORTED_MODULE_92__ = __webpack_require__(/*! ./interviews/kathy_instrument_01.webm */ "./assets/video/interviews/kathy_instrument_01.webm");
+/* harmony import */ var _interviews_kathy_instrument_01_webm__WEBPACK_IMPORTED_MODULE_92___default = /*#__PURE__*/__webpack_require__.n(_interviews_kathy_instrument_01_webm__WEBPACK_IMPORTED_MODULE_92__);
+/* harmony import */ var _interviews_kathy_outtakes_webm__WEBPACK_IMPORTED_MODULE_93__ = __webpack_require__(/*! ./interviews/kathy_outtakes.webm */ "./assets/video/interviews/kathy_outtakes.webm");
+/* harmony import */ var _interviews_kathy_outtakes_webm__WEBPACK_IMPORTED_MODULE_93___default = /*#__PURE__*/__webpack_require__.n(_interviews_kathy_outtakes_webm__WEBPACK_IMPORTED_MODULE_93__);
+/* harmony import */ var _interviews_kathy_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_94__ = __webpack_require__(/*! ./interviews/kathy_whytoday_01.webm */ "./assets/video/interviews/kathy_whytoday_01.webm");
+/* harmony import */ var _interviews_kathy_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_94___default = /*#__PURE__*/__webpack_require__.n(_interviews_kathy_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_94__);
+/* harmony import */ var _interviews_ken_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_95__ = __webpack_require__(/*! ./interviews/ken_firsttime_01.webm */ "./assets/video/interviews/ken_firsttime_01.webm");
+/* harmony import */ var _interviews_ken_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_95___default = /*#__PURE__*/__webpack_require__.n(_interviews_ken_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_95__);
+/* harmony import */ var _interviews_ken_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_96__ = __webpack_require__(/*! ./interviews/ken_firsttime_02.webm */ "./assets/video/interviews/ken_firsttime_02.webm");
+/* harmony import */ var _interviews_ken_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_96___default = /*#__PURE__*/__webpack_require__.n(_interviews_ken_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_96__);
+/* harmony import */ var _interviews_ken_instrument_01_webm__WEBPACK_IMPORTED_MODULE_97__ = __webpack_require__(/*! ./interviews/ken_instrument_01.webm */ "./assets/video/interviews/ken_instrument_01.webm");
+/* harmony import */ var _interviews_ken_instrument_01_webm__WEBPACK_IMPORTED_MODULE_97___default = /*#__PURE__*/__webpack_require__.n(_interviews_ken_instrument_01_webm__WEBPACK_IMPORTED_MODULE_97__);
+/* harmony import */ var _interviews_ken_instrument_02_webm__WEBPACK_IMPORTED_MODULE_98__ = __webpack_require__(/*! ./interviews/ken_instrument_02.webm */ "./assets/video/interviews/ken_instrument_02.webm");
+/* harmony import */ var _interviews_ken_instrument_02_webm__WEBPACK_IMPORTED_MODULE_98___default = /*#__PURE__*/__webpack_require__.n(_interviews_ken_instrument_02_webm__WEBPACK_IMPORTED_MODULE_98__);
+/* harmony import */ var _interviews_ken_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_99__ = __webpack_require__(/*! ./interviews/ken_whytoday_01.webm */ "./assets/video/interviews/ken_whytoday_01.webm");
+/* harmony import */ var _interviews_ken_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_99___default = /*#__PURE__*/__webpack_require__.n(_interviews_ken_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_99__);
+/* harmony import */ var _interviews_ken_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_100__ = __webpack_require__(/*! ./interviews/ken_whytoday_02.webm */ "./assets/video/interviews/ken_whytoday_02.webm");
+/* harmony import */ var _interviews_ken_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_100___default = /*#__PURE__*/__webpack_require__.n(_interviews_ken_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_100__);
+/* harmony import */ var _interviews_kenny_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_101__ = __webpack_require__(/*! ./interviews/kenny_firsttime_01.webm */ "./assets/video/interviews/kenny_firsttime_01.webm");
+/* harmony import */ var _interviews_kenny_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_101___default = /*#__PURE__*/__webpack_require__.n(_interviews_kenny_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_101__);
+/* harmony import */ var _interviews_kenny_instrument_01_webm__WEBPACK_IMPORTED_MODULE_102__ = __webpack_require__(/*! ./interviews/kenny_instrument_01.webm */ "./assets/video/interviews/kenny_instrument_01.webm");
+/* harmony import */ var _interviews_kenny_instrument_01_webm__WEBPACK_IMPORTED_MODULE_102___default = /*#__PURE__*/__webpack_require__.n(_interviews_kenny_instrument_01_webm__WEBPACK_IMPORTED_MODULE_102__);
+/* harmony import */ var _interviews_kenny_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_103__ = __webpack_require__(/*! ./interviews/kenny_whytoday_01.webm */ "./assets/video/interviews/kenny_whytoday_01.webm");
+/* harmony import */ var _interviews_kenny_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_103___default = /*#__PURE__*/__webpack_require__.n(_interviews_kenny_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_103__);
+/* harmony import */ var _interviews_laura_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_104__ = __webpack_require__(/*! ./interviews/laura_firsttime_01.webm */ "./assets/video/interviews/laura_firsttime_01.webm");
+/* harmony import */ var _interviews_laura_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_104___default = /*#__PURE__*/__webpack_require__.n(_interviews_laura_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_104__);
+/* harmony import */ var _interviews_laura_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_105__ = __webpack_require__(/*! ./interviews/laura_firsttime_02.webm */ "./assets/video/interviews/laura_firsttime_02.webm");
+/* harmony import */ var _interviews_laura_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_105___default = /*#__PURE__*/__webpack_require__.n(_interviews_laura_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_105__);
+/* harmony import */ var _interviews_laura_instrument_01_webm__WEBPACK_IMPORTED_MODULE_106__ = __webpack_require__(/*! ./interviews/laura_instrument_01.webm */ "./assets/video/interviews/laura_instrument_01.webm");
+/* harmony import */ var _interviews_laura_instrument_01_webm__WEBPACK_IMPORTED_MODULE_106___default = /*#__PURE__*/__webpack_require__.n(_interviews_laura_instrument_01_webm__WEBPACK_IMPORTED_MODULE_106__);
+/* harmony import */ var _interviews_laura_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_107__ = __webpack_require__(/*! ./interviews/laura_whytoday_01.webm */ "./assets/video/interviews/laura_whytoday_01.webm");
+/* harmony import */ var _interviews_laura_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_107___default = /*#__PURE__*/__webpack_require__.n(_interviews_laura_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_107__);
+/* harmony import */ var _interviews_lenore_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_108__ = __webpack_require__(/*! ./interviews/lenore_firsttime_01.webm */ "./assets/video/interviews/lenore_firsttime_01.webm");
+/* harmony import */ var _interviews_lenore_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_108___default = /*#__PURE__*/__webpack_require__.n(_interviews_lenore_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_108__);
+/* harmony import */ var _interviews_lenore_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_109__ = __webpack_require__(/*! ./interviews/lenore_firsttime_02.webm */ "./assets/video/interviews/lenore_firsttime_02.webm");
+/* harmony import */ var _interviews_lenore_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_109___default = /*#__PURE__*/__webpack_require__.n(_interviews_lenore_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_109__);
+/* harmony import */ var _interviews_lenore_instrument_01_webm__WEBPACK_IMPORTED_MODULE_110__ = __webpack_require__(/*! ./interviews/lenore_instrument_01.webm */ "./assets/video/interviews/lenore_instrument_01.webm");
+/* harmony import */ var _interviews_lenore_instrument_01_webm__WEBPACK_IMPORTED_MODULE_110___default = /*#__PURE__*/__webpack_require__.n(_interviews_lenore_instrument_01_webm__WEBPACK_IMPORTED_MODULE_110__);
+/* harmony import */ var _interviews_lenore_instrument_02_webm__WEBPACK_IMPORTED_MODULE_111__ = __webpack_require__(/*! ./interviews/lenore_instrument_02.webm */ "./assets/video/interviews/lenore_instrument_02.webm");
+/* harmony import */ var _interviews_lenore_instrument_02_webm__WEBPACK_IMPORTED_MODULE_111___default = /*#__PURE__*/__webpack_require__.n(_interviews_lenore_instrument_02_webm__WEBPACK_IMPORTED_MODULE_111__);
+/* harmony import */ var _interviews_lenore_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_112__ = __webpack_require__(/*! ./interviews/lenore_whytoday_01.webm */ "./assets/video/interviews/lenore_whytoday_01.webm");
+/* harmony import */ var _interviews_lenore_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_112___default = /*#__PURE__*/__webpack_require__.n(_interviews_lenore_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_112__);
+/* harmony import */ var _interviews_leslie_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_113__ = __webpack_require__(/*! ./interviews/leslie_firsttime_01.webm */ "./assets/video/interviews/leslie_firsttime_01.webm");
+/* harmony import */ var _interviews_leslie_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_113___default = /*#__PURE__*/__webpack_require__.n(_interviews_leslie_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_113__);
+/* harmony import */ var _interviews_leslie_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_114__ = __webpack_require__(/*! ./interviews/leslie_firsttime_02.webm */ "./assets/video/interviews/leslie_firsttime_02.webm");
+/* harmony import */ var _interviews_leslie_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_114___default = /*#__PURE__*/__webpack_require__.n(_interviews_leslie_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_114__);
+/* harmony import */ var _interviews_leslie_instrument_01_webm__WEBPACK_IMPORTED_MODULE_115__ = __webpack_require__(/*! ./interviews/leslie_instrument_01.webm */ "./assets/video/interviews/leslie_instrument_01.webm");
+/* harmony import */ var _interviews_leslie_instrument_01_webm__WEBPACK_IMPORTED_MODULE_115___default = /*#__PURE__*/__webpack_require__.n(_interviews_leslie_instrument_01_webm__WEBPACK_IMPORTED_MODULE_115__);
+/* harmony import */ var _interviews_leslie_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_116__ = __webpack_require__(/*! ./interviews/leslie_whytoday_01.webm */ "./assets/video/interviews/leslie_whytoday_01.webm");
+/* harmony import */ var _interviews_leslie_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_116___default = /*#__PURE__*/__webpack_require__.n(_interviews_leslie_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_116__);
+/* harmony import */ var _interviews_lisa_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_117__ = __webpack_require__(/*! ./interviews/lisa_firsttime_01.webm */ "./assets/video/interviews/lisa_firsttime_01.webm");
+/* harmony import */ var _interviews_lisa_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_117___default = /*#__PURE__*/__webpack_require__.n(_interviews_lisa_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_117__);
+/* harmony import */ var _interviews_lisa_instrument_01_webm__WEBPACK_IMPORTED_MODULE_118__ = __webpack_require__(/*! ./interviews/lisa_instrument_01.webm */ "./assets/video/interviews/lisa_instrument_01.webm");
+/* harmony import */ var _interviews_lisa_instrument_01_webm__WEBPACK_IMPORTED_MODULE_118___default = /*#__PURE__*/__webpack_require__.n(_interviews_lisa_instrument_01_webm__WEBPACK_IMPORTED_MODULE_118__);
+/* harmony import */ var _interviews_lisa_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_119__ = __webpack_require__(/*! ./interviews/lisa_whytoday_01.webm */ "./assets/video/interviews/lisa_whytoday_01.webm");
+/* harmony import */ var _interviews_lisa_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_119___default = /*#__PURE__*/__webpack_require__.n(_interviews_lisa_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_119__);
+/* harmony import */ var _interviews_reid_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_120__ = __webpack_require__(/*! ./interviews/reid_firsttime_01.webm */ "./assets/video/interviews/reid_firsttime_01.webm");
+/* harmony import */ var _interviews_reid_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_120___default = /*#__PURE__*/__webpack_require__.n(_interviews_reid_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_120__);
+/* harmony import */ var _interviews_reid_instrument_01_webm__WEBPACK_IMPORTED_MODULE_121__ = __webpack_require__(/*! ./interviews/reid_instrument_01.webm */ "./assets/video/interviews/reid_instrument_01.webm");
+/* harmony import */ var _interviews_reid_instrument_01_webm__WEBPACK_IMPORTED_MODULE_121___default = /*#__PURE__*/__webpack_require__.n(_interviews_reid_instrument_01_webm__WEBPACK_IMPORTED_MODULE_121__);
+/* harmony import */ var _interviews_reid_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_122__ = __webpack_require__(/*! ./interviews/reid_whytoday_01.webm */ "./assets/video/interviews/reid_whytoday_01.webm");
+/* harmony import */ var _interviews_reid_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_122___default = /*#__PURE__*/__webpack_require__.n(_interviews_reid_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_122__);
+/* harmony import */ var _interviews_sam_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_123__ = __webpack_require__(/*! ./interviews/sam_firsttime_01.webm */ "./assets/video/interviews/sam_firsttime_01.webm");
+/* harmony import */ var _interviews_sam_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_123___default = /*#__PURE__*/__webpack_require__.n(_interviews_sam_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_123__);
+/* harmony import */ var _interviews_sam_instrument_01_webm__WEBPACK_IMPORTED_MODULE_124__ = __webpack_require__(/*! ./interviews/sam_instrument_01.webm */ "./assets/video/interviews/sam_instrument_01.webm");
+/* harmony import */ var _interviews_sam_instrument_01_webm__WEBPACK_IMPORTED_MODULE_124___default = /*#__PURE__*/__webpack_require__.n(_interviews_sam_instrument_01_webm__WEBPACK_IMPORTED_MODULE_124__);
+/* harmony import */ var _interviews_sam_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_125__ = __webpack_require__(/*! ./interviews/sam_whytoday_01.webm */ "./assets/video/interviews/sam_whytoday_01.webm");
+/* harmony import */ var _interviews_sam_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_125___default = /*#__PURE__*/__webpack_require__.n(_interviews_sam_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_125__);
+/* harmony import */ var _interviews_scott_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_126__ = __webpack_require__(/*! ./interviews/scott_firsttime_01.webm */ "./assets/video/interviews/scott_firsttime_01.webm");
+/* harmony import */ var _interviews_scott_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_126___default = /*#__PURE__*/__webpack_require__.n(_interviews_scott_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_126__);
+/* harmony import */ var _interviews_scott_instrument_01_webm__WEBPACK_IMPORTED_MODULE_127__ = __webpack_require__(/*! ./interviews/scott_instrument_01.webm */ "./assets/video/interviews/scott_instrument_01.webm");
+/* harmony import */ var _interviews_scott_instrument_01_webm__WEBPACK_IMPORTED_MODULE_127___default = /*#__PURE__*/__webpack_require__.n(_interviews_scott_instrument_01_webm__WEBPACK_IMPORTED_MODULE_127__);
+/* harmony import */ var _interviews_scott_instrument_02_webm__WEBPACK_IMPORTED_MODULE_128__ = __webpack_require__(/*! ./interviews/scott_instrument_02.webm */ "./assets/video/interviews/scott_instrument_02.webm");
+/* harmony import */ var _interviews_scott_instrument_02_webm__WEBPACK_IMPORTED_MODULE_128___default = /*#__PURE__*/__webpack_require__.n(_interviews_scott_instrument_02_webm__WEBPACK_IMPORTED_MODULE_128__);
+/* harmony import */ var _interviews_scott_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_129__ = __webpack_require__(/*! ./interviews/scott_whytoday_01.webm */ "./assets/video/interviews/scott_whytoday_01.webm");
+/* harmony import */ var _interviews_scott_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_129___default = /*#__PURE__*/__webpack_require__.n(_interviews_scott_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_129__);
+/* harmony import */ var _interviews_sophia_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_130__ = __webpack_require__(/*! ./interviews/sophia_firsttime_01.webm */ "./assets/video/interviews/sophia_firsttime_01.webm");
+/* harmony import */ var _interviews_sophia_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_130___default = /*#__PURE__*/__webpack_require__.n(_interviews_sophia_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_130__);
+/* harmony import */ var _interviews_sophia_instrument_01_webm__WEBPACK_IMPORTED_MODULE_131__ = __webpack_require__(/*! ./interviews/sophia_instrument_01.webm */ "./assets/video/interviews/sophia_instrument_01.webm");
+/* harmony import */ var _interviews_sophia_instrument_01_webm__WEBPACK_IMPORTED_MODULE_131___default = /*#__PURE__*/__webpack_require__.n(_interviews_sophia_instrument_01_webm__WEBPACK_IMPORTED_MODULE_131__);
+/* harmony import */ var _interviews_sophia_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_132__ = __webpack_require__(/*! ./interviews/sophia_whytoday_01.webm */ "./assets/video/interviews/sophia_whytoday_01.webm");
+/* harmony import */ var _interviews_sophia_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_132___default = /*#__PURE__*/__webpack_require__.n(_interviews_sophia_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_132__);
+/* harmony import */ var _interviews_stephanie_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_133__ = __webpack_require__(/*! ./interviews/stephanie_firsttime_01.webm */ "./assets/video/interviews/stephanie_firsttime_01.webm");
+/* harmony import */ var _interviews_stephanie_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_133___default = /*#__PURE__*/__webpack_require__.n(_interviews_stephanie_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_133__);
+/* harmony import */ var _interviews_stephanie_instrument_01_webm__WEBPACK_IMPORTED_MODULE_134__ = __webpack_require__(/*! ./interviews/stephanie_instrument_01.webm */ "./assets/video/interviews/stephanie_instrument_01.webm");
+/* harmony import */ var _interviews_stephanie_instrument_01_webm__WEBPACK_IMPORTED_MODULE_134___default = /*#__PURE__*/__webpack_require__.n(_interviews_stephanie_instrument_01_webm__WEBPACK_IMPORTED_MODULE_134__);
+/* harmony import */ var _interviews_stephanie_outtakes_webm__WEBPACK_IMPORTED_MODULE_135__ = __webpack_require__(/*! ./interviews/stephanie_outtakes.webm */ "./assets/video/interviews/stephanie_outtakes.webm");
+/* harmony import */ var _interviews_stephanie_outtakes_webm__WEBPACK_IMPORTED_MODULE_135___default = /*#__PURE__*/__webpack_require__.n(_interviews_stephanie_outtakes_webm__WEBPACK_IMPORTED_MODULE_135__);
+/* harmony import */ var _interviews_stephanie_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_136__ = __webpack_require__(/*! ./interviews/stephanie_whytoday_01.webm */ "./assets/video/interviews/stephanie_whytoday_01.webm");
+/* harmony import */ var _interviews_stephanie_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_136___default = /*#__PURE__*/__webpack_require__.n(_interviews_stephanie_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_136__);
+/* harmony import */ var _interviews_stephanie_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_137__ = __webpack_require__(/*! ./interviews/stephanie_whytoday_02.webm */ "./assets/video/interviews/stephanie_whytoday_02.webm");
+/* harmony import */ var _interviews_stephanie_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_137___default = /*#__PURE__*/__webpack_require__.n(_interviews_stephanie_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_137__);
+/* harmony import */ var _interviews_sue_firsttake_01_webm__WEBPACK_IMPORTED_MODULE_138__ = __webpack_require__(/*! ./interviews/sue_firsttake_01.webm */ "./assets/video/interviews/sue_firsttake_01.webm");
+/* harmony import */ var _interviews_sue_firsttake_01_webm__WEBPACK_IMPORTED_MODULE_138___default = /*#__PURE__*/__webpack_require__.n(_interviews_sue_firsttake_01_webm__WEBPACK_IMPORTED_MODULE_138__);
+/* harmony import */ var _interviews_sue_instrument_01_webm__WEBPACK_IMPORTED_MODULE_139__ = __webpack_require__(/*! ./interviews/sue_instrument_01.webm */ "./assets/video/interviews/sue_instrument_01.webm");
+/* harmony import */ var _interviews_sue_instrument_01_webm__WEBPACK_IMPORTED_MODULE_139___default = /*#__PURE__*/__webpack_require__.n(_interviews_sue_instrument_01_webm__WEBPACK_IMPORTED_MODULE_139__);
+/* harmony import */ var _interviews_sue_outtakes_webm__WEBPACK_IMPORTED_MODULE_140__ = __webpack_require__(/*! ./interviews/sue_outtakes.webm */ "./assets/video/interviews/sue_outtakes.webm");
+/* harmony import */ var _interviews_sue_outtakes_webm__WEBPACK_IMPORTED_MODULE_140___default = /*#__PURE__*/__webpack_require__.n(_interviews_sue_outtakes_webm__WEBPACK_IMPORTED_MODULE_140__);
+/* harmony import */ var _interviews_sue_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_141__ = __webpack_require__(/*! ./interviews/sue_whytoday_01.webm */ "./assets/video/interviews/sue_whytoday_01.webm");
+/* harmony import */ var _interviews_sue_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_141___default = /*#__PURE__*/__webpack_require__.n(_interviews_sue_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_141__);
+/* harmony import */ var _interviews_sue_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_142__ = __webpack_require__(/*! ./interviews/sue_whytoday_02.webm */ "./assets/video/interviews/sue_whytoday_02.webm");
+/* harmony import */ var _interviews_sue_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_142___default = /*#__PURE__*/__webpack_require__.n(_interviews_sue_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_142__);
+/* harmony import */ var _interviews_suzanne_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_143__ = __webpack_require__(/*! ./interviews/suzanne_firsttime_01.webm */ "./assets/video/interviews/suzanne_firsttime_01.webm");
+/* harmony import */ var _interviews_suzanne_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_143___default = /*#__PURE__*/__webpack_require__.n(_interviews_suzanne_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_143__);
+/* harmony import */ var _interviews_suzanne_instrument_01_webm__WEBPACK_IMPORTED_MODULE_144__ = __webpack_require__(/*! ./interviews/suzanne_instrument_01.webm */ "./assets/video/interviews/suzanne_instrument_01.webm");
+/* harmony import */ var _interviews_suzanne_instrument_01_webm__WEBPACK_IMPORTED_MODULE_144___default = /*#__PURE__*/__webpack_require__.n(_interviews_suzanne_instrument_01_webm__WEBPACK_IMPORTED_MODULE_144__);
+/* harmony import */ var _interviews_suzanne_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_145__ = __webpack_require__(/*! ./interviews/suzanne_whytoday_01.webm */ "./assets/video/interviews/suzanne_whytoday_01.webm");
+/* harmony import */ var _interviews_suzanne_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_145___default = /*#__PURE__*/__webpack_require__.n(_interviews_suzanne_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_145__);
+/* harmony import */ var _interviews_tim_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_146__ = __webpack_require__(/*! ./interviews/tim_firsttime_01.webm */ "./assets/video/interviews/tim_firsttime_01.webm");
+/* harmony import */ var _interviews_tim_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_146___default = /*#__PURE__*/__webpack_require__.n(_interviews_tim_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_146__);
+/* harmony import */ var _interviews_tim_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_147__ = __webpack_require__(/*! ./interviews/tim_firsttime_02.webm */ "./assets/video/interviews/tim_firsttime_02.webm");
+/* harmony import */ var _interviews_tim_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_147___default = /*#__PURE__*/__webpack_require__.n(_interviews_tim_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_147__);
+/* harmony import */ var _interviews_tim_instrument_01_webm__WEBPACK_IMPORTED_MODULE_148__ = __webpack_require__(/*! ./interviews/tim_instrument_01.webm */ "./assets/video/interviews/tim_instrument_01.webm");
+/* harmony import */ var _interviews_tim_instrument_01_webm__WEBPACK_IMPORTED_MODULE_148___default = /*#__PURE__*/__webpack_require__.n(_interviews_tim_instrument_01_webm__WEBPACK_IMPORTED_MODULE_148__);
+/* harmony import */ var _interviews_tim_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_149__ = __webpack_require__(/*! ./interviews/tim_whytoday_01.webm */ "./assets/video/interviews/tim_whytoday_01.webm");
+/* harmony import */ var _interviews_tim_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_149___default = /*#__PURE__*/__webpack_require__.n(_interviews_tim_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_149__);
+/* harmony import */ var _interviews_tina_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_150__ = __webpack_require__(/*! ./interviews/tina_firsttime_01.webm */ "./assets/video/interviews/tina_firsttime_01.webm");
+/* harmony import */ var _interviews_tina_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_150___default = /*#__PURE__*/__webpack_require__.n(_interviews_tina_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_150__);
+/* harmony import */ var _interviews_tina_instrument_01_webm__WEBPACK_IMPORTED_MODULE_151__ = __webpack_require__(/*! ./interviews/tina_instrument_01.webm */ "./assets/video/interviews/tina_instrument_01.webm");
+/* harmony import */ var _interviews_tina_instrument_01_webm__WEBPACK_IMPORTED_MODULE_151___default = /*#__PURE__*/__webpack_require__.n(_interviews_tina_instrument_01_webm__WEBPACK_IMPORTED_MODULE_151__);
+/* harmony import */ var _interviews_tina_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_152__ = __webpack_require__(/*! ./interviews/tina_whytoday_01.webm */ "./assets/video/interviews/tina_whytoday_01.webm");
+/* harmony import */ var _interviews_tina_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_152___default = /*#__PURE__*/__webpack_require__.n(_interviews_tina_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_152__);
+/* harmony import */ var _interviews_tom_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_153__ = __webpack_require__(/*! ./interviews/tom_firsttime_01.webm */ "./assets/video/interviews/tom_firsttime_01.webm");
+/* harmony import */ var _interviews_tom_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_153___default = /*#__PURE__*/__webpack_require__.n(_interviews_tom_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_153__);
+/* harmony import */ var _interviews_tom_instrument_01_webm__WEBPACK_IMPORTED_MODULE_154__ = __webpack_require__(/*! ./interviews/tom_instrument_01.webm */ "./assets/video/interviews/tom_instrument_01.webm");
+/* harmony import */ var _interviews_tom_instrument_01_webm__WEBPACK_IMPORTED_MODULE_154___default = /*#__PURE__*/__webpack_require__.n(_interviews_tom_instrument_01_webm__WEBPACK_IMPORTED_MODULE_154__);
+/* harmony import */ var _interviews_tom_instrument_02_webm__WEBPACK_IMPORTED_MODULE_155__ = __webpack_require__(/*! ./interviews/tom_instrument_02.webm */ "./assets/video/interviews/tom_instrument_02.webm");
+/* harmony import */ var _interviews_tom_instrument_02_webm__WEBPACK_IMPORTED_MODULE_155___default = /*#__PURE__*/__webpack_require__.n(_interviews_tom_instrument_02_webm__WEBPACK_IMPORTED_MODULE_155__);
+/* harmony import */ var _interviews_tom_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_156__ = __webpack_require__(/*! ./interviews/tom_whytoday_01.webm */ "./assets/video/interviews/tom_whytoday_01.webm");
+/* harmony import */ var _interviews_tom_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_156___default = /*#__PURE__*/__webpack_require__.n(_interviews_tom_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_156__);
+/* harmony import */ var _interviews_travis_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_157__ = __webpack_require__(/*! ./interviews/travis_firsttime_01.webm */ "./assets/video/interviews/travis_firsttime_01.webm");
+/* harmony import */ var _interviews_travis_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_157___default = /*#__PURE__*/__webpack_require__.n(_interviews_travis_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_157__);
+/* harmony import */ var _interviews_travis_instrument_01_webm__WEBPACK_IMPORTED_MODULE_158__ = __webpack_require__(/*! ./interviews/travis_instrument_01.webm */ "./assets/video/interviews/travis_instrument_01.webm");
+/* harmony import */ var _interviews_travis_instrument_01_webm__WEBPACK_IMPORTED_MODULE_158___default = /*#__PURE__*/__webpack_require__.n(_interviews_travis_instrument_01_webm__WEBPACK_IMPORTED_MODULE_158__);
+/* harmony import */ var _interviews_travis_outtakes_webm__WEBPACK_IMPORTED_MODULE_159__ = __webpack_require__(/*! ./interviews/travis_outtakes.webm */ "./assets/video/interviews/travis_outtakes.webm");
+/* harmony import */ var _interviews_travis_outtakes_webm__WEBPACK_IMPORTED_MODULE_159___default = /*#__PURE__*/__webpack_require__.n(_interviews_travis_outtakes_webm__WEBPACK_IMPORTED_MODULE_159__);
+/* harmony import */ var _interviews_travis_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_160__ = __webpack_require__(/*! ./interviews/travis_whytoday_01.webm */ "./assets/video/interviews/travis_whytoday_01.webm");
+/* harmony import */ var _interviews_travis_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_160___default = /*#__PURE__*/__webpack_require__.n(_interviews_travis_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_160__);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const data = {[_interviews_ali_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_0___default.a]: "I would have to say the first time I saw a symphony play, I was probably in high school, and I was blown away.",
+[_interviews_ali_outtakes_webm__WEBPACK_IMPORTED_MODULE_1___default.a]: "Am I single yes for some while I sound like s*** So I can talk for like 5 minutes Except I would have to say was probably in high school the first time I saw Symphony performance Actually don't know I just made that up I have no idea You can just you just you can just pull like a succession you know if you can suggest succession where Kendall 10 Fox and then they show character And he just standing there and they don't have him say anything cuz it's bad Just leave it with me and I just let Eliza talk and then just show me smiling",
+[_interviews_amelia_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_2___default.a]: "First time I played in the symphony? I was in 7th grade, it was the Fairbanks Youth Orchestra, and I started because my violin teacher recommended it to me.",
+[_interviews_amelia_instrument_01_webm__WEBPACK_IMPORTED_MODULE_3___default.a]: "I received one on my fifth birthday from my grandparent.",
+[_interviews_amelia_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_4___default.a]: "I really enjoy playing in music groups more so than I actually like playing solo, and just opportunity.",
+[_interviews_amy_mitchell_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_5___default.a]: "I was very lucky with my experiences with getting to watch symphony because my mother was the physical therapist for the Houston Symphony Orchestra. And so from a pretty young age (middle school) I was backstage at Houston Symphony concerts meeting all the musicians, and I was a little girl so they thought that was cool, and they would find special seats for me, and play little special licks and wink and me in the middle of the concert and things like that. I just had this idea that people who played in the symphony were the nicest most magical people on the planet. That’s my experience getting to know them as human beings as well as enjoying their music.",
+[_interviews_amy_mitchell_instrument_01_webm__WEBPACK_IMPORTED_MODULE_6___default.a]: "When I was graduating from fifth grade, our sixth grade orchestra teacher (the middle school orchestra teacher) came to talk to the fifth grade class about what instruments we could play in the middle school orchestra. And she demonstrated the violin, and that was fine. And the viola was kinda’ neat, I liked the lower sound. But then when she played the cello, she sat down. And then I thought “that is the instrument for me”. And I actually decided to play the cello when she mentioned that they kept the cellos at school for you, so you didn’t have to carry your cello back and forth to school. And I had been playing piano for a couple years and knew that I didn;t like to practice. And I thought, “well if the cello is at school,  don’t have to bring it home, so I must not have to practice. That is definitely the instrument I want to play.” And I went home, told my mother I want  to play the cello, I don’t want to play the piano anymore. It’s the cello. I don’t know why but she said “Okay we’ll do the cello now”. And of course we rented a cello to keep at home, and there was one at school, and I had to practice a lot. But it was such a social instrument after playing piano that it was a much more satisfying, rewarding experience. Since it was in a group of people and it was kind of competitive, and I liked that.",
+[_interviews_amy_mitchell_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_7___default.a]: "I’ve always played in some kind of musical group ever since sixth grade. Played in my college orchestra, played in other community orchestras. So I moved to bend in 2001 and very quickly found the Central Oregon Symphony. [I] Attended the first rehearsal that concert season. Halfway through we all took a break and sat down and ate a meal together and people asked me questions, “Where are you from? How long have you played? What’s your favorite animal?” And it was just immediately community. I felt very welcomed. And I’ve tried to play as many concerts ever since.",
+[_interviews_amy_anderson_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_8___default.a]: "I was very fortunate to live in Portland and went to private school and my first memory is actually my 6th grade band teacher Mr. Evans taking us to an opera, not just a symphony, but an opera. And it was Aida with the elephants on stage and the whole Experience. It was great.",
+[_interviews_amy_anderson_instrument_01_webm__WEBPACK_IMPORTED_MODULE_9___default.a]: "Why did I start playing my instrument? I love the sound of the French horn. I just love the sound.",
+[_interviews_amy_anderson_outtakes_webm__WEBPACK_IMPORTED_MODULE_10___default.a]: "No that's great I don't know what to say seriously you can edit that And make it better Your plan You can do it again If you want though I felt like I saw some",
+[_interviews_amy_anderson_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_11___default.a]: "Because music is something I have to do to make me happy and I enjoy rehearsals, I enjoy this ensemble, and the support that Central Oregon gives It's musicians. So it's a good experience.",
+[_interviews_andreas_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_12___default.a]: "The first time played in a symphony it was actually with my teacher. I think I was about 10 years old, I had just taken lessons for 2 years and he had accepted the gig [at a] church for a Easter Sunday service. We played Mozart Coronation Mass and was the first time I played in a real orchestra.",
+[_interviews_andreas_instrument_01_webm__WEBPACK_IMPORTED_MODULE_13___default.a]: "Why do I play the French horn? Well so as you may know in Germany instrumental education is not part of the public school system, it's all done after school in little Music schools and Music Conservatories. I found some elementary music education there from a 6 to 8 and then when the time came to pick the instrument my mom took took me and we went to the open house this one in the Summer where it’s like two days and all the teachers are there and all the instruments are there, the kids can try something and we went and we went straight to the trumpet teacher because It was going to be the trumpet and nothing but the trumpet. And as we saw the trumpet teacher he said “yeah that sounds good, but all my spots are already filled, so you have two options you can either wait a year and I can accept you next year, or you could start with the french horn, it’s kind of like the same thing. And if you want next year you can switch.” And I never switched so I guess I want to say I didn't pick the instrument, maybe it picked me.",
+[_interviews_andreas_outtakes_webm__WEBPACK_IMPORTED_MODULE_14___default.a]: "I remember the first time I played in a symphony. Sorry, I didn't repeat the question I should have.",
+[_interviews_andreas_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_15___default.a]: "To me an orchestra is pretty much the ultimate team activity. It's not like in sports where you need another team you need an adversary right? like football games or basketball games or baseball games. Orchestras can play by themselves, and it requires everybody in this team to perform at the right time, the right notes, and to me there just isn't a better thing than being a part of that. I'm thrilled to be part of and orchestra.",
+[_interviews_annika_careerinterest_01_webm__WEBPACK_IMPORTED_MODULE_16___default.a]: "Sound of Music related I make my own music but I also just like to be around it so This is a totally different Styles that have never gotten to be around this is the only time of This is the second time that I've Been around Like I said classical music in a live setting I saw the symphony perform once + 12",
+[_interviews_annika_meetingchris_01_webm__WEBPACK_IMPORTED_MODULE_17___default.a]: "Well let's see I met Chris Spring when I enrolled in a scoring for film class Set the culture Especially Kind of microwave Getting to know what was happening up here cuz I'm a musician but Kind of operate on my own terms I guess I don't",
+[_interviews_annika_outtakes_webm__WEBPACK_IMPORTED_MODULE_18___default.a]: "Can I quote Frank Zappa",
+[_interviews_annika_work_01_webm__WEBPACK_IMPORTED_MODULE_19___default.a]: "I'm a lab supervisor and music labs Supervisor at cocc And I helped out with like a scoring for film class Add an audio engineer",
+[_interviews_austin_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_20___default.a]: "I don't honestly remember the first time that I Played or watched a symphony I would been very young he would been in eastern Oregon or possibly even though or against",
+[_interviews_austin_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_21___default.a]: "I was I believe I was 11 I joined a youth Symphony And I've been playing in symphonies",
+[_interviews_austin_instrument_01_webm__WEBPACK_IMPORTED_MODULE_22___default.a]: "I'm the youngest in my family all my other siblings had already picked Piano violin Bridal instruments Can my turn to select one I wanted one other than what they were doing But then my mom gave me the option of different instruments And when she offered me the cello I immediately I said yes and wait for it",
+[_interviews_austin_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_23___default.a]: "Like I said I've been playing orchestras since I was Young it's been a important part of life for balance and And it's enjoyable of course I want to move to Central Oregon Start looking around for it what are the groups what are the options down the Oregon Auditioning gardening Play whenever I can I wasn't able to for several years but then I was able to get back in",
+[_interviews_austin_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_24___default.a]: "Awesome ways knowing that every group Has Similar The musical aspects but And otherwise I would say it is different Central Oregon Symphony One of the favorite my favorite place",
+[_interviews_barry_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_25___default.a]: "I would guess the first time I played in a symphony was while I was in college in that Salem Oregon over there event Catching the Salem",
+[_interviews_barry_instrument_01_webm__WEBPACK_IMPORTED_MODULE_26___default.a]: "You know it's funny but there was a need In that middle school so when I started band in fifth or sixth grade I actually picked up euphonium And that Suddenly my brother older brother of 3 years comes home from Band program it says Havis Anybody willing to choose swap over to that play tuba And at that point I put my",
+[_interviews_barry_instrument_02_webm__WEBPACK_IMPORTED_MODULE_27___default.a]: "Chimborazo is just something that came about a year ago when we had a commissioned piece by Chris Thomas He wrote the bottom bass voice Aperture Marshall Park And I have never encountered one Before and I Decided to order one from the east coast and Got it in and played with it and said hey",
+[_interviews_barry_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_28___default.a]: "What are the best Michael's leadership",
+[_interviews_bill_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_29___default.a]: "But the first Time at Planet Symphony was Here actually",
+[_interviews_bill_instrument_01_webm__WEBPACK_IMPORTED_MODULE_30___default.a]: "The base was something that I picked up As I was playing guitar and in a band And The bass players just kept on leaving and I said you know what I'll just learn how to play the bass And I picked up Luckily the upright cuz I thought it was cool And although I played Jazz and and Bluegrass for for many years that enabled me to Play classical as well once",
+[_interviews_bill_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_31___default.a]: "Play I moved in next to Janet and Michael And She Janice really helpful she helped me move in and she's moving the stuff she's noticed The Basin said you play the bass Ted Leah You have to come play the symphony we just started rehearsing and I said I'd I've never played in a symphony He said well Just checking And so I did and I was hiding backstage Ashley listening And she she passed by for some reason she forgot something He went backstage Sami said What are you doing here Get out there Cuz weird that she's had the music for me and everything I said Eye pain and hard she said don't be a baby There and I start playing and Was enveloped in this sound and it was really cool I never I played in small groups",
+[_interviews_carolyn_instrument_01_webm__WEBPACK_IMPORTED_MODULE_32___default.a]: "I don't understand why he's taken to the violin I always loved it You don't sound The song And I really am used to enjoy practicing a lot when I was a kid. A lot of other things to do so I really enjoyed fact So and then for me now It's a Wonderful Hobby And I've been playing in the sand Oregon Symphony since 2000",
+[_interviews_carolyn_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_33___default.a]: "Just drove my life I mean it's something very special Super special hobby for me Design and hope I can play for a lot",
+[_interviews_carson_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_34___default.a]: "I had to be when I was Five or six years old It was still still at Bend High So I just came with my mom And I got to see Michael is conducting I've known Michael For a long time he goes to my church So How smelly are with him and his kids And it was just amazing to me at the time cuz I like to listening to music Watching all the instruments",
+[_interviews_carson_instrument_01_webm__WEBPACK_IMPORTED_MODULE_35___default.a]: "I started off from violin Didn't exactly like the high registers as mush So I started trying Insurance with car registers Play the base of a bit Just clicked I'm part of that was just cuz of watching the symphony bass in the symphony And I Maybe just to spite my parents into buying me a extremely expensive instrument I don't know but It paid off cuz Turns out I really liked it Really got the hang of it and I'm fortunate enough to be in the central Oregon Symphony plans",
+[_interviews_carson_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_36___default.a]: "I guess it's the highest level playing you can get in Central Oregon and Probably The best experience you can get as well Michaels Extraordinary conductor we've got A room full of Extraordinary musicians It's just kind of an honor to be playing with everybody here",
+[_interviews_chris_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_37___default.a]: "I remember the first time Play in a symphony orch I was in 9th grade And I was invited An honor to be invited Play with the The local community Orchestra in Pendleton The Oregon Symphony And so showed up with my cello and I was Gear myself up for some difficult sight reading and we were playing a John Philip Sousa March The first thing we rehearse that And I distinctly Trying to get myself all amped up Like try to keep up with his orchestra full of Adults and I thought yeah you can do it while I was mid psyching myself up The conductor just threw the Baton down and started in the noise was so loud It scared me and I Rose And all I can think about where the notes flying by on the page And I wasn't keeping up with any of the And I I wish I could say it was It was different but Rose at the immensity of the sound I feel like my intro to orchestral music was That of awe and respect",
+[_interviews_chris_instrument_01_webm__WEBPACK_IMPORTED_MODULE_38___default.a]: "The reason I started playing the cello in the first place wasn't by Choice I was sent home with a little pamphlet Split from grades I'm never going into 4th grade And they gave the head pictures Of all the different string instruments and they said you can join Orchestra next year in the violin looks Like this a viola Cello Bass But they all look The same to me And iiii I couldn't really choose and I hope I wasn't particularly interested until I saw the cover of the The pamphlet And there's a picture of a grasshopper Dancing and playing a cello and I thought you know what I'll play that one that looks like a lot of fun So that's why I chose the cello and luckily I did fall in love with it and it's stuck For all these years",
+[_interviews_chris_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_39___default.a]: "I play in the central Oregon Symphony because Play music Is Like life to me Like air I simply Need to connect The music of great composers As a composer myself Part of what it does is it Beadsbee Will give you the input From from the great that reminds me how a beautiful melodic line is shaper Like butter coffee ever playing right now Just what it means Truly be inventive With how you compare really unlikely things in the orchestra to make Even more incredible Sounds of things I never would have thought of putting together If it weren't for these composers influencing me all these years during rehearsal",
+[_interviews_dan_firsttake_01_webm__WEBPACK_IMPORTED_MODULE_40___default.a]: "First time I saw a symphony was the Sacramento Symphony Minute was young musicians concert A children's concert sorts It was important to me because I had a teacher",
+[_interviews_dan_instrument_01_webm__WEBPACK_IMPORTED_MODULE_41___default.a]: "Well it's an interesting thing to It was the last instrument left over and I got to school a week late",
+[_interviews_dan_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_42___default.a]: "Symphony Orchestra You know by 4 My favorite thing I had an entire career playing in Symphony Orchestra And then Retired here to Bend Oregon Only to find what we have here A delightful way to Spend the tail end of my",
+[_interviews_dara_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_43___default.a]: "First time I ever watch the symphony was when I was in the third grade and Probably 1980 Two or three I was attending Juniper Elementary here in Bend And the central Oregon Symphony came and did a performance in our gymnasium To show All of us kids What is something was like And it was Absolutely amazing And I remember Being so entertained by how much fun the musicians were having together that I Decided I wanted to learn how to play the violin",
+[_interviews_dara_instrument_01_webm__WEBPACK_IMPORTED_MODULE_44___default.a]: "Well I actually play the viola now Am I played violin From the time I was eight Till About 25th And then I used to take The summer off To try to finesse One summer I try to cello And I just couldn't do the body mechanics and the tenor clef At the same time So the following summer I decided to try a viola And I figured I could learn alto clef if I didn't have to change the bottom again And so I started playing Viola that summer and then Leslie the first share via list came to me for haircut and While we were working together she said We're really short on violas would you want to try to play and I was like Sure but I've really only been messing around 4 A couple months And Hands up playing my first concert on viola and",
+[_interviews_dara_outtakes_webm__WEBPACK_IMPORTED_MODULE_45___default.a]: "Oh well so the first time I ever watched Okay",
+[_interviews_dara_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_46___default.a]: "Well for one my family is all here in Central Oregon and I don't have Another opportunity Because I choose to live But I really really love Being a part of the whole I love the fact that when you come in the door You put your ego aside and you become one of many And I've always gotten a lot of joy out of Playing in a group And Be able to enrich other people's lives Even as they listen Anise A joy to play me",
+[_interviews_david_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_47___default.a]: "Yes I was 16 years old and I played in the metropolitan youth Symphony Which was a portland-based Portland Oregon base Symphony for use Once you are",
+[_interviews_david_instrument_01_webm__WEBPACK_IMPORTED_MODULE_48___default.a]: "In the fourth grade We were we signed up for orchestra and there were several Opportunity say they basically asked me which instrument would you like to play And I knew exactly the answer to that question The French horn And They go oh well we don't actually have a French horn But they said the cellos almost in the same rate",
+[_interviews_david_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_49___default.a]: "I have gotten back to playing in Symphonies when I was going back to school 2 Learn my current trade And I went back to marylhurst Symphony In Westland And I grew up in Westland so I knew the symphony This is natural this was fun that's just great And so Forgot how much I missed doing that when I moved here as soon as my family was settled that I had the time I had to try out",
+[_interviews_dylan_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_50___default.a]: "Play with the symphony because my teacher damn flag Recommended me he I think it was the it was summer of 2016 And he was Telling me about A spot opened up in the symphony and I would be a sub And so I said yeah I'll try it I enjoy playing so I did And I The dead Sub Spot kind of became my spot",
+[_interviews_eliza_instrument_01_webm__WEBPACK_IMPORTED_MODULE_51___default.a]: "I started playing clarinet Because of my grandma My grandma Growing Up watch me my brother a lot And She drove this Tiny 90 1990 white mower And the only thing that came out of that was No matter how hard you my brother fought to change Channel is always Costco Remember one day I was in second or third grade This piece was playing I finally started actually listen to I cuz it Start at Sonic Beard it sounded dark Scary hollow And I was totally intrigued by it And then out of that hollowness Came this Really pretty low warm clarinet solo I was like Grandma What is that and she's like us clarinet I'm like I'm all about it and so Third grade I was able to choose an instrument to play for fourth grade and I just went straight for the clarinet What I wanted and it's what I've wanted ever since",
+[_interviews_elly_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_52___default.a]: "Well watching when I probably would have been Elementary School Cuz my school where I grew up Was really big into Taking field trip To the ballet and to our symphony we had a local Symphony",
+[_interviews_elly_instrument_01_webm__WEBPACK_IMPORTED_MODULE_53___default.a]: "Started in fourth grade That was When we were The option of band or orchestra and for some reason I really wanted to",
+[_interviews_elly_instrument_02_webm__WEBPACK_IMPORTED_MODULE_54___default.a]: "I don't I don't know what the time in fourth grade for some reason it really appealed to me and Yeah really It was really",
+[_interviews_elly_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_55___default.a]: "Well I was a high school orchestra drop out in fresh my freshman year And I think I always kind of regret it I kind of dropped Violin Alt Together for many many years was probably 20 years But I always kind of had in the back of my mind that I wanted to Violin back And when we moved here and I found out they had this Symphony is local Symphony mostly volunteers it kind of made a goal for me to A get back into violin and I had this goal that I wanted to be able to at least Get to the point where I got audition And so when I audition that actually got in All uphill from there",
+[_interviews_emma_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_56___default.a]: "Watching a symphony I was a child My dad was a musician when I was a kid and so I grew up Going to all kinds of comfort Concerts including I did not get Play with a symphony until I joined Central Oregon Symphony",
+[_interviews_emma_instrument_01_webm__WEBPACK_IMPORTED_MODULE_57___default.a]: "I started symphonic music with the cello I played trumpet when I was a kid Anti played in bands But not so much in Symphony and then didn't play music for Couple of decades and I on a whim Took up cello as an adult Bend And yeah",
+[_interviews_emma_outtakes_webm__WEBPACK_IMPORTED_MODULE_58___default.a]: "And why do you live",
+[_interviews_emma_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_59___default.a]: "I didn't realize how much I missed Music Until I came back Duets I my day job is teaching science End When I add music back into my life my Rain Really cool things that it does not do and I'm not playing music so that's part of it I the opportunity to play with these Incredibly talented musicians has helped me Grow As a musician and ways that I could never have ants Tubidy Added to that like if that as if that's not enough The opportunity to play in this group Has allowed me to develop Really rich beautiful friendship And So it's just Beads Bizman all kinds of different ways",
+[_interviews_erik_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_60___default.a]: "Anna High School Came from a high school Lewis big enough and it was back in the 50s That actually had Both a high school band in a high school orchestra So But I got into high school as a freshman I played in that and then I played in The Greater Boston youth Symphony Orchestra In",
+[_interviews_erik_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_61___default.a]: "If I watch the symphony it would have been the Boston Symphony of the Boston Pops when I was In elementary school First time I played in a high school orchestra the high school at that point Had orchestras and bands And when I got a freshman in high school I wish That was my fourth year in trombone fact I got into the orchestra there and then I played in Abuse Symphony in Boston And they all stay darkest",
+[_interviews_erik_instrument_01_webm__WEBPACK_IMPORTED_MODULE_62___default.a]: "I basically play the trombone because my mother didn't want me to play Something like a clarinet the Witchwood Pull my teeth out I had a slight overbite and my mother thought maybe the trombone would",
+[_interviews_erik_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_63___default.a]: "When we moved to Oregon here in 89 Again my wife is a member of the symphony we met playing in an orchestra It was natural for us to go Seek out the orchestra Try out for it and Get a loctician and play in the And I played since",
+[_interviews_gayle_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_64___default.a]: "I would have watched my mother playing a symphony my mother was her Tell us then she played in a lot of local Group so that would have been When I was",
+[_interviews_gayle_instrument_01_webm__WEBPACK_IMPORTED_MODULE_65___default.a]: "I'm pissed because my mother thought it was a good instrument for me to play but I picked it as well so when we were in I grew up in the Portland area And as Band kids we started playing in Sisters 7th grade And I wanted to I had to walk a long ways Sebastian I don't want to install What's happening Clarinet was one and my sister fix luetzow",
+[_interviews_gayle_outtakes_webm__WEBPACK_IMPORTED_MODULE_66___default.a]: "And what's interesting is it when we were In Costco over Christmas we Met the director of the Memphis Symphony which is where we met And we would have met 40 years And Wii Went up to him and said We played an in your Orchestra 40 years Yeah I know You played Clarinet you played trombone Holy smokes And then we said we got married because of me",
+[_interviews_gayle_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_67___default.a]: "I played with the central Oregon Symphony basically since we moved here And my husband and I met playing in In a symphony In the Portland area and that is something that we like to do Together we have Common so when we moved here with us Well let's see if their son and Orchestra",
+[_interviews_jake_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_68___default.a]: "So I never really watch them is on a band guy so I mean I was playing you know marching bands and that's where thing and My Band director high school he said to me You know anything you just need to remain the same vocal Symphony who you want you want to come you know give it a shot and Make sure why not you know I came in what to the music like why I've never seen anything like this and never heard anything like this I was intrigued. This is a whole nother level outside of You know what We never played in March has anyone else or it sucks And I'm like okay there's like 47 time signatures in this there is you know different you know Sounds I never heard before and I was And you know I'm Walking ever since I love my soul of banal of the Winds There's something special on the symphony with the Sounds you get out of the heat on the sounds Different types of music and stuff you get out of there that you don't Find anywhere else That's awesome",
+[_interviews_jake_instrument_01_webm__WEBPACK_IMPORTED_MODULE_69___default.a]: "My dad is actually drummer And you know and I always call myself when I say I'm a percussionist Limp Bizkit drummer to read sheet music Yeah yeah My dad I actually recruited him to come play in the symphony He played He was being kind of like me just Abandoned already played The Rice School Then you know Sixth grade here locally you got to play Middle schools in area regular sing or play an instrument in And so I start planning on I start getting more involved in a local community plan Network store here and then Yeah we needed a percussionist in the local winds and Eventually in the symphony My dad had run music 25 years and Come play with me Okay If we had a little Call my dad how to read sheet music again and playing together in the in the band and then in the symphony year or so Later",
+[_interviews_jake_outtakes_webm__WEBPACK_IMPORTED_MODULE_70___default.a]: "It's been a lot of fun Manawa great view my daughter's both play in the symphony now so it's It's been a whole family fare for all of us Met my wife in Bandon high school music",
+[_interviews_janet_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_71___default.a]: "The first time I remember Watching a symphony was when my sister was playing in the professional Symphony and talent she's three years older than me She got into The temperature in 1 year before I got it So is a pretty short time after that.",
+[_interviews_janet_instrument_01_webm__WEBPACK_IMPORTED_MODULE_72___default.a]: "Well my sister had already on the cello String instrument Violinist A horrible horrible Nothing I think my death Someday will occur by a bunch of violinist Like tracking me down and playing high notes And I will just my ears will start bleeding and that will be my death Violin was not an option as you can see",
+[_interviews_janet_instrument_02_webm__WEBPACK_IMPORTED_MODULE_73___default.a]: "I had played the cello just on and on Like a tiny bit But then I got in a car accident in 2015 and couldn't play the deal anymore Take about two years till I can Sit long enough to To play a concert on cello but that's why I switched",
+[_interviews_janet_outtakes_webm__WEBPACK_IMPORTED_MODULE_74___default.a]: "Are you ready for some Or a professional Symphony Because I started playing when I was 9 and was playing in the Local youth Symphony in middle school so A little earlier Surprise questions",
+[_interviews_janet_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_75___default.a]: "Well my husband is the conductor of the Temple Oregon Symphony And he likes having me there so but I played because because I love it I love Being In a group Where people actually like to play or played in a lot of Hardcore professional groups It's kind of cutthroat in People are not that nice to each other And that's not the way this symphony is People are very kind and they're there to make music they want to do their best at making music But they're not Mean to each other It's very refreshing To make music With people who are Kinds to each other And who enjoys",
+[_interviews_jeff_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_76___default.a]: "Watching the symphony My first baby watches Symphony was probably More Audio and visual be back in high school Add friends that love classical music and we would listen to records Chicago Symphony playing Mahler Chicago Symphony playing Bruckner week we loved all of that Romantic music Time. So watching a symphony was probably the Atlanta Symphony Going in playing in the youth Symphony when I was in a Your kid",
+[_interviews_jeff_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_77___default.a]: "First memory watching a symphony was when I moved to Chicago Had seen other life Symphonies but I went saw the Chicago Symphony live And they were playing a Wagner piece Is Elsa's procession Cathedral And it just was Amazing it was Huge sound huge Orchestra big huge haul And it was just my trumpet hero was playing and I just loved",
+[_interviews_jeff_instrument_01_webm__WEBPACK_IMPORTED_MODULE_78___default.a]: "Why do they play the trumpet I was just I wanted to I didn't really have any second choice that's just I wanted to play it in 4th grade Was able to choose the trumpet in and",
+[_interviews_jeff_outtakes_webm__WEBPACK_IMPORTED_MODULE_79___default.a]: "That was an awful person Shoot oh I'm sorry I wanted to play the trumpet we started in fourth grade Where I grew up in Atlanta Georgia and that was a thing here at six grade I love the fourth grade stuff actually have a student it's in the third grade now so it's really great Just was attracted to it I think my dad might have played it Briefly Yeah long time ago maybe he was in An Arby's Skip that I don't want to do that answer",
+[_interviews_jeff_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_80___default.a]: "So when I graduated I got my master Search for Northwestern graduate in 1984 Hung out in Chicago for 5 years The Kardashians Took lessons Finally won something locally at the lake forest Symphony in Chicago My job Was moving to bend So I moved to bend in October of 88 Still love to play I just want to Did not want To try to make it as a living So I asked around and had a friend who told me about the central Oregon Symphony so soon as I got here I Audition with the jariana and and my first concert",
+[_interviews_joanne_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_81___default.a]: "The first time we watch the symphony was When I was a child we watch TV very regularly very irregularly We were watching Leonard Bernstein Conducting The New York Philharmonic doing the children's concert",
+[_interviews_joanne_instrument_01_webm__WEBPACK_IMPORTED_MODULE_82___default.a]: "Well I started out with Piano my dad his father and his grandfather all played pipe organ And Free Grandpa was a composer I started on piano and then Fifth grade they started the string program in my School and I was one or two",
+[_interviews_joanne_outtakes_webm__WEBPACK_IMPORTED_MODULE_83___default.a]: "The first time I watched something else was the few times we watch TV when I was a kid we watched it as a fam Leonard Bernstein Okay",
+[_interviews_joanne_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_84___default.a]: "Because I love the camaraderie of everybody playing I love listening to the other instrument Lacrosse The orchestra from me It gives me joy to play it gives me joy to Have an audience Hear what we play in Michael Jackson age Wonderful play on Drive plate under a lot of conductors and I really enjoy playing",
+[_interviews_joanne_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_85___default.a]: "I play in the central Oregon Symphony today because music is a huge part of who I am I love listening to all the different instrumental parts Lacrosse Whole Orchestra I played under conductor once that would make a Just close our eyes And start when the First base player the 3rd clarinet or somebody Started and we all had to start And play with that I love listening across I love the The joy of making the music I love that an audience can Appreciated",
+[_interviews_josh_instrument_01_webm__WEBPACK_IMPORTED_MODULE_86___default.a]: "I think it was Probably when I was in elementary school I started in Fifth grade I believe I can't member why I picked the cello I probably thought the violin and Viola was lame and the base was Way too big to take anywhere So I Chose the cello and I started playing an elementary school and continue through Junior High and then High School in Eventually on the college And then being an adult",
+[_interviews_josh_instrument_02_webm__WEBPACK_IMPORTED_MODULE_87___default.a]: "Yeah I started off as most kids do on piano And my dad was pretty strict about playing piano Up until I was the age of 18 but then when I started playing cello And he saw how much I liked it and how seriously I took it he said you know what you if you don't lie piano anymore you don't have to It was my Sly clever way To get out of PMI",
+[_interviews_josh_outtakes_nsfw_webm__WEBPACK_IMPORTED_MODULE_88___default.a]: "Yeah it was an opportunity but then once you get in I mean it's such a great Symphony like you start to meet other musicians that are kind of Same style as you like they're not professional but they're not hacks Like we have a lot of really really competent Amateur So people like that people that love music cuz I was get paid I mean we get French fries. Riley What was it Define professional Yeah What would you want me to start it No one's professional we don't get paid for this but No one's a hack We're really really Competent and in some cases more than cut Somebody did the door today Chris you blew my soundbite and you have to listen to vulgar Really quick Okay take okay No hacks oh okay yeah asked me why I want to play cello you like this one Chris okay Why do you say ciao Well Mainly to get laid But then No no there's more it gets worse but I made a terrible decision cuz nobody wants to f*** a string player So yeah real bad judgement call on my part But you have a whole community of us to be with now yeah but I mean we've all be no Each other so after while it's just lose the flame in the excitement I mean you worked your way through the viola section And I mean Clarinet players are like All concert long pill gross Okay let's leave it there",
+[_interviews_josh_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_89___default.a]: "Atlanta Central Oregon Symphony Frisco because it rehearses a quarter mile from my house Which is incredibly convenient I work here at the college and I got recruited by Janet Who found out I used to play cello can I play through college Adulthood Just kind of",
+[_interviews_josh_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_90___default.a]: "I like playing in the central Oregon Symphony because We're all really great musicians none of us are professional or not paid for this But there's no hacks either Like we're all Really capable of what we do and it's a It's a great local symphonies",
+[_interviews_kathy_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_91___default.a]: "Well I'm a piano player so I didn't play Play a symphony for a long time but I first heard Symphony my dad played trombone In a community Orchestra much like Central Oregon Symphony it so I went to all his concert I'm when I was growing up And then probably played in a symphony First time in college",
+[_interviews_kathy_instrument_01_webm__WEBPACK_IMPORTED_MODULE_92___default.a]: "When I was growing up my dad who's the musician said To all of his kids You could have to take a year of piano and then you can choose to switch To another instrument And my brother and sister both",
+[_interviews_kathy_outtakes_webm__WEBPACK_IMPORTED_MODULE_93___default.a]: "Cool and NYY",
+[_interviews_kathy_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_94___default.a]: "Well I play with the central Oregon Symphony because Playing the piano was really wonderful you You have all the Ranges of all the instruments but Signs he gets lonely And it's really wonderful to play with other people and Play music Is the best singer is but playing with others is",
+[_interviews_ken_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_95___default.a]: "I was still in elementary school And my parents got me tickets to go see the LA Phil play At The Shrine Auditorium So that would been in the late 50s Before they even had the Dorothy Chandler Pavilion",
+[_interviews_ken_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_96___default.a]: "Yeah I was High Lakes Elementary school years And I was living in the LA area My parents bought me a ticket to Children's concert For the LA Philharmonic And it was performed in the old. Shrine Auditorium Has before they had the Dorothy Chandler Pavilion Yeah and I can remember looking up at the ceiling sing this Huge chandelier just Has an R of what was What was in the auditorium in in Of course when the concert start I was just kidding Wow this is",
+[_interviews_ken_instrument_01_webm__WEBPACK_IMPORTED_MODULE_97___default.a]: "My dad had a trumpet And when I was 9 years old he handed it to me showed me a little bit about how to play it and I started from there",
+[_interviews_ken_instrument_02_webm__WEBPACK_IMPORTED_MODULE_98___default.a]: "My dad had a trumpet And I when I was 9 years old he brought it out show me a little bit about how to play it Try play around for a little while and My My parents decided Well was getting some private lessons and see how things work out 60 years later here I am",
+[_interviews_ken_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_99___default.a]: "You know I really appreciate the opportunity To play with such a fine group And I play in a couple other groups to And it's really a lot of Fun I enjoyed a great deal to play Different kind of music Symphony is a different kind of a challenge for Atomic player And the literature is quite different Handa",
+[_interviews_ken_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_100___default.a]: "First of all it's a wonderful group to play in And I it's a it's an honor and a privilege To play in a group like this I'm lucky To be able to play an area where you walk into the room and you look at All the people that are in there And the experience that they all bring into this collection into this one place in this one time And play some of the world's best music It's just Amazingly wonderful An enjoyable The Great Great opportunity",
+[_interviews_kenny_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_101___default.a]: "Probably the person that played in the symphony was Maybe 12 in like the Symphony Watching the symphony I'm not really sure when was My first time watching Symphony but Remember watching Joshua Bell concerts Couple years later Portland So that's pretty",
+[_interviews_kenny_instrument_01_webm__WEBPACK_IMPORTED_MODULE_102___default.a]: "Funny enough We can use watch a lot of cartoons Cartoon Network had Show called Pepper Ann The main character had a friend who did play the violin violin After that show How I turned my grandpa like a crab by tonight I want to play the violin And then",
+[_interviews_kenny_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_103___default.a]: "Initially was like like your Pathway as a students getting into the essential Organ Symphony there but now I play Just to be able to Express myself Outside Have work horse And the community here What central Oregon Symphony Is it's just So inclusive just so like tightly knit together That I did just feels comfortable Get still get to grow as a as a musician",
+[_interviews_laura_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_104___default.a]: "The first time I probably watch a symphony is a myelin root Elementary School would go out As a field trip And we went and saw",
+[_interviews_laura_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_105___default.a]: "I'm I played in I actually while I play the harp I also play the violin and so While there wasn't a heart Part in our Junior High Symphony there was Places for violin so I played in the",
+[_interviews_laura_instrument_01_webm__WEBPACK_IMPORTED_MODULE_106___default.a]: "What's playing several instruments Is not that uncommon with musicians till they find the one that really fit It's going well so Piano and violin and the harp I ended up just Really loving the heart I enjoyed all the Different types of instruments nail challenge you in different ways But in the end it I like the heart",
+[_interviews_laura_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_107___default.a]: "And heart is . Play my music And",
+[_interviews_lenore_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_108___default.a]: "My mother is played in a symphony since I was born so I probably Head Symphony when I was Before it was",
+[_interviews_lenore_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_109___default.a]: "Well let you know I remembered when I started a violin that she was already playing in the orchestra Add follower rounded Sit in the audience",
+[_interviews_lenore_instrument_01_webm__WEBPACK_IMPORTED_MODULE_110___default.a]: "I just love the violin I started on the violin I play Viola as well but violence my favorite Instrument",
+[_interviews_lenore_instrument_02_webm__WEBPACK_IMPORTED_MODULE_111___default.a]: "Wellatdell ugly violin It's a great melodica instrument and I started on the violin when I was young and it played the Olaf for a while But I always cut gravitate back to",
+[_interviews_lenore_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_112___default.a]: "Well I play with this group primarily because I love the format in that it's a Continuous learning environment For adults and Excel college students And I'm here retired in Oregon and I Who is winning to retire to come back to a central Oregon Symphony that way Who is my main goal And so now I am retired and I'm flying full Time having a great",
+[_interviews_leslie_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_113___default.a]: "I want to say was probably the Oregon Symphony in Portland Second grade",
+[_interviews_leslie_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_114___default.a]: "I just remember it was a really neat Hall and being in them because in the balcony A giant Orchestra Feeling of the sound Can I eat you",
+[_interviews_leslie_instrument_01_webm__WEBPACK_IMPORTED_MODULE_115___default.a]: "I switched a viola from violin in college because they went to a small college and Play chamber music They didn't have a viola",
+[_interviews_leslie_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_116___default.a]: "When we moved here in 1979 that was the Everyone played in at the time then still It's been a great group Wonderful Continue to play and play great music with great people",
+[_interviews_lisa_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_117___default.a]: "I think I was Sometime in elementary school and I got to see The Nutcracker at the Boise Philharmonic",
+[_interviews_lisa_instrument_01_webm__WEBPACK_IMPORTED_MODULE_118___default.a]: "Western down violin who played cello And I moved to the base and High School And I",
+[_interviews_lisa_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_119___default.a]: "I played Central Oregon Symphony because it Irelease it's a nice Something different something I can come together with the community of Like Souls that we can Beautiful music",
+[_interviews_reid_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_120___default.a]: "The first time I saw a symphony was in Hawaii Honolulu Symphony was playing Beethoven's 9th Symphony which was Gigantic Symphony with a choir And",
+[_interviews_reid_instrument_01_webm__WEBPACK_IMPORTED_MODULE_121___default.a]: "I think it's always play the bassoon when I was in Middle School They signed us all up for instruments we all lined up and they handed me So since the time I was in 7th grade I've been playing the bassoon and I",
+[_interviews_reid_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_122___default.a]: "I live in Pendleton For a long time And My wife and I moved there we didn't know very many people And we're both musicians What about Symphony musicians And one day I walked Down to the assembly office And I Give them a resume and Repertoire list instead hey I'd like to play And they signed me up and I played with the Oregon Youth Symphony for a long time for a couple of years And when we move to bend That we started playing with the central Oregon Symphony here I like to play with the symphony tonight It's important For both My wife and I to play with the symphony because it Keep the music In our lives and it keeps us interacting with people that Aphmau different parts of the community not just knew our friends or not just the people in our profession And it's that there's nothing like Nothing there's nothing like making life music And there's nothing like making Music and Rhupus as big Full symphony orchestra My favorite sound",
+[_interviews_sam_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_123___default.a]: "The first memory I have of the symphony (pause) well the first memory I have is the audition that I had for the symphony. I came in with my violin teacher to my first interview for the rehearsal of the or rather the um kind of introduction to the symphony that I had in there and I came in and sat before the panel of judges and I played a couple excerpts and um uh I can just distinctly remember the the welcomes that uh they were providing to someone who was interested in uh being a member of the symphony and that’s my first memory",
+[_interviews_sam_instrument_01_webm__WEBPACK_IMPORTED_MODULE_124___default.a]: "My mom always tells me this story of of why she wanted me to play the violin and she's the primary reason that I got started with it. She said that when I was in my terrible twos that I um was always running about and running amuck. But if the TV was on there was always this one commercial uh that had a violin player on it and no matter what I was doing I would just stop. And I would just sit there for whatever moment of time how long this ad was going on the tv and I would just listen to the violinist. And I would just be mesmerized by what was going on and so she decided that he needs to play the violin. And that’s how I got started.",
+[_interviews_sam_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_125___default.a]: "The reason I Play in the central Oregon Symphony is primarily for the Fellowship of being around other musicians and just For the Love of music There's nothing like playing In a group A people who are Gather together for the same reason to produce music Being able to Play the Pieces in the The songs that are composed 4 A group of people larger than just one person is miraculous and Getting to hear all the Different types of intricacies of how the different parts Fit together create the beautiful thing that is an Orchestral piece and that's why I love playing in the symphony",
+[_interviews_scott_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_126___default.a]: "First time I played in a symphony Was in 7th grade And it was an opening for an elbow they needed an oboe And I've never played in the symphony really heard much Symphonic music And my dad drove me To the Livonia Symphony youth symphony is a kids group And I remember we're playing like the Eggman Overtures Or something And I just just loved it because it was just so magical It was the first time I heard all of these instruments around all working together and It was just Wonderful experience tonight I've always tried to recapture That moment",
+[_interviews_scott_instrument_01_webm__WEBPACK_IMPORTED_MODULE_127___default.a]: "Well the oboe was you know is one of those things I think I'm a glutton for punishment It's a it's a Truly is a miserable and And you know but I've What happened was my parents brought home a bunch of different woodwind Because I come from a family that It has all play different And we The oboe I could make a sound on And my dad must have I'm just a little bit he's like Was pretty hard to make Sound on the elbow and that's a good start so I figured that I would stick with it And I just was I like to challenge You know it's so much fun To know that the instrument Is fighting you every step of the way",
+[_interviews_scott_instrument_02_webm__WEBPACK_IMPORTED_MODULE_128___default.a]: "Yeah yeah you know that Is if you think about it you're You're relying on these Micron Thin pieces of wood That you've carved yourself to do To cooperate to make sound which is Is a pretty unique sort of thing That's why I actually prefer playing English horn More than you'll go because it's a larger Reed It's a little more forgiving But you know the oboe is Is is really my",
+[_interviews_scott_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_129___default.a]: "I play with the central Oregon Symphony because It is just such A wonderful experience See so many devoted people Come together and work To make music you know I started out music school and decided to become An engineer And What I what I worked on At that point In my life was And understanding that I could Still have music in my life but not Have it be my only phone And the central Oregon Symphony allows me an opportunity The cam with a group Talented people And and play wonderful music and And and have that part of my Life being rich",
+[_interviews_sophia_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_130___default.a]: "Yes I was 3 I know really young I do remember it I swear I was three and I saw something on PBS And I said I'm going to do that Which apparently I said about everything but When I was five there was a music program at my school and I A flyer home and I started",
+[_interviews_sophia_instrument_01_webm__WEBPACK_IMPORTED_MODULE_131___default.a]: "I think I chose violin cuz when I saw it On PBS That time I was like so fascinated with how the bow works and how it was able to pull the sound from the instrument and what The strings were and I just was fascinated",
+[_interviews_sophia_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_132___default.a]: "I moved to fans not knowing there was a Symphony here is very pleased to hear that there was an obviously joined Been apart of The Arts in every community of ever lived in and I'm so glad we have Something like this here in What used to be a small town in Bend but is now growing I was going to make sure I play Something about",
+[_interviews_stephanie_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_133___default.a]: "First time I played in the symphony summer before I started high school and went to a summer camp Cornea and Got to play on the final concert And it was Absolutely amazing it was A huge step up from playing in Middle School band Before that I was just so overwhelmed By the amazing sound that all the instruments",
+[_interviews_stephanie_instrument_01_webm__WEBPACK_IMPORTED_MODULE_134___default.a]: "I had taken piano for a couple years and Elementary Going in my tea Teacher Advise that I pick up She knew what she was talking about it was the right choice I went with her guidance",
+[_interviews_stephanie_outtakes_webm__WEBPACK_IMPORTED_MODULE_135___default.a]: "Yeah the first time I played in a symphony was after finishing Middle School is The summer before high school and I Participated in a summer camp",
+[_interviews_stephanie_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_136___default.a]: "Miss music so much on my current Profession has Little to do with the Arts and I really crave that kind of Outlet Away from me to What are the Arts and play music again",
+[_interviews_stephanie_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_137___default.a]: "I play in the symphony because I love the Arts and I really miss The time in my current career I don't really have an artistic Outlet there until this What's a great way for me to Get back into that",
+[_interviews_sue_firsttake_01_webm__WEBPACK_IMPORTED_MODULE_138___default.a]: "Probably when I was a child I'm getting to see the LA Philharmonic They would take us on a school trip Field trip to see the LA Phil And what an honor I didn't realize How powerful they were at that time cuz I was young",
+[_interviews_sue_instrument_01_webm__WEBPACK_IMPORTED_MODULE_139___default.a]: "When we were When they were Scouting For instruments I wanted to play trumpet The girls didn't play trumpet back then So Pictures I liked it",
+[_interviews_sue_outtakes_webm__WEBPACK_IMPORTED_MODULE_140___default.a]: "My personality is more of a trumpet player though No no no That's one of the reasons I became a teacher is that I wasn't taught right So I wanted to make sure Kids didn't go through that",
+[_interviews_sue_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_141___default.a]: "Music was a part of my life and after I graduated from college I had a major teaching job that I was teaching at 7 different schools So I quit playing And three years later came back to it And I just sat there and cried in the rehearsal Because I had missed it so desperately And that was a Wind Ensemble with my college band director that was playing in So my promise to myself as I would never give it up again And so I played in here for 32 years and Then I retired a few years ago and then Michael brings me back when he needs",
+[_interviews_sue_whytoday_02_webm__WEBPACK_IMPORTED_MODULE_142___default.a]: "It was very important for me to keep up my performing When I graduated from college I had to at a job where I was teaching At 7 different schools Anna In California is East LA So it was a Tremendous strain And I just didn't have time to play But something was missing from my life And three years later I went back And I started performing with our Wind Ensemble that my college band director had And I just sat there and cry Because it was so meaningful",
+[_interviews_suzanne_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_143___default.a]: "Wow it must have been on PBS Like on television Right And then there was also Another first memory of the symphony was the movie Fantasia right I'm sitting for me those are my earliest memories",
+[_interviews_suzanne_instrument_01_webm__WEBPACK_IMPORTED_MODULE_144___default.a]: "You know I actually played Piano From a very young age like five or six I got interested in the piano started taking lessons and When I was in junior high In Seventh grade They didn't Have any cello Start my school So the music teacher knew I play the piano and he handed me a cello answer Figure this out and come back",
+[_interviews_suzanne_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_145___default.a]: "Well I teach music locally so I teach piano and cello and I wanted to just Meet other people and keep my skills up and it's It's great fun to play in a group and Be part of something bigger than myself",
+[_interviews_tim_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_146___default.a]: "It was probably my dad playing the local Tiffany my hometown And Yeah he played French horn as well so I got to grow up watching him play And then my sister play",
+[_interviews_tim_firsttime_02_webm__WEBPACK_IMPORTED_MODULE_147___default.a]: "First time I wash the symphony was my dad playing in our local Community Center And then later on my sister playing probably in Her fifth grade Orchestra",
+[_interviews_tim_instrument_01_webm__WEBPACK_IMPORTED_MODULE_148___default.a]: "Trinidad play French horn my sister played French horn And I like the sound of it I heard it in a home all the time and her dinner community Listen to my dad and my sister And so I Side picked up as well my mom play piano And What was pretty cool stuff Three of us my sister my dad and I all play trios together Things like sunrise service for church In different groups together in our hometown So it was Is pretty fun",
+[_interviews_tim_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_149___default.a]: "I took a break from playing later on a life and I got back to it when I moved The band And I really missed it I lived I missed Making music I really enjoy Distance Community making me to go to the People by the Enjoy playing and making Does Harmonic Almost Organ like sounds As a group together It's really it's really exciting is big part of my life growing up And when I kind of Got off the corporate treadmill to be able to do that again was",
+[_interviews_tina_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_150___default.a]: "Playing in the symphony probably It was a youth Symphony Pacific Music College I'm not sure it was down in them California Stanislaus area I think But I played in high school and some of us from high school went to that Symphony org",
+[_interviews_tina_instrument_01_webm__WEBPACK_IMPORTED_MODULE_151___default.a]: "Well it's kind of a funny story I when I got We started playing in 5th grade and when we were able to Pick an instrument My First Choice was the violin or the flute My mother was a music She taught music in LA county schools and she Didn't want me to do either of those two because she didn't like Listen to the high pitch Some people just learning so She suggested the cello And As much as I was disappointed at first time very happy I went to the cello because It's Heavy to carry bulky but the melinus in the music it makes Texas much Is very nice for me",
+[_interviews_tina_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_152___default.a]: "We moved up here about 6 years ago And it gives me I play the cello through high school and I quit When I went to college And It's about 20 years later I decided it would be fun we were living in Crescent City it would be fun to play again And I played for the Orchestra down in the Crescent City area Northern California And Then we'd my husband retired and we moved here and I Wanted to keep playing And so this was The venue that I can play and it It's Quite different An orchestra played in before Michael gives me his wonderful director and he Likes to take things up a notch than what I was used to playing down In my other work It's it's Good because",
+[_interviews_tom_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_153___default.a]: "The first time I played in a symphony was actually a junior high Orchestra And I was playing Trumpet in the oxy cornet In the junior high band and they needed some Cornet's in the Orchestra in ASL",
+[_interviews_tom_instrument_01_webm__WEBPACK_IMPORTED_MODULE_154___default.a]: "Are the reason play the trumpet was because I heard it being played Doctor Taps being played At a camp and I was recruited on TD when Dwight Eisenhower's funeral was being played and I said That's what I want to play My junior high band teacher when he came to interview us and say what instrument do you want to play a sad trumpet I think it'd be better at trombone I said but I want to play the Trump",
+[_interviews_tom_instrument_02_webm__WEBPACK_IMPORTED_MODULE_155___default.a]: "The reason I play the trumpet is because I heard the trumpet being played for taps At a camp Before we go to sleep at night And The Haunting sound of Taps on a Probably on a Bugle I want to play that I want to play a trumpet They also heard it played at Dwight Eisenhower's funeral Saw it on TV And I just captured me the sound of it",
+[_interviews_tom_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_156___default.a]: "I fed the central Oregon Oregon Symphony because there's so many Good players in it I don't play All the time But I do play and symphonic winds a plan a a swing band Play lead trumpet in the swing band Play in Horizon band and I'd love playing at church as well Church groups I really find it",
+[_interviews_travis_firsttime_01_webm__WEBPACK_IMPORTED_MODULE_157___default.a]: "I think the first time was in high school And I was in Orchestra and we went to a So like a tortoise or Invitational and that other orchestras there that had The high school orchestra symphonic stuff you know winds and brass and all that good stuff So I think that's the first time I probably saw that it was",
+[_interviews_travis_instrument_01_webm__WEBPACK_IMPORTED_MODULE_158___default.a]: "That I'm not really sure I don't remember why I chose the cello I remember going why went into the room I was going to Pretended like a feeder program for Stringed instruments from like 4th and 5th grade Sixth grade and I hadn't Bend in string instrument Program yet I went right into the choir and they see someone came in from the Mercer place and was like Job openings for string players I think I probably chose it cuz it was big",
+[_interviews_travis_outtakes_webm__WEBPACK_IMPORTED_MODULE_159___default.a]: "I like that 50 Thankfully there was a base in the room",
+[_interviews_travis_whytoday_01_webm__WEBPACK_IMPORTED_MODULE_160___default.a]: "I think it's a great experience for Is a great musical experience I like playing with The symphony enjoy working with everybody there But Also too it's just a it's a nice What's a social thing you get to see a lot of people that you Work with them that you wouldn't necessarily otherwise do That's really Yeah it's a Almost like little family"};
+
+
+/***/ }),
+
 /***/ "./src/arrow-graphic.ts":
 /*!******************************!*\
   !*** ./src/arrow-graphic.ts ***!
@@ -1224,6 +5721,1864 @@ var ArrowGraphic = /** @class */ (function (_super) {
     return ArrowGraphic;
 }(pixi_js_1.Container));
 exports.default = ArrowGraphic;
+
+
+/***/ }),
+
+/***/ "./src/bio-data.ts":
+/*!*************************!*\
+  !*** ./src/bio-data.ts ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BIO_DATA = void 0;
+var annika_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/annika.jpg */ "./assets/images/bios/annika.jpg"));
+var annika_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/annika-0.jpg */ "./assets/images/bios/annika-0.jpg"));
+var annika_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/annika-1.jpg */ "./assets/images/bios/annika-1.jpg"));
+var annika_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/annika-2.jpg */ "./assets/images/bios/annika-2.jpg"));
+var bill_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/bill.jpg */ "./assets/images/bios/bill.jpg"));
+var bill_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/bill-0.jpg */ "./assets/images/bios/bill-0.jpg"));
+var bill_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/bill-1.jpg */ "./assets/images/bios/bill-1.jpg"));
+var bill_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/bill-2.jpg */ "./assets/images/bios/bill-2.jpg"));
+var carson_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/carson.jpg */ "./assets/images/bios/carson.jpg"));
+var carson_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/carson-0.jpg */ "./assets/images/bios/carson-0.jpg"));
+var carson_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/carson-1.jpg */ "./assets/images/bios/carson-1.jpg"));
+var carson_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/carson-2.jpg */ "./assets/images/bios/carson-2.jpg"));
+var lisa_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/lisa.jpg */ "./assets/images/bios/lisa.jpg"));
+var lisa_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/lisa-0.jpg */ "./assets/images/bios/lisa-0.jpg"));
+var lisa_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/lisa-1.jpg */ "./assets/images/bios/lisa-1.jpg"));
+var lisa_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/lisa-2.jpg */ "./assets/images/bios/lisa-2.jpg"));
+var reid_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/reid.jpg */ "./assets/images/bios/reid.jpg"));
+var reid_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/reid-0.jpg */ "./assets/images/bios/reid-0.jpg"));
+var reid_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/reid-1.jpg */ "./assets/images/bios/reid-1.jpg"));
+var reid_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/reid-2.jpg */ "./assets/images/bios/reid-2.jpg"));
+var amy_mitchell_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/amy-mitchell.jpg */ "./assets/images/bios/amy-mitchell.jpg"));
+var amy_mitchell_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/amy-mitchell-0.jpg */ "./assets/images/bios/amy-mitchell-0.jpg"));
+var amy_mitchell_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/amy-mitchell-1.jpg */ "./assets/images/bios/amy-mitchell-1.jpg"));
+var amy_mitchell_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/amy-mitchell-2.jpg */ "./assets/images/bios/amy-mitchell-2.jpg"));
+var austin_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/austin.jpg */ "./assets/images/bios/austin.jpg"));
+var austin_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/austin-0.jpg */ "./assets/images/bios/austin-0.jpg"));
+var austin_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/austin-1.jpg */ "./assets/images/bios/austin-1.jpg"));
+var austin_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/austin-2.jpg */ "./assets/images/bios/austin-2.jpg"));
+var chris_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/chris.jpg */ "./assets/images/bios/chris.jpg"));
+var chris_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/chris-0.jpg */ "./assets/images/bios/chris-0.jpg"));
+var chris_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/chris-1.jpg */ "./assets/images/bios/chris-1.jpg"));
+var chris_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/chris-2.jpg */ "./assets/images/bios/chris-2.jpg"));
+var david_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/david.jpg */ "./assets/images/bios/david.jpg"));
+var david_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/david-0.jpg */ "./assets/images/bios/david-0.jpg"));
+var david_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/david-1.jpg */ "./assets/images/bios/david-1.jpg"));
+var david_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/david-2.jpg */ "./assets/images/bios/david-2.jpg"));
+var emma_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/emma.jpg */ "./assets/images/bios/emma.jpg"));
+var emma_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/emma-0.jpg */ "./assets/images/bios/emma-0.jpg"));
+var emma_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/emma-1.jpg */ "./assets/images/bios/emma-1.jpg"));
+var emma_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/emma-2.jpg */ "./assets/images/bios/emma-2.jpg"));
+var josh_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/josh.jpg */ "./assets/images/bios/josh.jpg"));
+var josh_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/josh-0.jpg */ "./assets/images/bios/josh-0.jpg"));
+var josh_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/josh-1.jpg */ "./assets/images/bios/josh-1.jpg"));
+var josh_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/josh-2.jpg */ "./assets/images/bios/josh-2.jpg"));
+var suzanne_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/suzanne.jpg */ "./assets/images/bios/suzanne.jpg"));
+var suzanne_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/suzanne-0.jpg */ "./assets/images/bios/suzanne-0.jpg"));
+var suzanne_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/suzanne-1.jpg */ "./assets/images/bios/suzanne-1.jpg"));
+var suzanne_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/suzanne-2.jpg */ "./assets/images/bios/suzanne-2.jpg"));
+var tina_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/tina.jpg */ "./assets/images/bios/tina.jpg"));
+var tina_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/tina-0.jpg */ "./assets/images/bios/tina-0.jpg"));
+var tina_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/tina-1.jpg */ "./assets/images/bios/tina-1.jpg"));
+var tina_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/tina-2.jpg */ "./assets/images/bios/tina-2.jpg"));
+var travis_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/travis.jpg */ "./assets/images/bios/travis.jpg"));
+var travis_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/travis-0.jpg */ "./assets/images/bios/travis-0.jpg"));
+var travis_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/travis-1.jpg */ "./assets/images/bios/travis-1.jpg"));
+var travis_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/travis-2.jpg */ "./assets/images/bios/travis-2.jpg"));
+var ali_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/ali.jpg */ "./assets/images/bios/ali.jpg"));
+var ali_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/ali-0.jpg */ "./assets/images/bios/ali-0.jpg"));
+var ali_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/ali-1.jpg */ "./assets/images/bios/ali-1.jpg"));
+var ali_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/ali-2.jpg */ "./assets/images/bios/ali-2.jpg"));
+var eliza_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/eliza.jpg */ "./assets/images/bios/eliza.jpg"));
+var eliza_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/eliza-0.jpg */ "./assets/images/bios/eliza-0.jpg"));
+var eliza_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/eliza-1.jpg */ "./assets/images/bios/eliza-1.jpg"));
+var eliza_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/eliza-2.jpg */ "./assets/images/bios/eliza-2.jpg"));
+var sue_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/sue.jpg */ "./assets/images/bios/sue.jpg"));
+var sue_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/sue-0.jpg */ "./assets/images/bios/sue-0.jpg"));
+var sue_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/sue-1.jpg */ "./assets/images/bios/sue-1.jpg"));
+var sue_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/sue-2.jpg */ "./assets/images/bios/sue-2.jpg"));
+var andreas_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/andreas.jpg */ "./assets/images/bios/andreas.jpg"));
+var andreas_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/andreas-0.jpg */ "./assets/images/bios/andreas-0.jpg"));
+var andreas_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/andreas-1.jpg */ "./assets/images/bios/andreas-1.jpg"));
+var andreas_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/andreas-2.jpg */ "./assets/images/bios/andreas-2.jpg"));
+var stephanie_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/stephanie.jpg */ "./assets/images/bios/stephanie.jpg"));
+var stephanie_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/stephanie-0.jpg */ "./assets/images/bios/stephanie-0.jpg"));
+var stephanie_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/stephanie-1.jpg */ "./assets/images/bios/stephanie-1.jpg"));
+var stephanie_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/stephanie-2.jpg */ "./assets/images/bios/stephanie-2.jpg"));
+var tim_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/tim.jpg */ "./assets/images/bios/tim.jpg"));
+var tim_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/tim-0.jpg */ "./assets/images/bios/tim-0.jpg"));
+var tim_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/tim-1.jpg */ "./assets/images/bios/tim-1.jpg"));
+var tim_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/tim-2.jpg */ "./assets/images/bios/tim-2.jpg"));
+var laura_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/laura.jpg */ "./assets/images/bios/laura.jpg"));
+var laura_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/laura-0.jpg */ "./assets/images/bios/laura-0.jpg"));
+var laura_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/laura-1.jpg */ "./assets/images/bios/laura-1.jpg"));
+var laura_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/laura-2.jpg */ "./assets/images/bios/laura-2.jpg"));
+var amy_anderson_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/amy-anderson.jpg */ "./assets/images/bios/amy-anderson.jpg"));
+var amy_anderson_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/amy-anderson-0.jpg */ "./assets/images/bios/amy-anderson-0.jpg"));
+var amy_anderson_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/amy-anderson-1.jpg */ "./assets/images/bios/amy-anderson-1.jpg"));
+var amy_anderson_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/amy-anderson-2.jpg */ "./assets/images/bios/amy-anderson-2.jpg"));
+var gayle_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/gayle.jpg */ "./assets/images/bios/gayle.jpg"));
+var gayle_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/gayle-0.jpg */ "./assets/images/bios/gayle-0.jpg"));
+var gayle_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/gayle-1.jpg */ "./assets/images/bios/gayle-1.jpg"));
+var gayle_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/gayle-2.jpg */ "./assets/images/bios/gayle-2.jpg"));
+var scott_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/scott.jpg */ "./assets/images/bios/scott.jpg"));
+var scott_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/scott-0.jpg */ "./assets/images/bios/scott-0.jpg"));
+var scott_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/scott-1.jpg */ "./assets/images/bios/scott-1.jpg"));
+var scott_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/scott-2.jpg */ "./assets/images/bios/scott-2.jpg"));
+var jake_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/jake.jpg */ "./assets/images/bios/jake.jpg"));
+var jake_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/jake-0.jpg */ "./assets/images/bios/jake-0.jpg"));
+var jake_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/jake-1.jpg */ "./assets/images/bios/jake-1.jpg"));
+var jake_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/jake-2.jpg */ "./assets/images/bios/jake-2.jpg"));
+var dan_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/dan.jpg */ "./assets/images/bios/dan.jpg"));
+var dan_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/dan-0.jpg */ "./assets/images/bios/dan-0.jpg"));
+var dan_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/dan-1.jpg */ "./assets/images/bios/dan-1.jpg"));
+var dan_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/dan-2.jpg */ "./assets/images/bios/dan-2.jpg"));
+var dylan_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/dylan.jpg */ "./assets/images/bios/dylan.jpg"));
+var dylan_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/dylan-0.jpg */ "./assets/images/bios/dylan-0.jpg"));
+var dylan_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/dylan-1.jpg */ "./assets/images/bios/dylan-1.jpg"));
+var dylan_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/dylan-2.jpg */ "./assets/images/bios/dylan-2.jpg"));
+var erik_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/erik.jpg */ "./assets/images/bios/erik.jpg"));
+var erik_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/erik-0.jpg */ "./assets/images/bios/erik-0.jpg"));
+var erik_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/erik-1.jpg */ "./assets/images/bios/erik-1.jpg"));
+var erik_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/erik-2.jpg */ "./assets/images/bios/erik-2.jpg"));
+var jeff_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/jeff.jpg */ "./assets/images/bios/jeff.jpg"));
+var jeff_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/jeff-0.jpg */ "./assets/images/bios/jeff-0.jpg"));
+var jeff_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/jeff-1.jpg */ "./assets/images/bios/jeff-1.jpg"));
+var jeff_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/jeff-2.jpg */ "./assets/images/bios/jeff-2.jpg"));
+var ken_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/ken.jpg */ "./assets/images/bios/ken.jpg"));
+var ken_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/ken-0.jpg */ "./assets/images/bios/ken-0.jpg"));
+var ken_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/ken-1.jpg */ "./assets/images/bios/ken-1.jpg"));
+var ken_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/ken-2.jpg */ "./assets/images/bios/ken-2.jpg"));
+var tom_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/tom.jpg */ "./assets/images/bios/tom.jpg"));
+var tom_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/tom-0.jpg */ "./assets/images/bios/tom-0.jpg"));
+var tom_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/tom-1.jpg */ "./assets/images/bios/tom-1.jpg"));
+var tom_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/tom-2.jpg */ "./assets/images/bios/tom-2.jpg"));
+var barry_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/barry.jpg */ "./assets/images/bios/barry.jpg"));
+var barry_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/barry-0.jpg */ "./assets/images/bios/barry-0.jpg"));
+var barry_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/barry-1.jpg */ "./assets/images/bios/barry-1.jpg"));
+var barry_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/barry-2.jpg */ "./assets/images/bios/barry-2.jpg"));
+var janet_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/janet.jpg */ "./assets/images/bios/janet.jpg"));
+var janet_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/janet-0.jpg */ "./assets/images/bios/janet-0.jpg"));
+var janet_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/janet-1.jpg */ "./assets/images/bios/janet-1.jpg"));
+var janet_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/janet-2.jpg */ "./assets/images/bios/janet-2.jpg"));
+var leslie_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/leslie.jpg */ "./assets/images/bios/leslie.jpg"));
+var leslie_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/leslie-0.jpg */ "./assets/images/bios/leslie-0.jpg"));
+var leslie_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/leslie-1.jpg */ "./assets/images/bios/leslie-1.jpg"));
+var leslie_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/leslie-2.jpg */ "./assets/images/bios/leslie-2.jpg"));
+var amelia_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/amelia.jpg */ "./assets/images/bios/amelia.jpg"));
+var amelia_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/amelia-0.jpg */ "./assets/images/bios/amelia-0.jpg"));
+var amelia_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/amelia-1.jpg */ "./assets/images/bios/amelia-1.jpg"));
+var amelia_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/amelia-2.jpg */ "./assets/images/bios/amelia-2.jpg"));
+var carolyn_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/carolyn.jpg */ "./assets/images/bios/carolyn.jpg"));
+var carolyn_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/carolyn-0.jpg */ "./assets/images/bios/carolyn-0.jpg"));
+var carolyn_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/carolyn-1.jpg */ "./assets/images/bios/carolyn-1.jpg"));
+var carolyn_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/carolyn-2.jpg */ "./assets/images/bios/carolyn-2.jpg"));
+var dara_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/dara.jpg */ "./assets/images/bios/dara.jpg"));
+var dara_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/dara-0.jpg */ "./assets/images/bios/dara-0.jpg"));
+var dara_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/dara-1.jpg */ "./assets/images/bios/dara-1.jpg"));
+var dara_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/dara-2.jpg */ "./assets/images/bios/dara-2.jpg"));
+var elly_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/elly.jpg */ "./assets/images/bios/elly.jpg"));
+var elly_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/elly-0.jpg */ "./assets/images/bios/elly-0.jpg"));
+var elly_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/elly-1.jpg */ "./assets/images/bios/elly-1.jpg"));
+var elly_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/elly-2.jpg */ "./assets/images/bios/elly-2.jpg"));
+var joanne_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/joanne.jpg */ "./assets/images/bios/joanne.jpg"));
+var joanne_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/joanne-0.jpg */ "./assets/images/bios/joanne-0.jpg"));
+var joanne_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/joanne-1.jpg */ "./assets/images/bios/joanne-1.jpg"));
+var joanne_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/joanne-2.jpg */ "./assets/images/bios/joanne-2.jpg"));
+var kenny_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/kenny.jpg */ "./assets/images/bios/kenny.jpg"));
+var kenny_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/kenny-0.jpg */ "./assets/images/bios/kenny-0.jpg"));
+var kenny_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/kenny-1.jpg */ "./assets/images/bios/kenny-1.jpg"));
+var kenny_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/kenny-2.jpg */ "./assets/images/bios/kenny-2.jpg"));
+var lenore_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/lenore.jpg */ "./assets/images/bios/lenore.jpg"));
+var lenore_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/lenore-0.jpg */ "./assets/images/bios/lenore-0.jpg"));
+var lenore_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/lenore-1.jpg */ "./assets/images/bios/lenore-1.jpg"));
+var lenore_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/lenore-2.jpg */ "./assets/images/bios/lenore-2.jpg"));
+var sam_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/sam.jpg */ "./assets/images/bios/sam.jpg"));
+var sam_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/sam-0.jpg */ "./assets/images/bios/sam-0.jpg"));
+var sam_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/sam-1.jpg */ "./assets/images/bios/sam-1.jpg"));
+var sam_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/sam-2.jpg */ "./assets/images/bios/sam-2.jpg"));
+var sophia_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/sophia.jpg */ "./assets/images/bios/sophia.jpg"));
+var sophia_0_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/sophia-0.jpg */ "./assets/images/bios/sophia-0.jpg"));
+var sophia_1_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/sophia-1.jpg */ "./assets/images/bios/sophia-1.jpg"));
+var sophia_2_jpg_1 = __importDefault(__webpack_require__(/*! ../assets/images/bios/sophia-2.jpg */ "./assets/images/bios/sophia-2.jpg"));
+var annika_careerinterest_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/annika_careerinterest_01.webm */ "./assets/video/interviews/annika_careerinterest_01.webm"));
+var annika_meetingchris_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/annika_meetingchris_01.webm */ "./assets/video/interviews/annika_meetingchris_01.webm"));
+var annika_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/annika_outtakes.webm */ "./assets/video/interviews/annika_outtakes.webm"));
+var annika_work_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/annika_work_01.webm */ "./assets/video/interviews/annika_work_01.webm"));
+var bill_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/bill_firsttime_01.webm */ "./assets/video/interviews/bill_firsttime_01.webm"));
+var bill_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/bill_instrument_01.webm */ "./assets/video/interviews/bill_instrument_01.webm"));
+var bill_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/bill_whytoday_01.webm */ "./assets/video/interviews/bill_whytoday_01.webm"));
+var carson_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/carson_firsttime_01.webm */ "./assets/video/interviews/carson_firsttime_01.webm"));
+var carson_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/carson_instrument_01.webm */ "./assets/video/interviews/carson_instrument_01.webm"));
+var carson_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/carson_whytoday_01.webm */ "./assets/video/interviews/carson_whytoday_01.webm"));
+var lisa_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/lisa_firsttime_01.webm */ "./assets/video/interviews/lisa_firsttime_01.webm"));
+var lisa_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/lisa_instrument_01.webm */ "./assets/video/interviews/lisa_instrument_01.webm"));
+var lisa_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/lisa_whytoday_01.webm */ "./assets/video/interviews/lisa_whytoday_01.webm"));
+var reid_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/reid_firsttime_01.webm */ "./assets/video/interviews/reid_firsttime_01.webm"));
+var reid_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/reid_instrument_01.webm */ "./assets/video/interviews/reid_instrument_01.webm"));
+var reid_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/reid_whytoday_01.webm */ "./assets/video/interviews/reid_whytoday_01.webm"));
+var amy_mitchell_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/amy-mitchell_firsttime_01.webm */ "./assets/video/interviews/amy-mitchell_firsttime_01.webm"));
+var amy_mitchell_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/amy-mitchell_instrument_01.webm */ "./assets/video/interviews/amy-mitchell_instrument_01.webm"));
+var amy_mitchell_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/amy-mitchell_whytoday_01.webm */ "./assets/video/interviews/amy-mitchell_whytoday_01.webm"));
+var austin_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/austin_firsttime_01.webm */ "./assets/video/interviews/austin_firsttime_01.webm"));
+var austin_firsttime_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/austin_firsttime_02.webm */ "./assets/video/interviews/austin_firsttime_02.webm"));
+var austin_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/austin_instrument_01.webm */ "./assets/video/interviews/austin_instrument_01.webm"));
+var austin_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/austin_whytoday_01.webm */ "./assets/video/interviews/austin_whytoday_01.webm"));
+var austin_whytoday_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/austin_whytoday_02.webm */ "./assets/video/interviews/austin_whytoday_02.webm"));
+var chris_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/chris_firsttime_01.webm */ "./assets/video/interviews/chris_firsttime_01.webm"));
+var chris_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/chris_instrument_01.webm */ "./assets/video/interviews/chris_instrument_01.webm"));
+var chris_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/chris_whytoday_01.webm */ "./assets/video/interviews/chris_whytoday_01.webm"));
+var david_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/david_firsttime_01.webm */ "./assets/video/interviews/david_firsttime_01.webm"));
+var david_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/david_instrument_01.webm */ "./assets/video/interviews/david_instrument_01.webm"));
+var david_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/david_whytoday_01.webm */ "./assets/video/interviews/david_whytoday_01.webm"));
+var emma_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/emma_firsttime_01.webm */ "./assets/video/interviews/emma_firsttime_01.webm"));
+var emma_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/emma_instrument_01.webm */ "./assets/video/interviews/emma_instrument_01.webm"));
+var emma_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/emma_outtakes.webm */ "./assets/video/interviews/emma_outtakes.webm"));
+var emma_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/emma_whytoday_01.webm */ "./assets/video/interviews/emma_whytoday_01.webm"));
+var josh_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/josh_instrument_01.webm */ "./assets/video/interviews/josh_instrument_01.webm"));
+var josh_instrument_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/josh_instrument_02.webm */ "./assets/video/interviews/josh_instrument_02.webm"));
+var josh_outtakes_nsfw__webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/josh_outtakes-nsfw-.webm */ "./assets/video/interviews/josh_outtakes-nsfw-.webm"));
+var josh_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/josh_whytoday_01.webm */ "./assets/video/interviews/josh_whytoday_01.webm"));
+var josh_whytoday_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/josh_whytoday_02.webm */ "./assets/video/interviews/josh_whytoday_02.webm"));
+var suzanne_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/suzanne_firsttime_01.webm */ "./assets/video/interviews/suzanne_firsttime_01.webm"));
+var suzanne_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/suzanne_instrument_01.webm */ "./assets/video/interviews/suzanne_instrument_01.webm"));
+var suzanne_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/suzanne_whytoday_01.webm */ "./assets/video/interviews/suzanne_whytoday_01.webm"));
+var tina_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/tina_firsttime_01.webm */ "./assets/video/interviews/tina_firsttime_01.webm"));
+var tina_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/tina_instrument_01.webm */ "./assets/video/interviews/tina_instrument_01.webm"));
+var tina_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/tina_whytoday_01.webm */ "./assets/video/interviews/tina_whytoday_01.webm"));
+var travis_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/travis_firsttime_01.webm */ "./assets/video/interviews/travis_firsttime_01.webm"));
+var travis_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/travis_instrument_01.webm */ "./assets/video/interviews/travis_instrument_01.webm"));
+var travis_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/travis_outtakes.webm */ "./assets/video/interviews/travis_outtakes.webm"));
+var travis_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/travis_whytoday_01.webm */ "./assets/video/interviews/travis_whytoday_01.webm"));
+var ali_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/ali_firsttime_01.webm */ "./assets/video/interviews/ali_firsttime_01.webm"));
+var ali_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/ali_outtakes.webm */ "./assets/video/interviews/ali_outtakes.webm"));
+var eliza_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/eliza_instrument_01.webm */ "./assets/video/interviews/eliza_instrument_01.webm"));
+var eliza_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/eliza_outtakes.webm */ "./assets/video/interviews/eliza_outtakes.webm"));
+var sue_firsttake_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/sue_firsttake_01.webm */ "./assets/video/interviews/sue_firsttake_01.webm"));
+var sue_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/sue_instrument_01.webm */ "./assets/video/interviews/sue_instrument_01.webm"));
+var sue_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/sue_outtakes.webm */ "./assets/video/interviews/sue_outtakes.webm"));
+var sue_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/sue_whytoday_01.webm */ "./assets/video/interviews/sue_whytoday_01.webm"));
+var sue_whytoday_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/sue_whytoday_02.webm */ "./assets/video/interviews/sue_whytoday_02.webm"));
+var andreas_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/andreas_firsttime_01.webm */ "./assets/video/interviews/andreas_firsttime_01.webm"));
+var andreas_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/andreas_instrument_01.webm */ "./assets/video/interviews/andreas_instrument_01.webm"));
+var andreas_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/andreas_outtakes.webm */ "./assets/video/interviews/andreas_outtakes.webm"));
+var andreas_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/andreas_whytoday_01.webm */ "./assets/video/interviews/andreas_whytoday_01.webm"));
+var stephanie_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/stephanie_firsttime_01.webm */ "./assets/video/interviews/stephanie_firsttime_01.webm"));
+var stephanie_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/stephanie_instrument_01.webm */ "./assets/video/interviews/stephanie_instrument_01.webm"));
+var stephanie_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/stephanie_outtakes.webm */ "./assets/video/interviews/stephanie_outtakes.webm"));
+var stephanie_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/stephanie_whytoday_01.webm */ "./assets/video/interviews/stephanie_whytoday_01.webm"));
+var stephanie_whytoday_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/stephanie_whytoday_02.webm */ "./assets/video/interviews/stephanie_whytoday_02.webm"));
+var tim_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/tim_firsttime_01.webm */ "./assets/video/interviews/tim_firsttime_01.webm"));
+var tim_firsttime_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/tim_firsttime_02.webm */ "./assets/video/interviews/tim_firsttime_02.webm"));
+var tim_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/tim_instrument_01.webm */ "./assets/video/interviews/tim_instrument_01.webm"));
+var tim_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/tim_whytoday_01.webm */ "./assets/video/interviews/tim_whytoday_01.webm"));
+var laura_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/laura_firsttime_01.webm */ "./assets/video/interviews/laura_firsttime_01.webm"));
+var laura_firsttime_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/laura_firsttime_02.webm */ "./assets/video/interviews/laura_firsttime_02.webm"));
+var laura_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/laura_instrument_01.webm */ "./assets/video/interviews/laura_instrument_01.webm"));
+var laura_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/laura_whytoday_01.webm */ "./assets/video/interviews/laura_whytoday_01.webm"));
+var amy_anderson_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/amy-anderson_firsttime_01.webm */ "./assets/video/interviews/amy-anderson_firsttime_01.webm"));
+var amy_anderson_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/amy-anderson_instrument_01.webm */ "./assets/video/interviews/amy-anderson_instrument_01.webm"));
+var amy_anderson_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/amy-anderson_outtakes.webm */ "./assets/video/interviews/amy-anderson_outtakes.webm"));
+var amy_anderson_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/amy-anderson_whytoday_01.webm */ "./assets/video/interviews/amy-anderson_whytoday_01.webm"));
+var gayle_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/gayle_firsttime_01.webm */ "./assets/video/interviews/gayle_firsttime_01.webm"));
+var gayle_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/gayle_instrument_01.webm */ "./assets/video/interviews/gayle_instrument_01.webm"));
+var gayle_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/gayle_outtakes.webm */ "./assets/video/interviews/gayle_outtakes.webm"));
+var gayle_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/gayle_whytoday_01.webm */ "./assets/video/interviews/gayle_whytoday_01.webm"));
+var scott_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/scott_firsttime_01.webm */ "./assets/video/interviews/scott_firsttime_01.webm"));
+var scott_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/scott_instrument_01.webm */ "./assets/video/interviews/scott_instrument_01.webm"));
+var scott_instrument_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/scott_instrument_02.webm */ "./assets/video/interviews/scott_instrument_02.webm"));
+var scott_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/scott_whytoday_01.webm */ "./assets/video/interviews/scott_whytoday_01.webm"));
+var jake_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/jake_firsttime_01.webm */ "./assets/video/interviews/jake_firsttime_01.webm"));
+var jake_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/jake_instrument_01.webm */ "./assets/video/interviews/jake_instrument_01.webm"));
+var jake_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/jake_outtakes.webm */ "./assets/video/interviews/jake_outtakes.webm"));
+var dan_firsttake_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/dan_firsttake_01.webm */ "./assets/video/interviews/dan_firsttake_01.webm"));
+var dan_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/dan_instrument_01.webm */ "./assets/video/interviews/dan_instrument_01.webm"));
+var dan_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/dan_whytoday_01.webm */ "./assets/video/interviews/dan_whytoday_01.webm"));
+var dylan_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/dylan_whytoday_01.webm */ "./assets/video/interviews/dylan_whytoday_01.webm"));
+var erik_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/erik_firsttime_01.webm */ "./assets/video/interviews/erik_firsttime_01.webm"));
+var erik_firsttime_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/erik_firsttime_02.webm */ "./assets/video/interviews/erik_firsttime_02.webm"));
+var erik_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/erik_instrument_01.webm */ "./assets/video/interviews/erik_instrument_01.webm"));
+var erik_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/erik_whytoday_01.webm */ "./assets/video/interviews/erik_whytoday_01.webm"));
+var jeff_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/jeff_firsttime_01.webm */ "./assets/video/interviews/jeff_firsttime_01.webm"));
+var jeff_firsttime_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/jeff_firsttime_02.webm */ "./assets/video/interviews/jeff_firsttime_02.webm"));
+var jeff_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/jeff_instrument_01.webm */ "./assets/video/interviews/jeff_instrument_01.webm"));
+var jeff_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/jeff_outtakes.webm */ "./assets/video/interviews/jeff_outtakes.webm"));
+var jeff_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/jeff_whytoday_01.webm */ "./assets/video/interviews/jeff_whytoday_01.webm"));
+var ken_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/ken_firsttime_01.webm */ "./assets/video/interviews/ken_firsttime_01.webm"));
+var ken_firsttime_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/ken_firsttime_02.webm */ "./assets/video/interviews/ken_firsttime_02.webm"));
+var ken_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/ken_instrument_01.webm */ "./assets/video/interviews/ken_instrument_01.webm"));
+var ken_instrument_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/ken_instrument_02.webm */ "./assets/video/interviews/ken_instrument_02.webm"));
+var ken_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/ken_whytoday_01.webm */ "./assets/video/interviews/ken_whytoday_01.webm"));
+var ken_whytoday_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/ken_whytoday_02.webm */ "./assets/video/interviews/ken_whytoday_02.webm"));
+var tom_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/tom_firsttime_01.webm */ "./assets/video/interviews/tom_firsttime_01.webm"));
+var tom_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/tom_instrument_01.webm */ "./assets/video/interviews/tom_instrument_01.webm"));
+var tom_instrument_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/tom_instrument_02.webm */ "./assets/video/interviews/tom_instrument_02.webm"));
+var tom_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/tom_whytoday_01.webm */ "./assets/video/interviews/tom_whytoday_01.webm"));
+var barry_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/barry_firsttime_01.webm */ "./assets/video/interviews/barry_firsttime_01.webm"));
+var barry_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/barry_instrument_01.webm */ "./assets/video/interviews/barry_instrument_01.webm"));
+var barry_instrument_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/barry_instrument_02.webm */ "./assets/video/interviews/barry_instrument_02.webm"));
+var barry_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/barry_whytoday_01.webm */ "./assets/video/interviews/barry_whytoday_01.webm"));
+var janet_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/janet_firsttime_01.webm */ "./assets/video/interviews/janet_firsttime_01.webm"));
+var janet_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/janet_instrument_01.webm */ "./assets/video/interviews/janet_instrument_01.webm"));
+var janet_instrument_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/janet_instrument_02.webm */ "./assets/video/interviews/janet_instrument_02.webm"));
+var janet_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/janet_outtakes.webm */ "./assets/video/interviews/janet_outtakes.webm"));
+var janet_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/janet_whytoday_01.webm */ "./assets/video/interviews/janet_whytoday_01.webm"));
+var leslie_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/leslie_firsttime_01.webm */ "./assets/video/interviews/leslie_firsttime_01.webm"));
+var leslie_firsttime_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/leslie_firsttime_02.webm */ "./assets/video/interviews/leslie_firsttime_02.webm"));
+var leslie_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/leslie_instrument_01.webm */ "./assets/video/interviews/leslie_instrument_01.webm"));
+var leslie_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/leslie_whytoday_01.webm */ "./assets/video/interviews/leslie_whytoday_01.webm"));
+var amelia_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/amelia_firsttime_01.webm */ "./assets/video/interviews/amelia_firsttime_01.webm"));
+var amelia_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/amelia_instrument_01.webm */ "./assets/video/interviews/amelia_instrument_01.webm"));
+var amelia_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/amelia_whytoday_01.webm */ "./assets/video/interviews/amelia_whytoday_01.webm"));
+var carolyn_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/carolyn_firsttime_01.webm */ "./assets/video/interviews/carolyn_firsttime_01.webm"));
+var carolyn_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/carolyn_instrument_01.webm */ "./assets/video/interviews/carolyn_instrument_01.webm"));
+var carolyn_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/carolyn_whytoday_01.webm */ "./assets/video/interviews/carolyn_whytoday_01.webm"));
+var dara_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/dara_firsttime_01.webm */ "./assets/video/interviews/dara_firsttime_01.webm"));
+var dara_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/dara_instrument_01.webm */ "./assets/video/interviews/dara_instrument_01.webm"));
+var dara_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/dara_outtakes.webm */ "./assets/video/interviews/dara_outtakes.webm"));
+var dara_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/dara_whytoday_01.webm */ "./assets/video/interviews/dara_whytoday_01.webm"));
+var elly_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/elly_firsttime_01.webm */ "./assets/video/interviews/elly_firsttime_01.webm"));
+var elly_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/elly_instrument_01.webm */ "./assets/video/interviews/elly_instrument_01.webm"));
+var elly_instrument_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/elly_instrument_02.webm */ "./assets/video/interviews/elly_instrument_02.webm"));
+var elly_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/elly_whytoday_01.webm */ "./assets/video/interviews/elly_whytoday_01.webm"));
+var joanne_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/joanne_firsttime_01.webm */ "./assets/video/interviews/joanne_firsttime_01.webm"));
+var joanne_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/joanne_instrument_01.webm */ "./assets/video/interviews/joanne_instrument_01.webm"));
+var joanne_outtakes_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/joanne_outtakes.webm */ "./assets/video/interviews/joanne_outtakes.webm"));
+var joanne_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/joanne_whytoday_01.webm */ "./assets/video/interviews/joanne_whytoday_01.webm"));
+var joanne_whytoday_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/joanne_whytoday_02.webm */ "./assets/video/interviews/joanne_whytoday_02.webm"));
+var kenny_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/kenny_firsttime_01.webm */ "./assets/video/interviews/kenny_firsttime_01.webm"));
+var kenny_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/kenny_instrument_01.webm */ "./assets/video/interviews/kenny_instrument_01.webm"));
+var kenny_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/kenny_whytoday_01.webm */ "./assets/video/interviews/kenny_whytoday_01.webm"));
+var lenore_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/lenore_firsttime_01.webm */ "./assets/video/interviews/lenore_firsttime_01.webm"));
+var lenore_firsttime_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/lenore_firsttime_02.webm */ "./assets/video/interviews/lenore_firsttime_02.webm"));
+var lenore_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/lenore_instrument_01.webm */ "./assets/video/interviews/lenore_instrument_01.webm"));
+var lenore_instrument_02_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/lenore_instrument_02.webm */ "./assets/video/interviews/lenore_instrument_02.webm"));
+var lenore_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/lenore_whytoday_01.webm */ "./assets/video/interviews/lenore_whytoday_01.webm"));
+var sam_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/sam_firsttime_01.webm */ "./assets/video/interviews/sam_firsttime_01.webm"));
+var sam_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/sam_instrument_01.webm */ "./assets/video/interviews/sam_instrument_01.webm"));
+var sam_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/sam_whytoday_01.webm */ "./assets/video/interviews/sam_whytoday_01.webm"));
+var sophia_firsttime_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/sophia_firsttime_01.webm */ "./assets/video/interviews/sophia_firsttime_01.webm"));
+var sophia_instrument_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/sophia_instrument_01.webm */ "./assets/video/interviews/sophia_instrument_01.webm"));
+var sophia_whytoday_01_webm_1 = __importDefault(__webpack_require__(/*! ../assets/video/interviews/sophia_whytoday_01.webm */ "./assets/video/interviews/sophia_whytoday_01.webm"));
+exports.BIO_DATA = [
+    {
+        name: "Annika Johannsen",
+        instrument: "Synth",
+        title: "Audio Engineer",
+        videos: {
+            CAREERINTEREST_01: annika_careerinterest_01_webm_1.default,
+            MEETINGCHRIS_01: annika_meetingchris_01_webm_1.default,
+            OUTTAKES: annika_outtakes_webm_1.default,
+            WORK_01: annika_work_01_webm_1.default
+        },
+        photos: [
+            annika_jpg_1.default,
+            annika_0_jpg_1.default,
+            annika_1_jpg_1.default,
+            annika_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Bill Weaver",
+        instrument: "Bass",
+        title: "Plays Bass",
+        yearStarted: 2001,
+        videos: {
+            FIRST_TIME: bill_firsttime_01_webm_1.default,
+            WHY_INSTR: bill_instrument_01_webm_1.default,
+            WHY_TODAY: bill_whytoday_01_webm_1.default
+        },
+        photos: [
+            bill_jpg_1.default,
+            bill_0_jpg_1.default,
+            bill_1_jpg_1.default,
+            bill_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Carson Perl",
+        instrument: "Bass",
+        title: "Plays Bass",
+        yearStarted: 2017,
+        videos: {
+            FIRST_TIME: carson_firsttime_01_webm_1.default,
+            WHY_INSTR: carson_instrument_01_webm_1.default,
+            WHY_TODAY: carson_whytoday_01_webm_1.default
+        },
+        photos: [
+            carson_jpg_1.default,
+            carson_0_jpg_1.default,
+            carson_1_jpg_1.default,
+            carson_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Lisa Pofelski-Rosa",
+        instrument: "Bass",
+        title: "Plays Bass",
+        yearStarted: 2000,
+        videos: {
+            FIRST_TIME: lisa_firsttime_01_webm_1.default,
+            WHY_INSTR: lisa_instrument_01_webm_1.default,
+            WHY_TODAY: lisa_whytoday_01_webm_1.default
+        },
+        photos: [
+            lisa_jpg_1.default,
+            lisa_0_jpg_1.default,
+            lisa_1_jpg_1.default,
+            lisa_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Reid Kajikawa",
+        instrument: "Bassoon",
+        title: "Plays Bassoon",
+        yearStarted: 2019,
+        videos: {
+            FIRST_TIME: reid_firsttime_01_webm_1.default,
+            WHY_INSTR: reid_instrument_01_webm_1.default,
+            WHY_TODAY: reid_whytoday_01_webm_1.default
+        },
+        photos: [
+            reid_jpg_1.default,
+            reid_0_jpg_1.default,
+            reid_1_jpg_1.default,
+            reid_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Amy Mitchell",
+        instrument: "Cello",
+        title: "Plays Cello",
+        yearStarted: 2002,
+        videos: {
+            FIRST_TIME: amy_mitchell_firsttime_01_webm_1.default,
+            WHY_INSTR: amy_mitchell_instrument_01_webm_1.default,
+            WHY_TODAY: amy_mitchell_whytoday_01_webm_1.default
+        },
+        photos: [
+            amy_mitchell_jpg_1.default,
+            amy_mitchell_0_jpg_1.default,
+            amy_mitchell_1_jpg_1.default,
+            amy_mitchell_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Austin Lenahan",
+        instrument: "Cello",
+        title: "Plays Cello",
+        yearStarted: 2010,
+        videos: {
+            FIRST_TIME: austin_firsttime_01_webm_1.default,
+            FIRST_TIME_2: austin_firsttime_02_webm_1.default,
+            WHY_INSTR: austin_instrument_01_webm_1.default,
+            WHY_TODAY: austin_whytoday_01_webm_1.default,
+            WHY_TODAY_2: austin_whytoday_02_webm_1.default
+        },
+        photos: [
+            austin_jpg_1.default,
+            austin_0_jpg_1.default,
+            austin_1_jpg_1.default,
+            austin_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Chris Thomas",
+        instrument: "Cello",
+        title: "Composer and Cello Player",
+        yearStarted: 2017,
+        videos: {
+            FIRST_TIME: chris_firsttime_01_webm_1.default,
+            WHY_INSTR: chris_instrument_01_webm_1.default,
+            WHY_TODAY: chris_whytoday_01_webm_1.default
+        },
+        photos: [
+            chris_jpg_1.default,
+            chris_0_jpg_1.default,
+            chris_1_jpg_1.default,
+            chris_2_jpg_1.default
+        ]
+    },
+    {
+        name: "David Ray Morris",
+        instrument: "Cello",
+        title: "Plays Cello",
+        yearStarted: 2014,
+        videos: {
+            FIRST_TIME: david_firsttime_01_webm_1.default,
+            WHY_INSTR: david_instrument_01_webm_1.default,
+            WHY_TODAY: david_whytoday_01_webm_1.default
+        },
+        photos: [
+            david_jpg_1.default,
+            david_0_jpg_1.default,
+            david_1_jpg_1.default,
+            david_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Emma Chaput",
+        instrument: "Cello",
+        title: "Plays Cello",
+        yearStarted: 2012,
+        videos: {
+            FIRST_TIME: emma_firsttime_01_webm_1.default,
+            WHY_INSTR: emma_instrument_01_webm_1.default,
+            OUTTAKES: emma_outtakes_webm_1.default,
+            WHY_TODAY: emma_whytoday_01_webm_1.default
+        },
+        photos: [
+            emma_jpg_1.default,
+            emma_0_jpg_1.default,
+            emma_1_jpg_1.default,
+            emma_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Joshua Evans",
+        instrument: "Cello",
+        title: "Plays Cello",
+        yearStarted: 2012,
+        videos: {
+            WHY_INSTR: josh_instrument_01_webm_1.default,
+            WHY_INSTR_2: josh_instrument_02_webm_1.default,
+            OUTTAKES: josh_outtakes_nsfw__webm_1.default,
+            WHY_TODAY: josh_whytoday_01_webm_1.default,
+            WHY_TODAY_2: josh_whytoday_02_webm_1.default
+        },
+        photos: [
+            josh_jpg_1.default,
+            josh_0_jpg_1.default,
+            josh_1_jpg_1.default,
+            josh_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Suzanne Gainey",
+        instrument: "Cello",
+        title: "Plays Cello",
+        yearStarted: 2019,
+        videos: {
+            FIRST_TIME: suzanne_firsttime_01_webm_1.default,
+            WHY_INSTR: suzanne_instrument_01_webm_1.default,
+            WHY_TODAY: suzanne_whytoday_01_webm_1.default
+        },
+        photos: [
+            suzanne_jpg_1.default,
+            suzanne_0_jpg_1.default,
+            suzanne_1_jpg_1.default,
+            suzanne_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Tina Filsinger",
+        instrument: "Cello",
+        title: "Plays Cello",
+        yearStarted: 2017,
+        videos: {
+            FIRST_TIME: tina_firsttime_01_webm_1.default,
+            WHY_INSTR: tina_instrument_01_webm_1.default,
+            WHY_TODAY: tina_whytoday_01_webm_1.default
+        },
+        photos: [
+            tina_jpg_1.default,
+            tina_0_jpg_1.default,
+            tina_1_jpg_1.default,
+            tina_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Travis Allen",
+        instrument: "Cello",
+        title: "Plays Cello",
+        yearStarted: 1996,
+        videos: {
+            FIRST_TIME: travis_firsttime_01_webm_1.default,
+            WHY_INSTR: travis_instrument_01_webm_1.default,
+            OUTTAKES: travis_outtakes_webm_1.default,
+            WHY_TODAY: travis_whytoday_01_webm_1.default
+        },
+        photos: [
+            travis_jpg_1.default,
+            travis_0_jpg_1.default,
+            travis_1_jpg_1.default,
+            travis_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Alephair Bylund",
+        instrument: "Clarinet",
+        title: "Plays Clarinet",
+        yearStarted: 2017,
+        videos: {
+            FIRST_TIME: ali_firsttime_01_webm_1.default,
+            OUTTAKES: ali_outtakes_webm_1.default
+        },
+        photos: [
+            ali_jpg_1.default,
+            ali_0_jpg_1.default,
+            ali_1_jpg_1.default,
+            ali_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Eliza Zandannoti",
+        instrument: "Clarinet",
+        title: "Plays Clarinet",
+        yearStarted: 2018,
+        videos: {
+            WHY_INSTR: eliza_instrument_01_webm_1.default,
+            OUTTAKES: eliza_outtakes_webm_1.default
+        },
+        photos: [
+            eliza_jpg_1.default,
+            eliza_0_jpg_1.default,
+            eliza_1_jpg_1.default,
+            eliza_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Sue Steiger",
+        instrument: "Flute",
+        title: "Plays Flute",
+        yearStarted: 1984,
+        videos: {
+            FIRST_TIME: sue_firsttake_01_webm_1.default,
+            WHY_INSTR: sue_instrument_01_webm_1.default,
+            OUTTAKES: sue_outtakes_webm_1.default,
+            WHY_TODAY: sue_whytoday_01_webm_1.default,
+            WHY_TODAY_2: sue_whytoday_02_webm_1.default
+        },
+        photos: [
+            sue_jpg_1.default,
+            sue_0_jpg_1.default,
+            sue_1_jpg_1.default,
+            sue_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Andreas Lang",
+        instrument: "French Horn",
+        title: "Plays French Horn",
+        yearStarted: 2011,
+        videos: {
+            FIRST_TIME: andreas_firsttime_01_webm_1.default,
+            WHY_INSTR: andreas_instrument_01_webm_1.default,
+            OUTTAKES: andreas_outtakes_webm_1.default,
+            WHY_TODAY: andreas_whytoday_01_webm_1.default
+        },
+        photos: [
+            andreas_jpg_1.default,
+            andreas_0_jpg_1.default,
+            andreas_1_jpg_1.default,
+            andreas_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Stephanie Everett",
+        instrument: "French Horn",
+        title: "Plays French Horn",
+        yearStarted: 2017,
+        videos: {
+            FIRST_TIME: stephanie_firsttime_01_webm_1.default,
+            WHY_INSTR: stephanie_instrument_01_webm_1.default,
+            OUTTAKES: stephanie_outtakes_webm_1.default,
+            WHY_TODAY: stephanie_whytoday_01_webm_1.default,
+            WHY_TODAY_2: stephanie_whytoday_02_webm_1.default
+        },
+        photos: [
+            stephanie_jpg_1.default,
+            stephanie_0_jpg_1.default,
+            stephanie_1_jpg_1.default,
+            stephanie_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Tim Lynch",
+        instrument: "French Horn",
+        title: "Plays French Horn",
+        yearStarted: 2010,
+        videos: {
+            FIRST_TIME: tim_firsttime_01_webm_1.default,
+            FIRST_TIME_2: tim_firsttime_02_webm_1.default,
+            WHY_INSTR: tim_instrument_01_webm_1.default,
+            WHY_TODAY: tim_whytoday_01_webm_1.default
+        },
+        photos: [
+            tim_jpg_1.default,
+            tim_0_jpg_1.default,
+            tim_1_jpg_1.default,
+            tim_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Laura Leighton",
+        instrument: "Harp",
+        title: "Plays Harp",
+        yearStarted: 2000,
+        videos: {
+            FIRST_TIME: laura_firsttime_01_webm_1.default,
+            FIRST_TIME_2: laura_firsttime_02_webm_1.default,
+            WHY_INSTR: laura_instrument_01_webm_1.default,
+            WHY_TODAY: laura_whytoday_01_webm_1.default
+        },
+        photos: [
+            laura_jpg_1.default,
+            laura_0_jpg_1.default,
+            laura_1_jpg_1.default,
+            laura_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Amy Anderson",
+        instrument: "French Horn",
+        title: "Plays French Horn",
+        yearStarted: 2011,
+        videos: {
+            FIRST_TIME: amy_anderson_firsttime_01_webm_1.default,
+            WHY_INSTR: amy_anderson_instrument_01_webm_1.default,
+            OUTTAKES: amy_anderson_outtakes_webm_1.default,
+            WHY_TODAY: amy_anderson_whytoday_01_webm_1.default
+        },
+        photos: [
+            amy_anderson_jpg_1.default,
+            amy_anderson_0_jpg_1.default,
+            amy_anderson_1_jpg_1.default,
+            amy_anderson_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Gayle Hogland",
+        instrument: "Oboe",
+        title: "Plays Oboe",
+        yearStarted: 1989,
+        videos: {
+            FIRST_TIME: gayle_firsttime_01_webm_1.default,
+            WHY_INSTR: gayle_instrument_01_webm_1.default,
+            OUTTAKES: gayle_outtakes_webm_1.default,
+            WHY_TODAY: gayle_whytoday_01_webm_1.default
+        },
+        photos: [
+            gayle_jpg_1.default,
+            gayle_0_jpg_1.default,
+            gayle_1_jpg_1.default,
+            gayle_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Scott Whitney",
+        instrument: "Oboe",
+        title: "Plays Oboe",
+        yearStarted: 2019,
+        videos: {
+            FIRST_TIME: scott_firsttime_01_webm_1.default,
+            WHY_INSTR: scott_instrument_01_webm_1.default,
+            WHY_INSTR_2: scott_instrument_02_webm_1.default,
+            WHY_TODAY: scott_whytoday_01_webm_1.default
+        },
+        photos: [
+            scott_jpg_1.default,
+            scott_0_jpg_1.default,
+            scott_1_jpg_1.default,
+            scott_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Jake Ortman",
+        instrument: "Percussion",
+        title: "Plays Percussion",
+        yearStarted: 1995,
+        videos: {
+            FIRST_TIME: jake_firsttime_01_webm_1.default,
+            WHY_INSTR: jake_instrument_01_webm_1.default,
+            OUTTAKES: jake_outtakes_webm_1.default
+        },
+        photos: [
+            jake_jpg_1.default,
+            jake_0_jpg_1.default,
+            jake_1_jpg_1.default,
+            jake_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Dan Flagg",
+        instrument: "Trombone",
+        title: "Plays Trombone",
+        yearStarted: 2007,
+        videos: {
+            FIRST_TIME: dan_firsttake_01_webm_1.default,
+            WHY_INSTR: dan_instrument_01_webm_1.default,
+            WHY_TODAY: dan_whytoday_01_webm_1.default
+        },
+        photos: [
+            dan_jpg_1.default,
+            dan_0_jpg_1.default,
+            dan_1_jpg_1.default,
+            dan_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Dylan White",
+        instrument: "Trombone",
+        title: "Plays Trombone",
+        yearStarted: 2016,
+        videos: {
+            WHY_TODAY: dylan_whytoday_01_webm_1.default
+        },
+        photos: [
+            dylan_jpg_1.default,
+            dylan_0_jpg_1.default,
+            dylan_1_jpg_1.default,
+            dylan_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Erik Hogland",
+        instrument: "Trombone",
+        title: "Plays Trombone",
+        yearStarted: 1989,
+        videos: {
+            FIRST_TIME: erik_firsttime_01_webm_1.default,
+            FIRST_TIME_2: erik_firsttime_02_webm_1.default,
+            WHY_INSTR: erik_instrument_01_webm_1.default,
+            WHY_TODAY: erik_whytoday_01_webm_1.default
+        },
+        photos: [
+            erik_jpg_1.default,
+            erik_0_jpg_1.default,
+            erik_1_jpg_1.default,
+            erik_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Jeff Briggs",
+        instrument: "Trumpet",
+        title: "Plays Trumpet",
+        yearStarted: 1988,
+        videos: {
+            FIRST_TIME: jeff_firsttime_01_webm_1.default,
+            FIRST_TIME_2: jeff_firsttime_02_webm_1.default,
+            WHY_INSTR: jeff_instrument_01_webm_1.default,
+            OUTTAKES: jeff_outtakes_webm_1.default,
+            WHY_TODAY: jeff_whytoday_01_webm_1.default
+        },
+        photos: [
+            jeff_jpg_1.default,
+            jeff_0_jpg_1.default,
+            jeff_1_jpg_1.default,
+            jeff_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Ken Steiger",
+        instrument: "Trumpet",
+        title: "Plays Trumpet",
+        yearStarted: 1986,
+        videos: {
+            FIRST_TIME: ken_firsttime_01_webm_1.default,
+            FIRST_TIME_2: ken_firsttime_02_webm_1.default,
+            WHY_INSTR: ken_instrument_01_webm_1.default,
+            WHY_INSTR_2: ken_instrument_02_webm_1.default,
+            WHY_TODAY: ken_whytoday_01_webm_1.default,
+            WHY_TODAY_2: ken_whytoday_02_webm_1.default
+        },
+        photos: [
+            ken_jpg_1.default,
+            ken_0_jpg_1.default,
+            ken_1_jpg_1.default,
+            ken_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Thomas Blomstrand",
+        instrument: "Trumpet",
+        title: "Plays Trumpet",
+        yearStarted: 2017,
+        videos: {
+            FIRST_TIME: tom_firsttime_01_webm_1.default,
+            WHY_INSTR: tom_instrument_01_webm_1.default,
+            WHY_INSTR_2: tom_instrument_02_webm_1.default,
+            WHY_TODAY: tom_whytoday_01_webm_1.default
+        },
+        photos: [
+            tom_jpg_1.default,
+            tom_0_jpg_1.default,
+            tom_1_jpg_1.default,
+            tom_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Barry Crenshaw",
+        instrument: "Tuba",
+        title: "Plays Tuba",
+        yearStarted: 2015,
+        videos: {
+            FIRST_TIME: barry_firsttime_01_webm_1.default,
+            WHY_INSTR: barry_instrument_01_webm_1.default,
+            WHY_INSTR_2: barry_instrument_02_webm_1.default,
+            WHY_TODAY: barry_whytoday_01_webm_1.default
+        },
+        photos: [
+            barry_jpg_1.default,
+            barry_0_jpg_1.default,
+            barry_1_jpg_1.default,
+            barry_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Janet Gesme",
+        instrument: "Cello",
+        title: "Plays Cello",
+        yearStarted: 1996,
+        videos: {
+            FIRST_TIME: janet_firsttime_01_webm_1.default,
+            WHY_INSTR: janet_instrument_01_webm_1.default,
+            WHY_INSTR_2: janet_instrument_02_webm_1.default,
+            OUTTAKES: janet_outtakes_webm_1.default,
+            WHY_TODAY: janet_whytoday_01_webm_1.default
+        },
+        photos: [
+            janet_jpg_1.default,
+            janet_0_jpg_1.default,
+            janet_1_jpg_1.default,
+            janet_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Leslie Knight",
+        instrument: "Viola",
+        title: "Plays Viola",
+        yearStarted: 1979,
+        videos: {
+            FIRST_TIME: leslie_firsttime_01_webm_1.default,
+            FIRST_TIME_2: leslie_firsttime_02_webm_1.default,
+            WHY_INSTR: leslie_instrument_01_webm_1.default,
+            WHY_TODAY: leslie_whytoday_01_webm_1.default
+        },
+        photos: [
+            leslie_jpg_1.default,
+            leslie_0_jpg_1.default,
+            leslie_1_jpg_1.default,
+            leslie_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Amelia Covington",
+        instrument: "Violin",
+        title: "Plays Violin",
+        yearStarted: 2019,
+        videos: {
+            FIRST_TIME: amelia_firsttime_01_webm_1.default,
+            WHY_INSTR: amelia_instrument_01_webm_1.default,
+            WHY_TODAY: amelia_whytoday_01_webm_1.default
+        },
+        photos: [
+            amelia_jpg_1.default,
+            amelia_0_jpg_1.default,
+            amelia_1_jpg_1.default,
+            amelia_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Carolyn Rouse",
+        instrument: "Violin",
+        title: "Plays Violin",
+        yearStarted: 2004,
+        videos: {
+            FIRST_TIME: carolyn_firsttime_01_webm_1.default,
+            WHY_INSTR: carolyn_instrument_01_webm_1.default,
+            WHY_TODAY: carolyn_whytoday_01_webm_1.default
+        },
+        photos: [
+            carolyn_jpg_1.default,
+            carolyn_0_jpg_1.default,
+            carolyn_1_jpg_1.default,
+            carolyn_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Dara Robertson",
+        instrument: "Viola",
+        title: "Plays Viola",
+        yearStarted: 1990,
+        videos: {
+            FIRST_TIME: dara_firsttime_01_webm_1.default,
+            WHY_INSTR: dara_instrument_01_webm_1.default,
+            OUTTAKES: dara_outtakes_webm_1.default,
+            WHY_TODAY: dara_whytoday_01_webm_1.default
+        },
+        photos: [
+            dara_jpg_1.default,
+            dara_0_jpg_1.default,
+            dara_1_jpg_1.default,
+            dara_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Elly Jocham",
+        instrument: "Violin",
+        title: "Plays Violin",
+        yearStarted: 2020,
+        videos: {
+            FIRST_TIME: elly_firsttime_01_webm_1.default,
+            WHY_INSTR: elly_instrument_01_webm_1.default,
+            WHY_INSTR_2: elly_instrument_02_webm_1.default,
+            WHY_TODAY: elly_whytoday_01_webm_1.default
+        },
+        photos: [
+            elly_jpg_1.default,
+            elly_0_jpg_1.default,
+            elly_1_jpg_1.default,
+            elly_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Joanne Bulley",
+        instrument: "Violin",
+        title: "Plays Violin",
+        yearStarted: 2019,
+        videos: {
+            FIRST_TIME: joanne_firsttime_01_webm_1.default,
+            WHY_INSTR: joanne_instrument_01_webm_1.default,
+            OUTTAKES: joanne_outtakes_webm_1.default,
+            WHY_TODAY: joanne_whytoday_01_webm_1.default,
+            WHY_TODAY_2: joanne_whytoday_02_webm_1.default
+        },
+        photos: [
+            joanne_jpg_1.default,
+            joanne_0_jpg_1.default,
+            joanne_1_jpg_1.default,
+            joanne_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Kenny Hersh",
+        instrument: "Violin",
+        title: "Plays Violin",
+        yearStarted: 2005,
+        videos: {
+            FIRST_TIME: kenny_firsttime_01_webm_1.default,
+            WHY_INSTR: kenny_instrument_01_webm_1.default,
+            WHY_TODAY: kenny_whytoday_01_webm_1.default
+        },
+        photos: [
+            kenny_jpg_1.default,
+            kenny_0_jpg_1.default,
+            kenny_1_jpg_1.default,
+            kenny_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Lenore Gilbert",
+        instrument: "Violin",
+        title: "Plays Violin",
+        yearStarted: 1989,
+        videos: {
+            FIRST_TIME: lenore_firsttime_01_webm_1.default,
+            FIRST_TIME_2: lenore_firsttime_02_webm_1.default,
+            WHY_INSTR: lenore_instrument_01_webm_1.default,
+            WHY_INSTR_2: lenore_instrument_02_webm_1.default,
+            WHY_TODAY: lenore_whytoday_01_webm_1.default
+        },
+        photos: [
+            lenore_jpg_1.default,
+            lenore_0_jpg_1.default,
+            lenore_1_jpg_1.default,
+            lenore_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Sam Conklin",
+        instrument: "Violin",
+        title: "Plays Violin",
+        yearStarted: 2015,
+        videos: {
+            FIRST_TIME: sam_firsttime_01_webm_1.default,
+            WHY_INSTR: sam_instrument_01_webm_1.default,
+            WHY_TODAY: sam_whytoday_01_webm_1.default
+        },
+        photos: [
+            sam_jpg_1.default,
+            sam_0_jpg_1.default,
+            sam_1_jpg_1.default,
+            sam_2_jpg_1.default
+        ]
+    },
+    {
+        name: "Sophia Wilkens",
+        instrument: "Violin",
+        title: "Plays Violin",
+        yearStarted: 2013,
+        videos: {
+            FIRST_TIME: sophia_firsttime_01_webm_1.default,
+            WHY_INSTR: sophia_instrument_01_webm_1.default,
+            WHY_TODAY: sophia_whytoday_01_webm_1.default
+        },
+        photos: [
+            sophia_jpg_1.default,
+            sophia_0_jpg_1.default,
+            sophia_1_jpg_1.default,
+            sophia_2_jpg_1.default
+        ]
+    }
+];
+
+
+/***/ }),
+
+/***/ "./src/bio-element.ts":
+/*!****************************!*\
+  !*** ./src/bio-element.ts ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BioElement = void 0;
+var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
+var musician_1 = __webpack_require__(/*! ./types/musician */ "./src/types/musician.ts");
+var tween_js_1 = __importDefault(__webpack_require__(/*! @tweenjs/tween.js */ "./node_modules/@tweenjs/tween.js/src/Tween.js"));
+var colors_1 = __webpack_require__(/*! ./colors */ "./src/colors.ts");
+var styles_1 = __webpack_require__(/*! ./styles */ "./src/styles.ts");
+var round_video_player_1 = __webpack_require__(/*! ./round-video-player */ "./src/round-video-player.ts");
+var video_transcripts_1 = __webpack_require__(/*! ../assets/video/video-transcripts */ "./assets/video/video-transcripts.js");
+var insicon_bass_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/insicon_bass.svg */ "./assets/images/instrument-icons/insicon_bass.svg"));
+var insicon_brass_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/insicon_brass.svg */ "./assets/images/instrument-icons/insicon_brass.svg"));
+var insicon_cello_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/insicon_cello.svg */ "./assets/images/instrument-icons/insicon_cello.svg"));
+var insicon_clarinet_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/insicon_clarinet.svg */ "./assets/images/instrument-icons/insicon_clarinet.svg"));
+var insicon_flute_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/insicon_flute.svg */ "./assets/images/instrument-icons/insicon_flute.svg"));
+var insicon_harp_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/insicon_harp.svg */ "./assets/images/instrument-icons/insicon_harp.svg"));
+var insicon_horn_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/insicon_horn.svg */ "./assets/images/instrument-icons/insicon_horn.svg"));
+var insicon_oboe_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/insicon_oboe.svg */ "./assets/images/instrument-icons/insicon_oboe.svg"));
+var insicon_string_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/insicon_string.svg */ "./assets/images/instrument-icons/insicon_string.svg"));
+var insicon_timpani_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/insicon_timpani.svg */ "./assets/images/instrument-icons/insicon_timpani.svg"));
+var insicon_trumpet_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/insicon_trumpet.svg */ "./assets/images/instrument-icons/insicon_trumpet.svg"));
+// import cymbalsIcon from '../assets/images/instrument-icons/insicon_cymbals.svg';
+// import keyboardIcon from '../assets/images/instrument-icons/insicon_keyboard.svg';
+//import choirIcon from '../assets/images/instrument-icons/insicon_choir.svg';
+//import gongIcon from '../assets/images/instrument-icons/insicon_gong.svg';
+//import percussionsectionIcon from '../assets/images/instrument-icons/insicon_percussionsection.svg';
+var insicon_synth_svg_1 = __importDefault(__webpack_require__(/*! ../assets/images/instrument-icons/insicon_synth.svg */ "./assets/images/instrument-icons/insicon_synth.svg"));
+//import woodwindIcon from '../assets/images/instrument-icons/insicon_woodwind.svg';
+var bass_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/bass.ogg */ "./assets/audio/bass.ogg"));
+var bassclarinet_bassoon_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/bassclarinet_bassoon.ogg */ "./assets/audio/bassclarinet_bassoon.ogg"));
+var cello_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/cello.ogg */ "./assets/audio/cello.ogg"));
+var clarinet_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/clarinet.ogg */ "./assets/audio/clarinet.ogg"));
+var flute_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/flute.ogg */ "./assets/audio/flute.ogg"));
+var french_horn_1_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/french_horn_1.ogg */ "./assets/audio/french_horn_1.ogg"));
+var harp_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/harp.ogg */ "./assets/audio/harp.ogg"));
+var oboe_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/oboe.ogg */ "./assets/audio/oboe.ogg"));
+var percussion_cym_gong_timp_bass_drum_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/percussion_cym_gong_timp_bass_drum.ogg */ "./assets/audio/percussion_cym_gong_timp_bass_drum.ogg"));
+var trombone_cimbasso_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/trombone_cimbasso.ogg */ "./assets/audio/trombone_cimbasso.ogg"));
+var trumpet_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/trumpet.ogg */ "./assets/audio/trumpet.ogg"));
+var viola_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/viola.ogg */ "./assets/audio/viola.ogg"));
+var violin_ogg_1 = __importDefault(__webpack_require__(/*! ../assets/audio/violin.ogg */ "./assets/audio/violin.ogg"));
+var round_sound_player_1 = __webpack_require__(/*! ./round-sound-player */ "./src/round-sound-player.ts");
+function getInstrumentIcon(instrument) {
+    switch (instrument) {
+        case "Bass":
+            return [insicon_bass_svg_1.default, -Math.PI / 8];
+        case "Cello":
+            return [insicon_cello_svg_1.default, -Math.PI / 8];
+        case "Clarinet":
+            return [insicon_clarinet_svg_1.default, Math.PI / 4];
+        case "Flute":
+            return [insicon_flute_svg_1.default, -Math.PI / 8];
+        case "French Horn":
+            return [insicon_horn_svg_1.default, 0];
+        case "Harp":
+            return [insicon_harp_svg_1.default, 0];
+        case "Bassoon":
+        case "Oboe":
+            return [insicon_oboe_svg_1.default, Math.PI / 4];
+        case "Percussion":
+            return [insicon_timpani_svg_1.default, 0];
+        case "Trombone":
+        case "Trumpet":
+            return [insicon_trumpet_svg_1.default, -Math.PI / 8];
+        case "Tuba":
+            return [insicon_brass_svg_1.default, 0];
+        case "Viola":
+            return [insicon_string_svg_1.default, -Math.PI / 4];
+        case "Violin":
+            return [insicon_string_svg_1.default, -Math.PI / 4];
+        case "Synth":
+            return [insicon_synth_svg_1.default, 0];
+    }
+}
+function getInstrumentSound(instrument) {
+    switch (instrument) {
+        case "Bass":
+            return bass_ogg_1.default;
+        case "Bassoon":
+            return bassclarinet_bassoon_ogg_1.default;
+        case "Cello":
+            return cello_ogg_1.default;
+        case "Clarinet":
+            return clarinet_ogg_1.default;
+        case "Flute":
+            return flute_ogg_1.default;
+        case "French Horn":
+            return french_horn_1_ogg_1.default;
+        case "Harp":
+            return harp_ogg_1.default;
+        case "Oboe":
+            return oboe_ogg_1.default;
+        case "Percussion":
+            return percussion_cym_gong_timp_bass_drum_ogg_1.default;
+        case "Trumpet":
+            return trumpet_ogg_1.default;
+        case "Tuba":
+        case "Trombone":
+            return trombone_cimbasso_ogg_1.default;
+        case "Viola":
+            return viola_ogg_1.default;
+        case "Violin":
+            return violin_ogg_1.default;
+    }
+}
+var OUTER_RADIUS = 32;
+var MEDIA_PLAYER_RADIUS = 64;
+var INNER_RADIUS = 25;
+var LINE_THICK = 2;
+var BOX_LINE_THICK = 3.5;
+var PLAY_BUTT_RADIUS = 16;
+var PLAY_BUTT_SPACE = 8;
+var BIO_CONTENT_PADDING = 15;
+var BIO_CONTENT_SPACING = 15;
+var BIO_BOX_X = 96;
+var ANIM_SPEED = 0.09;
+var WORD_AROUND_LINES = 20;
+function makeHappyText(person) {
+    if (!person.videos)
+        return '';
+    var usableVids = Object.entries(person.videos).filter(function (_a) {
+        var k = _a[0];
+        return !/outtake/i.test(k);
+    }).map(function (_a) {
+        var v = _a[1];
+        return v;
+    });
+    var usableVideos = Object.entries(video_transcripts_1.data).filter(function (_a) {
+        var k = _a[0];
+        return usableVids.includes(k);
+    });
+    return usableVideos.map(function (_a) {
+        var text = _a[1];
+        return text;
+    }).join(' ');
+}
+var BioElement = /** @class */ (function (_super) {
+    __extends(BioElement, _super);
+    function BioElement(person) {
+        var _this = _super.call(this) || this;
+        _this.person = person;
+        _this.graphics = new pixi_js_1.Graphics();
+        _this.focusContent = new pixi_js_1.Container();
+        _this.isActive = false;
+        _this.isFocused = false;
+        _this.isVisited = false;
+        _this.isHover = false;
+        _this.animFrame = 0;
+        _this.happyText = [];
+        _this.happyWordsContainer = new pixi_js_1.Container();
+        if (_this.person.photos) {
+            _this.photoContainer = new pixi_js_1.Container();
+            var photoMask = new pixi_js_1.Graphics();
+            photoMask.beginFill(0xffffff).drawCircle(OUTER_RADIUS, OUTER_RADIUS, OUTER_RADIUS).endFill();
+            _this.photoContainer.addChild(photoMask);
+            _this.photoContainer.mask = photoMask;
+            _this.photo = pixi_js_1.Sprite.from(_this.person.photos[0]);
+            _this.photo.width = OUTER_RADIUS * 2;
+            _this.photo.height = OUTER_RADIUS * 2;
+            _this.photoContainer.addChild(_this.photo);
+            _this.addChild(_this.photoContainer);
+            photoMask.position.set(-OUTER_RADIUS, -OUTER_RADIUS);
+            _this.photo.position.set(-OUTER_RADIUS, -OUTER_RADIUS);
+            _this.photoContainer.zIndex = -2;
+            if (_this.person.photos.length > 1) {
+                var toUse = _this.person.photos.slice(1);
+                _this.animPhoto = pixi_js_1.AnimatedSprite.fromImages(__spreadArrays(toUse));
+                _this.animPhoto.scale.set(MEDIA_PLAYER_RADIUS / 256);
+                _this.animPhoto.animationSpeed = 0.1;
+                _this.animPhoto.loop = false;
+                _this.animPhoto.autoUpdate = false;
+                _this.animPhoto.stop();
+                _this.animPhoto.visible = true;
+                _this.animPhoto.position.set(-OUTER_RADIUS, -OUTER_RADIUS);
+                _this.photoContainer.addChild(_this.animPhoto);
+            }
+        }
+        if (musician_1.isMusician(_this.person)) {
+            var icon = getInstrumentIcon(_this.person.instrument);
+            var sound = getInstrumentSound(_this.person.instrument);
+            if (icon && sound) {
+                _this.instrSpr = pixi_js_1.Sprite.from(icon[0]);
+                _this.instrSpr.rotation = icon[1];
+                _this.instSound = sound;
+            }
+        }
+        _this.sortableChildren = true;
+        _this.graphics.zIndex = -1;
+        _this.clearFocusContent();
+        _this.graphics.interactive = true;
+        _this.graphics.cursor = "pointer";
+        _this.draw();
+        _this.addChild(_this.graphics);
+        _this.graphics.on("pointertap", _this.focus.bind(_this));
+        _this.graphics.on("pointerover", _this.pointerOver.bind(_this));
+        _this.graphics.on("pointerout", _this.pointerOut.bind(_this));
+        if (_this.person.videos) {
+            _this.happyText = makeHappyText(_this.person).toLowerCase().split(/\s+/);
+        }
+        return _this;
+    }
+    BioElement.prototype.pointerOver = function () {
+        this.isHover = true;
+        if (this.animPhoto) {
+            //this.animPhoto.visible = false;
+        }
+    };
+    BioElement.prototype.pointerOut = function () {
+        this.isHover = false;
+        if (this.animPhoto && !this.isFocused) {
+            this.animPhoto.visible = true;
+        }
+    };
+    BioElement.prototype.focus = function () {
+        var _this = this;
+        if (this.isFocused)
+            return;
+        this.isFocused = true;
+        this.isVisited = true;
+        this.zIndex = 1;
+        this.animPhoto.visible = false;
+        this.prepareFocusContet();
+        this.happyWordsContainer.alpha = 0;
+        new tween_js_1.default.Tween({ alpha: 0 })
+            .to({ alpha: 1 }, 1000)
+            .easing(tween_js_1.default.Easing.Quadratic.InOut)
+            .onStart(function () {
+            _this.happyWordsContainer.alpha = 0;
+        })
+            .onUpdate(function (_a) {
+            var alpha = _a.alpha;
+            _this.happyWordsContainer.alpha = alpha;
+        })
+            .start();
+        new tween_js_1.default.Tween({ alpha: 0, scale: 1 })
+            .to({ alpha: 1, scale: MEDIA_PLAYER_RADIUS / OUTER_RADIUS }, 400)
+            .easing(tween_js_1.default.Easing.Elastic.Out)
+            .onStart(function () {
+            _this.photoContainer.zIndex = 1;
+            _this.focusContent.alpha = 0;
+            _this.focusContent.visible = true;
+            _this.photoContainer.scale.set(1);
+        })
+            .onUpdate(function (_a) {
+            var alpha = _a.alpha, scale = _a.scale;
+            _this.focusContent.alpha = alpha;
+            _this.photoContainer.scale.set(scale);
+        })
+            .start();
+        this.emit("focused");
+        // Also activate if not already
+        if (!this.isActive) {
+            this.activate();
+        }
+        else {
+            this.draw();
+        }
+    };
+    BioElement.prototype.unfocus = function () {
+        var _this = this;
+        if (!this.isFocused)
+            return;
+        this.isFocused = false;
+        this.zIndex = 0;
+        if (this.mediaPlayer) {
+            this.removeChild(this.mediaPlayer);
+            this.mediaPlayer.destroy();
+            delete this.mediaPlayer;
+        }
+        this.animPhoto.visible = true;
+        new tween_js_1.default.Tween({ alpha: 1 })
+            .to({ alpha: 0 }, 100)
+            .easing(tween_js_1.default.Easing.Quadratic.InOut)
+            .onStart(function () {
+            _this.happyWordsContainer.alpha = 1;
+        })
+            .onUpdate(function (_a) {
+            var alpha = _a.alpha;
+            _this.happyWordsContainer.alpha = alpha;
+        })
+            .start();
+        new tween_js_1.default.Tween({ alpha: 1, scale: this.photoContainer.scale.x })
+            .to({ alpha: 0, scale: 1 }, 100)
+            .easing(tween_js_1.default.Easing.Cubic.Out)
+            .onStart(function () {
+            _this.focusContent.alpha = 1;
+            _this.focusContent.visible = true;
+        })
+            .onUpdate(function (_a) {
+            var alpha = _a.alpha, scale = _a.scale;
+            _this.photoContainer.scale.set(scale);
+            _this.focusContent.alpha = alpha;
+        })
+            .onComplete(function () {
+            _this.photoContainer.zIndex = -2;
+            _this.focusContent.visible = false;
+            _this.clearFocusContent();
+            _this.draw();
+        })
+            .start();
+        this.emit("unfocused");
+    };
+    BioElement.prototype.activate = function () {
+        if (this.isActive)
+            return;
+        this.isActive = true;
+        this.emit("activated");
+        this.draw();
+    };
+    BioElement.prototype.deactivate = function () {
+        if (!this.isActive)
+            return;
+        this.isActive = false;
+    };
+    BioElement.prototype.clearFocusContent = function () {
+        if (this.focusContent) {
+            this.removeChild(this.focusContent);
+            this.focusContent.destroy();
+            this.focusContent = new pixi_js_1.Container();
+            this.addChild(this.focusContent);
+            this.happyWordsContainer.removeChildren();
+        }
+        this.focusContent.visible = false;
+    };
+    BioElement.prototype.prepareFocusContet = function () {
+        var _this = this;
+        if (this.focusContent.children.length > 0)
+            return;
+        this.focusContent.interactive = true; // prevents click un focus
+        var drawOnLeft = this.position.x >= 400;
+        var color = 0xffffff; //(isMusician(this.person) && INSTRUMENT_COLORS[this.person.instrument]) || DEFAULT_INSTRUMENT_COLOR;
+        var calculatedOuterRad = this.person.bioText || this.person.videos ? OUTER_RADIUS : INNER_RADIUS;
+        var graphicsBkg = new pixi_js_1.Graphics();
+        this.focusContent.addChild(graphicsBkg);
+        // Musicians Name with instrument
+        var bioName = new pixi_js_1.Text("" + this.person.name, styles_1.TEXT_STYLE_H2);
+        bioName.anchor.set(0, 0);
+        if (drawOnLeft)
+            bioName.anchor.set(1, 0);
+        this.focusContent.addChild(bioName);
+        this.happyWordsContainer.removeChildren();
+        //this.addChild(this.happyWordsContainer);
+        this.happyWordsContainer.zIndex = -3;
+        // let startWord = 0;
+        // for (let i = 0; i < WORD_AROUND_LINES; i+= 1) {
+        //   const tStart = Math.floor((i/WORD_AROUND_LINES) * this.happyText.length);
+        //   const tEnd = tStart + Math.min(this.happyText.length, Math.floor(Math.random()*10 + 2))
+        //   const words = this.happyText.slice(tStart, tEnd).join(" ");
+        //   const t = new Text(words, TEXT_STYLE_HAPPY_TEXT);
+        //   t.anchor.set(0.5, 0.5);
+        //   const theta = (i/WORD_AROUND_LINES) * 2 * Math.PI;
+        //   this.happyWordsContainer.addChild(t);
+        //   t.rotation = 0;//theta + Math.PI;
+        //   t.position.set(-200 + Math.random() *400, i * 20 - WORD_AROUND_LINES*20/2);//set(Math.cos(theta) * (VIDEO_PLAYER_RADIUS + 10), Math.sin(theta) * (VIDEO_PLAYER_RADIUS + 10))
+        // }
+        // let bioText = this.happyText.join(" ");
+        var BIO_WIDTH = bioName.width + BIO_CONTENT_PADDING * 2;
+        // Subtitle
+        if (this.person.title) {
+            var subTitle = new pixi_js_1.Text("" + this.person.title, styles_1.TET_STYLE_BIO_SUBTITLE);
+            subTitle.anchor.set(0, 0);
+            this.focusContent.addChild(subTitle);
+            BIO_WIDTH = Math.max(BIO_WIDTH, subTitle.width + BIO_CONTENT_PADDING * 2);
+            if (drawOnLeft) {
+                subTitle.anchor.set(1, 0);
+                subTitle.position.set(-MEDIA_PLAYER_RADIUS - 20, BIO_CONTENT_PADDING + 16 + BIO_CONTENT_SPACING);
+            }
+            else {
+                subTitle.position.set(MEDIA_PLAYER_RADIUS + 20, BIO_CONTENT_PADDING + 16 + BIO_CONTENT_SPACING);
+            }
+        }
+        if (drawOnLeft) {
+            bioName.position.set(-MEDIA_PLAYER_RADIUS - 10, BIO_CONTENT_PADDING);
+        }
+        else {
+            bioName.position.set(MEDIA_PLAYER_RADIUS + 10, BIO_CONTENT_PADDING);
+        }
+        var countPlayButtons = 0;
+        if (this.person.videos && Object.keys(this.person.videos).length) {
+            Object.entries(this.person.videos)
+                .filter(function (_a) {
+                var k = _a[0];
+                return !/outtake/i.test(k);
+            })
+                .map(function (_a, i) {
+                var key = _a[0], url = _a[1];
+                var butt = new pixi_js_1.Graphics();
+                var color = colors_1.videoColor(key);
+                butt.beginFill(color, 1).drawCircle(0, 0, PLAY_BUTT_RADIUS).endFill();
+                butt.beginFill(0xffffff);
+                var r = PLAY_BUTT_RADIUS * 0.5;
+                var c = Math.cos(Math.PI * 2 / 3);
+                var s = Math.sin(Math.PI * 2 / 3);
+                butt.drawPolygon([
+                    new pixi_js_1.Point(c * r, -s * r),
+                    new pixi_js_1.Point(r, 0),
+                    new pixi_js_1.Point(c * r, s * r),
+                ]);
+                butt.endFill();
+                butt.interactive = true;
+                butt.cursor = "pointer";
+                butt.on("pointerdown", function () {
+                    _this.cleanUpPlayer();
+                    var mediaPlayer = new round_video_player_1.RoundVideoPlayer(url, MEDIA_PLAYER_RADIUS, color);
+                    mediaPlayer.once("ended", _this.cleanUpPlayer.bind(_this));
+                    _this.addChild(mediaPlayer);
+                    mediaPlayer.zIndex = 99;
+                    mediaPlayer.position.set(-MEDIA_PLAYER_RADIUS, -MEDIA_PLAYER_RADIUS);
+                    mediaPlayer.autoplay = true;
+                    mediaPlayer.preload();
+                    _this.mediaPlayer = mediaPlayer;
+                });
+                _this.focusContent.addChild(butt);
+                countPlayButtons++;
+                if (drawOnLeft) {
+                    butt.position.set(-(MEDIA_PLAYER_RADIUS + BIO_CONTENT_PADDING * 2 + (PLAY_BUTT_RADIUS * 2 + PLAY_BUTT_SPACE) * i), MEDIA_PLAYER_RADIUS * 2 - PLAY_BUTT_RADIUS - BIO_CONTENT_PADDING);
+                }
+                else {
+                    butt.position.set(MEDIA_PLAYER_RADIUS + BIO_CONTENT_PADDING * 2 + (PLAY_BUTT_RADIUS * 2 + PLAY_BUTT_SPACE) * i, MEDIA_PLAYER_RADIUS * 2 - PLAY_BUTT_RADIUS - BIO_CONTENT_PADDING);
+                }
+            });
+        }
+        if (this.instrSpr && this.instSound) {
+            var buttRadius = 16;
+            var instrumentButt = new pixi_js_1.Container();
+            instrumentButt.interactive = true;
+            instrumentButt.cursor = "pointer";
+            this.instrSpr.anchor.set(0.5, 0.5);
+            this.instrSpr.alpha = 0.7;
+            this.instrSpr.blendMode = pixi_js_1.BLEND_MODES.ADD;
+            this.instrSpr.scale.set(1.2 * buttRadius / this.instrSpr.texture.width);
+            var butt = new pixi_js_1.Graphics();
+            var color_1 = 0x555555;
+            butt.beginFill(color_1, 1).drawCircle(0, 0, buttRadius).endFill();
+            countPlayButtons++;
+            instrumentButt.addChild(butt);
+            instrumentButt.addChild(this.instrSpr);
+            instrumentButt.on("pointerdown", function () {
+                _this.cleanUpPlayer();
+                var playerImage = pixi_js_1.Sprite.from(_this.instrSpr.texture);
+                playerImage.rotation = _this.instrSpr.rotation;
+                var mediaPlayer = new round_sound_player_1.RoundSoundPlayer(_this.instSound, playerImage, MEDIA_PLAYER_RADIUS, 0xcccccc);
+                mediaPlayer.once("ended", _this.cleanUpPlayer.bind(_this));
+                _this.addChild(mediaPlayer);
+                mediaPlayer.zIndex = 99;
+                mediaPlayer.position.set(-MEDIA_PLAYER_RADIUS, -MEDIA_PLAYER_RADIUS);
+                mediaPlayer.autoplay = true;
+                mediaPlayer.preload();
+                _this.mediaPlayer = mediaPlayer;
+            });
+            this.focusContent.addChild(instrumentButt);
+            if (drawOnLeft) {
+                instrumentButt.position.set(-(MEDIA_PLAYER_RADIUS + BIO_CONTENT_PADDING * 2 + (PLAY_BUTT_RADIUS * 2 + PLAY_BUTT_SPACE) * (countPlayButtons - 1)), MEDIA_PLAYER_RADIUS * 2 - PLAY_BUTT_RADIUS - BIO_CONTENT_PADDING);
+            }
+            else {
+                instrumentButt.position.set(MEDIA_PLAYER_RADIUS + BIO_CONTENT_PADDING * 2 + (PLAY_BUTT_RADIUS * 2 + PLAY_BUTT_SPACE) * (countPlayButtons - 1), MEDIA_PLAYER_RADIUS * 2 - PLAY_BUTT_RADIUS - BIO_CONTENT_PADDING);
+            }
+        }
+        BIO_WIDTH = Math.max(BIO_WIDTH, countPlayButtons * (PLAY_BUTT_RADIUS * 2 + PLAY_BUTT_SPACE));
+        // Rectangle background
+        graphicsBkg.beginFill(0, 0.95);
+        graphicsBkg.lineStyle(BOX_LINE_THICK, 0xb3b3b3, 1, 0);
+        // Main bkg for text
+        if (drawOnLeft) {
+            graphicsBkg.drawRoundedRect(-BIO_WIDTH - BIO_BOX_X, 0, BIO_WIDTH + BIO_BOX_X, MEDIA_PLAYER_RADIUS * 2, 2);
+        }
+        else {
+            graphicsBkg.drawRoundedRect(0, 0, BIO_WIDTH + BIO_BOX_X, MEDIA_PLAYER_RADIUS * 2, 2);
+        }
+        graphicsBkg.endFill();
+        // Draw connecting line
+        this.focusContent.position.set(0, -this.focusContent.height / 2);
+    };
+    BioElement.prototype.cleanUpPlayer = function () {
+        if (this.mediaPlayer) {
+            this.mediaPlayer.off("ended", this.cleanUpPlayer.bind(this));
+            this.removeChild(this.mediaPlayer);
+            this.mediaPlayer.destroy();
+            delete this.mediaPlayer;
+        }
+    };
+    BioElement.prototype.onTick = function (deltams) {
+        if (this.animPhoto && this.animPhoto.visible && !this.isHover) {
+            var lastFrame = Math.floor(this.animFrame);
+            this.animFrame += ANIM_SPEED * deltams;
+            if (Math.floor(this.animFrame) !== lastFrame) {
+                var randomNextFrame = Math.floor(Math.random() * (this.animPhoto.totalFrames - 1)) + 1;
+                this.animPhoto.gotoAndStop((this.animPhoto.currentFrame + randomNextFrame) % this.animPhoto.totalFrames);
+            }
+        }
+        if (this.happyWordsContainer) {
+            this.happyWordsContainer.children.forEach(function (t, i, arr) {
+                if (t instanceof pixi_js_1.Text) {
+                    var speed = 0.5 - ((i % 5) / 5);
+                    t.position.x += deltams * (0.2 * speed);
+                    if (t.position.x < -100) {
+                        t.alpha = Math.max(0, (t.position.x + 200) / 100);
+                        if (t.position.x < -200) {
+                            t.position.x += 400;
+                        }
+                    }
+                    if (t.position.x > 100) {
+                        t.alpha = Math.max(0, (200 - t.position.x) / 100);
+                        if (t.position.x > 200) {
+                            t.position.x -= 400;
+                        }
+                    }
+                }
+            });
+        }
+    };
+    BioElement.prototype.draw = function () {
+        this.graphics.clear();
+        var color = 0xffffff; //(isMusician(this.person) && INSTRUMENT_COLORS[this.person.instrument]) || DEFAULT_INSTRUMENT_COLOR;
+        var alpha = this.isVisited && !this.isFocused ? 0.1 : 1;
+        this.graphics.beginFill(0, 0.3);
+        if (!this.isFocused) {
+            this.graphics.drawCircle(0, 0, OUTER_RADIUS);
+        }
+        this.graphics.endFill();
+        this.graphics.lineStyle(LINE_THICK, color, alpha / 2, 0);
+        if (!this.isFocused) {
+            if (this.person.bioText || this.person.videos) {
+                this.graphics.drawCircle(0, 0, OUTER_RADIUS);
+            }
+        }
+    };
+    return BioElement;
+}(pixi_js_1.Container));
+exports.BioElement = BioElement;
+
+
+/***/ }),
+
+/***/ "./src/biographies-state.ts":
+/*!**********************************!*\
+  !*** ./src/biographies-state.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__webpack_require__(/*! ./css/styles.css */ "./src/css/styles.css");
+var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
+var bio_element_1 = __webpack_require__(/*! ./bio-element */ "./src/bio-element.ts");
+var fancy_viewport_1 = __webpack_require__(/*! ./fancy-viewport */ "./src/fancy-viewport.ts");
+var bio_data_1 = __webpack_require__(/*! ./bio-data */ "./src/bio-data.ts");
+var state_1 = __importDefault(__webpack_require__(/*! ./state */ "./src/state.ts"));
+var BiographiesState = /** @class */ (function (_super) {
+    __extends(BiographiesState, _super);
+    function BiographiesState() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    BiographiesState.prototype.createContainer = function (app) {
+        return __awaiter(this, void 0, void 0, function () {
+            function unFocusAll(allBios, except) {
+                if (except) {
+                    except.filters = [];
+                }
+                for (var i = 0; i < allBios.length; i++) {
+                    if (except === undefined || allBios[i] !== except) {
+                        allBios[i].unfocus();
+                        if (except) {
+                            allBios[i].filters = [blurFilter, alphaFilter];
+                        }
+                        else {
+                            allBios[i].filters = [];
+                        }
+                    }
+                }
+            }
+            var i, e, x, y, alphaFilter, blurFilter;
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.viewport = new fancy_viewport_1.FancyViewport({
+                    screenWidth: window.innerWidth,
+                    screenHeight: window.innerHeight,
+                    interaction: app.renderer.plugins.interaction,
+                });
+                app.renderer.backgroundColor = 0x000000;
+                this.viewport.viewPort.on("clicked", function (d) {
+                    var _a = d.screen, x = _a.x, y = _a.y;
+                    for (var i = 0; i < _this.bioElements.length; i++) {
+                        var b = _this.bioElements[i].getBounds(true);
+                        // Basic rectable*point collision
+                        if (x < b.x)
+                            continue;
+                        if (x > b.x + b.width)
+                            continue;
+                        if (y < b.y)
+                            continue;
+                        if (y > b.y + b.height)
+                            continue;
+                        return; // Cannot unfocus all, we've collided with a bioelement
+                    }
+                    unFocusAll(_this.bioElements);
+                });
+                this.bioContainer = new pixi_js_1.Container();
+                this.bioContainer.sortableChildren = true;
+                this.viewport.addChild(this.bioContainer);
+                this.bioElements = bio_data_1.BIO_DATA.map(function (m) { return new bio_element_1.BioElement(m); });
+                this.bioElements.forEach(function (b) {
+                    b.on("focused", function () {
+                        unFocusAll(_this.bioElements, b);
+                    });
+                });
+                for (i = 0; i < this.bioElements.length; i++) {
+                    e = this.bioElements[i];
+                    this.bioContainer.addChild(e);
+                    x = (i % 10) * 80;
+                    y = Math.floor(i / 10) * 80;
+                    e.position.set(x, y);
+                }
+                alphaFilter = new pixi_js_1.filters.AlphaFilter();
+                blurFilter = new pixi_js_1.filters.BlurFilter();
+                blurFilter.blur = 1.7;
+                alphaFilter.alpha = 0.5;
+                this.initialWidth = this.bioContainer.width;
+                this.initialHeight = this.bioContainer.height;
+                this.onResize();
+                return [2 /*return*/, this.viewport];
+            });
+        });
+    };
+    BiographiesState.prototype.cleanUp = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                this.viewport.destroy({ children: true });
+                delete this.bioElements;
+                return [2 /*return*/];
+            });
+        });
+    };
+    BiographiesState.prototype.onTick = function (deltams) {
+        if (this.bioElements) {
+            this.bioElements.forEach(function (b) {
+                b.onTick(deltams);
+            });
+        }
+    };
+    BiographiesState.prototype.onResize = function () {
+        var paddTop = 0;
+        if (!document.fullscreenElement) {
+            var nav = document.getElementsByTagName("nav");
+            if (nav && nav[0]) {
+                var _a = nav[0].getBoundingClientRect(), y = _a.y, height = _a.height;
+                paddTop = y + height;
+            }
+        }
+        this.viewport.viewPort.screenWidth = window.innerWidth;
+        this.viewport.viewPort.screenHeight = window.innerHeight - paddTop;
+        this.viewport.position.y = paddTop;
+        this.viewport.viewPort.moveCenter((this.initialWidth - 64) / 2, (this.initialHeight - 64) / 2);
+        this.viewport.viewPort.fit(true, this.initialWidth + 64, this.initialHeight + 64);
+    };
+    return BiographiesState;
+}(state_1.default));
+exports.default = BiographiesState;
 
 
 /***/ }),
@@ -1470,7 +7825,7 @@ exports.HSLtoHSV = HSLtoHSV;
 
 var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.COLOR_HALL_B = exports.COLOR_HALL_A = exports.COLOR_HALL_HIGHLIGHT = exports.COLOR_RECAP_B = exports.COLOR_RECAP_A = exports.COLOR_RECAP_HIGHLIGHT = exports.COLOR_MOUNTAIN_B = exports.COLOR_MOUNTAIN_A = exports.COLOR_MOUNTAIN_HIGHLIGHT = exports.COLOR_LAKE_B = exports.COLOR_LAKE_A = exports.COLOR_LAKE_HIGHLIGHT = exports.COLOR_FOREST_B = exports.COLOR_FOREST_A = exports.COLOR_FOREST_HIGHLIGHT = exports.COLOR_DESERT_B = exports.COLOR_DESERT_A = exports.COLOR_DESERT_HIGHLIGHT = exports.COLOR_BUS_B = exports.COLOR_BUS_A = exports.COLOR_BUS_HIGHLIGHT = exports.COLOR_BOOKSTORE_B = exports.COLOR_BOOKSTORE_A = exports.COLOR_BOOKSTORE_HIGHLIGHT = exports.DEFAULT_INSTRUMENT_COLOR = exports.INSTRUMENT_COLORS = void 0;
+exports.videoColor = exports.SOME_ACCENT_COLORS = exports.COLOR_HALL_B = exports.COLOR_HALL_A = exports.COLOR_HALL_HIGHLIGHT = exports.COLOR_RECAP_B = exports.COLOR_RECAP_A = exports.COLOR_RECAP_HIGHLIGHT = exports.COLOR_MOUNTAIN_B = exports.COLOR_MOUNTAIN_A = exports.COLOR_MOUNTAIN_HIGHLIGHT = exports.COLOR_LAKE_B = exports.COLOR_LAKE_A = exports.COLOR_LAKE_HIGHLIGHT = exports.COLOR_FOREST_B = exports.COLOR_FOREST_A = exports.COLOR_FOREST_HIGHLIGHT = exports.COLOR_DESERT_B = exports.COLOR_DESERT_A = exports.COLOR_DESERT_HIGHLIGHT = exports.COLOR_BUS_B = exports.COLOR_BUS_A = exports.COLOR_BUS_HIGHLIGHT = exports.COLOR_BOOKSTORE_B = exports.COLOR_BOOKSTORE_A = exports.COLOR_BOOKSTORE_HIGHLIGHT = exports.DEFAULT_INSTRUMENT_COLOR = exports.INSTRUMENT_COLORS = void 0;
 var color_utils_1 = __webpack_require__(/*! ./color-utils */ "./src/color-utils.ts");
 exports.INSTRUMENT_COLORS = (_a = {},
     _a["Violin"] = 0xaa4444,
@@ -1491,7 +7846,7 @@ exports.INSTRUMENT_COLORS = (_a = {},
     _a["French Horn"] = 0xccee66,
     _a["Trumpet"] = 0xccee66,
     _a["Cornet"] = 0xccee66,
-    _a["Slide Trombone"] = 0xccee66,
+    _a["Trombone"] = 0xccee66,
     _a["Tuba"] = 0xccee66,
     _a["Timpani"] = 0x7700ee,
     _a["Bass Drum"] = 0x7700ee,
@@ -1530,6 +7885,37 @@ exports.COLOR_RECAP_B = [0, 100, 0].map(function (d) { return d / 100; });
 exports.COLOR_HALL_HIGHLIGHT = color_utils_1.rgbToDecimal([96, 92, 81].map(function (d) { return d / 100; }));
 exports.COLOR_HALL_A = [96, 92, 81].map(function (d) { return d / 100; });
 exports.COLOR_HALL_B = [16, 9, 8].map(function (d) { return d / 100; });
+exports.SOME_ACCENT_COLORS = [
+    exports.COLOR_BOOKSTORE_HIGHLIGHT,
+    exports.COLOR_BUS_HIGHLIGHT,
+    exports.COLOR_DESERT_HIGHLIGHT,
+    exports.COLOR_FOREST_HIGHLIGHT,
+    exports.COLOR_LAKE_HIGHLIGHT,
+    exports.COLOR_MOUNTAIN_HIGHLIGHT,
+    exports.COLOR_HALL_HIGHLIGHT,
+];
+var videoKeyMatches = [
+    [/^WHY_TODAY_2/i, color_utils_1.rgbToDecimal(exports.COLOR_BUS_B)],
+    [/^FIRST_TIME_2/i, color_utils_1.rgbToDecimal(exports.COLOR_FOREST_B)],
+    [/^WHY_INSTR_2/i, color_utils_1.rgbToDecimal(exports.COLOR_MOUNTAIN_B)],
+    [/^CAREERINTEREST/i, exports.COLOR_BOOKSTORE_HIGHLIGHT],
+    [/^MEETINGCHRIS/i, exports.COLOR_LAKE_HIGHLIGHT],
+    [/^WORK/i, exports.COLOR_DESERT_HIGHLIGHT],
+    [/^FIRST_TIME/i, exports.COLOR_FOREST_HIGHLIGHT],
+    [/^OUTTAKES/i, 0xff74ba],
+    [/^WHY_INSTR/i, exports.COLOR_MOUNTAIN_HIGHLIGHT],
+    [/^WHY_TODAY/i, exports.COLOR_BUS_HIGHLIGHT],
+];
+exports.videoColor = function (key) {
+    var f = videoKeyMatches.find(function (_a) {
+        var r = _a[0];
+        return r.test(key);
+    });
+    if (f === undefined) {
+        return exports.COLOR_HALL_HIGHLIGHT;
+    }
+    return f[1];
+};
 
 
 /***/ }),
@@ -1993,7 +8379,7 @@ var Draggable = /** @class */ (function (_super) {
         if (this.parent) {
             this.parent.removeChild(this);
         }
-        this.destroy();
+        this.destroy({ children: true });
     };
     Draggable.prototype.setOrigin = function (x, y) {
         this.origin.x = x;
@@ -2546,6 +8932,82 @@ var EnvironmentLayer = /** @class */ (function (_super) {
     return EnvironmentLayer;
 }(pixi_js_1.Container));
 exports.default = EnvironmentLayer;
+
+
+/***/ }),
+
+/***/ "./src/fancy-viewport.ts":
+/*!*******************************!*\
+  !*** ./src/fancy-viewport.ts ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FancyViewport = void 0;
+var pixi_viewport_1 = __webpack_require__(/*! pixi-viewport */ "./node_modules/pixi-viewport/dist/viewport.es.js");
+var tween_js_1 = __importDefault(__webpack_require__(/*! @tweenjs/tween.js */ "./node_modules/@tweenjs/tween.js/src/Tween.js"));
+var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
+var FancyViewport = /** @class */ (function (_super) {
+    __extends(FancyViewport, _super);
+    function FancyViewport(options) {
+        var _this = _super.call(this) || this;
+        _this.viewPort = new pixi_viewport_1.Viewport(options);
+        _this.viewPort
+            .drag()
+            .pinch()
+            .wheel();
+        //.decelerate();
+        _super.prototype.addChild.call(_this, _this.viewPort);
+        return _this;
+    }
+    FancyViewport.prototype.addChild = function () {
+        var _a;
+        var child = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            child[_i] = arguments[_i];
+        }
+        return (_a = this.viewPort).addChild.apply(_a, child);
+    };
+    FancyViewport.prototype.moveCenter = function (x, y) {
+        this.viewPort.moveCenter(x, y);
+    };
+    FancyViewport.prototype.transitionCenter = function (x, y, time) {
+        var _this = this;
+        if (time === void 0) { time = 100; }
+        if (this.moveTween) {
+            this.moveTween.stop();
+        }
+        this.moveTween = new tween_js_1.default.Tween({ x: this.viewPort.center.x, y: this.viewPort.center.y })
+            .to({ x: x, y: y }, time)
+            .easing(tween_js_1.default.Easing.Cubic.Out)
+            .onUpdate(function (_a) {
+            var x = _a.x, y = _a.y;
+            _this.moveCenter(x, y);
+        })
+            .start();
+    };
+    return FancyViewport;
+}(pixi_js_1.Container));
+exports.FancyViewport = FancyViewport;
 
 
 /***/ }),
@@ -3150,49 +9612,100 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __webpack_require__(/*! ./css/styles.css */ "./src/css/styles.css");
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
-var styles_1 = __webpack_require__(/*! ./styles */ "./src/styles.ts");
 var state_machine_1 = __webpack_require__(/*! ./state-machine */ "./src/state-machine.ts");
 var nav_links_json_1 = __importDefault(__webpack_require__(/*! ./nav-links.json */ "./src/nav-links.json"));
+var tween_js_1 = __importDefault(__webpack_require__(/*! @tweenjs/tween.js */ "./node_modules/@tweenjs/tween.js/src/Tween.js"));
+pixi_js_1.settings.FAIL_IF_MAJOR_PERFORMANCE_CAVEAT = false;
 window.onload = function () { return __awaiter(void 0, void 0, void 0, function () {
-    var app, resizeCanvas, footer, links, stateManager;
+    // @TODO - replace this with app.ticker.add?
+    function animate(time) {
+        requestAnimationFrame(animate);
+        tween_js_1.default.update(time);
+    }
+    var app_1, resizeCanvas, stateManager_1, stateHash, errorDiv, errorDivMessage, footer, links, updateLink;
     return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4 /*yield*/, Promise.all([
-                    styles_1.loadFonts(),
-                ])];
-            case 1:
-                _a.sent();
-                app = new pixi_js_1.Application({
-                    antialias: true,
-                    transparent: false,
-                    autoDensity: true,
-                    resolution: window.devicePixelRatio || 1,
-                    resizeTo: window,
-                    backgroundColor: 0x000000,
-                });
-                resizeCanvas = function () {
-                    app.renderer.resolution = window.devicePixelRatio;
-                    app.resize();
-                };
-                // Change resolution if changes
-                window.matchMedia("(resolution: " + window.devicePixelRatio + "dppx)")
-                    .addEventListener("change", resizeCanvas);
-                window.addEventListener("orientationchange", resizeCanvas);
-                document.body.appendChild(app.view);
-                footer = document.createElement('nav');
-                links = Object.entries(nav_links_json_1.default).map(function (_a) {
-                    var label = _a[0], url = _a[1];
-                    var a = document.createElement('a');
-                    a.setAttribute('href', url);
-                    a.setAttribute('title', url.replace(/^.*:\/\//, '').replace(/^mailto:/, ''));
-                    a.innerText = label;
-                    return a;
-                });
-                links.forEach(function (link) { return footer.appendChild(link); });
-                document.body.appendChild(footer);
-                stateManager = new state_machine_1.StateMachine(app);
-                return [2 /*return*/];
+        // await Promise.all([
+        //   loadFonts(),
+        // ]);
+        try {
+            app_1 = new pixi_js_1.Application({
+                antialias: true,
+                transparent: false,
+                autoDensity: true,
+                resolution: window.devicePixelRatio || 1,
+                resizeTo: window,
+                backgroundColor: 0x000000,
+            });
+            resizeCanvas = function () {
+                app_1.renderer.resolution = window.devicePixelRatio;
+                app_1.resize();
+            };
+            // Change resolution if changes
+            window.matchMedia("(resolution: " + window.devicePixelRatio + "dppx)")
+                .addEventListener("change", resizeCanvas);
+            window.addEventListener("orientationchange", resizeCanvas);
+            document.body.appendChild(app_1.view);
+            stateManager_1 = new state_machine_1.StateMachine(app_1);
+            stateHash = window.location.hash.replace(/^#/, '');
+            if (stateHash && state_machine_1.isState(stateHash)) {
+                stateManager_1.setState(stateHash);
+            }
+            else {
+                stateManager_1.setState("intro");
+            }
+            window.addEventListener('hashchange', function () {
+                var stateHash = window.location.hash.replace(/^#/, '');
+                if (state_machine_1.isState(stateHash)) {
+                    stateManager_1.setState(stateHash);
+                }
+                else if (!stateHash) {
+                    stateManager_1.setState("intro");
+                }
+            });
         }
+        catch (e) {
+            errorDiv = document.createElement('div');
+            errorDivMessage = document.createElement('pre');
+            document.body.classList.add('load-error');
+            errorDiv.classList.add('error-message');
+            errorDivMessage.innerText = "Uh oh! Your browser had trouble setting things up. Your browser might not be supported.\n\nerror message:\n" + e.message;
+            errorDiv.appendChild(errorDivMessage);
+            document.body.appendChild(errorDiv);
+        }
+        footer = document.createElement('nav');
+        links = Object.entries(nav_links_json_1.default).map(function (_a) {
+            var label = _a[0], url = _a[1];
+            var a = document.createElement('a');
+            a.setAttribute('href', url);
+            a.setAttribute('title', url.replace(/^.*:\/\//, '').replace(/^mailto:/, ''));
+            a.innerText = label;
+            return a;
+        });
+        links.forEach(function (link) { return footer.appendChild(link); });
+        document.body.appendChild(footer);
+        updateLink = function () {
+            if (window.location.hash === "#musicians") {
+                var link = links.find(function (e) { return e.getAttribute('href') === "#musicians"; });
+                if (link) {
+                    link.setAttribute("href", "#");
+                    link.innerText = "interactive";
+                    link.setAttribute('title', '/');
+                }
+            }
+            else {
+                var link = links.find(function (e) { return e.getAttribute('href') === "#"; });
+                if (link) {
+                    link.setAttribute("href", "#musicians");
+                    link.innerText = "musicians";
+                    link.setAttribute('title', '#musicians');
+                }
+            }
+        };
+        updateLink();
+        // Toggle the muscians nav link
+        window.addEventListener('hashchange', updateLink);
+        requestAnimationFrame(animate);
+        return [2 /*return*/];
     });
 }); };
 
@@ -3203,10 +9716,10 @@ window.onload = function () { return __awaiter(void 0, void 0, void 0, function 
 /*!****************************!*\
   !*** ./src/nav-links.json ***!
   \****************************/
-/*! exports provided: film, about, github, dustin, evan, sid, bradley, chris, default */
+/*! exports provided: musicians, film, about, dustin, evan, sid, bradley, chris, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"film\":\"https://www.youtube.com/watch?v=-MdDe6tdA8E\",\"about\":\"https://about.imaginesymphony.live/\",\"github\":\"https://github.com/DustinWoods/imagine-symphony-live\",\"dustin\":\"https://github.com/DustinWoods\",\"evan\":\"mailto:evan@imaginesymphony.live\",\"sid\":\"http://www.hiresidchen.com/\",\"bradley\":\"https://bradleylanphear.com/\",\"chris\":\"https://www.christhomasmusic.com/\"}");
+module.exports = JSON.parse("{\"musicians\":\"#musicians\",\"film\":\"https://www.youtube.com/watch?v=-MdDe6tdA8E\",\"about\":\"https://about.imaginesymphony.live/\",\"dustin\":\"https://github.com/DustinWoods\",\"evan\":\"mailto:evan@imaginesymphony.live\",\"sid\":\"http://www.hiresidchen.com/\",\"bradley\":\"https://bradleylanphear.com/\",\"chris\":\"https://www.christhomasmusic.com/\"}");
 
 /***/ }),
 
@@ -3568,17 +10081,6 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -3626,7 +10128,6 @@ var interactive_instrument_1 = __webpack_require__(/*! ./interactive-instrument 
 var draggable_spawn_1 = __webpack_require__(/*! ./draggable-spawn */ "./src/draggable-spawn.ts");
 var interactive_1 = __webpack_require__(/*! ./interactive */ "./src/interactive.ts");
 var main_1 = __importDefault(__webpack_require__(/*! ./tracks/main/ */ "./src/tracks/main/index.ts"));
-var pixi_particles_1 = __webpack_require__(/*! pixi-particles */ "./node_modules/pixi-particles/lib/pixi-particles.es.js");
 var performance_video_player_1 = __webpack_require__(/*! ./performance-video-player */ "./src/performance-video-player.ts");
 var progress_bar_1 = __importDefault(__webpack_require__(/*! ./progress-bar */ "./src/progress-bar.ts"));
 var gradient_backdrop_1 = __importDefault(__webpack_require__(/*! ./gradient-backdrop */ "./src/gradient-backdrop.ts"));
@@ -3664,7 +10165,6 @@ var PerformanceState = /** @class */ (function (_super) {
     __extends(PerformanceState, _super);
     function PerformanceState() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.emitters = [];
         _this.stageInteractiveBackground = pixi_js_1.Sprite.from(stage_complete_2_svg_1.default);
         _this.bkg = new gradient_backdrop_1.default();
         _this.done = false;
@@ -3675,7 +10175,7 @@ var PerformanceState = /** @class */ (function (_super) {
     }
     PerformanceState.prototype.createContainer = function (app, args) {
         return __awaiter(this, void 0, void 0, function () {
-            var trackUrl, container, _a, interactives, tempo, offset, particleCues, stageSize, stageCenter, environmentBiomeIndexes, cues, switchBiomeTheme, switchBkgColors, biomeClickTrack, loadIntervalCheck, loadPromise;
+            var trackUrl, container, _a, interactives, tempo, offset, particleCues, stageSize, stageCenter, environmentBiomeIndexes, cues, switchBiomeTheme, switchBkgColors, loadIntervalCheck, loadPromise;
             var _this = this;
             return __generator(this, function (_b) {
                 this.app = app;
@@ -3874,7 +10374,7 @@ var PerformanceState = /** @class */ (function (_super) {
                     _this.bkg.colorA = data[0].map(function (d) { return d / 100; });
                     _this.bkg.colorB = data[1].map(function (d) { return d / 100; });
                 };
-                biomeClickTrack = new click_track_1.default({
+                PerformanceState.biomeClickTrack = new click_track_1.default({
                     timerSource: PerformanceState.clickTrack.timer,
                     cues: [
                         [0, switchBkgColors.bind(this, [[0, 0, 0], [0, 0, 0]])],
@@ -3921,13 +10421,6 @@ var PerformanceState = /** @class */ (function (_super) {
                         [240 + 32, switchBiomeTheme.bind(this, "night")],
                         [240 + 40, switchBiomeTheme.bind(this, "bookstore")],
                         [300 + 0, switchBiomeTheme.bind(this, "hall")],
-                        // [300 + 12, () => { //recap
-                        //   this.interactives.forEach((i) => {
-                        //     if(i instanceof InteractiveInstrument) {
-                        //       i.partyTime();
-                        //     }
-                        //   });
-                        // }],
                         [356, function () {
                                 _this.bkg.colorA = [0, 0, 0];
                                 _this.bkg.colorB = [0, 0, 0];
@@ -3959,25 +10452,12 @@ var PerformanceState = /** @class */ (function (_super) {
                         ]
                     ]
                 });
-                biomeClickTrack.on("cue", function (e, _a) {
+                PerformanceState.biomeClickTrack.on("cue", function (e, _a) {
                     var data = _a.data;
                     return data && data();
                 });
                 // Sort all cues ascending
                 particleCues.sort(function (a, b) { return Math.sign(a[0] - b[0]); });
-                // this.clickTrackParticles = new ClickTrack<ParticleCue>({
-                //   timerSource: () => track.currentTime,
-                //   tempo,
-                //   offset,
-                //   cues: particleCues
-                // });
-                //this.clickTrackParticles.on("cue", this.handleParticleCue.bind(this));
-                //this.particleContainer = new Container();
-                // SVG group size: 828 131.65
-                // Set instrument position to SVG group center
-                // @TODO put this in one spot
-                //this.particleContainer.position.set(window.innerWidth / 2 - 414, window.innerHeight * 3 / 4 -131.65);
-                //container.addChild(this.particleContainer);
                 this.loadProgressbar = new progress_bar_1.default();
                 container.addChild(this.loadProgressbar);
                 this.loadProgressbar.position.set(window.innerWidth / 2, window.innerHeight / 2);
@@ -4025,9 +10505,8 @@ var PerformanceState = /** @class */ (function (_super) {
                 }); });
                 this.bkgVideo.on("ended", function () {
                     // shut it down!
-                    biomeClickTrack.deconstruct();
+                    PerformanceState.biomeClickTrack.deconstruct();
                     PerformanceState.clickTrack.deconstruct();
-                    //this.clickTrackParticles.deconstruct();
                     if (document.fullscreenElement) {
                         document.exitFullscreen();
                     }
@@ -4110,12 +10589,6 @@ var PerformanceState = /** @class */ (function (_super) {
             interactive.onCue(cue.cue, state, value);
         }
     };
-    PerformanceState.prototype.handleParticleCue = function (clicktrack, cue) {
-        if (cue.data) {
-            var emitter = new pixi_particles_1.Emitter(this.particleContainer, cue.data[0], __assign(__assign({}, cue.data[1]), { autoUpdate: false }));
-            this.emitters.push(emitter);
-        }
-    };
     PerformanceState.prototype.onCircleDrag = function (dragging, e) {
         if (this.app) {
             var i = this.app.renderer.plugins.interaction.hitTest(e.data.global, this.interactivesContainer);
@@ -4159,15 +10632,6 @@ var PerformanceState = /** @class */ (function (_super) {
         }
         for (var i = 0; i < this.interactives.length; i++) {
             this.interactives[i].onTick(currentBeat, beatDelta);
-        }
-        for (var i = this.emitters.length - 1; i >= 0; i--) {
-            if (this.emitters[i].parent === null) {
-                // remove from array, it's destroyed
-                this.emitters.splice(i, 1);
-                continue;
-            }
-            // Perform update using beats
-            this.emitters[i].update(beatDelta);
         }
         // DIY mouse enter/mouse out interaction handling
         // This is here because while draggin draggables, mouseenter and mouseout events aren't triggered
@@ -4237,6 +10701,11 @@ var PerformanceState = /** @class */ (function (_super) {
     PerformanceState.prototype.cleanUp = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
+                PerformanceState.clickTrack.deconstruct();
+                PerformanceState.biomeClickTrack.deconstruct();
+                if (document.fullscreenElement) {
+                    document.exitFullscreen();
+                }
                 return [2 /*return*/];
             });
         });
@@ -4347,26 +10816,33 @@ var PerformanceVideoPlayer = /** @class */ (function (_super) {
                         _a.sent();
                         w = this.videoSprite.width;
                         h = this.videoSprite.height;
+                        if (!pixi_js_1.Loader.shared.loading) return [3 /*break*/, 3];
                         return [4 /*yield*/, new Promise(function (resolve) {
-                                if (pixi_js_1.Loader.shared.resources[video_mask_png_1.default])
-                                    return resolve();
-                                pixi_js_1.Loader.shared.add(video_mask_png_1.default).load(resolve);
+                                pixi_js_1.Loader.shared.onComplete.once(resolve);
                             })];
                     case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3: return [4 /*yield*/, new Promise(function (resolve) {
+                            if (pixi_js_1.Loader.shared.resources[video_mask_png_1.default])
+                                return resolve();
+                            pixi_js_1.Loader.shared.add(video_mask_png_1.default).load(resolve);
+                        })];
+                    case 4:
                         _a.sent();
                         return [4 /*yield*/, new Promise(function (resolve) {
                                 if (pixi_js_1.Loader.shared.resources[video_mask_flat_png_1.default])
                                     return resolve();
                                 pixi_js_1.Loader.shared.add(video_mask_flat_png_1.default).load(resolve);
                             })];
-                    case 3:
+                    case 5:
                         _a.sent();
                         return [4 /*yield*/, new Promise(function (resolve) {
                                 if (pixi_js_1.Loader.shared.resources[video_bkg_png_1.default])
                                     return resolve();
                                 pixi_js_1.Loader.shared.add(video_bkg_png_1.default).load(resolve);
                             })];
-                    case 4:
+                    case 6:
                         _a.sent();
                         bkgSprite = pixi_js_1.Sprite.from(video_bkg_png_1.default);
                         bkgSprite.scale.set(w / (bkgSprite.width));
@@ -4592,6 +11068,373 @@ exports.default = ProgressBar;
 
 /***/ }),
 
+/***/ "./src/round-sound-player.ts":
+/*!***********************************!*\
+  !*** ./src/round-sound-player.ts ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RoundSoundPlayer = void 0;
+var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
+var pixi_sound_1 = __importDefault(__webpack_require__(/*! pixi-sound */ "./node_modules/pixi-sound/dist/pixi-sound.esm.js"));
+var tween_js_1 = __importDefault(__webpack_require__(/*! @tweenjs/tween.js */ "./node_modules/@tweenjs/tween.js/src/Tween.js"));
+var PLAYER_SCRUB_SIZE = 4;
+var RoundSoundPlayer = /** @class */ (function (_super) {
+    __extends(RoundSoundPlayer, _super);
+    function RoundSoundPlayer(soundUrl, image, playerRadius, accentColor) {
+        if (playerRadius === void 0) { playerRadius = 64; }
+        if (accentColor === void 0) { accentColor = 0xffffff; }
+        var _this = _super.call(this) || this;
+        _this.soundUrl = soundUrl;
+        _this.image = image;
+        _this.playerRadius = playerRadius;
+        _this.accentColor = accentColor;
+        _this.isLoaded = false;
+        _this.canInteract = true;
+        _this.playButtonSizeRatio = 0.1;
+        _this.statusText = "Unloaded";
+        _this.autoplay = false;
+        _this.progress = 0;
+        var background = new pixi_js_1.Graphics();
+        background.beginFill(0x000000, 0.75);
+        background.drawRect(0, 0, _this.playerRadius * 2, _this.playerRadius * 2);
+        background.endFill();
+        _this.addChild(background);
+        _this.maskGraphic = new pixi_js_1.Graphics();
+        _this.addChild(_this.maskGraphic);
+        _this.mask = _this.maskGraphic;
+        _this.maskGraphic.position.set(0, 0);
+        _this.maskGraphic.beginFill(0xffffff, 1);
+        _this.maskGraphic.drawCircle(_this.playerRadius, _this.playerRadius, _this.playerRadius);
+        _this.maskGraphic.endFill();
+        if (_this.image) {
+            _this.addChild(_this.image);
+            _this.image.anchor.set(0.5, 0.5);
+            _this.image.scale.set(0);
+            _this.image.alpha = 0;
+            _this.image.position.set(_this.playerRadius, _this.playerRadius);
+            new tween_js_1.default.Tween({ alpha: 0, scale: 0.5 * 1.2 * _this.playerRadius / _this.image.texture.width })
+                .to({ alpha: 1, scale: 1.2 * _this.playerRadius / _this.image.texture.width }, 400)
+                .easing(tween_js_1.default.Easing.Elastic.Out)
+                .onUpdate(function (_a) {
+                var alpha = _a.alpha, scale = _a.scale;
+                if (_this.image) {
+                    _this.image.alpha = alpha;
+                    _this.image.scale.set(scale);
+                }
+            })
+                .start();
+        }
+        _this.interactive = true;
+        _this.cursor = "pointer";
+        _this.on('pointertap', function () {
+            if (_this.canInteract) {
+                _this.interact();
+            }
+        });
+        _this.overlayGraphics = new pixi_js_1.Graphics();
+        _this.addChild(_this.overlayGraphics);
+        _this.overlayGraphics.position.set(_this.playerRadius, _this.playerRadius);
+        _this.updateGraphics();
+        return _this;
+    }
+    RoundSoundPlayer.prototype.interact = function () {
+        this.playpause();
+    };
+    RoundSoundPlayer.prototype.updateGraphics = function (loop) {
+        if (loop === void 0) { loop = true; }
+        if (loop) {
+            this.animationFrameId = window.requestAnimationFrame(this.updateGraphics.bind(this));
+        }
+        this.overlayGraphics.clear();
+        this.overlayGraphics.lineStyle(PLAYER_SCRUB_SIZE, 0x000000, 0.6, 0);
+        this.overlayGraphics.drawCircle(0, 0, this.playerRadius);
+        if (this.progress !== NaN && this.progress > 0) {
+            this.overlayGraphics.lineStyle(PLAYER_SCRUB_SIZE + 5, this.accentColor, 1, 0);
+            if (this.progress >= 1) {
+                this.overlayGraphics.drawCircle(0, 0, this.playerRadius + 5);
+            }
+            else {
+                var arc = Math.PI * 2 * this.progress;
+                this.overlayGraphics.arc(0, 0, this.playerRadius + 5, -Math.PI / 2, -Math.PI / 2 + arc);
+            }
+        }
+    };
+    RoundSoundPlayer.prototype.playerEnded = function () {
+        if (this.animationFrameId !== -1) {
+            window.cancelAnimationFrame(this.animationFrameId);
+            this.animationFrameId = -1;
+        }
+        this.emit("ended");
+    };
+    RoundSoundPlayer.prototype.playerProgress = function (progress) {
+        this.progress = progress;
+    };
+    RoundSoundPlayer.prototype.playpause = function () {
+        if (this.sound) {
+            if (this.sound.paused) {
+                this.sound.resume();
+                this.emit("play");
+                this.statusText = "Playing";
+                if (this.animationFrameId === -1) {
+                    this.animationFrameId = window.requestAnimationFrame(this.updateGraphics.bind(this));
+                }
+            }
+            else {
+                this.sound.pause();
+                this.emit("pause");
+                this.statusText = "Paused";
+                this.updateGraphics(false);
+                if (this.animationFrameId !== -1) {
+                    window.cancelAnimationFrame(this.animationFrameId);
+                    this.animationFrameId = -1;
+                }
+            }
+        }
+    };
+    RoundSoundPlayer.prototype.destroy = function () {
+        _super.prototype.destroy.call(this, { children: true });
+        if (this.soundInstance) {
+            this.soundInstance.off('progress', this.playerProgress.bind(this));
+            this.soundInstance.off('end', this.playerEnded.bind(this));
+            this.soundInstance.stop();
+            this.soundInstance.destroy();
+        }
+        if (this.sound) {
+            this.sound.destroy();
+        }
+    };
+    RoundSoundPlayer.prototype.preload = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, new Promise(function (resolve, reject) {
+                            pixi_sound_1.default.Sound.from({
+                                url: _this.soundUrl,
+                                preload: true,
+                                autoPlay: _this.autoplay,
+                                loaded: function (err, sound) { return __awaiter(_this, void 0, void 0, function () {
+                                    var instance;
+                                    return __generator(this, function (_a) {
+                                        switch (_a.label) {
+                                            case 0:
+                                                if (!sound) return [3 /*break*/, 2];
+                                                this.sound = sound;
+                                                return [4 /*yield*/, sound.play()];
+                                            case 1:
+                                                instance = _a.sent();
+                                                instance.on('progress', this.playerProgress.bind(this));
+                                                instance.on('end', this.playerEnded.bind(this));
+                                                return [2 /*return*/, resolve()];
+                                            case 2: return [2 /*return*/, reject()];
+                                        }
+                                    });
+                                }); }
+                            });
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return RoundSoundPlayer;
+}(pixi_js_1.Container));
+exports.RoundSoundPlayer = RoundSoundPlayer;
+
+
+/***/ }),
+
+/***/ "./src/round-video-player.ts":
+/*!***********************************!*\
+  !*** ./src/round-video-player.ts ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RoundVideoPlayer = void 0;
+var video_player_1 = __webpack_require__(/*! ./video-player */ "./src/video-player.ts");
+var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
+var PLAYER_SCRUB_SIZE = 4;
+var RoundVideoPlayer = /** @class */ (function (_super) {
+    __extends(RoundVideoPlayer, _super);
+    function RoundVideoPlayer(videoUrl, playerRadius, accentColor) {
+        if (playerRadius === void 0) { playerRadius = 64; }
+        if (accentColor === void 0) { accentColor = 0xffffff; }
+        var _this = _super.call(this, videoUrl, playerRadius * 2, accentColor) || this;
+        _this.videoUrl = videoUrl;
+        _this.playerRadius = playerRadius;
+        _this.accentColor = accentColor;
+        _this.updateGraphics();
+        var background = new pixi_js_1.Graphics();
+        background.beginFill(0x000000, 0.5);
+        background.drawRect(0, 0, _this.playerRadius * 2, _this.playerRadius * 2);
+        background.endFill();
+        _this.addChild(background);
+        _this.maskGraphic = new pixi_js_1.Graphics();
+        _this.addChild(_this.maskGraphic);
+        _this.mask = _this.maskGraphic;
+        _this.maskGraphic.position.set(0, 0);
+        _this.maskGraphic.beginFill(0xffffff, 1);
+        _this.maskGraphic.drawCircle(_this.playerRadius, _this.playerRadius, _this.playerRadius);
+        _this.maskGraphic.endFill();
+        return _this;
+    }
+    RoundVideoPlayer.prototype.updateGraphics = function () {
+        _super.prototype.updateGraphics.call(this);
+        this.overlayGraphics.lineStyle(PLAYER_SCRUB_SIZE, 0x000000, 0.6, 0);
+        this.overlayGraphics.drawCircle(0, 0, this.playerRadius);
+        if (this.videoData) {
+            var percent = this.currentTime / this.duration;
+            if (percent !== NaN && percent > 0) {
+                this.overlayGraphics.lineStyle(PLAYER_SCRUB_SIZE + 5, this.accentColor, 1, 0);
+                if (percent >= 1) {
+                    this.overlayGraphics.drawCircle(0, 0, this.playerRadius + 5);
+                }
+                else {
+                    var arc = Math.PI * 2 * percent;
+                    this.overlayGraphics.arc(0, 0, this.playerRadius + 5, -Math.PI / 2, -Math.PI / 2 + arc);
+                }
+            }
+        }
+    };
+    RoundVideoPlayer.prototype.preload = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var x;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, _super.prototype.preload.call(this)];
+                    case 1:
+                        _a.sent();
+                        // Calculate video sprite size based on target radius
+                        this.videoSprite.height = this.playerRadius * 2;
+                        this.videoSprite.width = this.nativeRatio * this.videoSprite.height;
+                        x = -(this.videoSprite.width - this.playerRadius * 2) / 2;
+                        this.videoSprite.position.set(x, 0);
+                        // Recenter graphics
+                        this.overlayGraphics.position.set(this.playerWidth / 2, this.videoSprite.height / 2);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return RoundVideoPlayer;
+}(video_player_1.VideoPlayer));
+exports.RoundVideoPlayer = RoundVideoPlayer;
+
+
+/***/ }),
+
 /***/ "./src/score-reveal.ts":
 /*!*****************************!*\
   !*** ./src/score-reveal.ts ***!
@@ -4714,7 +11557,7 @@ var ScoreReveal = /** @class */ (function (_super) {
             }
             if (fadeout >= 1) {
                 this.emit("done", this.totalScore >= this.notes.length);
-                this.destroy();
+                this.destroy({ children: true });
             }
         }
         this.setNotes(0.5 * speedX * this.time / 100, radius);
@@ -4775,11 +11618,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.StateMachine = void 0;
+exports.StateMachine = exports.isState = void 0;
 var performance_state_1 = __importDefault(__webpack_require__(/*! ./performance-state */ "./src/performance-state.ts"));
 var title_state_1 = __importDefault(__webpack_require__(/*! ./title-state */ "./src/title-state.ts"));
+var biographies_state_1 = __importDefault(__webpack_require__(/*! ./biographies-state */ "./src/biographies-state.ts"));
+function isState(state) {
+    return ["intro", "performance", "musicians"].includes(state);
+}
+exports.isState = isState;
 var StateMachine = /** @class */ (function () {
-    function StateMachine(app) {
+    function StateMachine(app, initialState) {
         var _this = this;
         this.app = app;
         this.states = new Array();
@@ -4793,10 +11641,13 @@ var StateMachine = /** @class */ (function () {
         });
         app.ticker.add(this.tick, this);
         this.addState("intro", new title_state_1.default());
+        this.addState("musicians", new biographies_state_1.default());
         this.addState("performance", new performance_state_1.default());
         this.addStateCondition("intro", "complete", "performance");
         this.addStateCondition("performance", "complete", "intro");
-        this.setState("intro");
+        if (initialState) {
+            this.setState(initialState);
+        }
     }
     StateMachine.prototype.tick = function (deltams) {
         if (this.currentState) {
@@ -4853,8 +11704,7 @@ var StateMachine = /** @class */ (function () {
                         _a.label = 3;
                     case 3:
                         if (this.currentStateContainer) {
-                            this.app.stage.removeChild(this.currentStateContainer);
-                            this.currentStateContainer.destroy();
+                            this.currentStateContainer.destroy({ children: true });
                         }
                         this.app.stage.addChild(newContainer);
                         this.currentStateContainer = newContainer;
@@ -4952,7 +11802,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TET_STYLE_BIO_SUBTITLE = exports.TEXT_STYLE_BIO_P = exports.TEXT_STYLE_LOADING = exports.TEXT_STYLE_CENSORED = exports.TEXT_STYLE_INTERACTIVE_NUM = exports.TEXT_STYLE_H2 = exports.TEXT_STYLE_BUTTON_HOVER = exports.TEXT_STYLE_BUTTON = exports.loadFonts = void 0;
+exports.TEXT_STYLE_HAPPY_TEXT = exports.TET_STYLE_BIO_SUBTITLE = exports.TEXT_STYLE_BIO_P = exports.TEXT_STYLE_LOADING = exports.TEXT_STYLE_CENSORED = exports.TEXT_STYLE_INTERACTIVE_NUM = exports.TEXT_STYLE_H2 = exports.TEXT_STYLE_BUTTON_HOVER = exports.TEXT_STYLE_BUTTON = exports.loadFonts = void 0;
 var pixi_js_1 = __webpack_require__(/*! pixi.js */ "./node_modules/pixi.js/lib/pixi.es.js");
 function loadFonts() {
     return __awaiter(this, void 0, void 0, function () {
@@ -4962,7 +11812,7 @@ function loadFonts() {
                         // // Load them google fonts before starting...!
                         window.WebFontConfig = {
                             google: {
-                                families: ['Roboto:400'],
+                                families: ['Roboto:400', 'Homemade Apple'],
                             },
                             active: function () {
                                 resolve();
@@ -5044,6 +11894,19 @@ exports.TET_STYLE_BIO_SUBTITLE = new pixi_js_1.TextStyle({
     fontFamily: "Roboto",
     fontWeight: '400',
     fontSize: 12,
+});
+exports.TEXT_STYLE_HAPPY_TEXT = new pixi_js_1.TextStyle({
+    fill: "#666666",
+    fontFamily: "Homemade Apple",
+    wordWrap: false,
+    fontSize: 18,
+    // stroke: '#000000',
+    // strokeThickness: 2,
+    dropShadow: true,
+    dropShadowColor: '#000000',
+    dropShadowBlur: 6,
+    dropShadowAngle: Math.PI / 4,
+    dropShadowDistance: 6,
 });
 
 
@@ -5745,6 +12608,25 @@ exports.interactives = [
 
 /***/ }),
 
+/***/ "./src/types/musician.ts":
+/*!*******************************!*\
+  !*** ./src/types/musician.ts ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isMusician = void 0;
+function isMusician(e) {
+    return !!e.instrument;
+}
+exports.isMusician = isMusician;
+
+
+/***/ }),
+
 /***/ "./src/video-player.ts":
 /*!*****************************!*\
   !*** ./src/video-player.ts ***!
@@ -5922,6 +12804,10 @@ var VideoPlayer = /** @class */ (function (_super) {
         configurable: true
     });
     VideoPlayer.prototype.playerEnded = function () {
+        if (this.animationFrameId !== -1) {
+            window.cancelAnimationFrame(this.animationFrameId);
+            this.animationFrameId = -1;
+        }
         this.emit("ended");
     };
     VideoPlayer.prototype.preload = function () {
@@ -5933,45 +12819,57 @@ var VideoPlayer = /** @class */ (function (_super) {
                     case 0:
                         this.statusText = "Loading";
                         playEventSet = false;
-                        if (!!pixi_js_1.Loader.shared.resources[this.videoUrl]) return [3 /*break*/, 2];
-                        // If not already loaded
+                        if (!!pixi_js_1.Loader.shared.resources[this.videoUrl]) return [3 /*break*/, 4];
+                        if (!pixi_js_1.Loader.shared.loading) return [3 /*break*/, 2];
                         return [4 /*yield*/, new Promise(function (resolve) {
-                                var loaderTimer = setInterval(function () {
-                                    if (typeof pixi_js_1.Loader.shared.resources[_this.videoUrl] === "undefined") {
-                                        return;
-                                    }
-                                    try {
-                                        var buffered = pixi_js_1.Loader.shared.resources[_this.videoUrl].data.buffered;
-                                        var total = pixi_js_1.Loader.shared.resources[_this.videoUrl].data.duration;
-                                        var end = buffered.end(0);
-                                        _this.loadProgress = end / total;
-                                    }
-                                    catch (_a) { }
-                                    if (!playEventSet) {
-                                        pixi_js_1.Loader.shared.resources[_this.videoUrl].data.addEventListener("playing", doneLoading);
-                                        pixi_js_1.Loader.shared.resources[_this.videoUrl].data.addEventListener("play", doneLoading);
-                                        pixi_js_1.Loader.shared.resources[_this.videoUrl].data.addEventListener("canplaythrough", doneLoading);
-                                        playEventSet = true;
-                                    }
-                                }, 200);
-                                var doneLoading = function () {
-                                    clearInterval(loaderTimer);
-                                    pixi_js_1.Loader.shared.resources[_this.videoUrl].data.removeEventListener("playing", doneLoading);
-                                    pixi_js_1.Loader.shared.resources[_this.videoUrl].data.removeEventListener("play", doneLoading);
-                                    pixi_js_1.Loader.shared.resources[_this.videoUrl].data.removeEventListener("canplaythrough", doneLoading);
-                                    resolve();
-                                };
-                                pixi_js_1.Loader.shared.add(_this.videoUrl).load(doneLoading);
+                                pixi_js_1.Loader.shared.onComplete.once(resolve);
                             })];
                     case 1:
-                        // If not already loaded
                         _a.sent();
                         _a.label = 2;
-                    case 2: return [4 /*yield*/, new Promise(function (resolve) {
-                            pixi_js_1.Loader.shared.onComplete.once(resolve);
+                    case 2: 
+                    // If not already loaded
+                    return [4 /*yield*/, new Promise(function (resolve) {
+                            var loaderTimer = setInterval(function () {
+                                if (typeof pixi_js_1.Loader.shared.resources[_this.videoUrl] === "undefined") {
+                                    return;
+                                }
+                                try {
+                                    var buffered = pixi_js_1.Loader.shared.resources[_this.videoUrl].data.buffered;
+                                    var total = pixi_js_1.Loader.shared.resources[_this.videoUrl].data.duration;
+                                    var end = buffered.end(0);
+                                    _this.loadProgress = end / total;
+                                }
+                                catch (_a) { }
+                                if (!playEventSet) {
+                                    pixi_js_1.Loader.shared.resources[_this.videoUrl].data.addEventListener("playing", doneLoading);
+                                    pixi_js_1.Loader.shared.resources[_this.videoUrl].data.addEventListener("play", doneLoading);
+                                    pixi_js_1.Loader.shared.resources[_this.videoUrl].data.addEventListener("canplaythrough", doneLoading);
+                                    playEventSet = true;
+                                }
+                            }, 200);
+                            var doneLoading = function () {
+                                clearInterval(loaderTimer);
+                                pixi_js_1.Loader.shared.resources[_this.videoUrl].data.removeEventListener("playing", doneLoading);
+                                pixi_js_1.Loader.shared.resources[_this.videoUrl].data.removeEventListener("play", doneLoading);
+                                pixi_js_1.Loader.shared.resources[_this.videoUrl].data.removeEventListener("canplaythrough", doneLoading);
+                                resolve();
+                            };
+                            pixi_js_1.Loader.shared.add(_this.videoUrl).load(doneLoading);
                         })];
                     case 3:
+                        // If not already loaded
                         _a.sent();
+                        _a.label = 4;
+                    case 4:
+                        if (!pixi_js_1.Loader.shared.loading) return [3 /*break*/, 6];
+                        return [4 /*yield*/, new Promise(function (resolve) {
+                                pixi_js_1.Loader.shared.onComplete.once(resolve);
+                            })];
+                    case 5:
+                        _a.sent();
+                        _a.label = 6;
+                    case 6:
                         this.loadProgress = 1;
                         this.videoData = pixi_js_1.Loader.shared.resources[this.videoUrl].data;
                         videoBaseTexture = pixi_js_1.Texture.from(this.videoData);
@@ -5982,6 +12880,9 @@ var VideoPlayer = /** @class */ (function (_super) {
                             setTimeout(function () {
                                 _this.videoData.currentTime = 0;
                             }, 0);
+                        }
+                        else {
+                            this.resume();
                         }
                         this.videoSprite = new pixi_js_1.Sprite(videoBaseTexture);
                         this.nativeWidth = this.videoSprite.width;
@@ -6004,9 +12905,13 @@ var VideoPlayer = /** @class */ (function (_super) {
         this.playerWidth = playerWidth;
         var scale = this.playerWidth / this.nativeWidth;
         this.videoSprite.scale.set(scale);
-        this.updateGraphics();
+        this.updateGraphics(false);
     };
-    VideoPlayer.prototype.updateGraphics = function () {
+    VideoPlayer.prototype.updateGraphics = function (loop) {
+        if (loop === void 0) { loop = true; }
+        if (loop) {
+            this.animationFrameId = window.requestAnimationFrame(this.updateGraphics.bind(this));
+        }
         if (this.videoSprite) {
             this.overlayGraphics.visible = true;
             this.overlayGraphics.position.set(this.playerWidth / 2, this.videoSprite.height / 2);
@@ -6014,7 +12919,6 @@ var VideoPlayer = /** @class */ (function (_super) {
         else {
             this.overlayGraphics.visible = false;
         }
-        this.animationFrameId = window.requestAnimationFrame(this.updateGraphics.bind(this));
         this.overlayGraphics.clear();
         if (this.videoData) {
             if (this.videoData.paused && this.canInteract) {
@@ -6032,8 +12936,7 @@ var VideoPlayer = /** @class */ (function (_super) {
         }
     };
     VideoPlayer.prototype.destroy = function () {
-        // @TODO - clear loading of video if still in progress
-        _super.prototype.destroy.call(this);
+        _super.prototype.destroy.call(this, { children: true });
         if (this.videoData) {
             this.videoData.removeEventListener("ended", this.playerEnded.bind(this));
             this.videoData.currentTime = 0;
